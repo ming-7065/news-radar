@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Radar · 過刊</title>
+<style>
+:root {
+  --bg: #faf9f6; --text: #2d2d2d; --muted: #888; --border: #e8e5df; --accent: #d4a574;
+}
+[data-theme="dark"] {
+  --bg: #1a1a1a; --text: #e0ddd6; --muted: #999; --border: #333; --accent: #c9955e;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  background: var(--bg); color: var(--text);
+  font-size: 18px; line-height: 1.8;
+  max-width: 740px; margin: 0 auto; padding: 32px 20px 80px;
+}
+header { text-align: center; padding: 40px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+header h1 { font-size: 28px; }
+header a { color: var(--accent); text-decoration: none; font-size: 14px; }
+.issue { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.issue a { color: var(--accent); text-decoration: none; font-size: 17px; font-weight: 600; }
+.issue a:hover { text-decoration: underline; }
+.issue .date { color: var(--muted); font-size: 14px; }
+.theme-toggle { position: fixed; top: 16px; right: 20px; background: none; border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; cursor: pointer; font-size: 14px; color: var(--text); }
+</style>
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+<header>
+  <h1>News Radar</h1>
+  <a href="index.html">回到首頁</a>
+</header>
+<h2 style="margin-bottom:24px">過刊列表</h2>
+<div id="issues"><p style="color:var(--muted)">尚無過刊</p></div>
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const next = html.dataset.theme === 'light' ? 'dark' : 'light';
+  html.dataset.theme = next;
+  localStorage.setItem('news-radar-theme', next);
+}
+(function() {
+  const saved = localStorage.getItem('news-radar-theme');
+  if (saved) document.documentElement.dataset.theme = saved;
+})();
+</script>
+</body>
+</html>
