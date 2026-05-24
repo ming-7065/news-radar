@@ -128,15 +128,40 @@
 
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>DEBUG AI RAW: {&quot;id&quot;:&quot;06623ffde86b12ea735c8c43679b47a0&quot;,&quot;type&quot;:&quot;message&quot;,&quot;role&quot;:&quot;assistant&quot;,&quot;model&quot;:&quot;MiniMax-M2.7&quot;,&quot;content&quot;:[{&quot;thinking&quot;:&quot;The user asks:\n\n\&quot;請根據以下提供的新聞文章，先寫一段大約 150 字的「今日總結 (Briefing)」，總結今日 Web3 與 AI 的主要趨勢。然後對每一篇文章嚴格按格式輸出。\n\n=== 文章 1 ===\n標題：OpenAI opens Singapore AI lab as IMDA updates AI framework\n來源：AI News\n摘要：OpenAI will open its first Applied AI Lab outside the US in Singapore. The lab is part of a new partnership with the Ministry of Digital Development and Information.\nThe initiative, called OpenAI for Singapore, was announced at the ATx Summit and is backed by a commitment of more than S$300 million.\n\n=== 文章 2 ===\n標題：Two Men Federally Charged Over AI Deepfake Porn Under the Take It Down Act\n來源：Decrypt\n摘要：Federal prosecutors charged two men under the 2025 law that criminalizes non-consensual AI-generated intimate imagery.\n\n=== 文章 3 ===\n標題：Kash Patel-Linked Apparel Store Goes Dark After Pushing Crypto-Stealing Malware\n來源：Decrypt\n摘要：User losses weren’t immediately clear.\n\n=== 文章 4 ===\n標題：NHL Agrees to Share Data With the CFTC for Prediction Market Integrity\n來源：Decrypt\n摘要：The agreement ensures the regulator and the NHL communicate and share data to protect the integrity of hockey-related prediction markets.\n\n=== 文章 5 ===\n標題：Why DeFi Keeps Losing Millions to Exploits\n來源：Decrypt\n摘要：DeFi exploits keep piling up in 2026. Here’s what experts say is behind crypto’s security crisis—and how it can be fixed.\n\n=== 文章 6 ===\n標題：Peec, one of Berlin’s rising startups, more than doubled annualized revenue in months to $10M, sources say\n來源：TechCrunch\n摘要：Peec, which helps brands track their presence in AI searches, offers proof of a key trend among European startups.\n\n=== 文章 7 ===\n標題：Kash Patel&amp;#8217;s clothing brand website shut down after reports it was hacked\n來源：TechCrunch\n摘要：According to users on X, the website was hijacked by hackers in an attempt to trick visitors into installing malware.\n\n=== 文章 8 ===\n標題：ETFs flash a bid, HumidiFi tokenizes\n來源：Blockworks\n摘要：BTC leads a broad crypto bid as ETFs post their strongest inflow in weeks\n\n=== 文章 9 ===\n標題：Crypto Is Growing Up—Why Some Everyday Traders Are Moving On\n來源：Decrypt\n摘要：Muted volatility, political shifts, and Wall Street dominance are driving increasingly jaded retail traders out of crypto.\n\n=== 文章 10 ===\n標題：Blockchain researcher defends Ethereum Foundation, says it’s ‘exactly’ doing its job\n來源：Cointelegraph\n摘要：William Mougayar says critics are measuring the Ethereum Foundation by the wrong standard, claiming it was never meant to pump ETH or court institutions.\n\n=== 輸出格式要求（嚴格遵守） ===\n今日總結：&lt;150字繁體中文，總結 Web3 與 AI 趨勢&gt;\n\n文章 N：\n摘要：&lt;30字繁體中文，將英文翻譯後寫出&gt;\n問句：&lt;15字繁體中文，寫出引人好奇的問句&gt;\n評分：&lt;1到10&gt;\n標籤：&lt;3-5個中英文關鍵標籤，逗號分隔&gt;\&quot;\n\nWe need to output a briefing summary first (around 150 Chinese characters, presumably Traditional Chinese), summarizing main trends in Web3 and AI. Then each article formatted as specified.\n\nWe must adhere strictly to the output format. The format for each article:\n\n文章 N：\n摘要：&lt;30字繁體中文，將英文翻譯後寫出&gt;\n問句：&lt;15字繁體中文，寫出引人好奇的問句&gt;\n評分：&lt;1到10&gt;\n標籤：&lt;3-5個中英文關鍵標籤，逗號分隔&gt;\n\nThus we need to produce 10 article entries (N from 1 to 10). The summary first.\n\nWe need to ensure each article summary is within 30 characters (including punctuation?). Also each question must be within 15 characters. Use Traditional Chinese. The tags must be 3-5 keywords, comma-separated, mixing Chinese and English likely.\n\nLet's parse each article's content and translate the English summary to Chinese (within 30 characters). Then craft a question that is interesting (within 15 characters). Score each article 1-10.\n\nWe also need to be careful about the 30-character limit. Chinese characters count each one; English characters also count as a character? Typically each Chinese char is one, English words are counted maybe as multiple characters. We'll keep them short.\n\nLet's go through each article.\n\nArticle 1:\n\nTitle: OpenAI opens Singapore AI lab as IMDA updates AI framework\nSummary (English): \&quot;OpenAI will open its first Applied AI Lab outside the US in Singapore. The lab is part of a new partnership with the Ministry of Digital Development and Information. The initiative, called OpenAI for Singapore, was announced at the ATx Summit and is backed by a commitment of more than S$300 million.\&quot;\n\nWe need to produce a 30-character Chinese translation. Let's try:\n\n\&quot;OpenAI在新加坡設立首個海外應用AI實驗室，與政府合作，投入逾3億新加坡元。\&quot; Let's count characters: \&quot;OpenAI在新加坡設立首個海外應用AI實驗室，與政府合作，投入逾3億新加坡元。\&quot; Let's count: O (1) p2 e3 n4 ... Actually we need to count each character; Chinese characters each count as one, but English letters also count as characters; it's ambiguous but we can try to stay within 30 characters. However \&quot;OpenAI\&quot; 6 letters + 1 maybe count as 6. So total length maybe exceed 30. Let's try to shorten:\n\n\&quot;OpenAI在新加坡設首個海外AI實驗室，投入逾3億星元。\&quot; Count: O1 p2 e3 n4 A5 I6 在7 新8 加9 坡10 設11 首12 個13 海14 外15 A16 I17 實18 驗19 室20 ，21 投22 入23 逾24 3 25 億26 星27 元28 。 That's 28 characters. Good, within 30.\n\nNow a question within 15 characters: \&quot;這筆投資會帶來什麼創新？\&quot;. Count: 這1 筆2 投3 資4 會5 帶6 來7 什8 麼9 創10 新11 ？12 - That's 12 characters. Good.\n\nScore: maybe 8. We'll assign.\n\nTags: \&quot;OpenAI, 新加坡, AI實驗室, 數位發展, 投資\&quot;. That's 5 tags.\n\nBut ensure 3-5 tags. Use Chinese and English mixing: \&quot;OpenAI, 新加坡, AI實驗室, IMDA, 投資\&quot;. That is 5.\n\nArticle 2:\n\nTitle: Two Men Federally Charged Over AI Deepfake Porn Under the Take It Down Act\n\nSummary: \&quot;Federal prosecutors charged two men under the 2025 law that criminalizes non-consensual AI-generated intimate imagery.\&quot;\n\n30-character Chinese translation:\n\n\&quot;聯邦起訴兩名男子，2025年法條將非自願AI生成的私密影像列為犯罪。\&quot; Count: 聯1 邦2 起3 訴4 兩5 名6 男7 子8 ，9 2025 10 年11 法12 條13 將14 非15 自16 願17 A18 I19 生20 成21 的22 私23 密24 影25 像26 列27 為28 犯29 罪30 。 That's exactly 30 characters! Good.\n\nNow a question within 15 characters: \&quot;新規能否遏止deepfake色情？\&quot;. Count: 新1 規2 能3 否4 遏5 止6 d7 e8 e9 p10 f11 a12 k13 e14 色15 情16 ？ Actually \&quot;deepfake\&quot; is English; maybe we can keep it as \&quot;deepfake\&quot;. So count: \&quot;新\&quot;1 \&quot;規\&quot;2 \&quot;能\&quot;3 \&quot;否\&quot;4 \&quot;遏\&quot;5 \&quot;止\&quot;6 \&quot;deepfake\&quot; (7 characters?) Actually \&quot;deepfake\&quot; is 8 letters? D1 e2 e3 p4 f5 a6 k7 e8, 8. So the total would be &gt;15. Let's try something else: \&quot;新規能否阻止AI色情？\&quot; Count: 新1 規2 能3 否4 阻5 止6 A7 I8 色9 情10 ？11. That's 11 characters. Good.\n\nScore: maybe 7.\n\nTags: \&quot;AI, 深度偽造, 法律, 隱私, Take It Down Act\&quot;. That's 5.\n\nArticle 3:\n\nTitle: Kash Patel-Linked Apparel Store Goes Dark After Pushing Crypto-Stealing Malware\n\nSummary: \&quot;User losses weren’t immediately clear.\&quot;\n\n30-character Chinese translation: \&quot;用戶損失暫未明顯，網站已關閉。\&quot; Count: 用1 戶2 損3 失4 暫5 未6 明7 顯8 ，9 網10 站11 已12 關13 閉14 。 That's 14 characters. Good.\n\nQuestion within 15 characters: \&quot;如何防止加密貨幣被竊？\&quot; Count: 如1 何2 防3 止4 加5 密6 貨7 幣8 被9 竊10 ？11. Good.\n\nScore: maybe 6.\n\nTags: \&quot;加密貨幣, 惡意軟體, 網站安全, 數位資產, 駭客\&quot;. That's 5.\n\nArticle 4:\n\nTitle: NHL Agrees to Share Data With the CFTC for Prediction Market Integrity\n\nSummary: \&quot;The agreement ensures the regulator and the NHL communicate and share data to protect the integrity of hockey-related prediction markets.\&quot;\n\n30-character Chinese translation: \&quot;NHL與CFTC協議共享數據，保障冰球預測市場公正。\&quot; Count: N1 H2 L3 與4 C5 F6 T7 C8 協9 議10 共11 享12 數13 據14 ，15 保16 障17 冰18 球19 預20 測21 市22 場23 公24 正25 。 That's 25 characters. Good.\n\nQuestion within 15 characters: \&quot;預測市場將更安全嗎？\&quot; Count: 預1 測2 市3 場4 將5 更6 安7 全8 嗎9 ？10. Good.\n\nScore: maybe 7.\n\nTags: \&quot;NHL, CFTC, 預測市場, 數據共享, 區塊鏈\&quot;. That's 5.\n\nArticle 5:\n\nTitle: Why DeFi Keeps Losing Millions to Exploits\n\nSummary: \&quot;DeFi exploits keep piling up in 2026. Here’s what experts say is behind crypto’s security crisis—and how it can be fixed.\&quot;\n\n30-character Chinese translation: \&quot;2026年DeFi漏洞頻傳，專家析安全危機與修復之道。\&quot; Count: 2026 (4 characters?) Actually \&quot;2026\&quot; count as four characters. Let's count: 2 0 2 6 each. Then \&quot;年\&quot;1, \&quot;DeFi\&quot; 4, \&quot;漏洞\&quot;2, \&quot;頻傳\&quot;2, \&quot;，\&quot;1, \&quot;專家\&quot;2, \&quot;析\&quot;1, \&quot;安全\&quot;2, \&quot;危機\&quot;2, \&quot;與\&quot;1, \&quot;修復\&quot;2, \&quot;之\&quot;1, \&quot;道\&quot;1. Let's count properly: \&quot;2026\&quot; = 4, \&quot;年\&quot;=5, \&quot;DeFi\&quot;=9 (since D=1, e=2, F=3, i=4?), but each letter counts as one char, so after \&quot;2026\&quot; we have \&quot;年\&quot; =&gt; 5, \&quot;D\&quot; =&gt;6, \&quot;e\&quot;=&gt;7, \&quot;F\&quot;=&gt;8, \&quot;i\&quot;=&gt;9, \&quot;漏\&quot;=&gt;10, \&quot;洞\&quot;=&gt;11, \&quot;頻\&quot;=&gt;12, \&quot;傳\&quot;=&gt;13, \&quot;，\&quot;=&gt;14, \&quot;專\&quot;=&gt;15, \&quot;家\&quot;=&gt;16, \&quot;析\&quot;=&gt;17, \&quot;安\&quot;=&gt;18, \&quot;全\&quot;=&gt;19, \&quot;危\&quot;=&gt;20, \&quot;機\&quot;=&gt;21, \&quot;與\&quot;=&gt;22, \&quot;修\&quot;=&gt;23, \&quot;復\&quot;=&gt;24, \&quot;之\&quot;=&gt;25, \&quot;道\&quot;=&gt;26, \&quot;。\&quot;=&gt;27. That's 27 characters. Good.\n\nQuestion: \&quot;DeFi安全漏洞該如何根除？\&quot;. Count: D1 e2 F3 i4 安5 全6 漏7 洞8 該9 如10 何11 根12 除13 ？14. That's 14 characters.\n\nScore: maybe 8.\n\nTags: \&quot;DeFi, 安全漏洞, 區塊鏈, 加密貨幣, 專家觀點\&quot;. That's 5.\n\nArticle 6:\n\nTitle: Peec, one of Berlin’s rising startups, more than doubled annualized revenue in months to $10M, sources say\n\nSummary: \&quot;Peec, which helps brands track their presence in AI searches, offers proof of a key trend among European startups.\&quot;\n\n30-character Chinese translation: \&quot;Peec助品牌追蹤AI搜尋，歐洲新創收益倍增至千萬美元。\&quot; Count: P1 e2 e3 c4 助5 品6 牌7 追8 蹤9 A10 I11 搜12 索13 ，14 歐15 洲16 新17 創18 收19 益20 倍21 增22 至23 千24 萬25 美26 元27 。 That's 27 characters. Good.\n\nQuestion: \&quot;AI搜尋如何提升品牌價值？\&quot;. Count: A1 I2 搜3 索4 如5 何6 提7 升8 品9 牌10 價11 值12 ？13. Good.\n\nScore: maybe 8.\n\nTags: \&quot;Peec, AI搜尋, 歐洲新創, 品牌追蹤, 收益增長\&quot;. That's 5.\n\nArticle 7:\n\nTitle: Kash Patel’s clothing brand website shut down after reports it was hacked\n\nSummary: \&quot;According to users on X, the website was hijacked by hackers in an attempt to trick visitors into installing malware.\&quot;\n\n30-character Chinese translation: \&quot;用戶反映網站遭駭客劫持，試圖誘導訪客下載惡意程式。\&quot; Count: 用1 戶2 反3 映4 網5 站6 遭7 駭8 客9 劫10 持11 ，12 試13 圖14 誘15 導16 訪17 客18 下19 載20 惡21 意22 程23 式24 。 That's 24 characters.\n\nQuestion: \&quot;網站安全該如何加強防護？\&quot; Count: 網1 站2 安3 全4 該5 如6 何7 加8 強9 防10 護11 ？12. Good.\n\nScore: maybe 6.\n\nTags: \&quot;網站安全, 駭客攻擊, 惡意程式, 數位品牌, 網路風險\&quot;. That's 5.\n\nArticle 8:\n\nTitle: ETFs flash a bid, HumidiFi tokenizes\n\nSummary: \&quot;BTC leads a broad crypto bid as ETFs post their strongest inflow in weeks\&quot;\n\n30-character Chinese translation: \&quot;比特幣帶動加密市場漲勢，ETF資金流入創數週新高。\&quot; Count: 比1 特2 幣3 帶4 動5 加6 密7 市8 場9 漲10 勢11 ，12 E13 T14 F15 資16 金17 流18 入19 創20 數21 週22 新23 高24 。 That's 24 characters.\n\nQuestion: \&quot;比特幣ETF熱潮能否持續？\&quot; Count: 比1 特2 幣3 E4 T5 F6 熱7 潮8 能9 否10 持11 續12 ？13. Good.\n\nScore: maybe 7.\n\nTags: \&quot;比特幣, ETF, 加密市場, 資金流入, 區塊鏈\&quot;. That's 5.\n\nArticle 9:\n\nTitle: Crypto Is Growing Up—Why Some Everyday Traders Are Moving On\n\nSummary: \&quot;Muted volatility, political shifts, and Wall Street dominance are driving increasingly jaded retail traders out of crypto.\&quot;\n\n30-character Chinese translation: \&quot;波動減弱、政治變遷、華爾街主導，散戶投資者逐漸退出加密市場。\&quot; Count: 波1 動2 減3 弱4 、5 政6 治7 變8 遷9 、10 華11 爾12 街13 主14 導15 ，16 散17 戶18 投19 資20 者21 逐22 漸23 退24 出25 加26 密27 市28 場29 。 That's 29 characters.\n\nQuestion: \&quot;散戶撤離會改變市場格局嗎？\&quot; Count: 散1 戶2 撤3 離4 會5 改6 變7 市8 場9 格10 局11 嗎12 ？13. Good.\n\nScore: maybe 7.\n\nTags: \&quot;加密市場, 散戶, 華爾街, 政治風險, 市場成熟\&quot;. That's 5.\n\nArticle 10:\n\nTitle: Blockchain researcher defends Ethereum Foundation, says it’s ‘exactly’ doing its job\n\nSummary: \&quot;William Mougayar says critics are measuring the Ethereum Foundation by the wrong standard, claiming it was never meant to pump ETH or court institutions.\&quot;\n\n30-character Chinese translation: \&quot;研究者反駁批評，稱以太坊基金會不應以幣價或機構合作衡量。\&quot; Count: 研1 究2 者3 反4 駁5 批6 評7 ，8 稱9 以10 太11 坊12 基13 金14 會15 不16 應17 以18 幣19 價20 或21 機22 構23 合24 作25 衡26 量27 。 That's 27 characters.\n\nQuestion: \&quot;以太坊基金會真正目標是什麼？\&quot; Count: 以1 太2 坊3 基4 金5 會6 真7 正8 目9 標10 是11 什12 麼13 ？14. Good.\n\nScore: maybe 7.\n\nTags: \&quot;以太坊, 基金會, 區塊鏈研究, 批評, 加密生態\&quot;. That's 5.\n\nNow the \&quot;今日總結\&quot; should be around 150 characters (maybe 150 Chinese characters). Must summarize Web3 and AI trends. We need to capture the main trends from all articles: AI expansion (OpenAI lab in Singapore), regulation (deepfake law, take it down act), security issues (malware, DeFi exploits), institutional involvement (NHL &amp; CFTC, ETFs inflows), market maturation and retail exit, startup growth (Peec), etc.\n\nWe'll write about ~150 Chinese characters.\n\nLet's craft:\n\n\&quot;今日 Web3 與 AI 領域顯現多層趨勢：OpenAI 在新加坡設立首個海外 AI 實驗室，逾三億星元投入數位發展，顯示亞太 AI 產業加速布局；同時美國立法打擊 AI 深度偽造，非自願 AI 生成影像被列刑事，顯示監管收緊。DeFi 持續遭駭，專家強調安全修復需求；加密ETF資金流入創新高，比特幣領漲，但散戶因波動降低與華爾街主導而逐漸退場。區塊鏈新創如柏林的 Peec 收入翻倍，印證 AI 搜尋服務在歐洲崛起。整體顯示 AI 產業化、監管制度化與 Web3 安全性仍是未來關鍵焦點。\&quot;\n\nNow count characters: Let's approximate; it's likely near 150. Let's count roughly:\n\n\&quot;今\&quot;1 \&quot;日\&quot;2 \&quot; \&quot; maybe not count spaces. We'll count Chinese characters and punctuation.\n\n\&quot;今日 Web3 與 AI 領域顯現多層趨勢：OpenAI 在新加坡設立首個海外 AI 實驗室，逾三億星元投入數位發展，顯示亞太 AI 產業加速布局；同時美國立法打擊 AI 深度偽造，非自願 AI 生成影像被列刑事，顯示監管收緊。DeFi 持續遭駭，專家強調安全修復需求；加密ETF資金流入創新高，比特幣領漲，但散戶因波動降低與華爾街主導而逐漸退場。區塊鏈新創如柏林的 Peec 收入翻倍，印證 AI 搜尋服務在歐洲崛起。整體顯示 AI 產業化、監管制度化與 Web3 安全性仍是未來關鍵焦點。\&quot;\n\nLet's count manually. But need approximate 150. Let's try to count precisely.\n\nWe can count each Chinese character and punctuation as one. We'll count all characters, including English words (like Web3, AI, OpenAI). Each English letter counts as one? We can treat each letter as one char, but the requirement says \&quot;150字繁體中文\&quot;. Usually, they count Chinese characters only; English words may count as characters too, but for safety we should keep total characters near 150. We'll aim for 150 Chinese characters ignoring English letters maybe. We'll attempt to produce exactly about 150 characters (including punctuation). Let's count.\n\nWe'll copy the text and count.\n\n\&quot;今日 Web3 與 AI 領域顯現多層趨勢：OpenAI 在新加坡設立首個海外 AI 實驗室，逾三億星元投入數位發展，顯示亞太 AI 產業加速布局；同時美國立法打擊 AI 深度偽造，非自願 AI 生成影像被列刑事，顯示監管收緊。DeFi 持續遭駭，專家強調安全修復需求；加密ETF資金流入創新高，比特幣領漲，但散戶因波動降低與華爾街主導而逐漸退場。區塊鏈新創如柏林的 Peec 收入翻倍，印證 AI 搜尋服務在歐洲崛起。整體顯示 AI 產業化、監管制度化與 Web3 安全性仍是未來關鍵焦點。\&quot;\n\nNow count.\n\nI'll go line by line.\n\nLine 1: \&quot;今日 Web3 與 AI 領域顯現多層趨勢：\&quot;\n\nCount characters:\n1 今\n2 日\n3 space? maybe ignore. We'll count characters, spaces are characters but maybe not counted? Usually \&quot;字\&quot; count Chinese characters only, ignoring spaces and punctuation maybe. But we can count spaces as characters for approximate length. Let's ignore spaces for Chinese count. We'll count Chinese characters and English letters as separate characters. We'll compute total characters including punctuation.\n\nWe'll count sequentially, marking each.\n\nWe'll treat each English letter as one character. We'll treat spaces as one but we can disregard them because they are not counted as Chinese characters. But the instruction says \&quot;150字繁體中文\&quot; which is typical for Chinese characters count, not including spaces. So we need about 150 Chinese characters, not including spaces and punctuation maybe. But to be safe, we can produce about 150 Chinese characters ignoring spaces/punctuation. Let's count Chinese characters only.\n\nI'll count Chinese characters only. We need about 150 Chinese characters. Let's count.\n\nWe'll write the Chinese characters ignoring English words and spaces:\n\n\&quot;今日Web3與AI領域顯現多層趨勢OpenAI在新加坡設立首個海外AI實驗室逾三億星元投入數位發展顯示亞太AI產業加速布局同時美國立法打擊AI深度偽造非自願AI生成影像被列刑事顯示監管收緊DeFi持續遭駭專家強調安全修復需求加密ETF資金流入創新高比特幣領漲但散戶因波動降低與華爾街主導而逐漸退場區塊鏈新創如柏林的Peec收入翻倍印證AI搜尋服務在歐洲崛起整體顯示AI產業化監管制度化與Web3安全性仍是未來關鍵焦點\&quot;\n\nNow count Chinese characters. Let's count in groups.\n\nI'll annotate each Chinese character and number.\n\nWe can break into segments.\n\nSegment 1: \&quot;今日\&quot; 2\nSegment \&quot;Web3\&quot; is English, ignore.\nSegment \&quot;與\&quot; 1 -&gt; total 3\n\&quot;AI\&quot; English ignore.\n\&quot;領域\&quot; 2 -&gt; total 5\n\&quot;顯現\&quot; 2 -&gt; 7\n\&quot;多層\&quot; 2 -&gt; 9\n\&quot;趨勢\&quot; 2 -&gt; 11\n\&quot;OpenAI\&quot; ignore.\n\&quot;在\&quot; 1 -&gt; 12\n\&quot;新加坡\&quot; 3 -&gt; 15\n\&quot;設立\&quot; 2 -&gt; 17\n\&quot;首個\&quot; 2 -&gt; 19\n\&quot;海外\&quot; 2 -&gt; 21\n\&quot;AI\&quot; ignore.\n\&quot;實驗室\&quot; 3 -&gt; 24\n\&quot;逾\&quot; 1 -&gt; 25\n\&quot;三億\&quot; 2 -&gt; 27\n\&quot;星元\&quot; 2 -&gt; 29\n\&quot;投入\&quot; 2 -&gt; 31\n\&quot;數位\&quot; 2 -&gt; 33\n\&quot;發展\&quot; 2 -&gt; 35\n\&quot;顯示\&quot; 2 -&gt; 37\n\&quot;亞太\&quot; 2 -&gt; 39\n\&quot;AI\&quot; ignore.\n\&quot;產業\&quot; 2 -&gt; 41\n\&quot;加速\&quot; 2 -&gt; 43\n\&quot;布局\&quot; 2 -&gt; 45\n\&quot;同時\&quot; 2 -&gt; 47\n\&quot;美國\&quot; 2 -&gt; 49\n\&quot;立法\&quot; 2 -&gt; 51\n\&quot;打擊\&quot; 2 -&gt; 53\n\&quot;AI\&quot; ignore.\n\&quot;深度\&quot; 2 -&gt; 55\n\&quot;偽造\&quot; 2 -&gt; 57\n\&quot;非自願\&quot; 3? Actually \&quot;非\&quot;1 \&quot;自\&quot;2 \&quot;願\&quot;3 -&gt; 3 -&gt; 60\n\&quot;AI\&quot; ignore.\n\&quot;生成\&quot; 2 -&gt; 62\n\&quot;影像\&quot; 2 -&gt; 64\n\&quot;被列\&quot; 2 -&gt; 66\n\&quot;刑事\&quot; 2 -&gt; 68\n\&quot;顯示\&quot; 2 -&gt; 70\n\&quot;監管\&quot; 2 -&gt; 72\n\&quot;收緊\&quot; 2 -&gt; 74\n\&quot;DeFi\&quot; ignore.\n\&quot;持續\&quot; 2 -&gt; 76\n\&quot;遭\&quot; 1 -&gt; 77\n\&quot;駭\&quot; 1 -&gt; 78\n\&quot;專家\&quot; 2 -&gt; 80\n\&quot;強調\&quot; 2 -&gt; 82\n\&quot;安全\&quot; 2 -&gt; 84\n\&quot;修復\&quot; 2 -&gt; 86\n\&quot;需求\&quot; 2 -&gt; 88\n\&quot;加密ETF\&quot; ignore letters but maybe ignore.\n\&quot;資金\&quot; 2 -&gt; 90\n\&quot;流入\&quot; 2 -&gt; 92\n\&quot;創新高\&quot; 3? \&quot;創\&quot;1 \&quot;新\&quot;2 \&quot;高\&quot;3 -&gt; 3 -&gt; 95\n\&quot;比特幣\&quot; 3 -&gt; 98\n\&quot;領漲\&quot; 2 -&gt; 100\n\&quot;但\&quot; 1 -&gt; 101\n\&quot;散戶\&quot; 2 -&gt; 103\n\&quot;因\&quot; 1 -&gt; 104\n\&quot;波動\&quot; 2 -&gt; 106\n\&quot;降低\&quot; 2 -&gt; 108\n\&quot;與\&quot; 1 -&gt; 109\n\&quot;華爾街\&quot; 3? \&quot;華\&quot;1 \&quot;爾\&quot;2 \&quot;街\&quot;3 -&gt; 3 -&gt; 112\n\&quot;主導\&quot; 2 -&gt; 114\n\&quot;而\&quot; 1 -&gt; 115\n\&quot;逐漸\&quot; 2 -&gt; 117\n\&quot;退場\&quot; 2 -&gt; 119\n\&quot;區塊鏈\&quot; 3? \&quot;區\&quot;1 \&quot;塊\&quot;2 \&quot;鏈\&quot;3 -&gt; 3 -&gt; 122\n\&quot;新創\&quot; 2 -&gt; 124\n\&quot;如\&quot; 1 -&gt; 125\n\&quot;柏林的\&quot; 3? \&quot;柏\&quot;1 \&quot;林\&quot;2 \&quot;的\&quot;3 -&gt; 3 -&gt; 128\n\&quot;Peec\&quot; ignore.\n\&quot;收入\&quot; 2 -&gt; 130\n\&quot;翻倍\&quot; 2 -&gt; 132\n\&quot;印證\&quot; 2 -&gt; 134\n\&quot;AI\&quot; ignore.\n\&quot;搜尋\&quot; 2 -&gt; 136\n\&quot;服務\&quot; 2 -&gt; 138\n\&quot;在\&quot; 1 -&gt; 139\n\&quot;歐洲\&quot; 2 -&gt; 141\n\&quot;崛起\&quot; 2 -&gt; 143\n\&quot;整體\&quot; 2 -&gt; 145\n\&quot;顯示\&quot; 2 -&gt; 147\n\&quot;AI\&quot; ignore.\n\&quot;產業化\&quot; 3? \&quot;產\&quot;1 \&quot;業\&quot;2 \&quot;化\&quot;3 -&gt; 3 -&gt; 150\n\&quot;監管\&quot; 2 -&gt; 152\n\&quot;制度化\&quot; 3? \&quot;制\&quot;1 \&quot;度\&quot;2 \&quot;化\&quot;3 -&gt; 3 -&gt; 155\n\&quot;與\&quot; 1 -&gt; 156\n\&quot;Web3\&quot; ignore.\n\&quot;安全性\&quot; 3? \&quot;安\&quot;1 \&quot;全\&quot;2 \&quot;性\&quot;3 -&gt; 3 -&gt; 159\n\&quot;仍是\&quot; 2 -&gt; 161\n\&quot;未來\&quot; 2 -&gt; 163\n\&quot;關鍵\&quot; 2 -&gt; 165\n\&quot;焦點\&quot; 2 -&gt; 167\n\nSo total Chinese characters ~167. That's more than 150, but maybe acceptable? The instruction says \&quot;大約 150 字\&quot;, roughly 150. 167 is a bit higher but still maybe okay. Could reduce a bit to be closer. Let's try to trim a little. Could cut some redundant parts.\n\nBut the user likely expects around 150 characters. We can reduce the summary to around 150 characters by trimming some parts. We could produce a concise summary of about 150 Chinese characters.\n\nAlternatively, we could output as \&quot;今日總結：...\&quot; and include the summary as separate. The user didn't ask for exact count but \&quot;大約150字\&quot;. So 167 is okay if it's approximate.\n\nBut better to be safe and target around 150-160. Let's aim for 150-160 Chinese characters. Our count currently 167. Let's see which parts we can cut to reduce 17 characters.\n\nPotential cuts:\n\n- Remove \&quot;持續\&quot; maybe (2). Remove \&quot;安全\&quot; maybe (2). But need to keep sense.\n\nLet's re-evaluate the summary text and edit to reduce about 15-20 characters.\n\nRewrite:\n\n\&quot;今日 Web3 與 AI 領域呈多層趨勢：OpenAI 在新加坡設首個海外 AI 實驗室，投入逾三億星元發展數位建設；同時美國立法打擊 AI 深度偽造，監管力度收緊。DeFi 持續遭駭，專家強調安全修復需求；加密 ETF 資金流入創新高，比特幣領漲，散戶因波動降低與華爾街主導逐漸退場。區塊鏈新創如柏林的 Peec 收入翻倍，印證 AI 搜尋服務在歐洲崛起。整體顯示 AI 產業化、監管制度化與 Web3 安全性仍是未來關鍵焦點。\&quot;\n\nNow count Chinese characters again.\n\nWe'll count Chinese characters ignoring English/space.\n\nString: \&quot;今日Web3與AI領域呈多層趨勢OpenAI在新加坡設首個海外AI實驗室投入逾三億星元發展數位建設同時美國立法打擊AI深度偽造監管力度收緊DeFi持續遭駭專家強調安全修復需求加密ETF資金流入創新高比特幣領漲散戶因波動降低與華爾街主導逐漸退場區塊鏈新創如柏林的Peec收入翻倍印證AI搜尋服務在歐洲崛起整體顯示AI產業化監管制度化與Web3安全性仍是未來關鍵焦點\&quot;\n\nNow count Chinese characters.\n\nWe'll count sequentially:\n\nSegment 1: \&quot;今日\&quot; 2 -&gt; 2\n\&quot;Web3\&quot; ignore.\n\&quot;與\&quot; 1 -&gt; 3\n\&quot;AI\&quot; ignore.\n\&quot;領域\&quot; 2 -&gt; 5\n\&quot;呈\&quot; 1 -&gt; 6\n\&quot;多層\&quot; 2 -&gt; 8\n\&quot;趨勢\&quot; 2 -&gt; 10\n\&quot;OpenAI\&quot; ignore.\n\&quot;在\&quot; 1 -&gt; 11\n\&quot;新加坡\&quot; 3 -&gt; 14\n\&quot;設\&quot; 1 -&gt; 15\n\&quot;首個\&quot; 2 -&gt; 17\n\&quot;海外\&quot; 2 -&gt; 19\n\&quot;AI\&quot; ignore.\n\&quot;實驗室\&quot; 3 -&gt; 22\n\&quot;投入\&quot; 2 -&gt; 24\n\&quot;逾\&quot; 1 -&gt; 25\n\&quot;三億\&quot; 2 -&gt; 27\n\&quot;星元\&quot; 2 -&gt; 29\n\&quot;發展\&quot; 2 -&gt; 31\n\&quot;數位\&quot; 2 -&gt; 33\n\&quot;建設\&quot; 2 -&gt; 35\n\&quot;同時\&quot; 2 -&gt; 37\n\&quot;美國\&quot; 2 -&gt; 39\n\&quot;立法\&quot; 2 -&gt; 41\n\&quot;打擊\&quot; 2 -&gt; 43\n\&quot;AI\&quot; ignore.\n\&quot;深度\&quot; 2 -&gt; 45\n\&quot;偽造\&quot; 2 -&gt; 47\n\&quot;監管\&quot; 2 -&gt; 49\n\&quot;力度\&quot; 2 -&gt; 51\n\&quot;收緊\&quot; 2 -&gt; 53\n\&quot;DeFi\&quot; ignore.\n\&quot;持續\&quot; 2 -&gt; 55\n\&quot;遭\&quot; 1 -&gt; 56\n\&quot;駭\&quot; 1 -&gt; 57\n\&quot;專家\&quot; 2 -&gt; 59\n\&quot;強調\&quot; 2 -&gt; 61\n\&quot;安全\&quot; 2 -&gt; 63\n\&quot;修復\&quot; 2 -&gt; 65\n\&quot;需求\&quot; 2 -&gt; 67\n\&quot;加密ETF\&quot; ignore letters.\n\&quot;資金\&quot; 2 -&gt; 69\n\&quot;流入\&quot; 2 -&gt; 71\n\&quot;創新高\&quot; 3 -&gt; 74\n\&quot;比特幣\&quot; 3 -&gt; 77\n\&quot;領漲\&quot; 2 -&gt; 79\n\&quot;散戶\&quot; 2 -&gt; 81\n\&quot;因\&quot; 1 -&gt; 82\n\&quot;波動\&quot; 2 -&gt; 84\n\&quot;降低\&quot; 2 -&gt; 86\n\&quot;與\&quot; 1 -&gt; 87\n\&quot;華爾街\&quot; 3 -&gt; 90\n\&quot;主導\&quot; 2 -&gt; 92\n\&quot;逐漸\&quot; 2 -&gt; 94\n\&quot;退場\&quot; 2 -&gt; 96\n\&quot;區塊鏈\&quot; 3 -&gt; 99\n\&quot;新創\&quot; 2 -&gt; 101\n\&quot;如\&quot; 1 -&gt; 102\n\&quot;柏林的\&quot; 3 -&gt; 105\n\&quot;Peec\&quot; ignore.\n\&quot;收入\&quot; 2 -&gt; 107\n\&quot;翻倍\&quot; 2 -&gt; 109\n\&quot;印證\&quot; 2 -&gt; 111\n\&quot;AI\&quot; ignore.\n\&quot;搜尋\&quot; 2 -&gt; 113\n\&quot;服務\&quot; 2 -&gt; 115\n\&quot;在\&quot; 1 -&gt; 116\n\&quot;歐洲\&quot; 2 -&gt; 118\n\&quot;崛起\&quot; 2 -&gt; 120\n\&quot;整體\&quot; 2 -&gt; 122\n\&quot;顯示\&quot; 2 -&gt; 124\n\&quot;AI\&quot; ignore.\n\&quot;產業化\&quot; 3 -&gt; 127\n\&quot;監管\&quot; 2 -&gt; 129\n\&quot;制度化\&quot; 3 -&gt; 132\n\&quot;與\&quot; 1 -&gt; 133\n\&quot;Web3\&quot; ignore.\n\&quot;安全性\&quot; 3 -&gt; 136\n\&quot;仍是\&quot; 2 -&gt; 138\n\&quot;未來\&quot; 2 -&gt; 140\n\&quot;關鍵\&quot; 2 -&gt; 142\n\&quot;焦點\&quot; 2 -&gt; 144\n\nTotal Chinese characters ~144. That's roughly 150. Good. The summary is close enough.\n\nNow we need to output the briefing with the label \&quot;今日總結：\&quot; then the summary. The user wants \&quot;今日總結：&lt;150字繁體中文，總結 Web3 與 AI 趨勢&gt;\&quot; So we need to output \&quot;今日總結：\&quot; then the summary. The summary should be about 150 Chinese characters (including punctuation). Our summary appears to be 144 Chinese characters, which is fine.\n\nNow we need to output each article in the specified format.\n\nWe need to number them 1-10, each with:\n\n文章 N：\n摘要：&lt;30字繁體中文，將英文翻譯後寫出&gt;\n問句：&lt;15字繁體中文，寫出引人好奇的問句&gt;\n評分：&lt;1到10&gt;\n標籤：&lt;3-5個中英文關鍵標籤，逗號分隔&gt;\n\nMake sure to follow format exactly, each line with correct punctuation. Also ensure the article numbering matches original order.\n\nWe'll produce the content.\n\nWe have prepared the Chinese summary for each article, within 30 characters. Let's verify each summary length.\n\nWe'll need to output exactly:\n\n文章 1：\n摘要：... (30 Chinese characters)\n問句：... (15 characters)\n評分：8\n標籤：OpenAI, 新加坡, AI實驗室, IMDA, 投資\n\nNeed to ensure summary is exactly 30 Chinese characters. Let's count each carefully.\n\nWe'll recalc each summary to ensure it's within 30 characters (including punctuation maybe). We'll produce exactly 30 characters for each to be safe, but the requirement is \&quot;摘要：&lt;30字繁體中文&gt;\&quot; meaning maximum 30 characters, not necessarily exactly. So we can make 30 characters or less. We'll try to keep each at 30 for consistency.\n\nLet's recompute each article's summary length precisely.\n\nWe'll also double-check the question length (&lt;15 characters). We'll aim for 15 Chinese characters exactly.\n\nNow list each article.\n\nArticle 1:\n\nOriginal summary: \&quot;OpenAI在新加坡設首個海外AI實驗室，投入逾3億星元。\&quot; Count characters:\n\nLet's count: \&quot;O\&quot; is English; we can ignore English letters in character count. The requirement is Chinese characters count. We want to count Chinese characters: \&quot;OpenAI\&quot; is English, we ignore for Chinese count? The spec says \&quot;&lt;30字繁體中文\&quot; which likely means Chinese characters only; English words are not counted? Typically \&quot;字\&quot; refers to Chinese characters, not English. However they may count letters as characters but we can assume they want Chinese characters only. So we need 30 Chinese characters.\n\nOur summary: \&quot;OpenAI在新加坡設首個海外AI實驗室，投入逾3億星元。\&quot;\n\nLet's count Chinese characters:\n\n\&quot;OpenAI\&quot; ignore.\n\&quot;在\&quot;1\n\&quot;新加坡\&quot;3 =&gt;4\n\&quot;設\&quot;5\n\&quot;首個\&quot;2 =&gt;7\n\&quot;海外\&quot;2 =&gt;9\n\&quot;AI\&quot; ignore.\n\&quot;實驗室\&quot;3 =&gt;12\n\&quot;，\&quot; punctuation maybe not counted.\n\&quot;投入\&quot;2 =&gt;14\n\&quot;逾\&quot;1 =&gt;15\n\&quot;3\&quot; numeric maybe ignore? \&quot;3\&quot; counts as a character? Probably yes but not Chinese. We'll treat it as a character; but let's be safe. Could convert to Chinese numeral \&quot;三\&quot;. We wrote \&quot;3\&quot;. Let's change to Chinese \&quot;三\&quot;. Then \&quot;億\&quot;1 =&gt;? Let's count numeric \&quot;三\&quot; counts as Chinese char? It's a Chinese numeral, yes. We'll write \&quot;三\&quot;. So phrase&quot;,&quot;signature&quot;:&quot;3dd8e4c01b0d59704ea9d832a7fc22d9042cdf7fd0b5dea3b8bc62ae9d925d87&quot;,&quot;type&quot;:&quot;thinking&quot;}],&quot;usage&quot;:{&quot;input_tokens&quot;:756,&quot;output_tokens&quot;:8192},&quot;stop_reason&quot;:&quot;max_tokens&quot;,&quot;base_resp&quot;:{&quot;status_code&quot;:0,&quot;status_msg&quot;:&quot;&quot;}}</p>
+    <p>今日 Web3 與 AI 趨勢交錯，監管與市場波動明顯。美國 SEC 延後代幣化股票豁免，導致業界對法規清晰度的不確定性加劇；比特幣跌破 76,000 美元後，空頭重新掌握行情，卻有 HYPE 等 altcoin 創下新高的表現。Spotify 推出 AI 內容生成工具，IBM 與法拉利攜手打造 AI 驅動的粉絲體驗，同時 Kash Patel 相關服飾網站被迫下架，因其散發惡意軟體造成用戶損失。DeFi 接連橋接攻擊削弱機構信心，SpaceX IPO 預期可能將科技股與比特幣持倉格局改寫。美國政府宣布投入 2,000 億美元於量子晶片 foundry，以因應 Q‑Day 對比特幣的潛在威脅，並有 ARMA 法案提議將比特幣列為戰略儲備。</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
+    <span class="term">比特幣</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
     <span class="term">ai</span>
-    <span class="count">10 則相關</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">spacex</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">ipo</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">科技股</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">機構投資</span>
+    <span class="count">1 則相關</span>
   </li>
 </ol>
   </div>
@@ -145,129 +170,129 @@
   <div class="cards">
     
   <article class="card">
-    <div class="kicker">AI News</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://www.artificialintelligence-news.com/news/openai-singapore-ai-lab-imda-agentic-ai-framework/" target="_blank">OpenAI opens Singapore AI lab as IMDA updates AI framework</a></h3>
-    
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>SpaceX 的比特幣持倉會否成為機構投資的新焦點？</div>
+    <h3 class="title"><a href="https://cointelegraph.com/markets/space-x-ipo-bad-news-for-tech-stocks-but-what-about-bitcoin?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Space X IPO: 'Bad news' for tech stocks but what about Bitcoin?</a></h3>
+    <div class="ai-takeaway">SpaceX IPO 若成真，將把 Mag 7 變成 Mag 8，且特斯拉與 SpaceX 佔比特幣資產負債表的 25% 比重。</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">SpaceX</span><span class="term">IPO</span><span class="term">比特幣</span><span class="term">科技股</span><span class="term">機構投資</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368797/two-men-federally-charged-ai-deepfake-porn-take-down-act" target="_blank">Two Men Federally Charged Over AI Deepfake Porn Under the Take It Down Act</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368856/kash-patel-apparel-store-goes-dark-crypto-malware" target="_blank">Kash Patel-Linked Apparel Store Goes Dark After Pushing Crypto-Stealing Malware</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368687/nhl-agrees-share-data-cftc-prediction-market-integrity" target="_blank">NHL Agrees to Share Data With the CFTC for Prediction Market Integrity</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368591/why-defi-keeps-losing-millions-to-exploits" target="_blank">Why DeFi Keeps Losing Millions to Exploits</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TechCrunch</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://techcrunch.com/2026/05/23/peec-one-of-berlins-rising-startups-more-than-doubled-annualized-revenue-in-months-to-10m-sources-say/" target="_blank">Peec, one of Berlin’s rising startups, more than doubled annualized revenue in months to $10M, sources say</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TechCrunch</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/kash-patels-clothing-brand-website-shut-down-after-reports-it-was-hacked/" target="_blank">Kash Patel&amp;#8217;s clothing brand website shut down after reports it was hacked</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/etfs-flash-humidifi-tokenizes" target="_blank">ETFs flash a bid, HumidiFi tokenizes</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368746/crypto-growing-up-why-everyday-traders-moving-on" target="_blank">Crypto Is Growing Up—Why Some Everyday Traders Are Moving On</a></h3>
-    
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
+      <b>SCORE</b><span class="score">9/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://cointelegraph.com/news/blockchain-researcher-defends-ethereum-foundation-says-its-exactly-doing-its-job?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Blockchain researcher defends Ethereum Foundation, says it’s ‘exactly’ doing its job</a></h3>
-    
+    <div class="hook"><span class="q">Q</span>如果當年的 10,000 BTC 今天價值幾何？</div>
+    <h3 class="title"><a href="https://cointelegraph.com/news/bitcoin-pizza-day-those-10k-btc-worth-today?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Bitcoin 'Pizza Day' was 16 years ago, here's how much that BTC is worth today</a></h3>
+    <div class="ai-takeaway">2010 年 Laszlo Hanyecz 用 10,000 BTC 換取兩片披薩，首創比特幣商業交易，距今已 16 年。</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">比特幣披薩日</span><span class="term">Laszlo Hanyecz</span><span class="term">BTC</span><span class="term">加密貨幣歷史</span><span class="term">價值</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">9/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>量子計算的突破何時會真正挑戰比特幣的加密基礎？</div>
+    <h3 class="title"><a href="https://decrypt.co/368647/us-government-2-billion-bet-quantum-computing-bitcoin-threat-grows" target="_blank">US Government Makes $2 Billion Bet on Quantum Computing as Threat to Bitcoin Grows</a></h3>
+    <div class="ai-takeaway">美國商務部將投入 200 億美元於量子晶片 foundry 與新創公司，因 Q‑Day 可能威脅比特幣安全。</div>
+    <div class="terms">
+      <span class="term">量子計算</span><span class="term">Q‑Day</span><span class="term">比特幣安全</span><span class="term">美國政府</span><span class="term">投資</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">9/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>這樣的延遲會如何影響未來的代幣化資產市場？</div>
+    <h3 class="title"><a href="https://decrypt.co/368855/sec-delays-tokenized-stocks-innovation-exemption-amid-concerns-bloomberg" target="_blank">SEC Delays Tokenized Stocks Innovation Exemption Amid Concerns: Bloomberg</a></h3>
+    <div class="ai-takeaway">美國 SEC 預期的監管框架本可為代幣化傳統資產（如股票）的公司提供明確指引，但現已推遲。</div>
+    <div class="terms">
+      <span class="term">代幣化</span><span class="term">SEC</span><span class="term">監管</span><span class="term">區塊鏈</span><span class="term">金融創新</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">8/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>AI 驅動的粉絲互動會否成為賽車運動的新標準？</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" target="_blank">Ferrari is using IBM&amp;#8217;s AI to create F1 superfans</a></h3>
+    <div class="ai-takeaway">IBM 與法拉利合作利用 AI 重塑粉絲體驗，打造 F1 超級粉絲。</div>
+    <div class="terms">
+      <span class="term">法拉利</span><span class="term">IBM</span><span class="term">AI</span><span class="term">F1</span><span class="term">粉絲體驗</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">8/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>此法案若通過，將如何改變美元與比特幣的資產配置？</div>
+    <h3 class="title"><a href="https://decrypt.co/368662/proposed-arma-bill-aims-enshrine-strategic-bitcoin-reserve-law" target="_blank">Proposed ARMA Bill Aims to Enshrine Strategic Bitcoin Reserve Into Law</a></h3>
+    <div class="ai-takeaway">《American Reserve Modernization Act》提議財政部創建並維持比特幣準備金至少 20 年。</div>
+    <div class="terms">
+      <span class="term">ARMA Bill</span><span class="term">比特幣準備金</span><span class="term">立法</span><span class="term">美國財政部</span><span class="term">加密政策</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">8/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>比特幣的跌勢會否在短期內持續？</div>
+    <h3 class="title"><a href="https://cointelegraph.com/markets/price-predictions-522-btc-eth-bnb-xrp-sol-doge-hype-ada-zec-bch?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Price predictions 5/22: BTC, ETH, BNB, XRP, SOL, DOGE, HYPE, ADA, ZEC, BCH</a></h3>
+    <div class="ai-takeaway">比特幣跌破 76,000 美元後，空頭重新奪回市場控制權，而 HYPE 等 altcoin 創下新高。</div>
+    <div class="terms">
+      <span class="term">比特幣</span><span class="term">價格預測</span><span class="term">熊市</span><span class="term">主流幣</span><span class="term">Altcoin</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">7/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>AI 生成內容是否會稀釋平台的用戶黏性？</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/spotifys-ai-bet-more-of-everything-less-of-what-you-want/" target="_blank">Spotify&amp;#8217;s AI bet: more of everything, less of what you want</a></h3>
+    <div class="ai-takeaway">Spotify 發布多款 AI 工具，鼓勵用戶創作更多內容，但有時可能過於繁瑣。</div>
+    <div class="terms">
+      <span class="term">Spotify</span><span class="term">AI</span><span class="term">內容創作</span><span class="term">音樂平台</span><span class="term">人工智慧</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">6/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>DeFi 是否能在安全與收益之間找到平衡點？</div>
+    <h3 class="title"><a href="https://cointelegraph.com/features/defi-hacks-institutional-confidence-risks-outpace-yields?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">DeFi hacks shake institutional confidence as risks outpace yields</a></h3>
+    <div class="ai-takeaway">頻頻的橋接漏洞與縮水的收益使機構懷疑 DeFi 的風險是否仍合理。</div>
+    <div class="terms">
+      <span class="term">DeFi</span><span class="term">機構</span><span class="term">安全性</span><span class="term">收益率</span><span class="term">橋接攻擊</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">6/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>此類惡意軟體將如何影響加密社群的安全感知？</div>
+    <h3 class="title"><a href="https://decrypt.co/368856/kash-patel-apparel-store-goes-dark-crypto-malware" target="_blank">Kash Patel-Linked Apparel Store Goes Dark After Pushing Crypto-Stealing Malware</a></h3>
+    <div class="ai-takeaway">與 Kash Patel 相關的服飾商店在散發竊取加密貨幣的惡意軟體後已下線，用戶損失尚未明確。</div>
+    <div class="terms">
+      <span class="term">惡意軟體</span><span class="term">加密盜竊</span><span class="term">安全</span><span class="term">服飾</span><span class="term">Web3</span>
     </div>
     <div class="byline">
       <b>SCORE</b><span class="score">5/10</span>
