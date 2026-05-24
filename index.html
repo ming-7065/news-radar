@@ -8,66 +8,46 @@
 :root{--bg:#faf9f6;--card-bg:#fff;--text:#2d2d2d;--muted:#888;--border:#e8e5df;--accent:#d4a574;--tag-bg:#f5f0e8;--tag-text:#8b7355;--score-bg:#faf5ef;--summary-bg:#fdfaf5}
 [data-theme=dark]{--bg:#1a1a1a;--card-bg:#242424;--text:#e0ddd6;--muted:#999;--border:#333;--accent:#c9955e;--tag-bg:#2a2520;--tag-text:#c9955e;--score-bg:#252220;--summary-bg:#282420}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);font-size:18px;line-height:1.8;max-width:740px;margin:0 auto;padding:32px 20px 80px}
-header{text-align:center;padding:40px 0 32px;border-bottom:1px solid var(--border);margin-bottom:32px}
-header h1{font-size:28px;font-weight:700;letter-spacing:.04em}
-header p{color:var(--muted);font-size:15px;margin-top:6px}
-.day-meta{text-align:center;color:var(--muted);font-size:14px;margin-bottom:40px;letter-spacing:.05em}
-.summary{background:var(--summary-bg);border-left:3px solid var(--accent);padding:20px 24px;margin-bottom:40px;border-radius:0 8px 8px 0}
-.summary h2{font-size:18px;margin-bottom:10px;color:var(--accent)}
-.summary p{font-size:17px;line-height:2}
-.section-title{font-size:15px;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:40px 0 20px;text-transform:uppercase}
-.article-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:24px;margin-bottom:16px;transition:box-shadow .15s}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);font-size:20px;line-height:1.8;max-width:800px;margin:0 auto;padding:40px 24px 80px}
+header{text-align:center;padding:48px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px}
+header h1{font-size:32px;font-weight:700;letter-spacing:.04em}
+header p{color:var(--muted);font-size:16px;margin-top:8px}
+.day-meta{text-align:center;color:var(--muted);font-size:15px;margin-bottom:44px;letter-spacing:.05em}
+.summary{background:var(--summary-bg);border-left:3px solid var(--accent);padding:24px 28px;margin-bottom:44px;border-radius:0 8px 8px 0}
+.summary h2{font-size:20px;margin-bottom:12px;color:var(--accent)}
+.summary p{font-size:18px;line-height:2}
+.section-title{font-size:16px;font-weight:600;letter-spacing:.08em;color:var(--muted);margin:44px 0 24px;text-transform:uppercase}
+.article-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:28px;margin-bottom:18px;transition:box-shadow .15s}
 .article-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.article-card .hook{font-size:15px;color:var(--accent);font-weight:600;margin-bottom:8px;letter-spacing:.03em}
-.article-card h3{font-size:19px;font-weight:700;margin-bottom:8px;line-height:1.5}
+.article-card .hook{font-size:16px;color:var(--accent);font-weight:600;margin-bottom:8px;letter-spacing:.03em}
+.article-card h3{font-size:22px;font-weight:700;margin-bottom:10px;line-height:1.5}
 .article-card h3 a{color:var(--text);text-decoration:none}
 .article-card h3 a:hover{color:var(--accent)}
-.article-card .desc{font-size:16px;color:var(--muted);margin-bottom:14px;line-height:1.75}
-.article-card .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
-.article-card .score{background:var(--score-bg);color:var(--accent);padding:2px 10px;border-radius:12px;font-weight:600;font-size:13px}
-.article-card .tag{background:var(--tag-bg);color:var(--tag-text);padding:2px 10px;border-radius:4px;font-size:12px}
-.article-card .source{color:var(--muted);font-size:12px}
-.hot-topics{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
-.hot-topic{background:var(--tag-bg);color:var(--accent);padding:6px 16px;border-radius:20px;font-size:14px;font-weight:500}
+.article-card .desc{font-size:17px;color:var(--muted);margin-bottom:16px;line-height:1.75}
+.article-card .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.article-card .score{background:var(--score-bg);color:var(--accent);padding:3px 12px;border-radius:12px;font-weight:600;font-size:15px}
+.article-card .tag{background:var(--tag-bg);color:var(--tag-text);padding:3px 12px;border-radius:4px;font-size:14px}
+.article-card .source{color:var(--muted);font-size:13px}
+.hot-topics{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:44px}
+.hot-topic{background:var(--tag-bg);color:var(--accent);padding:8px 18px;border-radius:20px;font-size:15px;font-weight:500}
 .archive{margin-top:48px;padding-top:24px;border-top:1px solid var(--border)}
-.archive h3{font-size:16px;color:var(--muted);margin-bottom:12px}
-.archive a{color:var(--accent);text-decoration:none;font-size:15px;display:inline-block;margin-right:16px;margin-bottom:6px}
+.archive h3{font-size:18px;color:var(--muted);margin-bottom:12px}
+.archive a{color:var(--accent);text-decoration:none;font-size:16px;display:inline-block;margin-right:16px;margin-bottom:6px}
 .archive a:hover{text-decoration:underline}
-footer{text-align:center;color:var(--muted);font-size:13px;margin-top:64px;padding-top:24px;border-top:1px solid var(--border)}
+footer{text-align:center;color:var(--muted);font-size:14px;margin-top:64px;padding-top:24px;border-top:1px solid var(--border)}
 .theme-toggle{position:fixed;top:16px;right:20px;background:none;border:1px solid var(--border);border-radius:20px;padding:6px 14px;cursor:pointer;font-size:14px;color:var(--text)}
-@media(max-width:600px){body{padding:16px 14px 60px;font-size:16px}header h1{font-size:22px}.article-card{padding:18px}.article-card h3{font-size:17px}}
+@media(max-width:600px){body{padding:20px 16px 60px;font-size:18px}header h1{font-size:26px}.article-card{padding:20px}.article-card h3{font-size:19px}}
 </style>
 </head>
 <body>
 <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
 <header><h1>News Radar</h1><p>每天早 8 點，5 分鐘看懂 Web3 + AI</p></header>
-<div class="day-meta">2026年5月24日 星期日 · 共 8 篇</div>
+<div class="day-meta">2026年5月24日 星期日 · 共 8 篇 · AI 自動生成</div>
 <div class="summary"><h2>今日總結</h2><p>今天 AI 與 Web3 圈聚焦在技術落地與新標準制定。從瀏覽器內建 AI 除錯到去中心化支付的普及，技術正在走進日常工具鏈。</p></div>
 <div class="section-title">🔥 今日熱搜</div>
-<div class="hot-topics"><span class="hot-topic">ai</span><span class="hot-topic">ai人工</span><span class="hot-topic">nuclear startup</span><span class="hot-topic">ipo</span><span class="hot-topic">deep fission</span><span class="hot-topic">核能新創</span></div>
+<div class="hot-topics"><span class="hot-topic">ai</span><span class="hot-topic">- 3-5個中英文混搭標籤</span></div>
 <div class="section-title">📰 新聞</div>
 
-<div class="article-card">
-  <div class="hook">法拉利如何用AI打造超級粉絲？</div>
-  <h3><a href="https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" target="_blank">IBM與法拉利合作運用AI技術，重新定義F1方程式賽車粉絲體驗。</a></h3>
-  <div class="desc">IBM與法拉利合作運用AI技術，重新定義F1方程式賽車粉絲體驗。</div>
-  <div class="meta">
-    <span class="score">7</span>
-    <span class="tag">AI人工</span>
-    <span class="source">TechCrunch</span>
-  </div>
-</div>
-<div class="article-card">
-  <div class="hook">一家核能新創能說服華爾街嗎？</div>
-  <h3><a href="https://techcrunch.com/2026/05/23/nuclear-startup-deep-fission-says-its-going-public-again-and-i-have-questions/" target="_blank">核能新創Deep Fission再次申請IPO，集資1.57億美元，但投資者對其核能故事信心存疑。</a></h3>
-  <div class="desc">核能新創Deep Fission再次申請IPO，集資1.57億美元，但投資者對其核能故事信心存疑。</div>
-  <div class="meta">
-    <span class="score">7</span>
-    <span class="tag">Nuclear startup</span> <span class="tag">IPO</span> <span class="tag">Deep Fission</span> <span class="tag">核能新創</span> <span class="tag">清潔能源</span>
-    <span class="source">TechCrunch</span>
-  </div>
-</div>
 <div class="article-card">
   <div class="hook">最新消息</div>
   <h3><a href="https://techcrunch.com/2026/05/23/solarsquare-in-talks-to-raise-up-to-60m-as-indias-rooftop-solar-market-draws-major-vc-interest/" target="_blank">SolarSquare in talks to raise </a></h3>
@@ -90,6 +70,26 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:64px;paddi
 </div>
 <div class="article-card">
   <div class="hook">最新消息</div>
+  <h3><a href="https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" target="_blank">Ferrari is using IBM’s AI to c</a></h3>
+  <div class="desc">Ferrari is using IBM’s AI to c</div>
+  <div class="meta">
+    <span class="score">5</span>
+    <span class="tag">AI</span>
+    <span class="source">TechCrunch</span>
+  </div>
+</div>
+<div class="article-card">
+  <div class="hook">最新消息</div>
+  <h3><a href="https://techcrunch.com/2026/05/23/nuclear-startup-deep-fission-says-its-going-public-again-and-i-have-questions/" target="_blank">核能新創Deep Fission再次尋求上市，預計籌資1.57億美元，投資人態度存疑。</a></h3>
+  <div class="desc">核能新創Deep Fission再次尋求上市，預計籌資1.57億美元，投資人態度存疑。</div>
+  <div class="meta">
+    <span class="score">5</span>
+    <span class="tag">AI</span>
+    <span class="source">TechCrunch</span>
+  </div>
+</div>
+<div class="article-card">
+  <div class="hook">最新消息</div>
   <h3><a href="https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/" target="_blank">Elon Musk has given up on sola</a></h3>
   <div class="desc">Elon Musk has given up on sola</div>
   <div class="meta">
@@ -99,32 +99,32 @@ footer{text-align:center;color:var(--muted);font-size:13px;margin-top:64px;paddi
   </div>
 </div>
 <div class="article-card">
-  <div class="hook">- An intriguing question opening within 15 characters</div>
-  <h3><a href="https://techcrunch.com/2026/05/23/peec-one-of-berlins-rising-startups-more-than-doubled-annualized-revenue-in-months-to-10m-sources-say/" target="_blank">- A one-sentence summary within 30 characters</a></h3>
-  <div class="desc">- A one-sentence summary within 30 characters</div>
+  <div class="hook">最新消息</div>
+  <h3><a href="https://techcrunch.com/2026/05/23/peec-one-of-berlins-rising-startups-more-than-doubled-annualized-revenue-in-months-to-10m-sources-say/" target="_blank">Peec, one of Berlin’s rising s</a></h3>
+  <div class="desc">Peec, one of Berlin’s rising s</div>
   <div class="meta">
     <span class="score">5</span>
-    <span class="tag">- 3-5 mixed Chinese-English tags separated by commas</span>
-    <span class="source">TechCrunch</span>
-  </div>
-</div>
-<div class="article-card">
-  <div class="hook">&quot;:&quot;AI能讓死人「開口說話」嗎？&quot;,&quot;【評分】&quot;:&quot;7&quot;,&quot;【標籤】&quot;:&quot;AI語音重建、隱私爭議、NTSB、數位復活、倫理議題&quot;}</div>
-  <h3><a href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" target="_blank">&quot;:&quot;科技公司利用AI技術從歷史錄音頻譜圖重建已故飛行員聲音，引發隱私與倫理爭議。&quot;,&quot;【問句破題】&quot;:&quot;AI能讓死人「開口說話」嗎？&quot;,&quot;【評分】&quot;:&quot;7&quot;,&quot;【標籤】&quot;:&quot;AI語音重建、隱私爭議、NTSB、數位復活、倫理議題&quot;}</a></h3>
-  <div class="desc">&quot;:&quot;科技公司利用AI技術從歷史錄音頻譜圖重建已故飛行員聲音，引發隱私與倫理爭議。&quot;,&quot;【問句破題】&quot;:&quot;AI能讓死人「開口說話」嗎？&quot;,&quot;【評分】&quot;:&quot;7&quot;,&quot;【標籤】&quot;:&quot;AI語音重建、隱私爭議、NTSB、數位復活、倫理議題&quot;}</div>
-  <div class="meta">
-    <span class="score">5</span>
-    <span class="tag">&quot;:&quot;AI語音重建、隱私爭議、NTSB、數位復活、倫理議題&quot;}</span>
+    <span class="tag">AI</span>
     <span class="source">TechCrunch</span>
   </div>
 </div>
 <div class="article-card">
   <div class="hook">最新消息</div>
-  <h3><a href="https://techcrunch.com/2026/05/22/spacex-launches-starship-v3-for-the-first-time-but-loses-booster-on-return/" target="_blank">SpaceX launches Starship V3 fo</a></h3>
-  <div class="desc">SpaceX launches Starship V3 fo</div>
+  <h3><a href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" target="_blank">AI is being used to resurrect </a></h3>
+  <div class="desc">AI is being used to resurrect </div>
   <div class="meta">
     <span class="score">5</span>
     <span class="tag">AI</span>
+    <span class="source">TechCrunch</span>
+  </div>
+</div>
+<div class="article-card">
+  <div class="hook">- 15字內的問句</div>
+  <h3><a href="https://techcrunch.com/2026/05/22/spacex-launches-starship-v3-for-the-first-time-but-loses-booster-on-return/" target="_blank">- 30字內，一句話說明文章內容</a></h3>
+  <div class="desc">- 30字內，一句話說明文章內容</div>
+  <div class="meta">
+    <span class="score">5</span>
+    <span class="tag">- 3-5個中英文混搭標籤</span>
     <span class="source">TechCrunch</span>
   </div>
 </div>
