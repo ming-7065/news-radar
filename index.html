@@ -47,8 +47,8 @@
   
   .masthead { text-align: center; padding-bottom: 22px; border-bottom: 3px double var(--rule); position: relative; }
   .masthead .dateline {
-    display: flex; justify-content: space-between; align-items: center;
-    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px;
+    display: flex; justify-content: center; align-items: center; gap: 12px;
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px;
   }
   .masthead h1 { font-family: var(--serif); font-weight: 900; font-size: 56px; line-height: 1.15; letter-spacing: -0.01em; margin: 4px 0 8px; }
   .masthead .tagline { font-family: var(--sans); font-weight: 600; font-size: 16px; color: var(--fg-mute); margin: 0 0 6px; }
@@ -92,7 +92,25 @@
   .card .term::before { content: "#"; color: var(--accent); }
   
   footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
-  @media(max-width:600px){ .masthead h1{font-size:36px} .briefing{font-size:16px} .card .title{font-size:20px} }
+  @media(max-width:600px){
+  body{font-size:18px}
+  .masthead h1{font-size:36px}
+  .masthead .tagline{font-size:18px}
+  .masthead .meta-line{font-size:14px}
+  .masthead .author-strip{font-size:14px}
+  .dateline{font-size:14px}
+  .section-rule{font-size:14px}
+  .briefing{font-size:18px}
+  .briefing p:first-child::first-letter{font-size:48px}
+  .trending li{font-size:18px}
+  .trending li .count{font-size:14px}
+  .card .hook{font-size:16px}
+  .card .title{font-size:22px}
+  .card .summary{font-size:17px}
+  .card .byline{font-size:14px}
+  .card .term{font-size:14px}
+  footer{font-size:14px}
+}
 </style>
 </head>
 <body>
@@ -108,15 +126,40 @@
 
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>今日市場動態請參考下方詳情。</p>
+    <p>比特幣小幅回升 1.6%，但 L2 和 RWA 持續承壓。加密圈傳統遊戲開始退場，但 DePIN 與 GameFi 意外反彈。Google 展示 AI 眼鏡原型，AI 與 XR 融合加速。委內瑞拉因制裁轉向穩定幣，法國則成為加密暴力犯罪重災區。印度太陽能新創 SolarSquare 估值上看 5 億美元，顯示 Web3 與實體經濟連結持續深化。</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
-    <span class="term">ai</span>
-    <span class="count">10 則相關</span>
+    <span class="term">btc</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">google</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">ai 眼鏡</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">android xr</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">gemini</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">xr 技術</span>
+    <span class="count">1 則相關</span>
   </li>
 </ol>
   </div>
@@ -125,129 +168,129 @@
   <div class="cards">
     
   <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368643/crypto-exchange-kraken-secures-vara-license-launch-dubai" target="_blank">Crypto Exchange Kraken Secures</a></h3>
-    <div class="summary">Dubai&amp;#39;s Virtual Asset Regulatory Authority granted Kraken’s parent company preliminary broker-dealer and investment management authorization....</div>
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>AI 眼鏡會成為日常穿戴標配嗎？</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/" target="_blank">我們試用 Google 的 AI 眼鏡，它們幾乎完美了</a></h3>
+    <div class="summary">Google demoed prototype Android XR glasses that overlay Gemini-powered translation, navigation, and other information directly into your field of view....</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">Google</span><span class="term">AI 眼鏡</span><span class="term">Android XR</span><span class="term">Gemini</span><span class="term">XR 技術</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
+      <b>SCORE</b><span class="score">9/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://cointelegraph.com/markets/near-protocol-leads-ai-token-rally-with-a-50-pump-is-5-near-price-next?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">NEAR protocol leads AI token r</a></h3>
-    <div class="summary">NEAR price surges 50% in a week as AI token momentum, Nvidia optimism and network upgrades fuel bullish sentiment....</div>
+    <div class="hook"><span class="q">Q</span>比特幣何時才能止跌回升？</div>
+    <h3 class="title"><a href="https://cointelegraph.com/markets/why-is-bitcoin-falling-despite-pro-crypto-kevin-warsh-becoming-fed-chair?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">比特幣為何在全球市場中持續下滑</a></h3>
+    <div class="summary">Rising short-term bond yields and Warsh's hawkish comments in the past are reviving fears of a December rate hike, which could slam the brakes on Bitcoin's recovery....</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">Bitcoin</span><span class="term">Fed 主席</span><span class="term">Kevin Warsh</span><span class="term">市場趨勢</span><span class="term">升息風險</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
+      <b>SCORE</b><span class="score">8/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368912/bitcoin-drops-75k-crypto-liquidations-near-1-billion" target="_blank">Bitcoin Dives Below $75K for F</a></h3>
-    <div class="summary">Bitcoin touched its lowest price in a month overnight following an awful week for ETFs, which shed over $1.25 billion this week....</div>
+    <div class="hook"><span class="q">Q</span>加密網紅遊戲真的曇花一現？</div>
+    <h3 class="title"><a href="https://decrypt.co/368640/ethereum-crypto-influencer-game-fantasy-top-shutting-down" target="_blank">以太坊加密網紅遊戲「Fantasy Top」宣布關閉</a></h3>
+    <div class="summary">Fantasy Top, a game that reimagines fantasy sports through the lens of Crypto Twitter, will close down two years after its hot launch....</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">Ethereum</span><span class="term">Fantasy Top</span><span class="term">Web3 遊戲</span><span class="term">加密 Twitter</span><span class="term">NFT</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TheVerge</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard" target="_blank">Google&amp;#8217;s AI search is so</a></h3>
-    <div class="summary">Google's AI Overviews are running into an interesting problem right now. Earlier on Friday, if you searched for the term &quot;disregard,&quot; the AI Overview section would include a response like what you'd see from a more traditional AI chatbot instead of the typical AI summary, as spotted on X. As you can...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
+      <b>SCORE</b><span class="score">7/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://cointelegraph.com/news/us-house-probe-kalshi-polymarket-insider-trading?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">US House lawmakers launch prob</a></h3>
-    <div class="summary">Representative James Comer asked CEOs of two major prediction market companies for information on their responses to insider trading after “suspiciously timed trades” related to US military actions against Iran....</div>
+    <div class="hook"><span class="q">Q</span>法國為何成為加密犯罪重災區？</div>
+    <h3 class="title"><a href="https://cointelegraph.com/news/70-crypto-wrench-attacks-happen-france?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">七成加密暴力攻擊發生在法國：報告出爐</a></h3>
+    <div class="summary">Centralized data collection is a honeypot for hackers and organized criminals looking to target crypto holders and their families, according to Bitcoiners....</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">法國</span><span class="term">加密安全</span><span class="term">駭客攻擊</span><span class="term">中心化風險</span><span class="term">BTC</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://cointelegraph.com/news/binance-denies-new-wsj-report-alleging-850m-in-iran-linked-transactions?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Binance denies new WSJ report </a></h3>
-    <div class="summary">Binance CEO Richard Teng denied a new WSJ report alleging $850 million in Iran-linked transactions flowed through the exchange to the IRGC....</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368591/why-defi-keeps-losing-millions-to-exploits" target="_blank">Why DeFi Keeps Losing Millions</a></h3>
-    <div class="summary">DeFi exploits keep piling up in 2026. Here’s what experts say is behind crypto’s security crisis—and how it can be fixed....</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://cointelegraph.com/markets/xrp-adds-4300-new-wallets-in-24-hours-but-why-is-price-stuck?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">XRP adds 4,300 new wallets in </a></h3>
-    <div class="summary">XRP Ledger activity surges with 4,300 new wallets created in 24 hours, but strong resistance keeps XRP price capped....</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://decrypt.co/368752/trump-media-moves-over-200-million-bitcoin-losses-arkham" target="_blank">Trump Media Moves Over $200 Mi</a></h3>
-    <div class="summary">It&amp;#39;s unknown whether Trump Media &amp;amp;#038; Technology Group is selling its Bitcoin, though it has amassed sizable losses on its holdings....</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
+      <b>SCORE</b><span class="score">7/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/cantons-rwa-rails" target="_blank">Canton’s $6T RWA rails and Lig</a></h3>
-    <div class="summary">DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory...</div>
+    <div class="hook"><span class="q">Q</span>穩定幣如何解救受制裁國家？</div>
+    <h3 class="title"><a href="https://blockworks.com/news/venezuelas-sanctions-stablecoins" target="_blank">委內瑞拉的制裁是穩定幣的最佳證明概念</a></h3>
+    <div class="summary">Banned from the dollar system, the country uses digital dollars instead...</div>
     <div class="terms">
-      <span class="term">AI</span>
+      <span class="term">委內瑞拉</span><span class="term">穩定幣</span><span class="term">美元制裁</span><span class="term">Crypto</span><span class="term">USDC</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">7/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>印度太陽能為何吸引創投巨額注資？</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/23/solarsquare-in-talks-to-raise-up-to-60m-as-indias-rooftop-solar-market-draws-major-vc-interest/" target="_blank">SolarSquare 協商籌措 6 千萬美元，印度屋頂太陽能市場吸引 VC 興趣</a></h3>
+    <div class="summary">SolarSquare could be valued at up to $500 million in the financing expected to close next month....</div>
+    <div class="terms">
+      <span class="term">SolarSquare</span><span class="term">印度</span><span class="term">太陽能</span><span class="term">屋頂發電</span><span class="term">創業投資</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">7/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Blockworks</div>
+    <div class="hook"><span class="q">Q</span>DePIN 會是新一輪牛市領頭羊嗎？</div>
+    <h3 class="title"><a href="https://blockworks.com/news/depin-gaming-surprising-rebound" target="_blank">DePIN 與加密遊戲帶動出人意料的年末反彈</a></h3>
+    <div class="summary">BTC finished the week up 1.6%, while L2s, RWAs and the treasury trade continued to grind lower...</div>
+    <div class="terms">
+      <span class="term">DePIN</span><span class="term">加密遊戲</span><span class="term">年末反彈</span><span class="term">BTC</span><span class="term">L2</span><span class="term">RWA</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">7/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TheVerge</div>
+    <div class="hook"><span class="q">Q</span>東京還有哪些隱藏的咖啡秘境？</div>
+    <h3 class="title"><a href="https://www.theverge.com/entertainment/936278/coffee-talk-tokyo-review-switch-xbox-ps5-steam" target="_blank">在東京我最愛的虛擬咖啡店閒逛</a></h3>
+    <div class="summary">Finding a cafe that fits you can be a revelatory experience. For me at least, there are few places outside of my house that I can truly feel comfortable in. I'm lucky enough to have two options in walking distance: a coffee shop that's bright, airy, and full of art, and another that doubles as [&amp;#82...</div>
+    <div class="terms">
+      <span class="term">虛擬咖啡店</span><span class="term">東京</span><span class="term">XR 科技</span><span class="term">元宇宙體驗</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">6/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Blockworks</div>
+    <div class="hook"><span class="q">Q</span>MetaDAO 能否藉此東風翻身？</div>
+    <h3 class="title"><a href="https://blockworks.com/news/rangers-ico-metadao" target="_blank">Ranger 的 ICO 今日啟動，MetaDAO 瞄準重置</a></h3>
+    <div class="summary">Ranger’s Jan 6–10 sale could re-accelerate MetaDAO volumes and revenue...</div>
+    <div class="terms">
+      <span class="term">Ranger</span><span class="term">ICO</span><span class="term">MetaDAO</span><span class="term">DeFi</span><span class="term">代幣銷售</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">6/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>政治人物網站成為駭客新目標？</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/kash-patels-clothing-brand-website-shut-down-after-reports-it-was-hacked/" target="_blank">Kash Patel 的服飾品牌網站因報導稱遭駭而關閉</a></h3>
+    <div class="summary">According to users on X, the website was hijacked by hackers in an attempt to trick visitors into installing malware....</div>
+    <div class="terms">
+      <span class="term">Kash Patel</span><span class="term">服飾品牌</span><span class="term">網站被駭</span><span class="term">惡意軟體</span><span class="term">資安</span>
     </div>
     <div class="byline">
       <b>SCORE</b><span class="score">5/10</span>
