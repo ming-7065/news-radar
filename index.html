@@ -128,408 +128,7 @@
 
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>Then for each article (110), output fields: 摘要 (30 Chinese characters, explanation of article's key point), 問句 (15 Chinese characters, curiosityevoking question), 評分 (1 to 10), 標籤 (35 Chinese/English tags separated by commas). The tags should be either Chinese or English proper nouns. It's okay to include English if it's a proper noun. For others, we should translate to Chinese.
-
-The user gave article titles and summaries in English; we must translate them.
-
-We also must adhere to: &quot;禁止輸出任何英文句子或單字&quot;. That means we cannot output any English sentences or words. That includes output fields must be entirely Chinese characters, except proper nouns like &quot;OpenAI&quot;, &quot;Solana&quot; etc. But the article titles themselves are English; we need to translate them to Chinese as well? The rule says &quot;所有輸出欄位（標題、摘要、問句、標籤、今日總結）必須是繁體中文&quot;. That implies the title is part of output, so we need to translate the title to Traditional Chinese. Similarly for tags; we can use Chinese tags, but English proper nouns can be kept (like &quot;ETH&quot;, &quot;BTC&quot; maybe we can keep those as proper nouns). &quot;ETH derivatives reset&quot; could become &quot;以太坊衍生品重置&quot;. &quot;Deloitte: Scale &amp;8216;autonomous intelligence&amp;8217; for real growth&quot; &gt; &quot;德勤：規模化「自主智慧」以實現真正成長&quot;. The title includes a colon, we can use Chinese colon &quot;：&quot;. The user wants &quot;文章 N：&quot; and then fields. So we must output &quot;文章 1：&quot; with Chinese colon after number, then fields.
-
-Also &quot;今日總結：&quot; before the briefing. The user wants &quot;今日總結：&lt;150字左右的趨勢總結&gt;&quot; and then &quot;文章 N：&quot; with fields.
-
-We must not output any English sentences. That includes any stray English characters or words. We must be careful to use Chinese punctuation and no English.
-
-Check that we are not inadvertently leaving English text like &quot;ETH&quot;, &quot;BTC&quot;. The user said &quot;英文專有名詞可保留（如 OpenAI、Solana），其餘一律翻譯&quot;. So &quot;ETH&quot;, &quot;BTC&quot; are English abbreviations but could be considered proper nouns; but they are not listed as examples. We could keep them as is (ETH, BTC) but also Chinese translation could be &quot;以太坊&quot; for ETH, &quot;比特幣&quot; for BTC. Better to translate them to Chinese for consistency. However, tags may contain &quot;ETH&quot;, &quot;DeFi&quot; etc. Possibly they can be English terms but they are not proper nouns per se. The user says &quot;英文專有名詞可保留（如 OpenAI、Solana）&quot;. If &quot;ETH&quot; is a proper noun (Ethereum), we can keep &quot;ETH&quot;. However, maybe it's safer to translate to Chinese, e.g., &quot;以太坊&quot;. The rule doesn't forbid we can't use &quot;ETH&quot; if it's not a proper noun. But it's a wellknown abbreviation. However, we can translate &quot;ETH derivatives&quot; to &quot;以太坊衍生品&quot;, &quot;BTC&quot; to &quot;比特幣&quot;. That way we avoid English words.
-
-Tags: The user says &quot;35個中英文關鍵標籤，逗號分隔&quot;. So we can have tags like &quot;以太坊, 衍生品, 槓桿, 零售&quot;. However need to balance English proper nouns if we want. Might be safe to use Chinese tags primarily, maybe add &quot;DeFi&quot;. But &quot;DeFi&quot; is English abbreviation; it's a proper noun? Might be considered. Possibly we could include both Chinese and English tags: e.g., &quot;以太坊, DeFi, 零售&quot;. That would satisfy the requirement that tags include some English. But the rule &quot;禁止輸出任何英文句子或單字&quot; only forbids English sentences or words, but tags might be short nouns, but if they are not part of sentences, maybe they are allowed? It's ambiguous. The rule &quot;英文專有名詞可保留（如 OpenAI、Solana）&quot; suggests we can keep some English nouns. &quot;DeFi&quot; might be considered a proper noun (Decentralized Finance). So we could keep &quot;DeFi&quot;. We need to ensure we don't have English words that are not proper nouns.
-
-We need to make sure the summary (摘要) is 30 Chinese characters, question is 15 Chinese characters.
-
-Let's do step by step.
-
-First, generate &quot;今日總結&quot; about ~150 Chinese characters. Should summarize Web3 and AI trends. We need to include mention of Ethereum's Fusaka upgrade, gold rally, crypto market structure, AI scaling, prediction markets, decentralized perps, etc. 150 characters is about ~7580 Chinese characters? Actually Chinese characters count as one per char. 150 characters is about 150 Chinese characters, which is fairly long. Let's try to produce a roughly 150 character summary. We'll count characters manually.
-
-Draft: &quot;今日以太坊完成Fusaka升級，強化blob費用市場並重啟通縮潛力；黃金創下1979年以來最佳年度表現，DeFi代幣則普遍低迷。加密領域出現資金過剩與併購重整現象，預測市場如Robinhood與Kalshi正加劇競爭。AI方面，企業從生成式應用邁向自主智慧，以追求實質營收成長。整體市場朝向更高效、去中心化的架構與更嚴謹的風險管理方向演變。&quot;
-
-Now count characters: Let's count manually:
-
-&quot;今日以太坊完成Fusaka升級，強化blob費用市場並重啟通縮潛力；黃金創下1979年以來最佳年度表現，DeFi代幣則普遍低迷。加密領域出現資金過剩與併購重整現象，預測市場如Robinhood與Kalshi正加劇競爭。AI方面，企業從生成式應用邁向自主智慧，以追求實質營收成長。整體市場朝向更高效、去中心化的架構與更嚴謹的風險管理方向演變。&quot;
-
-Let's count:
-
-1 今
-2 日
-3 以
-4 太
-5 坊
-6 完
-7 成
-8 F
-9 u
-10 s
-11 a
-12 k
-13 a
-14 升
-15 級
-16 ，
-17 強
-18 化
-19 b
-20 l
-21 o
-22 b
-23 費
-24 用
-25 市
-26 場
-27 並
-28 重
-29 啟
-30 通
-31 縮
-32 潛
-33 力
-34 ；
-35 黃
-36 金
-37 創
-38 下
-39 1
-40 9
-41 7
-42 9
-43 年
-44 以
-45 來
-46 最
-47 佳
-48 年
-49 度
-50 表
-51 現
-52 ，
-53 D
-54 e
-55 F
-56 i
-57 代
-58 币
-Wait &quot;代币&quot; is 2 characters: 代 (57) 币 (58). Actually we counted &quot;代&quot; as 57, &quot;币&quot; as 58. Continue.
-
-59 則
-60 普
-61 遍
-62 低
-63 迷
-64 。
-65 加
-66 密
-67 領
-68 域
-69 出
-70 現
-71 資
-72 金
-73 過
-74 剩
-75 與
-76 併
-77 購
-78 重
-79 整
-80 現
-81 象
-82 ，
-83 預
-84 測
-85 市
-86 場
-87 如
-88 R
-89 o
-90 b
-91 i
-92 n
-93 h
-94 o
-95 o
-96 d
-97 與
-98 K
-99 a
-100 l
-101 s
-102 h
-103 i
-104 正
-105 加
-106 劇
-107 競
-108 爭
-109 。
-110 A
-111 I
-112 方
-113 面
-114 ，
-115 企
-116 業
-117 從
-118 生
-119 成
-120 式
-121 應
-122 用
-123 邁
-124 向
-125 自
-126 主
-127 智
-128 慧
-129 ，
-130 以
-131 追
-132 求
-133 實
-134 質
-135 營
-136 收
-137 成
-138 長
-139 。
-140 整
-141 體
-142 市
-143 場
-144 朝
-145 向
-146 更
-147 高
-148 效
-149 、 (this is punctuation, counts? Usually punctuation counts as characters? Probably yes. But let's consider it's a character.)
-150 去
-151 中
-152 心
-153 化
-154 的
-155 架
-156 構
-157 與
-158 更
-159 嚴
-160 謹
-161 的
-162 風
-163 險
-164 管
-165 理
-166 方
-167 向
-168 演
-169 變
-170 。
-
-So total ~170 characters, exceeds 150. We need around 150 characters. Maybe we can trim some parts. Let's aim for ~150 characters.
-
-We need to capture main trends: Ethereum upgrade, gold vs DeFi, prediction markets, AI scaling, market needing restructure.
-
-We can cut some punctuation, some repeats.
-
-Better to write about 150 Chinese characters exactly. Let's count precisely.
-
-We'll rewrite the briefing:
-
-&quot;今日以太坊完成Fusaka升級，強化blob費用市場並重啟通縮潛力；黃金創1979年來最佳表現，DeFi代幣普遍低迷。加密領域因資金過剩正進行結構性重整，預測市場如Robinhood與Kalshi加劇競爭。AI方面，企業從生成式應用邁向自主智慧，以追求實質營收成長。整體市場朝向更高效、去中心化架構與嚴謹風險管理方向演變。&quot;
-
-Now count.
-
-1 今
-2 日
-3 以
-4 太
-5 坊
-6 完
-7 成
-8 F
-9 u
-10 s
-11 a
-12 k
-13 a
-14 升
-15 級
-16 ，
-17 強
-18 化
-19 b
-20 l
-21 o
-22 b
-23 費
-24 用
-25 市
-26 場
-27 並
-28 重
-29 啟
-30 通
-31 縮
-32 潛
-33 力
-34 ；
-35 黃
-36 金
-37 創
-38 1
-39 9
-40 7
-41 9
-42 年
-43 來
-44 最
-45 佳
-46 表
-47 現
-48 ，
-49 D
-50 e
-51 F
-52 i
-53 代
-54 币
-Wait we need to count Chinese char: 代 (53) 币 (54). Continue.
-
-55 普
-56 遍
-57 低
-58 迷
-59 。
-60 加
-61 密
-62 領
-63 域
-64 因
-65 資
-66 金
-67 過
-68 剩
-69 正
-70 進
-71 行
-72 結
-73 構
-74 性
-75 重
-76 整
-77 ，
-78 預
-79 測
-80 市
-81 場
-82 如
-83 R
-84 o
-85 b
-86 i
-87 n
-88 h
-89 o
-90 o
-91 d
-92 與
-93 K
-94 a
-95 l
-96 s
-97 h
-98 i
-99 加
-100 劇
-101 競
-102 爭
-103 。
-104 A
-105 I
-106 方
-107 面
-108 ，
-109 企
-110 業
-111 從
-112 生
-113 成
-114 式
-115 應
-116 用
-117 邁
-118 向
-119 自
-120 主
-121 智
-122 慧
-123 ，
-124 以
-125 追
-126 求
-127 實
-128 質
-129 營
-130 收
-131 成
-132 長
-133 。
-134 整
-135 體
-136 市
-137 場
-138 朝
-139 向
-140 更
-141 高
-142 效
-143 、 (punctuation)
-144 去
-145 中
-146 心
-147 化
-148 架
-149 構
-150 與
-151 嚴
-152 謹
-153 風
-154 險
-155 管
-156 理
-157 方
-158 向
-159 演
-160 變
-161 。
-Total ~161 characters. Slightly over 150, but maybe okay as approximate; they said &quot;大約 150字左右&quot;. 161 is okay.
-
-We need to doublecheck not having any English words except proper nouns. In the briefing we have &quot;Fusaka&quot; is a proper noun for the upgrade, &quot;DeFi&quot; is a proper noun, &quot;Robinhood&quot;, &quot;Kalshi&quot;, &quot;AI&quot;. Those are English proper nouns, allowed. There's &quot;blob&quot; maybe not a proper noun. &quot;blob&quot; is a term; it's not a proper noun but is a generic term in Ethereum's EIP4844 context. Could be considered technical term, perhaps acceptable. However the rule says &quot;英文專有名詞可保留（如 OpenAI、Solana），其餘一律翻譯&quot;. &quot;Blob&quot; is not a proper noun; it's a common term. So we might need to translate &quot;blob&quot; to Chinese &quot;blob資料&quot;? But &quot;blob&quot; is part of the term &quot;blob費用&quot; used in Ethereum's data blobs; &quot;blob&quot; is a proper noun in this context? It may be considered a specific term, but not a proper noun like a company name. Might be okay to keep &quot;blob&quot;. The rule says &quot;英文專有名詞可保留&quot;. &quot;blob&quot; is not proper noun; maybe we should translate &quot;blob&quot; to &quot;blob資料&quot; or &quot;blob費用&quot;? Actually &quot;blob費用&quot; is a Chinese phrase; we can keep &quot;blob費用&quot;. If we want to be safe, we can rename &quot;blob&quot; to &quot;blob資料&quot; which includes Chinese word for data, but still includes &quot;blob&quot;. The rule doesn't forbid using English words if they are part of a term? It says &quot;英文專有名詞可保留（如 OpenAI、Solana），其餘一律翻譯&quot;. So if not a proper noun, we must translate. But &quot;blob&quot; is a common English word used as a technical term. We could translate as &quot;Blob資料&quot;. However the user didn't specify translation of technical terms; we can argue it's a proper noun but not sure.
-
-To be safe, let's translate &quot;blob&quot; to &quot;blob資料&quot;. But that still contains &quot;blob&quot;. If we want to fully translate, we could say &quot;資料blob&quot; but we prefer to avoid English altogether? The rule says &quot;禁止輸出任何英文句子或單字&quot;. That includes &quot;blob&quot;. So we can't have any English words anywhere, even as part of tags. But we have &quot;Fusaka&quot; which is a proper noun (upgrade name). &quot;DeFi&quot;, &quot;Robinhood&quot;, &quot;Kalshi&quot;, &quot;AI&quot;. Those are proper nouns (or acronyms). We can keep them. &quot;blob&quot; is not a proper noun, we should translate to Chinese maybe &quot;資料區塊&quot;? Actually &quot;blob&quot; refers to binary large objects; we can call it &quot;資料blob&quot;. But again includes English. We could replace with &quot;資料塊&quot; (data block). Let's replace &quot;blob費用&quot; with &quot;資料塊費用&quot;. &quot;資料塊&quot; is Chinese. This would avoid English word.
-
-Also we have &quot;AI&quot;. It's an abbreviation but considered a proper noun? It's an acronym for Artificial Intelligence, often used as a term. It's not a proper noun in sense of a company; but it's commonly used. However the rule says &quot;英文專有名詞可保留&quot;. &quot;AI&quot; is an abbreviation of English phrase, but it's widely used. I think we can keep &quot;AI&quot;. But the rule says &quot;禁止輸出任何英文句子或單字&quot;. Does &quot;AI&quot; count as a single word? Possibly. But the rule about &quot;英文專有名詞可保留（如 OpenAI、Solana）&quot; implies we can keep some English words that are proper nouns, like &quot;OpenAI&quot;, &quot;Solana&quot;. &quot;AI&quot; may be considered a proper noun (the field of AI). Might be okay.
-
-Similarly &quot;DeFi&quot; is a proper noun. Keep.
-
-We also have &quot;Fusaka&quot; which is a proper noun for the upgrade. Keep.
-
-We have &quot;Robinhood&quot; and &quot;Kalshi&quot;. Keep.
-
-Now we need to format output.
-
-First line: &quot;今日總結：&quot; then the briefing.
-
-Then &quot;文章 1：&quot; then fields: &quot;摘要：&quot;, &quot;問句：&quot;, &quot;評分：&quot;, &quot;標籤：&quot;.
-
-The title must be translated to Chinese. The user gave title in English; we need to output Chinese title. The format likely: &quot;標題：&quot; then Chinese title. The user didn't specify to include the title as a field, but they gave &quot;文章 1：&quot; as a line; we need to produce fields for each article. The fields are &quot;摘要&quot;, &quot;問句&quot;, &quot;評分&quot;, &quot;標籤&quot;. Not &quot;標題&quot;. The instruction: &quot;對每一篇文章嚴格按格式輸出&quot;. The format requirement: after &quot;文章 N：&quot; we have each field. The fields are &quot;摘要&quot;, &quot;問句&quot;, &quot;評分&quot;, &quot;標籤&quot;. There's no explicit &quot;標題&quot;. However the user earlier says &quot;所有輸出欄位（標題、摘要、問句、標籤、今日總結）必須是繁體中文&quot;. So maybe we need to include the title field too. Let's reread the output format requirement:
-
-&quot;=== 輸出格式要求（嚴格遵守） ===
-今日總結：&lt;150字左右的趨勢總結&gt;</p>
+    <p>今日市場動態請參考下方詳情。</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
@@ -548,114 +147,6 @@ The title must be translated to Chinese. The user gave title in English; we need
   <article class="card">
     <div class="kicker">Blockworks</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/eth-derivatives-reset" target="_blank">ETH derivatives reset and the </a></h3>
-    <div class="summary">ETH derivatives show a disciplined rebuild of risk, with rising open interest pointing to healthier leverage...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">AI News</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://www.artificialintelligence-news.com/news/deloitte-scale-autonomous-intelligence-for-real-growth/" target="_blank">Deloitte: Scale &amp;#8216;autonom</a></h3>
-    <div class="summary">Enterprise leaders must progress past generative applications and scale &amp;#8220;autonomous intelligence&amp;#8221; to capture real growth.
-
-
-
-Generating text or summarising internal communications offers localised productivity improvements, yet these abilities rarely alter the core cost or revenue struct...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/cryptos-coffee-pot-moment" target="_blank">The long wait for crypto’s “co</a></h3>
-    <div class="summary">In the 90s, rapt audiences worldwide watched a coffee pot — will that fascination ever turn to crypto?...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/robinhoods-leap-shows-the-prediction-market-arms-race-is-underway" target="_blank">Robinhood’s leap shows the pre</a></h3>
-    <div class="summary">Robinhood is pushing deeper into high-margin market design, joining competitors like Kalshi and DraftKings...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/jup-lend-vs-kamino" target="_blank">Analyzing Jup Lend vs. Kamino</a></h3>
-    <div class="summary">The exchange between Kamino and Jupiter has escalated from healthy competition to a clear public dispute...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/boros-sleeper-perps" target="_blank">A sleeper in the perps categor</a></h3>
-    <div class="summary">As Hyperliquid and Lighter battle for perps DEX dominance, Boros could capture the structural upside...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/gold-silver-won-2025" target="_blank">Gold and silver won 2025</a></h3>
-    <div class="summary">Gold is having its best year since 1979, while many DeFi names are trading near multi-year lows...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/forest-fire" target="_blank">Too funded to fail: Crypto nee</a></h3>
-    <div class="summary">For new growth, crypto may need to shed tired norms like over-raising and the hoarding of investment resources...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
     <h3 class="title"><a href="https://blockworks.com/news/strategy-playbook-2026" target="_blank">The Strategy playbook looks di</a></h3>
     <div class="summary">The treasury company now holds 673,783 BTC, but flow is more likely to be episodic in this year’s financial climate...</div>
     <div class="terms">
@@ -667,10 +158,114 @@ Generating text or summarising internal communications offers localised producti
   </article>
 
   <article class="card">
+    <div class="kicker">The Block</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.theblock.co/post/402353/binance-disputes-latest-wsj-report-on-alleged-iran-linked-transactions?utm_source=rss&amp;amp;utm_medium=rss" target="_blank">Binance disputes latest WSJ re</a></h3>
+    <div class="summary">WSJ reported Iranian financier Babak Zanjani allegedly moved $850 million through Binance, which CEO Richard Teng said was mischaracterized....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/you-can-no-longer-google-the-word-disregard/" target="_blank">You can no longer Google the w</a></h3>
+    <div class="summary">After Google Search's AI update, the word &quot;disregard&quot; now effectively breaks the search interface....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://cointelegraph.com/news/euro-and-usd-stablecoins-depeg-amid-ongoing-28m-stablr-exploit?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Euro and USD stablecoins depeg</a></h3>
+    <div class="summary">The suspected cause is a private key compromise of one owner in the minting multisig account, said Blockaid....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">The Block</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.theblock.co/post/402382/okx-ice-partner-oil-commodity-perps?utm_source=rss&amp;amp;utm_medium=rss" target="_blank">OKX, ICE partner on oil perps </a></h3>
+    <div class="summary">OKX's oil perps contracts will track Intercontinental Exchange's Brent Crude and WTI Crude energy benchmarks....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://decrypt.co/368763/crypto-banks-policy-experts-press-congress-to-modernize-bank-secrecy-act" target="_blank">Crypto, Banks, Policy Experts </a></h3>
+    <div class="summary">A House subcommittee hearing exposed a divide over how far to scale back the 1970-era anti-money laundering law as Trump expands its reach....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">The Block</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.theblock.co/post/402264/new-strategic-bitcoin-reserve-bill-drops-btc-purchase-target-adds-lockup?utm_source=rss&amp;amp;utm_medium=rss" target="_blank">New strategic bitcoin reserve </a></h3>
+    <div class="summary">The bill would require quarterly public proof-of-reserve disclosures and third-party audits of government bitcoin holdings....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://cointelegraph.com/news/bitcoin-pizza-day-those-10k-btc-worth-today?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Bitcoin 'Pizza Day' was 16 yea</a></h3>
+    <div class="summary">Laszlo Hanyecz's 2010 post, offering 10,000 BTC in exchange for two pizzas delivered to his home, marked the first recorded commercial BTC payment....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
     <div class="kicker">Blockworks</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/fusaka-update-today" target="_blank">Ethereum’s Fusaka upgrade land</a></h3>
-    <div class="summary">Ethereum rolls out Fusaka, setting the stage for a stronger blob fee market and renewed deflationary potential...</div>
+    <h3 class="title"><a href="https://blockworks.com/news/blockworks-2025-reflections" target="_blank">2025 Reflections</a></h3>
+    <div class="summary">A look back at 2025, reflections on our industry, and what it means for Blockworks in 2026...</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">TechCrunch</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://techcrunch.com/2026/05/23/ferrari-is-using-ai-to-create-f1-superfans/" target="_blank">Ferrari is using IBM&amp;#8217;s A</a></h3>
+    <div class="summary">IBM and Scuderia Ferrari HP take TechCrunch inside how they are redefining the fan experience....</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
