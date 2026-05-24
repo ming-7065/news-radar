@@ -108,137 +108,7 @@
 
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>&lt;150字左右的趨勢總結&gt;
-
-文章 N：
-摘要：&lt;30字繁體中文&gt;
-問句：&lt;15字繁體中文&gt;
-評分：&lt;1到10&gt;
-標籤：&lt;3-5個標籤，逗號分隔&gt;
-
-Thus need to produce 10 article entries. Let's read all articles.
-
-We have article details:
-
-Article 1: Title: &quot;China’s AI just mapped its entire renewable energy grid. Here’s why the rest of the world should pay attention&quot; source AI News. The summary: &quot;Every major economy is staring at the same problem right now. Artificial intelligence is consuming electricity at a pace that grids were never designed to handle. In the US, capacity market prices in PJM, the country’s largest grid operator, have risen more than tenfold in two years, with data&quot; - incomplete.
-
-The summary we need to produce: &lt;30字繁體中文&gt;. So summarizing article in 30 Chinese characters. The title is about China's AI mapping renewable energy grid, world should pay attention. So could be &quot;中國AI完整映射再生能源電網，引發全球對AI用電與電網負荷的關注&quot;. That's 27 characters. Good.
-
-&quot;問句&quot;: A question about the article? Should be 15 Chinese characters, presumably a question that could be asked regarding the content. Eg: &quot;中國AI測繪電網會否改變能源政策？&quot; That's 14 characters? Count: &quot;中(1)國(2)AI(3)測(4)繪(5)電(6)網(7)會(8)否(9)改(10)變(11)能(12)源(13)政(14)策(15)?&quot;. That's 15. Good.
-
-&quot;評分&quot;: Provide a rating from 1 to 10.
-
-&quot;標籤&quot;: 3-5 tags separated by commas. Should reflect content: &quot;AI, 再生能源, 電網, 能源政策, 中國&quot;. Use 5 tags.
-
-Now article 2: Title: &quot;A man’s blockchain is his castle&quot; source Blockworks. &quot;But who gets a key to the gate?&quot; Probably about blockchain identity or personal custody. Summarize in 30 Chinese characters: &quot;個人區塊鏈如城堡，鑰匙歸屬問題成焦點&quot;. Let's count: &quot;個(1)人(2)區(3)塊(4)鏈(5)如(6)城(7)堡(8)，(9)鑰(10)匙(11)歸(12)屬(13)問(14)題(15)成(16)焦(17)點(18)&quot;. 18 characters, not enough? It should be about 30 characters, so we can add more: &quot;個人區塊鏈如城堡，誰將掌握金鑰成焦點&quot;. Count: &quot;個(1)人(2)區(3)塊(4)鏈(5)如(6)城(7)堡(8)，(9)誰(10)將(11)掌(12)握(13)金(14)鑰(15)成(16)焦(17)點(18)&quot;. Still 18. Need 30 characters. Add more words: &quot;個人區塊鏈如城堡，誰將掌握金鑰成焦點？區塊鏈安全與所有權議題備受關注&quot;. Let's count entire thing: &quot;個(1)人(2)區(3)塊(4)鏈(5)如(6)城(7)堡(8)，(9)誰(10)將(11)掌(12)握(13)金(14)鑰(15)成(16)焦(17)點(18)？區(19)塊(20)鏈(21)安(22)全(23)與(24)所(25)有(26)權(27)議(28)題(29)備(30)受(31)關(32)注(33)&quot;. That's 33 characters, over 30 but okay as about 30? The instruction says &lt;30字, so should be exactly around 30, not exceed? &quot;about 30 characters&quot; suggests around 30, but I think better to be exactly 30 or less. Let's try to be around 30: &quot;個人區塊鏈如城堡，誰將掌握金鑰成焦點？安全與所有權受矚目&quot;. Let's count: &quot;個(1)人(2)區(3)塊(4)鏈(5)如(6)城(7)堡(8)，(9)誰(10)將(11)掌(12)握(13)金(14)鑰(15)成(16)焦(17)點(18)？(19)安(20)全(21)與(22)所(23)有(24)權(25)受(26)矚(27)目(28)&quot;. That's 28 characters. Good.
-
-Question: need 15 characters. Something like: &quot;誰將取得區塊鏈城堡的鑰匙？&quot;. Count: &quot;誰(1)將(2)取(3)得(4)區(5)塊(6)鏈(7)城(8)堡(9)的(10)鑰(11)匙(12)？&quot;. That's 12 characters. Need 15 characters. Add maybe &quot;最終&quot; or something: &quot;誰將取得區塊鏈城堡的最終鑰匙？&quot;. Count: &quot;誰1將2取3得4區5塊6鏈7城8堡9的10最11終12鑰13匙14？&quot;. That's 14 characters. Add one more: &quot;最終&quot; already two words. Could be &quot;最終決定&quot;. Let's try: &quot;誰將取得區塊鏈城堡的最終決定鑰匙？&quot;. Count: &quot;誰1將2取3得4區5塊6鏈7城8堡9的10最11終12決13定14鑰15匙16？&quot;. That's 16 characters. Too many. Let's aim for exactly 15. Let's think: &quot;誰將取得區塊鏈城堡的最終鑰匙？&quot;. Count: &quot;誰1將2取3得4區5塊6鏈7城8堡9的10最11終12鑰13匙14？&quot;. That's 14. Add one char: maybe &quot;呢&quot;? &quot;誰將取得區塊鏈城堡的最終鑰匙呢？&quot;. Count: &quot;誰1將2取3得4區5塊6鏈7城8堡9的10最11終12鑰13匙14呢15？&quot;. Perfect 15 characters.
-
-Rating: assign maybe 8.
-
-Tags: &quot;區塊鏈, 個人化, 所有權, 安全, 城堡&quot;. That's 5 tags.
-
-Article 3: Title: &quot;After Monad’s TGE, can the chain turn hype into long-term conversion?&quot; source Blockworks. Summary: &quot;The data paint a complicated picture about user activity and the Monad ecosystem&quot;. Need 30 Chinese characters summary: &quot;Monad TGE 後，生態系統用戶活躍度複雜，能否將熱度轉化為長期轉換仍是未知&quot;. Let's count: &quot;Monad1 TGE2 後，3生4態5系6統7用8戶9活10躍11度12複13雜，14能15否16將17熱18度19轉20化21為22長23期24轉25換26仍27是28未29知30&quot;. That's exactly 30 characters. Good.
-
-Question 15 characters: Something like &quot;Monad能否將熱度轉為長期用戶？&quot;. Count: &quot;Monad1能2否3將4熱5度6轉7為8長9期10用11戶12？&quot;. That's 12. Need 3 more characters. Maybe &quot;持續&quot;? Let's try: &quot;Monad能否將熱度轉為持續長期用戶？&quot;. Count: &quot;Monad1能2否3將4熱5度6轉7為8持9續10長11期12用13戶14？&quot;. That's 14. Need one more: maybe &quot;呢&quot;. &quot;Monad能否將熱度轉為持續長期用戶呢？&quot;. Count: &quot;Monad1能2否3將4熱5度6轉7為8持9續10長11期12用13戶14呢15？&quot;. Perfect 15.
-
-Rating: maybe 7.
-
-Tags: &quot;Monad, TGE, 區塊鏈, 用戶活躍, 長期轉換&quot;. 5 tags.
-
-Article 4: Title: &quot;A holiday guide to explaining crypto to your relatives&quot; source Blockworks. Summary: &quot;Spoiler alert: talking about crypto to normies is still really hard&quot;. Need 30 Chinese characters: &quot;假期向親友解說加密貨幣仍屬挑戰，如何簡化術語成關鍵&quot;. Let's count: &quot;假1期2向3親4友5解6說7加8密9貨10幣11仍12屬13挑14戰，15如16何17簡18化19術20語21成22關23鍵24&quot;. That's 24. Need 6 more. Add &quot;需要技巧&quot;. Let's combine: &quot;假期向親友解說加密貨幣仍屬挑戰，如何簡化術語成關鍵需要技巧&quot;. Count: &quot;假1期2向3親4友5解6說7加8密9貨10幣11仍12屬13挑14戰，15如16何17簡18化19術20語21成22關23鍵24需25要26技27巧28&quot;. That's 28. Add &quot;多&quot; maybe: &quot;需要多技巧&quot;. Let's modify: &quot;假期向親友解說加密貨幣仍屬挑戰，如何簡化術語成關鍵需要多技巧&quot;. Count: &quot;假1期2向3親4友5解6說7加8密9貨10幣11仍12屬13挑14戰，15如16何17簡18化19術20語21成22關23鍵24需25要26多27技28巧29&quot;. That's 29. Add &quot;的&quot; perhaps: &quot;需要多技巧的&quot;. Count: &quot;假1期2向3親4友5解6說7加8密9貨10幣11仍12屬13挑14戰，15如16何17簡18化19術20語21成22關23鍵24需25要26多27技28巧29的30&quot;. Perfect 30.
-
-Question 15 characters: &quot;如何向親友簡單解釋加密貨幣？&quot;. Count: &quot;如1何2向3親4友5簡6單7解8釋9加10密11貨12幣13？&quot;. That's 13. Need 2 more. Add &quot;技巧&quot;. &quot;如何向親友簡單解釋加密貨幣技巧？&quot;. Count: &quot;如1何2向3親4友5簡6單7解8釋9加10密11貨12幣13技14巧15？&quot;. Perfect 15.
-
-Rating: maybe 8.
-
-Tags: &quot;加密貨幣, 假期, 親友, 教育, 簡化&quot;. 5 tags.
-
-Article 5: Title: &quot;Smart ring maker Oura files to go public&quot; source TechCrunch. Summary: &quot;The Finnish company said in September that it has sold 5.5 million smart rings to date.&quot; Need 30 Chinese characters: &quot;芬蘭智慧戒指公司Oura申請上市，已售出550萬枚，進軍健康穿戴市場&quot;. Count: &quot;芬1蘭2智3慧4戒5指6公7司8O9ura10申11請12上13市，14已15售16出17五18五19零20萬21枚，22進23軍24健25康26穿27戴28市29場30&quot;. Perfect 30.
-
-Question 15 characters: &quot;Oura上市能否複製成功？&quot;. Count: &quot;O1ura2上3市4能5否6複7製8成9功10？&quot;. That's 10. Need 5 more: &quot;並提升市值&quot;. Let's try &quot;Oura上市能否複製成功並提升市值？&quot;. Count: &quot;O1ura2上3市4能5否6複7製8成9功10並11提12升13市14值15？&quot;. Perfect.
-
-Rating: maybe 8.
-
-Tags: &quot;Oura, 智慧戒指, IPO, 健康穿戴, 芬蘭&quot;. 5 tags.
-
-Article 6: Title: &quot;Canton’s $6T RWA rails and Lighter’s Hyperliquid multiple&quot; source Blockworks. Summary: &quot;DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory&quot;. Need 30 Chinese characters: &quot;Canton將6兆美元現實資產代幣化，DTCC透過其鐵路轉移庫務；Lighter的LIT在Hyperliquid上交易，手續費倍增&quot;. Let's count: &quot;C1anton2將3六4兆5美6元7現8實9資10產11代12幣13化，14DT15CC16透17過18其19鐵20路21轉22移23庫24務；25L26ight27er28的29L30IT31在32H33yper34liq35uid36上37交38易，39手40續41費42倍43增&quot;. That's 43 characters, too many. Need around 30. Let's condense: &quot;Canton將6兆美元現實資產代幣化，DTCC透過其鐵路轉移庫務；Lighter的LIT在Hyperliquid交易，手續費倍增&quot;. Count: &quot;C1anton2將3六4兆5美6元7現8實9資10產11代12幣13化，14DT15CC16透17過18其19鐵20路21轉22移23庫24務；25L26ight27er28的29L30IT31在32H33yper34liq35uid36交37易，38手39續40費41倍42增43&quot;. 43 again. Need reduce. Let's try: &quot;Canton將6兆美元現實資產代幣化，DTCC轉移庫務；Lighter LIT在Hyperliquid上市，手續費倍增&quot;. Count: &quot;C1anton2將3六4兆5美6元7現8實9資10產11代12幣13化，14DT15CC16轉17移18庫19務；20L21ight22er23 LIT24在25H26yper27liq28uid29上30市，31手32續33費34倍35增36&quot;. That's 36. Need ~30. Let's try: &quot;Canton代幣化6兆美元資產，DTCC將庫務轉移鏈上；Lighter LIT在Hyperliquid上市，手續費倍增&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13將14庫15務16轉17移18鏈19上；20L21ight22er23 LIT24在25H26yper27liq28uid29上30市，31手32續33費34倍35增36&quot;. 36. Let's try more succinct: &quot;Canton代幣化6兆美元資產，DTCC上鏈轉移庫務；Lighter LIT在Hyperliquid上市，手續費倍增&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13上14鏈15轉16移17庫18務；19L20ight21er22 LIT23在24H25yper26liq27uid28上29市，30手31續32費33倍34增35&quot;. 35. Still not 30. Let's try: &quot;Canton代幣化6兆美元資產，DTCC上鏈移庫務；Lighter LIT在Hyperliquid上市，手續費倍增&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13上14鏈15移16庫17務；18L19ight20er21 LIT22在23H24yper25liq26uid27上28市，29手30續31費32倍33增34&quot;. That's 34.
-
-We need around 30. Remove some words: &quot;Canton代幣化6兆美元資產，DTCC移庫務鏈上；Lighter LIT在Hyperliquid上市，手續費倍增&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13移14庫15務16鏈17上；18L19ight20er21 LIT22在23H24yper25liq26uid27上28市，29手30續31費32倍33增34&quot;. 34.
-
-Let's try: &quot;Canton代幣化6兆美元資產，DTCC上鏈移庫務；Lighter LIT在Hyperliquid上市&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13上14鏈15移16庫17務；18L19ight20er21 LIT22在23H24yper25liq26uid27上28市&quot;. That's 28. Good. Need 30, but 28 is within &quot;around&quot;? The instruction is &quot;摘要：&lt;30字繁體中文&gt;&quot; meaning up to 30 characters? It says &lt;30字, not &quot;around&quot;. So we should aim for ≤30, but 28 is fine. It might be acceptable. Let's adjust to be exactly 30 maybe by adding &quot;提升&quot;. Let's try: &quot;Canton代幣化6兆美元資產，DTCC上鏈移庫務；Lighter LIT在Hyperliquid上市提升&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13上14鏈15移16庫17務；18L19ight20er21 LIT22在23H24yper25liq26uid27上28市29提30升31&quot;. That's 31, too many.
-
-Add one character like &quot;再&quot; maybe: &quot;Canton代幣化6兆美元資產，DTCC上鏈移庫務；Lighter LIT在Hyperliquid上市再&quot;. Count: &quot;C1anton2代3幣4化5六6兆7美8元9資10產，11DT12CC13上14鏈15移16庫17務；18L19ight20er21 LIT22在23H24yper25liq26uid27上28市29再30&quot;. That's 30 exactly. Good.
-
-Thus summary: &quot;Canton代幣化6兆美元資產，DTCC上鏈移庫務；Lighter LIT在Hyperliquid上市再&quot;. Might be a bit odd grammar but acceptable.
-
-Question 15 characters: &quot;Canton的RWA鐵路能吸引多少機構？&quot;. Count: &quot;C1anton2的3R4WA5鐵6路7能8吸9引10多11少12機13構14？&quot;. That's 14. Add one more char: &quot;參與&quot;. Let's try: &quot;Canton的RWA鐵路能吸引多少機構參與？&quot;. Count: &quot;C1anton2的3R4WA5鐵6路7能8吸9引10多11少12機13構14參15與16？&quot;. That's 16. Too many. Let's try: &quot;Canton的RWA鐵路能吸引多少機構？&quot;. Count: &quot;C1anton2的3R4WA5鐵6路7能8吸9引10多11少12機13構14？&quot;. 14. Need 1 more. Add &quot;呢&quot;. &quot;Canton的RWA鐵路能吸引多少機構呢？&quot;. Count: &quot;C1anton2的3R4WA5鐵6路7能8吸9引10多11少12機13構14呢15？&quot;. Perfect 15.
-
-Rating: maybe 9.
-
-Tags: &quot;Canton, RWA, DTCC, Hyperliquid, Lighter&quot;. 5 tags.
-
-Article 7: Title: &quot;Links: Trading, valuations, and the end of crypto’s ‘golden age’&quot; source Blockworks. Summary: &quot;It’s getting harder and harder to trade crypto like the good ol’ days&quot;. Need 30 Chinese characters: &quot;加密交易日漸艱難，估值波動加劇，黃金時代接近尾聲&quot;. Count: &quot;加1密2交3易4日5漸6艱7難，8估9值10波11動12加13劇，14黃15金16時17代18接19近20尾21聲22&quot;. That's 22. Need 8 more characters. Add &quot;市場不確定性提升&quot;. Let's try: &quot;加密交易日漸艱難，估值波動加劇，黃金時代接近尾聲，市場不確定性提升&quot;. Count: &quot;加1密2交3易4日5漸6艱7難，8估9值10波11動12加13劇，14黃15金16時17代18接19近20尾21聲，22市23場24不25確26定27性28提29升30&quot;. That's exactly 30. Good.
-
-Question 15 characters: &quot;加密市場的黃金時代是否已結束？&quot;. Count: &quot;加1密2市3場4的5黃6金7時8代9是10否11已12結13束14？&quot;. That's 14. Need one more char. Add &quot;了&quot;. &quot;加密市場的黃金時代是否已結束了？&quot;. Count: &quot;加1密2市3場4的5黃6金7時8代9是10否11已12結13束14了15？&quot;. Perfect 15.
-
-Rating: maybe 7.
-
-Tags: &quot;加密交易, 估值, 黃金時代, 市場不確定性, 區塊鏈&quot;. 5 tags.
-
-Article 8: Title: &quot;Coinbase embeds Solana trading&quot; source Blockworks. Summary: &quot;The platform turns to onchain rails for Solana assets while crypto M&amp;A and fundraising surge to cycle highs&quot;. Need 30 Chinese characters: &quot;Coinbase整合Solana鏈上交易，加密併購與集資創新高&quot;. Count: &quot;C1oin2base3整4合5S6ol7ana8鏈9上10交11易，12加13密14併15購16與17集18資19創20新21高22&quot;. That's 22. Need 8 more characters. Add &quot;市場熱度升溫&quot;. Let's extend: &quot;Coinbase整合Solana鏈上交易，加密併購與集資創新高，市場熱度升溫&quot;. Count: &quot;C1oin2base3整4合5S6ol7ana8鏈9上10交11易，12加13密14併15購16與17集18資19創20新21高22，23市24場25熱26度27升28溫29&quot;. That's 29. Need one more char. Add &quot;中&quot;. &quot;Coinbase整合Solana鏈上交易，加密併購與集資創新高，市場熱度升溫中&quot;. Count: &quot;C1oin2base3整4合5S6ol7ana8鏈9上10交11易，12加13密14併15購16與17集18資19創20新21高22，23市24場25熱26度27升28溫29中30&quot;. Perfect 30.
-
-Question 15 characters: &quot;Coinbase的Solana整合會帶來什麼變化？&quot;. Count: &quot;C1oin2base3的4S5ol6ana7整8合9會10帶11來12什13麼14變15化16？&quot;. That's 16. Need 15. Remove maybe &quot;的&quot;. &quot;Coinbase整合Solana會帶來什麼變化？&quot;. Count: &quot;C1oin2base3整4合5S6ol7ana8會9帶10來11什12麼13變14化15？&quot;. Perfect 15.
-
-Rating: maybe 9.
-
-Tags: &quot;Coinbase, Solana, 整合, 加密併購, 集資&quot;. 5 tags.
-
-Article 9: Title: &quot;Analysts forecast a Bitcoin crash to the $60K level, revisiting 2026 low&quot; source Cointelegraph. Summary: &quot;The price of Bitcoin is about $75,800 at the time of publication, a nearly 40% decrease from the all-time high of about $126,000 reached in October 2025.&quot; Need 30 Chinese characters: &quot;比特幣現價75,800美元，較去年高點126,000美元跌近40%，分析師預測跌至60,000美元&quot;. Count: &quot;比1特2幣3現4價75,800美元，較去年高點126,000美元跌近40%，分析師預測跌至60,000美元&quot;. Let's count each character individually: &quot;比1特2幣3現4價5 7 6 , 8 8 0 0美10元，11較12去13年14高15點16 1 2 6 , 0 0 0美18元20跌22近23 4 0 %，25分26析27師28預29測30跌31至32 6 0 , 0 0 0美33元&quot;. This is not straightforward; we must treat numbers and punctuation as characters maybe. Let's count more systematically: &quot;比&quot;1, &quot;特&quot;2, &quot;幣&quot;3, &quot;現&quot;4, &quot;價&quot;5, &quot;7&quot;6, &quot;5&quot;7, &quot;8&quot;8, &quot;0&quot;9, &quot;0&quot;10, &quot;美&quot;11, &quot;元&quot;12, &quot;，&quot;13, &quot;較&quot;14, &quot;去&quot;15, &quot;年&quot;16, &quot;高&quot;17, &quot;點&quot;18, &quot;1&quot;19, &quot;2&quot;20, &quot;6&quot;21, &quot;,&quot;22, &quot;0&quot;23, &quot;0&quot;24, &quot;0&quot;25, &quot;美&quot;26, &quot;元&quot;27, &quot;跌&quot;28, &quot;近&quot;29, &quot;4&quot;30, &quot;0&quot;31, &quot;%&quot;32, &quot;，&quot;33, &quot;分&quot;34, &quot;析&quot;35, &quot;師&quot;36, &quot;預&quot;37, &quot;測&quot;38, &quot;跌&quot;39, &quot;至&quot;40, &quot;6&quot;41, &quot;0&quot;42, &quot;,&quot;43, &quot;0&quot;44, &quot;0&quot;45, &quot;0&quot;46, &quot;美&quot;47, &quot;元&quot;48. That's 48 characters, too many. Need about 30 characters.
-
-Let's compress: &quot;比特幣現價75,800美元，較高點126,000美元跌近40%，分析師預測降至60,000美元&quot;. Count: &quot;比1特2幣3現4價5 7 6 , 8 0 0 美元，較高點126,000美元跌近40%，分析師預測降至60,000美元&quot;. Let's count each character: &quot;比&quot;(1), &quot;特&quot;(2), &quot;幣&quot;(3), &quot;現&quot;(4), &quot;價&quot;(5), &quot;7&quot;(6), &quot;5&quot;(7), &quot;,&quot;(8), &quot;8&quot;(9), &quot;0&quot;(10), &quot;0&quot;(11), &quot;美&quot;(12), &quot;元&quot;(13), &quot;，&quot;(14), &quot;較&quot;(15), &quot;高&quot;(16), &quot;點&quot;(17), &quot;1&quot;(18), &quot;2&quot;(19), &quot;6&quot;(20), &quot;,&quot;(21), &quot;0&quot;(22), &quot;0&quot;(23), &quot;0&quot;(24), &quot;美&quot;(25), &quot;元&quot;(26), &quot;跌&quot;(27), &quot;近&quot;(28), &quot;4&quot;(29), &quot;0&quot;(30), &quot;%&quot;(31), &quot;，&quot;(32), &quot;分&quot;(33), &quot;析&quot;(34), &quot;師&quot;(35), &quot;預&quot;(36), &quot;測&quot;(37), &quot;降&quot;(38), &quot;至&quot;(39), &quot;6&quot;(40), &quot;0&quot;(41), &quot;,&quot;(42), &quot;0&quot;(43), &quot;0&quot;(44), &quot;0&quot;(45), &quot;美&quot;(46), &quot;元&quot;(47). That's 47. Still too many.
-
-We need to produce a summary that is within 30 characters, but we can be less detailed, maybe just &quot;比特幣跌破60K，分析師警告將回測2026低點&quot;. Count: &quot;比1特2幣3跌4破5 6 0 K，分析師警告將回測2026低點&quot;. Let's count: &quot;比&quot;1, &quot;特&quot;2, &quot;幣&quot;3, &quot;跌&quot;4, &quot;破&quot;5, &quot;6&quot;6, &quot;0&quot;7, &quot;K&quot;8, &quot;，&quot;9, &quot;分&quot;10, &quot;析&quot;11, &quot;師&quot;12, &quot;警&quot;13, &quot;告&quot;14, &quot;將&quot;15, &quot;回&quot;16, &quot;測&quot;17, &quot;2&quot;18, &quot;0&quot;19, &quot;2&quot;20, &quot;6&quot;21, &quot;低&quot;22, &quot;點&quot;23. That's 23 characters. Might be okay. But we want around 30, but 23 is okay. However maybe we can extend a bit: &quot;比特幣跌破60K，分析師警告將回測2026低點，或再跌至50K&quot;. Count: &quot;比1特2幣3跌4破5 6 0 K，分析師警告將回測2026低點，或再跌至50K&quot;. Count: &quot;比&quot;(1), &quot;特&quot;(2), &quot;幣&quot;(3), &quot;跌&quot;(4), &quot;破&quot;(5), &quot;6&quot;(6), &quot;0&quot;(7), &quot;K&quot;(8), &quot;，&quot;(9), &quot;分&quot;(10), &quot;析&quot;(11), &quot;師&quot;(12), &quot;警&quot;(13), &quot;告&quot;(14), &quot;將&quot;(15), &quot;回&quot;(16), &quot;測&quot;(17), &quot;2&quot;(18), &quot;0&quot;(19), &quot;2&quot;(20), &quot;6&quot;(21), &quot;低&quot;(22), &quot;點&quot;(23), &quot;，&quot;(24), &quot;或&quot;(25), &quot;再&quot;(26), &quot;跌&quot;(27), &quot;至&quot;(28), &quot;5&quot;(29), &quot;0&quot;(30), &quot;K&quot;(31). That's 31, too many. Keep at 30 or less.
-
-Maybe &quot;比特幣跌破60K，分析師警告回測2026低點&quot;. Count: &quot;比&quot;(1), &quot;特&quot;(2), &quot;幣&quot;(3), &quot;跌&quot;(4), &quot;破&quot;(5), &quot;6&quot;(6), &quot;0&quot;(7), &quot;K&quot;(8), &quot;，&quot;(9), &quot;分&quot;(10), &quot;析&quot;(11), &quot;師&quot;(12), &quot;警&quot;(13), &quot;告&quot;(14), &quot;回&quot;(15), &quot;測&quot;(16), &quot;2&quot;(17), &quot;0&quot;(18), &quot;2&quot;(19), &quot;6&quot;(20), &quot;低&quot;(21), &quot;點&quot;(22). That's 22.
-
-We could add &quot;可能&quot; to make it a bit longer: &quot;比特幣跌破60K，分析師警告回測2026低點，可能&quot;. Count: &quot;比&quot;(1), &quot;特&quot;(2), &quot;幣&quot;(3), &quot;跌&quot;(4), &quot;破&quot;(5), &quot;6&quot;(6), &quot;0&quot;(7), &quot;K&quot;(8), &quot;，&quot;(9), &quot;分&quot;(10), &quot;析&quot;(11), &quot;師&quot;(12), &quot;警&quot;(13), &quot;告&quot;(14), &quot;回&quot;(15), &quot;測&quot;(16), &quot;2&quot;(17), &quot;0&quot;(18), &quot;2&quot;(19), &quot;6&quot;(20), &quot;低&quot;(21), &quot;點&quot;(22), &quot;可&quot;(23), &quot;能&quot;(24). That's 24.
-
-We need to fit within 30 characters; 24 is okay. We'll use that.
-
-Question 15 characters: &quot;比特幣會跌破60K嗎？&quot;. Count: &quot;比1特2幣3會4跌5破6 6 0 K 7 嗎8？&quot;. That's 8. Need 7 more characters. Add &quot;如果是的話，後市如何？&quot;. Let's think: &quot;比特幣會跌破60K嗎？後市將如何？&quot;. Count: &quot;比1特2幣3會4跌5破6 6 0 K 7 嗎8？後9市10將11如12何13？&quot;. That's 13. Need 2 more characters. Add &quot;變化&quot;. &quot;比特幣會跌破60K嗎？後市將如何變化？&quot;. Count: &quot;比1特2幣3會4跌5破6 6 0 K 7 嗎8？後9市10將11如12何13變14化15？&quot;. Perfect 15.
-
-Rating: maybe 6.
-
-Tags: &quot;比特幣, 跌破, 分析師, 2026低點, 市場預測&quot;. 5 tags.
-
-Article 10: Title: &quot;Elon, stop trying to make Grok happen&quot; source TheVerge. Summary: &quot;There is a harsh truth about Elon Musk's &quot;truth-seeking&quot; AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI'&quot;. This is truncated maybe but we can summarise.
-
-Need 30 Chinese characters: &quot;馬斯克Grok聊天機器人成效不佳，使用率低，聯邦文件中鮮少出現&quot;. Count: &quot;馬1斯2克3 G4r5o6k7聊8天9機10器11人12成13效14不15佳，16使17用18率19低，20聯21邦22文23件24中25鮮26少27出28現29&quot;. That's 29 characters. Good.
-
-Question 15 characters: &quot;Grok是否已成失敗案例？&quot;. Count: &quot;G1r2o3k4是5否6已7成8失9敗10案11例12？&quot;. That's 12. Need 3 more. Add &quot;真的&quot;. &quot;Grok是否已成失敗案例真的？&quot;. Count: &quot;G1r2o3k4是5否6已7成8失9敗10案11例12真13的14？&quot;. That's 14. Need 1 more: &quot;啊&quot;. &quot;Grok是否已成失敗案例真的啊？&quot;. Count: &quot;G1r2o3k4是5否6已7成8失9敗10案11例12真13的14啊15？&quot;. Perfect 15.
-
-Rating: maybe 7.
-
-Tags: &quot;Grok, 馬斯克, AI聊天, 使用率, 失敗&quot;. 5 tags.
-
-Now we need to produce the &quot;今日總結&quot; first, then article entries 1-10.
-
-The summary of today's trends (150 Chinese characters) covering Web3 &amp; AI trends. Let's craft a paragraph of roughly 150 characters. Need to capture main topics: AI's electricity demand, blockchain personal ownership, Monad ecosystem, crypto education, Oura IPO, Canton RWA rails, crypto trading challenges, Coinbase integration of Solana, Bitcoin price crash predictions, Grok's poor performance.
-
-Goal: around 150 characters, not exceed too much. Let's produce roughly 150 Chinese characters.
-
-We should count carefully. Let's draft:
-
-&quot;今日AI與Web3領域呈現多重轉變。中國AI完整測繪再生能源電網，凸顯AI用電負荷對全球電網壓力；個人區塊鏈所有權議題持續發酵，Monad代幣推出後生態用戶活化情況複雜。假期加密貨幣教育需求升溫，Oura智慧戒指申請上市，進軍健康穿戴市場。Canton推動6兆美元現實資產代幣化，DTCC鏈上移轉庫務；Lighter在Hyperliquid上市，手續費倍增。Coinbase整合Solana提升鏈上交易，加密併購與集資熱度創新高。比特幣預測跌破60K，回測2026低點；馬斯克Grok聊天機器人使用率低，成效受質疑。&quot;
-
-Now count characters. Let's count manually.
-
-Sentence: &quot;今日AI與Web3領域呈現多重轉變。&quot; Count characters: &quot;今&quot;(1) &quot;日&quot;(2) &quot;A&quot;(3) &quot;I&quot;(4) &quot;與&quot;(5) &quot;W&quot;(6) &quot;e&quot;(7) &quot;b&quot;(8) &quot;3&quot;(9) &quot;領&quot;(10) &quot;域&quot;(11) &quot;呈&quot;(12) &quot;現&quot;(13) &quot;多&quot;(14) &quot;重&quot;(15) &quot;轉&quot;(16) &quot;變&quot;(17) &quot;。&quot; (18). So 18 characters.
-
-Next: &quot;中國AI完整測繪再生能源電網，凸顯AI用電負荷對全球電網壓力；&quot; Let's count: &quot;中&quot;(1) &quot;國&quot;(2) &quot;A&quot;(3) &quot;I&quot;(4) &quot;完&quot;(5) &quot;整&quot;(6) &quot;測&quot;(7) &quot;繪&quot;(8) &quot;再&quot;(9) &quot;生&quot;(10) &quot;能&quot;(11) &quot;源&quot;(12) &quot;電&quot;(13) &quot;網&quot;(14) &quot;，&quot; (15) &quot;凸&quot;(16) &quot;顯&quot;(17) &quot;A&quot;(18) &quot;I&quot;(19) &quot;用&quot;(20) &quot;電&quot;(21) &quot;負&quot;(22) &quot;荷&quot;(23) &quot;對&quot;(24) &quot;全&quot;(25) &quot;球&quot;(26) &quot;電&quot;(27) &quot;網&quot;(28) &quot;壓&quot;(29) &quot;力&quot;(30) &quot;；&quot;(31). So 31 characters.
-
-Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
+    <p>今日市場動態請參考下方詳情。</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
@@ -255,10 +125,10 @@ Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
   <div class="cards">
     
   <article class="card">
-    <div class="kicker">AI News</div>
+    <div class="kicker">Decrypt</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://www.artificialintelligence-news.com/news/ai-energy-grid-mapping-china/" target="_blank">China&amp;#8217;s AI just mapped i</a></h3>
-    <div class="summary">Every major economy is staring at the same problem right now. Artificial intelligence is consuming electricity at a pace that grids were never designed to handle. In the US, capacity market prices in PJM, the country&amp;#8217;s largest grid operator, have risen more than tenfold in two years, with data...</div>
+    <h3 class="title"><a href="https://decrypt.co/368643/crypto-exchange-kraken-secures-vara-license-launch-dubai" target="_blank">Crypto Exchange Kraken Secures</a></h3>
+    <div class="summary">Dubai&amp;#39;s Virtual Asset Regulatory Authority granted Kraken’s parent company preliminary broker-dealer and investment management authorization....</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
@@ -268,10 +138,10 @@ Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
   </article>
 
   <article class="card">
-    <div class="kicker">Blockworks</div>
+    <div class="kicker">Cointelegraph</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/mans-blockchain-castle" target="_blank">A man’s blockchain is his cast</a></h3>
-    <div class="summary">But who gets a key to the gate?...</div>
+    <h3 class="title"><a href="https://cointelegraph.com/markets/near-protocol-leads-ai-token-rally-with-a-50-pump-is-5-near-price-next?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">NEAR protocol leads AI token r</a></h3>
+    <div class="summary">NEAR price surges 50% in a week as AI token momentum, Nvidia optimism and network upgrades fuel bullish sentiment....</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
@@ -281,10 +151,10 @@ Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
   </article>
 
   <article class="card">
-    <div class="kicker">Blockworks</div>
+    <div class="kicker">Decrypt</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/after-monad-tge" target="_blank">After Monad’s TGE, can the cha</a></h3>
-    <div class="summary">The data paint a complicated picture about user activity and the Monad ecosystem...</div>
+    <h3 class="title"><a href="https://decrypt.co/368912/bitcoin-drops-75k-crypto-liquidations-near-1-billion" target="_blank">Bitcoin Dives Below $75K for F</a></h3>
+    <div class="summary">Bitcoin touched its lowest price in a month overnight following an awful week for ETFs, which shed over $1.25 billion this week....</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
@@ -294,10 +164,10 @@ Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
   </article>
 
   <article class="card">
-    <div class="kicker">Blockworks</div>
+    <div class="kicker">TheVerge</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/explaining-crypto-to-relatives" target="_blank">A holiday guide to explaining </a></h3>
-    <div class="summary">Spoiler alert: talking about crypto to normies is still really hard...</div>
+    <h3 class="title"><a href="https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard" target="_blank">Google&amp;#8217;s AI search is so</a></h3>
+    <div class="summary">Google's AI Overviews are running into an interesting problem right now. Earlier on Friday, if you searched for the term &quot;disregard,&quot; the AI Overview section would include a response like what you'd see from a more traditional AI chatbot instead of the typical AI summary, as spotted on X. As you can...</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
@@ -307,10 +177,62 @@ Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
   </article>
 
   <article class="card">
-    <div class="kicker">TechCrunch</div>
+    <div class="kicker">Cointelegraph</div>
     <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/smart-ring-maker-oura-files-to-go-public/" target="_blank">Smart ring maker Oura files to</a></h3>
-    <div class="summary">The Finnish company said in September that it has sold 5.5 million smart rings to date....</div>
+    <h3 class="title"><a href="https://cointelegraph.com/news/us-house-probe-kalshi-polymarket-insider-trading?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">US House lawmakers launch prob</a></h3>
+    <div class="summary">Representative James Comer asked CEOs of two major prediction market companies for information on their responses to insider trading after “suspiciously timed trades” related to US military actions against Iran....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://cointelegraph.com/news/binance-denies-new-wsj-report-alleging-850m-in-iran-linked-transactions?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Binance denies new WSJ report </a></h3>
+    <div class="summary">Binance CEO Richard Teng denied a new WSJ report alleging $850 million in Iran-linked transactions flowed through the exchange to the IRGC....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://decrypt.co/368591/why-defi-keeps-losing-millions-to-exploits" target="_blank">Why DeFi Keeps Losing Millions</a></h3>
+    <div class="summary">DeFi exploits keep piling up in 2026. Here’s what experts say is behind crypto’s security crisis—and how it can be fixed....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Cointelegraph</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://cointelegraph.com/markets/xrp-adds-4300-new-wallets-in-24-hours-but-why-is-price-stuck?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">XRP adds 4,300 new wallets in </a></h3>
+    <div class="summary">XRP Ledger activity surges with 4,300 new wallets created in 24 hours, but strong resistance keeps XRP price capped....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Decrypt</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://decrypt.co/368752/trump-media-moves-over-200-million-bitcoin-losses-arkham" target="_blank">Trump Media Moves Over $200 Mi</a></h3>
+    <div class="summary">It&amp;#39;s unknown whether Trump Media &amp;amp;#038; Technology Group is selling its Bitcoin, though it has amassed sizable losses on its holdings....</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
@@ -324,58 +246,6 @@ Next: &quot;個人區塊鏈所有權議題持續發酵，Monad代幣</p>
     <div class="hook"><span class="q">Q</span>最新消息</div>
     <h3 class="title"><a href="https://blockworks.com/news/cantons-rwa-rails" target="_blank">Canton’s $6T RWA rails and Lig</a></h3>
     <div class="summary">DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/links-trading-valuations-golden-age" target="_blank">Links: Trading, valuations, an</a></h3>
-    <div class="summary">It’s getting harder and harder to trade crypto like the good ol’ days...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Blockworks</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://blockworks.com/news/coinbase-embeds-solana-trading" target="_blank">Coinbase embeds Solana trading</a></h3>
-    <div class="summary">The platform turns to onchain rails for Solana assets while crypto M&amp;A and fundraising  surge to cycle highs...</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://cointelegraph.com/news/analysts-forecast-bitcoin-crash-60k-february-low?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">Analysts forecast a Bitcoin cr</a></h3>
-    <div class="summary">The price of Bitcoin is about $75,800 at the time of publication, a nearly 40% decrease from the all-time high of about $126,000 reached in October 2025....</div>
-    <div class="terms">
-      <span class="term">AI</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">5/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TheVerge</div>
-    <div class="hook"><span class="q">Q</span>最新消息</div>
-    <h3 class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/936219/elon-stop-trying-to-make-grok-happen" target="_blank">Elon, stop trying to make Grok</a></h3>
-    <div class="summary">There is a harsh truth about Elon Musk's &quot;truth-seeking&quot; AI chatbot Grok: It's not very good, and not many people are using it. That's the takeaway of a new Reuters report, which found that Grok barely appears in federal records of how the US government used AI last year. It's not the only sign xAI'...</div>
     <div class="terms">
       <span class="term">AI</span>
     </div>
