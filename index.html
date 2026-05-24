@@ -94,15 +94,14 @@
   
   footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
   @media(max-width:600px){
-  body{font-size:18px}
+  body{font-size:18px;overflow-x:hidden}
   .masthead h1{font-size:36px}
   .masthead .tagline{font-size:18px}
   .masthead .meta-line{font-size:14px}
   .masthead .author-strip{font-size:14px}
   .dateline{font-size:14px}
   .section-rule{font-size:14px}
-  .briefing{font-size:18px}
-  .briefing p:first-child::first-letter{font-size:48px}
+  .briefing{font-size:18px}.briefing p:first-child::first-letter{font-size:48px}
   .trending li{font-size:18px}
   .trending li .count{font-size:14px}
   .card .hook{font-size:16px}
@@ -110,6 +109,8 @@
   .card .summary{font-size:17px}
   .card .byline{font-size:14px}
   .card .term{font-size:14px}
+  .card{max-width:100%;word-wrap:break-word}
+  a{word-break:break-all}
   footer{font-size:14px}
 }
 </style>
@@ -127,40 +128,15 @@
 
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>今日 Web3 與 AI 領域呈現監管整合與技術創新並進的態勢。美國監管機構與職業運動联盟簽署數據共享協議，標誌著預測市場合規化進入新階段。同時，AI 晶片設計出現戰略分歧，西方專注於 AI 代理人優化，而中國企業如阿里巴巴則打造整合堆疊突圍美國出口管制。生成式 AI 持續顛覆創作邊界，從數位克隆到已故飛行員聲音重建，挑戰隱私與倫理框架。區塊鏈領域聚焦以太坊基金會的角色定位與機構級應用，Ark Invest 等投資機構持續加碼加密貨幣相關股票。</p>
+    <p>今日市場動態請參考下方詳情。</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
-    <span class="term">ai代理人</span>
-    <span class="count">3 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">ai晶片</span>
-    <span class="count">2 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">商務競爭</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">東西方對抗</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">openai</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">機器人</span>
-    <span class="count">1 則相關</span>
+    <span class="term">ai</span>
+    <span class="count">10 則相關</span>
   </li>
 </ol>
   </div>
@@ -169,151 +145,147 @@
   <div class="cards">
     
   <article class="card">
+    <div class="kicker">Blockworks</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://blockworks.com/news/jup-lend-vs-kamino" target="_blank">Analyzing Jup Lend vs. Kamino</a></h3>
+    <div class="summary">The exchange between Kamino and Jupiter has escalated from healthy competition to a clear public dispute...</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
     <div class="kicker">Hacker News AI</div>
-    <div class="hook"><span class="q">Q</span>西方AI能否持續主宰全球市場？</div>
-    <h3 class="title"><a href="https://medium.com/@vektormemory/the-ai-existential-crisis-western-ai-agents-will-win-finance-chinas-will-win-the-world-3945a70b3366" target="_blank">AI 存在危機：西方 AI 代理人將赢得商務</a></h3>
-    <div class="summary">Article URL: https://medium.com/@vektormemory/the-ai-existential-crisis-western-ai-agents-will-win-finance-chinas-will-win-the-world-3945a70b3366
-Comments URL: https://news.ycombinator.com/item?id=48256365
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://blog.ecosia.org/improving-our-ai/" target="_blank">Our AI just got better</a></h3>
+    <div class="summary">Article URL: https://blog.ecosia.org/improving-our-ai/
+Comments URL: https://news.ycombinator.com/item?id=48256749
+Points: 6
+# Comments: 2...</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Blockworks</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://blockworks.com/news/after-monad-tge" target="_blank">After Monad’s TGE, can the chain turn hype into long-term conversion?</a></h3>
+    <div class="summary">The data paint a complicated picture about user activity and the Monad ecosystem...</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Hacker News AI</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.cnbc.com/2026/05/23/ai-wealth-must-benefit-the-public-south-koreas-deputy-pm-says.html" target="_blank">South Korea's deputy PM says AI wealth must benefit the public</a></h3>
+    <div class="summary">Article URL: https://www.cnbc.com/2026/05/23/ai-wealth-must-benefit-the-public-south-koreas-deputy-pm-says.html
+Comments URL: https://news.ycombinator.com/item?id=48256265
 Points: 1
 # Comments: 0...</div>
     <div class="terms">
-      <span class="term">AI代理人</span><span class="term">商務競爭</span><span class="term">東西方對抗</span><span class="term">OpenAI</span><span class="term">機器人</span>
+      <span class="term">AI</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TechCrunch</div>
-    <div class="hook"><span class="q">Q</span>AI模擬逝者是否侵犯隱私與倫理？</div>
-    <h3 class="title"><a href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" target="_blank">AI 技術重建已故飛行員聲音引發爭議</a></h3>
-    <div class="summary">People used AI on a spectrogram image of cockpit recordings to reconstruct them, forcing the NTSB to temporarily block access to its docket system....</div>
-    <div class="terms">
-      <span class="term">AI重建</span><span class="term">聲音複製</span><span class="term">NTSB</span><span class="term">倫理爭議</span><span class="term">錄音分析</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Hacker News AI</div>
-    <div class="hook"><span class="q">Q</span>誰能真正掌控AI晶片供應鏈？</div>
-    <h3 class="title"><a href="https://zoopa.es/en/innovation-technology/invisible-fabric-ai-chips-geopolitics/" target="_blank">AI 晶片非中美戰爭而是30國供應鏈</a></h3>
-    <div class="summary">Article URL: https://zoopa.es/en/innovation-technology/invisible-fabric-ai-chips-geopolitics/
-Comments URL: https://news.ycombinator.com/item?id=48256396
-Points: 2
-# Comments: 1...</div>
-    <div class="terms">
-      <span class="term">AI晶片</span><span class="term">地緣政治</span><span class="term">供應鏈</span><span class="term">美中關係</span><span class="term">半導體</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">AI News</div>
-    <div class="hook"><span class="q">Q</span>阿里巴巴如何突破晶片出口管制？</div>
-    <h3 class="title"><a href="https://www.artificialintelligence-news.com/news/alibaba-zhenwu-m890-ai-agent-chip-roadmap/" target="_blank">阿里巴巴為 AI 代理人設計晶片改變競賽本質</a></h3>
-    <div class="summary">Alibaba has unveiled a new AI processor built specifically for AI agents, pairing the chip announcement with a multi-year silicon roadmap and a new large language model, signalling that the company is building an integrated AI stack rather than just filling a gap left by US export controls.
-
-
-
-The Z...</div>
-    <div class="terms">
-      <span class="term">阿里巴巴</span><span class="term">AI晶片</span><span class="term">AI代理人</span><span class="term">出口管制</span><span class="term">整合堆疊</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Decrypt</div>
-    <div class="hook"><span class="q">Q</span>預測市場將迎來新監管時代？</div>
-    <h3 class="title"><a href="https://decrypt.co/368687/nhl-agrees-share-data-cftc-prediction-market-integrity" target="_blank">國家冰球聯盟與美國商品期貨交易委員會簽署數據共享協議</a></h3>
-    <div class="summary">The agreement ensures the regulator and the NHL communicate and share data to protect the integrity of hockey-related prediction markets....</div>
-    <div class="terms">
-      <span class="term">預測市場</span><span class="term">CFTC</span><span class="term">NHL</span><span class="term">監管合規</span><span class="term">數據共享</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Cointelegraph</div>
-    <div class="hook"><span class="q">Q</span>以太坊基金會的角色是否被誤解？</div>
-    <h3 class="title"><a href="https://cointelegraph.com/news/blockchain-researcher-defends-ethereum-foundation-says-its-exactly-doing-its-job?utm_source=rss_feed&amp;utm_medium=rss&amp;utm_campaign=rss_partner_inbound" target="_blank">區塊鏈研究者為以太坊基金會辯護</a></h3>
-    <div class="summary">William Mougayar says critics are measuring the Ethereum Foundation by the wrong standard, claiming it was never meant to pump ETH or court institutions....</div>
-    <div class="terms">
-      <span class="term">以太坊</span><span class="term">Ethereum Foundation</span><span class="term">區塊鏈</span><span class="term">機構辯護</span><span class="term">批評回應</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TechCrunch</div>
-    <div class="hook"><span class="q">Q</span>馬斯克的能源願景為何變調？</div>
-    <h3 class="title"><a href="https://techcrunch.com/2026/05/23/elon-musk-has-given-up-on-solar-power-on-earth/" target="_blank">馬斯克放棄地球太陽能發電轉向天然氣</a></h3>
-    <div class="summary">Elon Muks's xAI has gone all in on natural gas, while SpaceX is obsessed with orbital data centers. What happened to the &quot;solar-electric economy&quot; he promised?...</div>
-    <div class="terms">
-      <span class="term">Elon Musk</span><span class="term">太陽能</span><span class="term">天然氣</span><span class="term">xAI</span><span class="term">軌道資料中心</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
+      <b>SCORE</b><span class="score">5/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">Wired AI</div>
-    <div class="hook"><span class="q">Q</span>AI化身是否會成為隱私新威脅？</div>
-    <h3 class="title"><a href="https://www.wired.com/story/i-cloned-myself-with-geminis-ai-avatar-tool-the-result-was-unnervingly-me/" target="_blank">我用 Gemini 的 AI 化身工具克隆自己結果令人不安</a></h3>
-    <div class="summary">I used the Gemini app to generate lifelike videos featuring a digital clone of myself. Google sees this as the future of creation. I’m still creeped out....</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.wired.com/story/openai-chris-lehane-global-affairs-pr/" target="_blank">Can OpenAI’s ‘Master of Disaster’ Fix AI’s Reputation Crisis?</a></h3>
+    <div class="summary">Global affairs chief Chris Lehane wants to tone down the debate over AI’s societal impacts—and get states to pass laws that won’t derail OpenAI’s meteoric rise....</div>
     <div class="terms">
-      <span class="term">Gemini</span><span class="term">AI化身</span><span class="term">數位克隆</span><span class="term">Google</span><span class="term">隱私顧慮</span>
+      <span class="term">AI</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Hacker News AI</div>
-    <div class="hook"><span class="q">Q</span>AI代理人能否改善散戶投資策略？</div>
-    <h3 class="title"><a href="https://github.com/analyticalmonk/autotrader" target="_blank">Autotrader — 印度股票紙交易 AI 代理人</a></h3>
-    <div class="summary">Article URL: https://github.com/analyticalmonk/autotrader
-Comments URL: https://news.ycombinator.com/item?id=48256526
-Points: 1
-# Comments: 0...</div>
-    <div class="terms">
-      <span class="term">AI代理人</span><span class="term">股票交易</span><span class="term">印度市場</span><span class="term">紙交易</span><span class="term">開源工具</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">6/10</span>
+      <b>SCORE</b><span class="score">5/10</span>
     </div>
   </article>
 
   <article class="card">
     <div class="kicker">The Block</div>
-    <div class="hook"><span class="q">Q</span>機構投資者為何持續押注加密貨幣？</div>
-    <h3 class="title"><a href="https://www.theblock.co/post/402302/ark-invest-buys-5-million-bullish?utm_source=rss&amp;amp;utm_medium=rss" target="_blank">Ark Invest 再砸500萬美元買進 Bullish 股票</a></h3>
-    <div class="summary">Ark Invest bought a total of 139,117 shares of Bullish, worth about $5 million, across three of its ETFs on Thursday....</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.theblock.co/post/402394/ripple-north-island-ventures-squid-crypto-funding?utm_source=rss&amp;amp;utm_medium=rss" target="_blank">Ripple, North Island Ventures back $6 million round for cross-chain platform Squid</a></h3>
+    <div class="summary">Squid is preparing to launch a new consumer product aimed at making it easier to access and manage crypto assets, Fig told The Block....</div>
     <div class="terms">
-      <span class="term">Ark Invest</span><span class="term">Bullish</span><span class="term">ETF</span><span class="term">機構投資</span><span class="term">加密貨幣</span>
+      <span class="term">AI</span>
     </div>
     <div class="byline">
-      <b>SCORE</b><span class="score">6/10</span>
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">The Block</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.theblock.co/post/402427/ecb-warns-eu-finance-ministers-that-easing-euro-stablecoin-rules-would-weaken-banks-reuters?utm_source=rss&amp;amp;utm_medium=rss" target="_blank">ECB warns EU finance ministers that easing euro stablecoin rules would weaken banks: Reuters</a></h3>
+    <div class="summary">ECB President Christine Lagarde warned the changes would destabilize bank funding and weaken interest-rate transmission....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Hacker News AI</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://www.satisfice.com/responsible" target="_blank">Responsible Work with AI</a></h3>
+    <div class="summary">Article URL: https://www.satisfice.com/responsible
+Comments URL: https://news.ycombinator.com/item?id=48256376
+Points: 1
+# Comments: 0...</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Blockworks</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://blockworks.com/news/venezuelas-sanctions-stablecoins" target="_blank">Venezuela’s sanctions are stablecoins’ proof of concept</a></h3>
+    <div class="summary">Banned from the dollar system, the country uses digital dollars instead...</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="kicker">Blockworks</div>
+    <div class="hook"><span class="q">Q</span>最新消息</div>
+    <h3 class="title"><a href="https://blockworks.com/news/friday-charts-finding-good-news-in-spite-of-bad-headlines" target="_blank">Friday charts: Finding good news, in spite of bad headlines</a></h3>
+    <div class="summary">2025 was far from perfect, but much better than we think it was....</div>
+    <div class="terms">
+      <span class="term">AI</span>
+    </div>
+    <div class="byline">
+      <b>SCORE</b><span class="score">5/10</span>
     </div>
   </article>
 
   </div>
 
-  <footer>0xRadar · AI-Powered Aggregation · 2026-05-24</footer>
+  <footer>© 2026 銘於心 (MING). 智慧物聯架構實驗室.</footer>
 </div>
 </body>
 </html>
