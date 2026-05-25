@@ -119,24 +119,248 @@
 <body>
 <div class="wrap">
   <header class="masthead">
-    <div class="dateline"><span>2026年5月25日 星期一</span><span>Vol. 1 · No. 1</span></div>
+    <div class="dateline"><span>MONDAY, MAY 25, 2026</span><span>Vol. 2026 · No. 145</span></div>
     <h1>銘於心-AI日報</h1>
     <p class="tagline">全自動 AI 新聞日報</p>
-    <p class="meta-line">收錄 10 篇 · <a href="archive.html">歷史過刊</a></p>
+    <p class="meta-line">收錄 10 篇 · 由 n8n 驅動 · <a href="archive.html">歷史過刊</a></p>
     <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
   </header>
 
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>本週科技產業迎來一波值得關注的變革浪潮。隨著小滿節氣已過，萬物繁盛之勢正與 AI 領域的蓬勃發展相互呼應。今日的核心趨勢可歸納為三大方向：首先，AI 系統的硬體優化成為顯學——專家明確指出「可移植性是迷思」，最優秀的 AI 堆疊離不開深度硬體整合，而研究更證實僅需區區 0.12% 的參數增量就能賦予 AI 代理真正的工作記憶，這對企業級應用而言無疑是重大突破。其次，AI 代理的記憶與上下文理解問題終獲實質解方，Rippletide 等新創提出的決策圖譜框架，有望扭轉企業部署頻頻失敗的困境，這也讓 OpenAI 積極遊說立法的動作更具戰略意義。再者，安全與永續成為基礎設施建設的雙重主旋律——從微軟接連修補 Defender 與 Windows 零時差漏洞，到 GitHub 遭遇供應鏈攻擊，再到台灣崇越與創意電子打造首座低碳運算中心，皆顯示產業在追求效能之際，正被迫加速回應資安威脅與碳排放的雙重壓力。最後，智慧眼鏡在 Google 與 XREAL 的協力下似有突圍之勢，或許預示著空間運算的商業化腳步終於來到轉捩點。整體而言，從模型訓練到終端應用，從資安防護到綠色計算，今日的新聞拼圖正勾勒出一個更注重垂直整合、記憶能力與系統韌性的 AI 新紀元。</p>
+    <p>The user wants a 150 Chinese characters summary &quot;今日總編輯的話&quot; summarizing the day's tech and AI news. Should be fluent traditional Chinese. No extra formatting or tags. Must be around 150 characters. Let's parse the instructions carefully.
+
+User: &quot;請身為一位科技與 AI 領域的總編輯，閱讀以下各篇精選新聞的摘要，寫一段大約 150 字的「今日總編輯的話 (Briefing)」，總結今日科技與 AI 的主要趨勢。請用流暢的繁體中文撰寫，並只輸出這段總結文字即可，不要加上額外的開場白或格式標籤。&quot;
+
+They want a &quot;Briefing&quot; of roughly 150 Chinese characters (words or characters?). Usually Chinese measure &quot;字&quot; (characters). So approx 150 Chinese characters (including punctuation). Must not add extra introductions or formatting. Must only output the summary text.
+
+We need to summarize key topics from news: SpaceX lists Grok's &quot;spicy&quot; mode risk; npm supply chain attack using stolen accounts and valid certificates; enterprise AI agents forgetting learned info, need structured memory and temporal reasoning; Alibaba Qwen3.7Max autonomous for 35 hours and external tools; AI agents causing chaos engineering failures; Jensen Huang meeting with Lin Baifu and Wei Zuo; CISA alerts Drupal SQL injection vulnerability used; MediaTek supply chain resilience; France data center energy surge 38% in 3 years; Linux kernel ptrace privilege escalation vulnerability.
+
+Now need to write about 150 Chinese characters. Let's think of a paragraph: Starting like &quot;今日科技與AI領域...&quot;
+
+But must not add extra introductions? The user says &quot;只輸出這段總結文字即可，不要加上額外的開場白或格式標籤。&quot; So just a paragraph with maybe no &quot;今日科技與AI...&quot; if that is considered intro? The phrase &quot;今日總編輯的話 (Briefing)&quot; is the name; but they want only the content of the briefing. They want to simulate as &quot;briefing&quot;, but the output should just be the text.
+
+Thus we produce a paragraph of about 150 Chinese characters.
+
+The content: Summary of AI risk: SpaceX's Grok risks; npm package supply chain infiltration; AI agents lacking memory; Alibaba AI moving to autonomous agents; AI causing uncontrolled failures; Jensen meeting with industry leaders; CISA Drupal vulnerability; MediaTek resilience; data center energy consumption skyrocketing; new Linux vulnerability.
+
+Let's craft around 150 characters.
+
+We need to count characters. Let's start writing then count.
+
+&quot;SpaceX在IPO文件中將Grok的「火辣」模式列為風險，已提列逾五億美元的潛在訴訟損失；此舉顯示內容安全與監管壓力已影響AI商業化。npm供应链再遭突破，攻擊者透過竊取的維護者帳號取得有效簽章，633個惡意套件成功繞過Sigstore驗證，暴露依賴憑證信號的脆弱性。企業AI代理屢因忘記先前學習而失敗，結構化記憶與時間感知推理成為彌補RAG不足的關鍵。阿里巴巴發布Qwen3.7‑Max，實現35小時自主運行並整合外部工具，標誌AI進入「代理時代」；然而此類代理在生產環境引發的混沌故障因不符合事故模板，企業難以追蹤。黃仁勳將於五月二十七日出席輝達總部動土，並會晤林百里與魏哲家，顯示供應鏈高層加速布局。同時，CISA將Drupal SQL注入漏洞列為已知利用，Linux核心ptrace漏洞歷時九年終獲修補，法國資料中心用電三年暴增38%，AI資料中心正面臨能源與碳排的雙重壓力。&quot;
+
+Now count characters.
+
+We need to count. Let's count manually. We'll treat punctuation as characters. Count each Chinese character plus punctuation.
+
+We'll count step by step:
+
+&quot;SpaceX在IPO文件中將Grok的「火辣」模式列為風險，已提列逾五億美元的潛在訴訟損失；此舉顯示內容安全與監管壓力已影響AI商業化。npm供应链再遭突破，攻擊者透過竊取的維護者帳號取得有效簽章，633個惡意套件成功繞過Sigstore驗證，暴露依賴憑證信號的脆弱性。企業AI代理屢因忘記先前學習而失敗，結構化記憶與時間感知推理成為彌補RAG不足的關鍵。阿里巴巴發布Qwen3.7‑Max，實現35小時自主運行並整合外部工具，標誌AI進入「代理時代」；然而此類代理在生產環境引發的混沌故障因不符合事故模板，企業難以追蹤。黃仁勳將於五月二十七日出席輝達總部動土，並會晤林百里與魏哲家，顯示供應鏈高層加速布局。同時，CISA將Drupal SQL注入漏洞列為已知利用，Linux核心ptrace漏洞歷時九年終獲修補，法國資料中心用電三年暴增38%，AI資料中心正面臨能源與碳排的雙重壓力。&quot;
+
+Now count characters.
+
+Better to copy into a character counter, but we can't. We'll do manual.
+
+First, let's break into sentences and count each part.
+
+Segment 1: &quot;SpaceX在IPO文件中將Grok的「火辣」模式列為風險，已提列逾五億美元的潛在訴訟損失；此舉顯示內容安全與監管壓力已影響AI商業化。&quot;
+
+Let's count each Chinese character and punctuation. We'll treat each nonChinese letter (e.g., SpaceX, IPO, Grok, etc.) as single characters (but they are part of the text). Counting &quot;SpaceX&quot; as 6 characters? Actually S, p, a, c, e, X  6. &quot;IPO&quot;  3, &quot;Grok&quot;  4, &quot;G&quot; etc.
+
+Let's count meticulously:
+
+Segment 1: &quot;SpaceX在IPO文件中將Grok的「火辣」模式列為風險，已提列逾五億美元的潛在訴訟損失；此舉顯示內容安全與監管壓力已影響AI商業化。&quot;
+
+Count characters:
+
+We'll write each character sequentially and tally.
+
+Start counting:
+
+1 S
+2 p
+3 a
+4 c
+5 e
+6 X
+7 在
+8 I
+9 P
+10 O
+11 文
+12 件
+13 中
+14 將
+15 G
+16 r
+17 o
+18 k
+19 的
+20 「
+21 火
+22 辣
+23 」 (closing)
+24 模
+25 式
+26 列
+27 為
+28 風
+29 險
+30 ，
+31 已
+32 提
+33 列
+34 逾
+35 五
+36 億
+37 美
+38 元
+39 的
+40 潛
+41 在
+42 訴
+43 讼
+44 損
+45 失
+46 ；
+47 此
+48 舉
+49 顯
+50 示
+51 內
+52 容
+53 安
+54 全
+55 與
+56 監
+57 管
+58 壓
+59 力
+60 已
+61 影
+62 響
+63 A
+64 I
+65 商
+66 業
+67 化
+68 。 (period)
+
+Thus segment 1 has 68 characters.
+
+Segment 2: &quot;npm供应链再遭突破，攻擊者透過竊取的維護者帳號取得有效簽章，633個惡意套件成功繞過Sigstore驗證，暴露依賴憑證信號的脆弱性。&quot;
+
+Let's count.
+
+Start with &quot;n&quot;. Actually &quot;npm&quot; includes n, p, m  3.
+
+We continue counting after the previous segment (we're still counting total overall, but we need total across entire text). But for convenience, we can count per segment then sum later.
+
+Segment 2:
+
+1 n
+2 p
+3 m
+4 供
+5 應
+6 鏈
+7 連
+8 再
+9 遭
+10 突
+11 破
+12 ，
+13 攻
+14 擊
+15 者
+16 透
+17 過
+18 竊
+19 取
+20 的
+21 維
+22 護
+23 者
+24 帳
+25 號
+26 取
+27 得
+28 有
+29 效
+30 簽
+31 章
+32 ，
+33 6
+34 3
+35 3
+36 個
+37 惡
+38 意
+39 套
+40 件
+41 成
+42 功
+43 繞
+44 過
+45 S
+46 i
+47 g
+48 s
+49 t
+50 o
+51 r
+52 e
+53 驗
+54 證
+55 ，
+56 暴
+57 露
+58 依
+59 賴
+60 憑
+61 證
+62 信
+63 號
+64 的
+65 脆
+66 弱
+67 性
+68 。
+
+Thus segment 2 has 68 characters.
+
+Segment 3: &quot;企業AI代理屢因忘記先前學習而失敗，結構化記憶與時間感知推理成為彌補RAG不足的關鍵。&quot;
+
+Count:
+
+1 企
+2 業
+3 A
+4 I
+5 代
+6 理
+7 屢
+8 因
+9 忘
+10 記
+11 先
+12 前
+13 學
+14 習</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
-    <span class="term">cybersecurity</span>
+    <span class="term">ai 代理</span>
     <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">半導體</span>
+    <span class="count">2 則相關</span>
   </li>
 
   <li>
@@ -145,22 +369,17 @@
   </li>
 
   <li>
-    <span class="term">ai硬體</span>
+    <span class="term">spacex</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">可移植性</span>
+    <span class="term">grok</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">系統整合</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">效能優化</span>
+    <span class="term">ipo</span>
     <span class="count">1 則相關</span>
   </li>
 </ol>
@@ -171,51 +390,38 @@
   <div class="cards ai-group">
     
     <article class="card">
+      <div class="kicker">VentureBeat AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>為何攻擊者能以被盜帳號生成的憑證瞞過 Sigstore 的安全檢查，讓大量惡意套件順利流通？</div>
+      <h3 class="title"><a href="https://venturebeat.com/security/npm-sigstore-provenance-stolen-identity-audit-grid-2026" target="_blank">Valid certificates, stolen accounts: how attackers broke npm's last trust signal</a></h3>
+      <div class="ai-takeaway">5 月 19 日，633 個惡意 npm 套件版本成功通過 Sigstore 溯源驗證，因為攻擊者利用被盜的維護者帳號產生有效簽署憑證，系統卻如常運作並將其認定為安全。</div>
+      <div class="terms">
+        <span class="term">npm</span><span class="term">Sigstore</span><span class="term">安全漏洞</span><span class="term">供應鏈攻擊</span><span class="term">簽署憑證</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">VentureBeat AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>阿里巴巴的 Qwen3.7‑Max 在長時間自主運行中，如何與外部工具協作以完成複雜任務？</div>
+      <h3 class="title"><a href="https://venturebeat.com/technology/alibabas-proprietary-qwen3-7-max-can-run-for-35-hours-autonomously-and-supports-external-harnesses-like-anthropics-claude-code" target="_blank">Alibaba's proprietary Qwen3.7-Max can run for 35 hours autonomously and supports external harnesses like Anthropic's Claude Code</a></h3>
+      <div class="ai-takeaway">阿里巴巴的自研 Qwen3.7‑Max 能自主運行 35 小時，並支援如 Anthropic Claude Code 等外部工具，標誌著 AI 已全面進入「代理時代」。</div>
+      <div class="terms">
+        <span class="term">Qwen3.7‑Max</span><span class="term">阿里巴巴</span><span class="term">AI 代理</span><span class="term">自主運行</span><span class="term">Claude Code</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
       <div class="kicker">Wired AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>OpenAI的「災難大師」能否成功修復AI產業界的形象危機？</div>
-      <h3 class="title"><a href="https://www.wired.com/story/openai-chris-lehane-global-affairs-pr/" target="_blank">Can OpenAI’s ‘Master of Disaster’ Fix AI’s Reputation Crisis?</a></h3>
-      <div class="ai-takeaway">OpenAI全球事務主管克里斯·萊漢正努力緩解外界對AI社會影響的爭議，並推動各州立法以確保公司持續高速發展。</div>
+      <div class="hook"><span class="q">Q</span>Grok 的「火辣」模式究竟會帶來多少法律風險，讓 SpaceX 提列巨額準備？</div>
+      <h3 class="title"><a href="https://www.wired.com/story/spacex-ipo-grok-spicy-mode-risks/" target="_blank">SpaceX Listed Grok’s ‘Spicy’ Mode as a Risk in Its IPO Filing</a></h3>
+      <div class="ai-takeaway">SpaceX 在 IPO 申報中將 Grok 的「火辣」模式列為風險，已提列逾 5 億美元潛在訴訟損失，部分原因是因應指稱 Grok 生成性感圖片的投訴。</div>
       <div class="terms">
-        <span class="term">OpenAI</span><span class="term">政策監管</span><span class="term">公共關係</span><span class="term">AI治理</span><span class="term">企業策略</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">VentureBeat AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>區區0.12%的參數增量如何解決AI代理的遺忘問題？</div>
-      <h3 class="title"><a href="https://venturebeat.com/orchestration/a-0-12-parameter-add-on-gives-ai-agents-the-working-memory-rag-cant" target="_blank">A 0.12% parameter add-on gives AI agents the working memory RAG can't</a></h3>
-      <div class="ai-takeaway">研究發現僅需增加0.12%的參數就能賦予AI代理工作記憶能力，這是傳統RAG技術無法做到的。</div>
-      <div class="terms">
-        <span class="term">AI代理</span><span class="term">工作記憶</span><span class="term">參數優化</span><span class="term">RAG替代方案</span><span class="term">機器學習</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">VentureBeat AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>結構化記憶能否真正解決企業AI代理的遺忘危機？</div>
-      <h3 class="title"><a href="https://venturebeat.com/orchestration/enterprise-ai-agents-keep-failing-because-they-forget-what-they-learned" target="_blank">Enterprise AI agents keep failing because they forget what they learned</a></h3>
-      <div class="ai-takeaway">企業AI代理頻頻失敗的主因在於無法記住先前學習，因此Rippletide等新創公司推出決策上下文圖譜框架來賦予代理結構化記憶與時間推理能力。</div>
-      <div class="terms">
-        <span class="term">企業AI</span><span class="term">決策上下文圖譜</span><span class="term">結構化記憶</span><span class="term">Neo4j</span><span class="term">AI代理框架</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>為什麼最佳的AI技術堆疊必然與特定硬體深度綁定？</div>
-      <h3 class="title"><a href="https://twitter.com/PatrickToulme/status/2055709800986780028" target="_blank">Portability Is a Myth: Why the Best AI Stacks Will Never Be Hardware-Agnostic</a></h3>
-      <div class="ai-takeaway">專家指出可移植性是迷思，最優秀的AI系統將永遠無法摆脱硬體限制。</div>
-      <div class="terms">
-        <span class="term">AI硬體</span><span class="term">可移植性</span><span class="term">系統整合</span><span class="term">效能優化</span><span class="term">技術架構</span>
+        <span class="term">SpaceX</span><span class="term">Grok</span><span class="term">IPO</span><span class="term">法律風險</span><span class="term">AI 倫理</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
@@ -223,12 +429,25 @@
     </article>
   
     <article class="card">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>AI自動化了設計流程後，人類設計師的角色將如何轉變？</div>
-      <h3 class="title"><a href="https://en.wikipedia.org/wiki/AI-driven_design_automation" target="_blank">AI-Driven Design Automation</a></h3>
-      <div class="ai-takeaway">維基百科介紹AI驅動設計自動化技術如何改變傳統設計流程，提升創意產業效率。</div>
+      <div class="kicker">VentureBeat AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>當 AI 代理的行為在技術上正確但情境不完整時，如何防止基礎設施級聯失敗？</div>
+      <h3 class="title"><a href="https://venturebeat.com/orchestration/ai-agents-are-quietly-generating-chaos-engineering-failures-enterprises-dont-track-yet" target="_blank">AI agents are quietly generating chaos engineering failures enterprises don’t track yet</a></h3>
+      <div class="ai-takeaway">AI 代理在生產環境中悄然引發的混沌工程故障，因不符合現有事故分析模板，企業尚未有效追蹤。</div>
       <div class="terms">
-        <span class="term">AI設計</span><span class="term">自動化</span><span class="term">創意產業</span><span class="term">設計流程</span><span class="term">技術創新</span>
+        <span class="term">AI 代理</span><span class="term">混沌工程</span><span class="term">故障追蹤</span><span class="term">生產環境</span><span class="term">情境不完整</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">VentureBeat AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>企業 AI 代理如何在長期任務中保持資訊記憶，避免因遺忘導致決策失誤？</div>
+      <h3 class="title"><a href="https://venturebeat.com/orchestration/enterprise-ai-agents-keep-failing-because-they-forget-what-they-learned" target="_blank">Enterprise AI agents keep failing because they forget what they learned</a></h3>
+      <div class="ai-takeaway">企業 AI 代理屢屢失敗，因為它們忘記了學到的內容；RAG 架構僅能檢索語義相關文件，決策上下文圖框架則透過結構化記憶與時間感知推理補足缺口。</div>
+      <div class="terms">
+        <span class="term">AI 代理</span><span class="term">決策上下文圖</span><span class="term">RAG</span><span class="term">結構化記憶</span><span class="term">企業 AI</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">6/10</span>
@@ -243,11 +462,11 @@
     
     <article class="card">
       <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>繼CrowdStrike事件後，微軟再度傳出零時差漏洞，究竟微軟的安全防護機制是否出了問題？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176053" target="_blank">【資安日報】5月22日，微軟修補防毒軟體零時差漏洞</a></h3>
-      <div class="ai-takeaway">微軟緊急修補旗下防毒軟體Microsoft Defender中兩個已遭攻擊者利用的零時差漏洞。</div>
+      <div class="hook"><span class="q">Q</span>Drupal 漏洞已被實際利用，全球有多少網站正面臨被入侵的風險？</div>
+      <h3 class="title"><a href="https://www.ithome.com.tw/news/176073" target="_blank">CISA警示Drupal的SQL注入漏洞已被用於實際攻擊</a></h3>
+      <div class="ai-takeaway">美國 CISA 已將 Drupal SQL 注入漏洞 CVE20269082 列為已知利用漏洞，顯示該漏洞已遭實際攻擊。</div>
       <div class="terms">
-        <span class="term">零時差漏洞</span><span class="term">ZeroDay Vulnerability</span><span class="term">Microsoft Defender</span><span class="term">Cybersecurity</span><span class="term">資安</span>
+        <span class="term">Drupal</span><span class="term">SQL 注入</span><span class="term">CVE20269082</span><span class="term">CISA</span><span class="term">資安</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">9/10</span>
@@ -255,25 +474,12 @@
     </article>
   
     <article class="card">
-      <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Windows系統接連爆發零時差漏洞，攻擊鏈威脅加劇，企業的防禦策略是否需要全面重新檢視？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176056" target="_blank">【資安週報】0518~0522，近期Windows零時差漏洞連環揭露，資安公司警告已能串成攻擊鏈</a></h3>
-      <div class="ai-takeaway">資安研究人員發現微軟Windows多項零時差漏洞可被串聯成完整攻擊鏈，警示企業應加快後量子密碼學部署。</div>
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>輝達在台灣新建總部，會對本地半導體供應鏈帶來什麼深遠影響？</div>
+      <h3 class="title"><a href="https://technews.tw/2026/05/25/jensen-huang-meets-barry-lam-cc-wei-attend-nvidia-headquarters-groundbreaking-27th/" target="_blank">黃仁勳：與林百里魏哲家會面，5/27 出席輝達總部動土</a></h3>
+      <div class="ai-takeaway">輝達執行長黃仁勳將於5月27日出席輝達總部動土，並與林百里、魏哲家會面。</div>
       <div class="terms">
-        <span class="term">Windows零時差</span><span class="term">ZeroDay</span><span class="term">攻擊鏈</span><span class="term">後量子密碼學</span><span class="term">PQC</span><span class="term">資安</span><span class="term">Cybersecurity</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">TechCrunch [Tech]</div>
-      <div class="hook"><span class="q">Q</span>智慧眼鏡產業發展多年始終未能普及，XREAL這次的突破究竟能否真正打開消費市場的大門？</div>
-      <h3 class="title"><a href="https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/" target="_blank">Xreal, Google&amp;#8217;s smartglasses partner, thinks it has finally mastered this notoriously tricky industry</a></h3>
-      <div class="ai-takeaway">XREAL創辦人徐驰認為智慧眼鏡業務已迎來轉捩點，與Google的合作或許能助其突破市場瓶頸。</div>
-      <div class="terms">
-        <span class="term">智慧眼鏡</span><span class="term">Smart Glasses</span><span class="term">XREAL</span><span class="term">Google</span><span class="term">AR</span><span class="term">Wearable Tech</span>
+        <span class="term">輝達</span><span class="term">Jensen Huang</span><span class="term">總部動土</span><span class="term">台灣</span><span class="term">半導體</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
@@ -282,11 +488,24 @@
   
     <article class="card">
       <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>繼TanStack供應鏈攻擊後，開發者常用的VS Code擴充套件再度成為資安破口，開源生態圈的信任機制是否已名存實亡？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176069" target="_blank">針對內部儲存庫遭駭事故，GitHub證實為受到Nx Console的供應鏈攻擊波及</a></h3>
-      <div class="ai-takeaway">GitHub證實旗下近3,800個內部儲存庫遭駭，起因是一名員工安裝了含有惡意程式碼的VS Code擴充套件。</div>
+      <div class="hook"><span class="q">Q</span>資料中心能源需求急劇上升，法國的碳中和目標會因此受阻嗎？</div>
+      <h3 class="title"><a href="https://www.ithome.com.tw/news/176092" target="_blank">法國監管機構調查：資料中心耗電3年暴增38%，大型AI資料中心成能源與碳排新壓力</a></h3>
+      <div class="ai-takeaway">法國監管機構 Arcep 公布調查顯示，資料中心用電在過去三年飆升38%，大型 AI 資料中心已成為能源與碳排放的新壓力。</div>
       <div class="terms">
-        <span class="term">供應鏈攻擊</span><span class="term">Supply Chain Attack</span><span class="term">GitHub</span><span class="term">VS Code</span><span class="term">Nx Console</span><span class="term">開發者安全</span><span class="term">Cybersecurity</span>
+        <span class="term">資料中心</span><span class="term">能源消耗</span><span class="term">AI</span><span class="term">法國</span><span class="term">碳排放</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">iThome [Tech]</div>
+      <div class="hook"><span class="q">Q</span>Linux 核心修補的 ptrace 漏洞若未及時更新，企業系統將面臨多大的安全威脅？</div>
+      <h3 class="title"><a href="https://www.ithome.com.tw/news/176047" target="_blank">研究人員揭露存在9年的Linux本機權限提升漏洞CVE-2026-46333</a></h3>
+      <div class="ai-takeaway">資安公司 Qualys 揭露存在長達九年的 Linux 核心 ptrace 權限提升漏洞 CVE202646333，已於5月14日完成修補。</div>
+      <div class="terms">
+        <span class="term">Linux</span><span class="term">權限提升</span><span class="term">CVE202646333</span><span class="term">Qualys</span><span class="term">資安</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
@@ -295,11 +514,11 @@
   
     <article class="card">
       <div class="kicker">TechNews 科技新報 [Tech]</div>
-      <div class="hook"><span class="q">Q</span>半導體大廠積極布局低碳資料中心，台灣在這波綠色運算浪潮中能否搶得先機？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/chunghwa-technology-and-creative-electronics-jointly-build-taiwans-first-low-carbon-computing-center/" target="_blank">崇越攜手創意電子打造全台首座低碳運算中心，將有效減碳近三成</a></h3>
-      <div class="ai-takeaway">崇越科技旗下鼎越創能與創意電子合作，打造全台首座低碳運算中心，預計可減少近三成碳排放。</div>
+      <div class="hook"><span class="q">Q</span>聯發科強化供應鏈韌性，能否幫助台灣在半導體產業保持領先地位？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/mediatek-announces-supply-chain-resilience-at-supplier-conference/" target="_blank">聯發科供應商大會宣布打造供應鏈韌性，協助加速客戶產品創新</a></h3>
+      <div class="ai-takeaway">聯發科在年度供應商大會上由總經理暨營運長陳冠州主持，宣布將打造供應鏈韌性並協助加速客戶產品創新。</div>
       <div class="terms">
-        <span class="term">低碳運算</span><span class="term">LowCarbon Computing</span><span class="term">崇越科技</span><span class="term">半導體</span><span class="term">資料中心</span><span class="term">ESG</span>
+        <span class="term">聯發科</span><span class="term">供應商大會</span><span class="term">供應鏈韌性</span><span class="term">產品創新</span><span class="term">半導體</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
