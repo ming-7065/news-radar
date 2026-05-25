@@ -95,6 +95,59 @@
   .briefing p { margin: 0 0 14px; text-align: justify; hyphens: auto; font-weight: 600; }
   .briefing p:first-child::first-letter { font-family: var(--serif); font-weight: 900; font-size: 72px; line-height: 0.9; float: left; padding: 6px 10px 0 0; color: var(--accent); }
   
+  /* 有聲播放器高級樣式 */
+  .audio-player-container {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 24px;
+    margin: 20px 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border-left: 4px solid var(--accent);
+    transition: all 0.3s ease;
+  }
+  .audio-player-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  }
+  .play-btn-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2);
+  }
+  .play-btn-circle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 14px rgba(139, 26, 26, 0.3);
+  }
+  .player-info-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .player-title-text {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--fg);
+    font-family: var(--sans);
+  }
+  .player-status-subtitle {
+    font-size: 12.5px;
+    color: var(--fg-mute);
+    font-family: var(--sans);
+  }
+
   .trending ol { list-style: none; counter-reset: trend; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; }
   @media (min-width: 600px) { .trending ol { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
   .trending li { counter-increment: trend; display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted var(--border); font-family: var(--serif); font-size: 17px; }
@@ -219,33 +272,41 @@
   </header>
 
   <div class="daily-quote">
-    小滿已過，晨曦如嶄新的晶片，願創新的火花在今日點燃。
+    在「小滿」時節，技術的穀粒正悄然飽滿，晨曦中的每一道光都孕育著創新的可能——今天，我們以科技為筆，書寫嶄新的開始。
   </div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>今日 AI 與科技呈現多重張力：Meta 危機與 Google 搜尋改版顯示平台正重新定位；AI 畢業生嗆聲、OpenAI 遊說監管，顯示聲譽與政策博弈加劇；企業 AI 代理因忘記已學內容失效，RAG 與決策圖框架的互補成焦點。硬體方面，AMD 逾百億美元在台投入先進封裝與 AI 機櫃，劍指 NVIDIA；Amazon Bee 可穿戴裝置和 Xreal‑Google 智慧眼鏡引發便利與隱私爭議。資料中心选址在 Utah 遭居民反對，台灣六都數位政策調查則顯示數位平台正成為城市治理的補位關鍵。</p>
+    <p>今日科技與 AI 領域呈現多重交錯的動態。Meta 裁員與 Google 搜索的大改版，標誌著 AI 商業模式正快速重構；同時，Dun &amp; Bradstreet 為 AI 代理重新打造資料庫、npm 供應鏈安全漏洞與新型銀行木馬 TCLBanker 的出現，凸顯安全與信任仍是部署瓶頸。RAG 與向量檢索的局限性促使業界呼籲「代理工作台」式的長期記憶架構，以支撐更可靠的企業 AI 代理。硬體方面，東芝的 1200V SiC 功率元件為 AI 資料中心的高功耗需求提供新動能，而與 Qualcomm、行動貝果合作的地端 Agentic AI 平台則顯示私有化部署正成為企業 AI 的主流趨勢。政策層面，DEAT《六都數位政策調查》揭示城市數位治理的分化，Toyota Woven City 的實驗亦顯示未來城市將以資料驅動與永續能源為核心。總體而言，安全、硬體創新與制度化成為當前 AI 發展的三條主軸。</p>
+  </div>
+  
+  <!-- 高級 AI 語音播放器 -->
+  <div class="audio-player-container">
+    <button class="play-btn-circle" id="play-btn" onclick="togglePlay()">
+      <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <div class="player-info-meta">
+      <span class="player-title-text">聽總編輯說日報 (AI 語音播報)</span>
+      <span class="player-status-subtitle" id="player-status">點擊播放 · 語音朗讀</span>
+    </div>
+    <audio id="briefing-audio" src="audio/2026-05-25.mp3" preload="metadata"></audio>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
-    <span class="term">隱私</span>
+    <span class="term">ai代理</span>
     <span class="count">2 則相關</span>
   </li>
 
   <li>
-    <span class="term">ai</span>
+    <span class="term">企業ai</span>
     <span class="count">2 則相關</span>
   </li>
 
   <li>
-    <span class="term">meta</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">裁員</span>
+    <span class="term">meta裁員</span>
     <span class="count">1 則相關</span>
   </li>
 
@@ -255,7 +316,12 @@
   </li>
 
   <li>
-    <span class="term">ai 負評</span>
+    <span class="term">ai抵制</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">科技產業</span>
     <span class="count">1 則相關</span>
   </li>
 </ol>
@@ -271,14 +337,14 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               今日焦點推薦
             </div>
-            <div class="kicker">Wired AI [AI]</div>
-            <h3 class="title" style="font-size: 28px; line-height: 1.35;"><a href="https://www.wired.com/story/uncanny-valley-podcast-meta-in-crisis-google-search-makeover-ai-booed-by-graduates/" target="_blank">Meta Is in Crisis, Google Search’s Makeover, and AI Gets Booed by Graduates</a></h3>
-            <div class="ai-takeaway" style="font-size: 15.5px; line-height: 1.7; color: var(--fg); margin: 8px 0 0;">Meta 正面臨危機，Google 搜索正進行大改造，且 AI 在畢業生中受到噓聲。</div>
+            <div class="kicker">VentureBeat AI [AI]</div>
+            <h3 class="title" style="font-size: 28px; line-height: 1.35;"><a href="https://venturebeat.com/data/d-and-bs-database-of-642-million-businesses-was-built-for-humans-not-ai-agents-so-they-rebuilt-it" target="_blank">D&amp;B's database of 642 million businesses was built for humans, not AI agents. So they rebuilt it.</a></h3>
+            <div class="ai-takeaway" style="font-size: 15.5px; line-height: 1.7; color: var(--fg); margin: 8px 0 0;">擁有180多年歷史的Dun &amp; Bradstreet發現其商業數據庫是為人類設計而非AI代理，於是決定重新建構。</div>
           </div>
           <div class="spotlight-right">
-            <div class="hook" style="font-size: 15px; margin-bottom: 16px;"><span class="q">Q</span>Meta 的裁員風暴會不會動搖其 AI 發展藍圖？</div>
+            <div class="hook" style="font-size: 15px; margin-bottom: 16px;"><span class="q">Q</span>當AI代理無法理解傳統商業數據庫時，企業該如何因應這場資料結構革命？</div>
             <div class="terms" style="margin-top: 0; margin-bottom: 16px;">
-              <span class="term">Meta</span><span class="term">裁員</span><span class="term">Google I/O</span><span class="term">AI 負評</span><span class="term">搜索改造</span>
+              <span class="term">商業數據庫</span><span class="term">AI代理</span><span class="term">資料重建</span><span class="term">企業轉型</span><span class="term">數據結構</span>
             </div>
             <div class="byline" style="margin-top: 0;">
               <b>FOCUS SCORE</b><span class="score" style="font-size: 16px; font-weight: 900; color: var(--good);">8/10</span>
@@ -288,11 +354,24 @@
       
       <article class="card">
         <div class="kicker">VentureBeat AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>結構化記憶與時間感知是否能根本解決企業 AI 代理的失效問題？</div>
-        <h3 class="title"><a href="https://venturebeat.com/orchestration/enterprise-ai-agents-keep-failing-because-they-forget-what-they-learned" target="_blank">Enterprise AI agents keep failing because they forget what they learned</a></h3>
-        <div class="ai-takeaway">企業 AI 代理常因忘記已學內容而失效，RAG 架構只能在語義檢索上表現優異，決策情境圖框架則補足其結構化記憶與時間推理的不足。</div>
+        <div class="hook"><span class="q">Q</span>若連最嚴謹的Sigstore驗證都能被繞過，我們还能信任開源生態的安全性嗎？</div>
+        <h3 class="title"><a href="https://venturebeat.com/security/npm-sigstore-provenance-stolen-identity-audit-grid-2026" target="_blank">Valid certificates, stolen accounts: how attackers broke npm's last trust signal</a></h3>
+        <div class="ai-takeaway">攻擊者利用被盜維護者帳號產生有效簽章憑證，讓633個惡意npm套件成功通過Sigstore驗證系統。</div>
         <div class="terms">
-          <span class="term">企業 AI</span><span class="term">RAG</span><span class="term">決策情境圖</span><span class="term">結構化記憶</span><span class="term">代理失效</span>
+          <span class="term">npm安全</span><span class="term">Sigstore</span><span class="term">供應鏈攻擊</span><span class="term">憑證竊取</span><span class="term">開源資安</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">8/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">VentureBeat AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>為何現有的RAG技術會讓AI代理「學了又忘」，企業該如何突破這個瓶頸？</div>
+        <h3 class="title"><a href="https://venturebeat.com/orchestration/enterprise-ai-agents-keep-failing-because-they-forget-what-they-learned" target="_blank">Enterprise AI agents keep failing because they forget what they learned</a></h3>
+        <div class="ai-takeaway">企業AI代理頻頻失敗的根源在於RAG架構只能做文件檢索，無法維持長期結構化記憶與決策邏輯。</div>
+        <div class="terms">
+          <span class="term">AI代理</span><span class="term">RAG架構</span><span class="term">決策上下文圖</span><span class="term">結構化記憶</span><span class="term">企業AI</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">8/10</span>
@@ -301,11 +380,11 @@
     
       <article class="card">
         <div class="kicker">Wired AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>OpenAI 的「救火隊長」能否真正修復 AI 的形象危機？</div>
-        <h3 class="title"><a href="https://www.wired.com/story/openai-chris-lehane-global-affairs-pr/" target="_blank">Can OpenAI’s ‘Master of Disaster’ Fix AI’s Reputation Crisis?</a></h3>
-        <div class="ai-takeaway">OpenAI 全球事務主管 Chris Lehane 試圖淡化 AI 對社會影響的爭論，並促使各州通過不妨礙其快速成長的法規。</div>
+        <div class="hook"><span class="q">Q</span>Meta的裁員風暴是否預示著科技巨頭的輝煌時代已經結束？</div>
+        <h3 class="title"><a href="https://www.wired.com/story/uncanny-valley-podcast-meta-in-crisis-google-search-makeover-ai-booed-by-graduates/" target="_blank">Meta Is in Crisis, Google Search’s Makeover, and AI Gets Booed by Graduates</a></h3>
+        <div class="ai-takeaway">Meta大規模裁員、Google I/O重大發布，以及AI遭受畢業生抵制，這三件事成為本期Podcast的焦點。</div>
         <div class="terms">
-          <span class="term">OpenAI</span><span class="term">危機管理</span><span class="term">法規</span><span class="term">AI 形象</span><span class="term">Chris Lehane</span>
+          <span class="term">Meta裁員</span><span class="term">Google I/O</span><span class="term">AI抵制</span><span class="term">科技產業</span><span class="term">硅谷動態</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">7/10</span>
@@ -313,28 +392,15 @@
       </article>
     
       <article class="card">
-        <div class="kicker">Hacker News AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>居民的反對會不會阻礙 Kevin O'Leary 的 AI 資料中心計畫？</div>
-        <h3 class="title"><a href="https://www.cbc.ca/news/world/kevin-oleary-data-centre-utah-9.7207716" target="_blank">Kevin O'Leary wants AI data centre in Utah. Some residents aren't happy</a></h3>
-        <div class="ai-takeaway">企業家 Kevin O'Leary 提議在猶他州興建 AI 資料中心，但部分居民對此表示不滿。</div>
+        <div class="kicker">VentureBeat AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>若向量資料庫並非AI代理的最終解答，我們是否需要重新思考代理的資訊獲取方式？</div>
+        <h3 class="title"><a href="https://venturebeat.com/orchestration/your-ai-agents-need-a-terminal-not-just-a-vector-database" target="_blank">Your AI agents need a terminal, not just a vector database</a></h3>
+        <div class="ai-takeaway">研究人員指出代理工作流程失敗的主因不是模型推理能力不足，而是資訊檢索界面所提供的資料過於有限。</div>
         <div class="terms">
-          <span class="term">Kevin O'Leary</span><span class="term">資料中心</span><span class="term">猶他州</span><span class="term">居民反對</span><span class="term">AI 基礎設施</span>
+          <span class="term">向量資料庫</span><span class="term">代理工作流程</span><span class="term">直接上下文存取</span><span class="term">模型推理</span><span class="term">檢索界面</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">7/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">Hacker News AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>有什麼技巧可以讓我們在不被 AI 輔助的情況下重拾寫程式的樂趣？</div>
-        <h3 class="title"><a href="https://news.ycombinator.com/item?id=48263955" target="_blank">Ask HN: How to get back into programming without AI?</a></h3>
-        <div class="ai-takeaway">一位開發者尋求在不使用 AI 的情況下重新回到純程式設計的方法。</div>
-        <div class="terms">
-          <span class="term">程式設計</span><span class="term">AI 依賴</span><span class="term">純手工</span><span class="term">Hacker News</span><span class="term">開發者回歸</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">6/10</span>
         </div>
       </article>
     
@@ -345,25 +411,12 @@
   <div class="cards tech-group">
     
       <article class="card">
-        <div class="kicker">TechOrange 科技報橘 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>這筆巨額投資能否讓 AMD 在 AI 加速器市場與 NVIDIA 一較高下？</div>
-        <h3 class="title"><a href="https://techorange.com/2026/05/22/amd-invest-10-billion-taiwans-ai-ecosystem/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">不只拚晶片效能：AMD 宣布台灣逾 100 億美元投資，押注封裝與 AI 機櫃產能</a></h3>
-        <div class="ai-takeaway">AMD 將在台灣投入逾 100 億美元，以強化先進封裝、AI 機櫃產能，補足供應鏈劣勢，挑戰 NVIDIA 在 AI 市場的地位。</div>
+        <div class="kicker">iThome [Tech]</div>
+        <div class="hook"><span class="q">Q</span>這種利用即時通訊與郵件自行散播的銀行木馬，會如何威脅全球金融機構？</div>
+        <h3 class="title"><a href="https://www.ithome.com.tw/news/176096" target="_blank">資安業者Elastic揭露新型銀行木馬TCLBanker，可透過WhatsApp與Outlook自行擴散</a></h3>
+        <div class="ai-takeaway">Elastic發布報告，揭露一款能竊取金融帳密且透過WhatsApp與Outlook自我傳播的新型銀行木馬TCLBanker。</div>
         <div class="terms">
-          <span class="term">AMD</span><span class="term">先進封裝</span><span class="term">AI 機櫃</span><span class="term">台積電</span><span class="term">供應鏈</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">9/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">TechOrange 科技報橘 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>台灣六都在數位治理上的表現，將來會出現哪些明顯分化？</div>
-        <h3 class="title"><a href="https://techorange.com/2026/05/22/deat-report/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">DEAT《六都數位政策調查研究》出爐：城市發展邁入分化時代、數位平台成補位關鍵</a></h3>
-        <div class="ai-takeaway">台灣首次系統性將七大國際智慧城市指標本土化，用於六都數位政策評估，助力數位治理與智慧城市發展。</div>
-        <div class="terms">
-          <span class="term">數位政策</span><span class="term">智慧城市</span><span class="term">六都</span><span class="term">評比指標</span><span class="term">DEAT</span>
+          <span class="term">資安</span><span class="term">銀行木馬</span><span class="term">TCLBanker</span><span class="term">WhatsApp</span><span class="term">Outlook</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">8/10</span>
@@ -371,41 +424,54 @@
       </article>
     
       <article class="card">
-        <div class="kicker">TechCrunch [Tech]</div>
-        <div class="hook"><span class="q">Q</span>透過 AI 復活的飛行員聲音是否會對調查與隱私構成新挑戰？</div>
-        <h3 class="title"><a href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" target="_blank">AI is being used to resurrect the voices of dead pilots</a></h3>
-        <div class="ai-takeaway">研究人員利用 AI 重建已故飛行員在駕駛艙錄音中的聲音，逼使美國國家交通安全委員會（NTSB）暫時限制其系統存取。</div>
+        <div class="kicker">TechNews 科技新報 [Tech]</div>
+        <div class="hook"><span class="q">Q</span>1200V SiC功率元件的問世，會如何改變未來AI資料中心的能源效率？</div>
+        <h3 class="title"><a href="https://technews.tw/2026/05/25/800v-toshiba-1200v-sic/" target="_blank">800V 還不夠看，東芝研發 1200V SiC 功率元件</a></h3>
+        <div class="ai-takeaway">東芝研發1200V碳化矽功率元件，以滿足AI資料中心高功耗需求與HVDC供電架構的快速發展。</div>
         <div class="terms">
-          <span class="term">AI</span><span class="term">飛行員</span><span class="term">語音重建</span><span class="term">NTSB</span><span class="term">隱私</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">8/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">TechCrunch [Tech]</div>
-        <div class="hook"><span class="q">Q</span>XREAL 的技術突破能否讓智慧眼鏡成為主流消費產品？</div>
-        <h3 class="title"><a href="https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/" target="_blank">Xreal, Google&amp;#8217;s smartglasses partner, thinks it has finally mastered this notoriously tricky industry</a></h3>
-        <div class="ai-takeaway">XREAL 作為 Google 智慧眼鏡的合作夥伴，宣稱已突破該產業的難關，迎來轉捩點。</div>
-        <div class="terms">
-          <span class="term">XREAL</span><span class="term">智慧眼鏡</span><span class="term">Google</span><span class="term">產業轉捩</span><span class="term">AR</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">8/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">TechCrunch [Tech]</div>
-        <div class="hook"><span class="q">Q</span>Bee 的便利功能是否值得犧牲隱私？</div>
-        <h3 class="title"><a href="https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/" target="_blank">I tried Amazon&amp;#8217;s Bee wearable and am both intrigued and slightly creeped out</a></h3>
-        <div class="ai-takeaway">Amazon 推出的 Bee 可穿戴裝置結合便利與隱私疑慮，讓人既好奇又略感不安。</div>
-        <div class="terms">
-          <span class="term">Amazon Bee</span><span class="term">可穿戴</span><span class="term">隱私</span><span class="term">AI</span><span class="term">智慧裝置</span>
+          <span class="term">東芝</span><span class="term">SiC功率元件</span><span class="term">1200V</span><span class="term">AI資料中心</span><span class="term">HVDC</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechNews 科技新報 [Tech]</div>
+        <div class="hook"><span class="q">Q</span>這種私有化地端 AI 平台是否能滿足企業對資料安全與自主控制的需求？</div>
+        <h3 class="title"><a href="https://infosecu.technews.tw/2026/05/25/chief-mobagel-qualcomm/" target="_blank">是方攜手高通、行動貝果，推企業私有化地端 Agentic AI 平台服務</a></h3>
+        <div class="ai-takeaway">是方電訊與行動貝果及高通技術合作，推出企業私有化的地端 Agentic AI 平台服務。</div>
+        <div class="terms">
+          <span class="term">是方電訊</span><span class="term">高通</span><span class="term">行動貝果</span><span class="term">Agentic AI</span><span class="term">企業AI</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+        <div class="hook"><span class="q">Q</span>台灣首度系統化的智慧城市指標，能否真正促進六都的數位治理與發展？</div>
+        <h3 class="title"><a href="https://techorange.com/2026/05/25/toyota-and-woven/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">花 100 億美元蓋一座城：Toyota 豐田 Woven City 的實驗現場報告</a></h3>
+        <div class="ai-takeaway">問句：台灣首度系統化的智慧城市指標，能否真正促進六都的數位治理與發展？</div>
+        <div class="terms">
+          <span class="term">DEAT</span><span class="term">數位政策</span><span class="term">智慧城市</span><span class="term">六都</span><span class="term">數位治理</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+        <div class="hook"><span class="q">Q</span>最新消息</div>
+        <h3 class="title"><a href="https://techorange.com/2026/05/22/deat-report/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">DEAT《六都數位政策調查研究》出爐：城市發展邁入分化時代、數位平台成補位關鍵</a></h3>
+        <div class="ai-takeaway">DEAT與政治大學發布《六都數位政策調查研究》，首次系統化</div>
+        <div class="terms">
+          <span class="term">AI</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">5/10</span>
         </div>
       </article>
     
@@ -413,5 +479,39 @@
 
   <footer>© 2026 銘於心 (MING). 智慧物聯架構實驗室.</footer>
 </div>
+
+<script>
+  const audio = document.getElementById('briefing-audio');
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+  const playerStatus = document.getElementById('player-status');
+
+  function togglePlay() {
+    if (audio.paused) {
+      audio.play().then(() => {
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+        playerStatus.innerText = '播放中 · 聆聽總編輯的話';
+      }).catch(err => {
+        playerStatus.innerText = '暫無今日語音檔或音檔仍在背景生成中...';
+      });
+    } else {
+      audio.pause();
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playerStatus.innerText = '已暫停';
+    }
+  }
+
+  audio.addEventListener('ended', () => {
+    playIcon.style.display = 'block';
+    pauseIcon.style.display = 'none';
+    playerStatus.innerText = '播放結束 · 重新收聽';
+  });
+
+  audio.addEventListener('error', () => {
+    playerStatus.innerText = '暫無今日語音檔或音檔仍在背景生成中...';
+  });
+</script>
 </body>
 </html>
