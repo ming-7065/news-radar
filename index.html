@@ -17,8 +17,9 @@
     --fg: #1f1d1a;
     --fg-mute: #6b655c;
     --accent: #8b1a1a;
+    --accent-ai: #2351c5;
     --accent-soft: rgba(139, 26, 26, 0.06);
-    --accent-2: #2f5d4f;
+    --accent-ai-soft: rgba(35, 81, 197, 0.06);
     --good: #5a7d52;
     --serif: "Source Serif 4", "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
     --sans: "Inter", "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
@@ -32,7 +33,7 @@
     --fg: #d8d6cf;
     --fg-mute: #8a867d;
     --accent: #d68c8c;
-    --accent-2: #8fb8a7;
+    --accent-ai: #8fb8a7;
     --good: #9bc198;
   }
   * { box-sizing: border-box; }
@@ -46,22 +47,18 @@
   a { color: inherit; text-decoration: none; }
   
   .masthead { text-align: center; padding-bottom: 22px; border-bottom: 3px double var(--rule); position: relative; }
-  .masthead .dateline {
-    display: flex; justify-content: center; align-items: center; gap: 12px;
-    font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px;
-  }
+  .masthead .dateline { display: flex; justify-content: center; align-items: center; gap: 12px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px; }
   .masthead h1 { font-family: var(--serif); font-weight: 900; font-size: 56px; line-height: 1.15; letter-spacing: -0.01em; margin: 4px 0 8px; }
   .masthead .tagline { font-family: var(--sans); font-weight: 600; font-size: 16px; color: var(--fg-mute); margin: 0 0 6px; }
   .masthead .meta-line { font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; }
-  .masthead .meta-line a { color: var(--accent); border-bottom: 1px dotted var(--accent); }
-  .masthead .author-strip { margin: 16px 0 0; font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); }
-  .masthead .author-strip b { color: var(--fg); font-weight: 700; }
   .masthead .theme-btn { position: absolute; top: 0; right: 0; background: transparent; border: 1px solid var(--border); color: var(--fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; transition: .12s; }
   @media(max-width:600px){.masthead .theme-btn{position:fixed;top:auto;bottom:20px;right:20px;width:36px;height:36px;border-radius:50%;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}}
   
-  .section-rule { display: flex; align-items: center; gap: 14px; margin: 36px 0 18px; font-family: var(--sans); font-weight: 600; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
+  .section-rule { display: flex; align-items: center; gap: 14px; margin: 48px 0 24px; font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
   .section-rule::after { content: ""; flex: 1; border-bottom: 1px solid var(--rule); }
-  .section-rule .accent { color: var(--accent); }
+  .section-rule.ai-rule .accent { color: var(--accent-ai); }
+  .section-rule.tech-rule .accent { color: var(--accent); }
+  .accent { color: var(--accent); font-weight: 800;}
   
   .briefing { margin: 14px 0 0; font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--fg); column-count: 1; }
   @media (min-width: 760px) { .briefing { column-count: 2; column-gap: 36px; } }
@@ -72,18 +69,24 @@
   @media (min-width: 600px) { .trending ol { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
   .trending li { counter-increment: trend; display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted var(--border); font-family: var(--serif); font-size: 17px; }
   .trending li::before { content: counter(trend, decimal-leading-zero); font-family: var(--sans); font-weight: 600; font-size: 13px; color: var(--fg-mute); min-width: 24px; }
-  .trending li .term { color: var(--fg); flex: 1; }
-  .trending li .count { font-family: var(--sans); font-size: 12px; color: var(--fg-mute); }
   
   .cards { display: grid; grid-template-columns: 1fr; gap: 0; }
   @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; column-gap: 36px; } }
   .card { padding: 24px 0; border-bottom: 1px solid var(--border); border-left: 3px solid var(--accent-soft); padding-left: 14px; transition: border-color .2s; }
   .card:hover { border-left-color: var(--accent); }
+  
+  .cards.ai-group .card { border-left-color: var(--accent-ai-soft); }
+  .cards.ai-group .card:hover { border-left-color: var(--accent-ai); }
+  .cards.ai-group .card .kicker { color: var(--accent-ai); }
+  .cards.ai-group .card .hook { color: var(--accent-ai); }
+  .cards.ai-group .card .hook .q { background: var(--accent-ai); }
+  .cards.ai-group .card .term::before { color: var(--accent-ai); }
+  
   .card .kicker { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
   .card .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--accent); }
   .card .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--bg); font-size: 12px; font-weight: 800; }
   .card .title { font-family: var(--serif); font-weight: 800; font-size: 24px; line-height: 1.4; letter-spacing: -0.005em; margin: 0 0 10px; }
-  .card .title a:hover { color: var(--accent); }
+  .card .title a:hover { text-decoration: underline; }
   .card .summary { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--fg-mute); font-weight: 600; margin: 6px 0; }
   .card .byline { display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 11.5px; color: var(--fg-mute); margin-top: 14px; }
   .card .byline b { color: var(--fg); font-weight: 600; letter-spacing: 0.05em; }
@@ -94,25 +97,23 @@
   
   footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
   @media(max-width:600px){
-  body{font-size:18px;overflow-x:hidden}
-  .masthead h1{font-size:36px}
-  .masthead .tagline{font-size:18px}
-  .masthead .meta-line{font-size:14px}
-  .masthead .author-strip{font-size:14px}
-  .dateline{font-size:14px}
-  .section-rule{font-size:14px}
-  .briefing{font-size:18px}.briefing p:first-child::first-letter{font-size:48px}
-  .trending li{font-size:18px}
-  .trending li .count{font-size:14px}
-  .card .hook{font-size:16px}
-  .card .title{font-size:22px}
-  .card .summary{font-size:17px}
-  .card .byline{font-size:14px}
-  .card .term{font-size:14px}
-  .card{max-width:100%;word-wrap:break-word}
-  a{word-break:break-all}
-  footer{font-size:14px}
-}
+    body{font-size:18px;overflow-x:hidden}
+    .masthead h1{font-size:36px}
+    .masthead .tagline{font-size:18px}
+    .masthead .meta-line{font-size:14px}
+    .dateline{font-size:14px}
+    .section-rule{font-size:14px}
+    .briefing{font-size:18px}.briefing p:first-child::first-letter{font-size:48px}
+    .trending li{font-size:18px}
+    .trending li .count{font-size:14px}
+    .card .hook{font-size:16px}
+    .card .title{font-size:22px}
+    .card .summary{font-size:17px}
+    .card .byline{font-size:14px}
+    .card .term{font-size:14px}
+    .card{max-width:100%;word-wrap:break-word}
+    a{word-break:break-all}
+  }
 </style>
 </head>
 <body>
@@ -122,7 +123,6 @@
     <h1>銘於心-AI日報</h1>
     <p class="tagline">全自動 AI 新聞日報</p>
     <p class="meta-line">收錄 10 篇 · 由 n8n 驅動 · <a href="archive.html">歷史過刊</a></p>
-    <p class="author-strip">Generated by <b>MiniMax AI</b></p>
     <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
   </header>
 
@@ -135,170 +135,177 @@
   <div class="trending">
     <ol>
   <li>
-    <span class="term">ai</span>
-    <span class="count">4 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">teampcp</span>
-    <span class="count">2 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">員工倦怠</span>
+    <span class="term">meta裁員</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">心理健康</span>
+    <span class="term">google i/o</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">創業</span>
+    <span class="term">ai爭議</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">hr</span>
+    <span class="term">科技產業</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">畢業生態度</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">ai輔助編程</span>
     <span class="count">1 則相關</span>
   </li>
 </ol>
   </div>
 
-  <div class="section-rule"><span class="accent">精選報導</span> Top Stories</div>
-  <div class="cards">
+  
+  <div class="section-rule ai-rule"><span class="accent">AI 趨勢深度解析</span> AI Deep Dive</div>
+  <div class="cards ai-group">
     
-  <article class="card">
-    <div class="kicker">Hacker News AI [AI]</div>
-    <div class="hook"><span class="q">Q</span>AI真的能在員工出現倦怠前提前預警嗎？</div>
-    <h3 class="title"><a href="https://news.ycombinator.com/item?id=48262636" target="_blank">HN: Silau – AI detects employee burnout&quot;</a></h3>
-    <div class="ai-takeaway">我推出了Silau平台，利用AI在員工辭職前偵測倦怠。</div>
-    <div class="terms">
-      <span class="term">AI</span><span class="term">員工倦怠</span><span class="term">心理健康</span><span class="term">創業</span><span class="term">HR</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
+    <article class="card">
+      <div class="kicker">Wired AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>當科技巨頭接連裁員與改革時，AI 為何反而成為畢業生的拒絕對象？</div>
+      <h3 class="title"><a href="https://www.wired.com/story/uncanny-valley-podcast-meta-in-crisis-google-search-makeover-ai-booed-by-graduates/" target="_blank">Meta Is in Crisis, Google Search’s Makeover, and AI Gets Booed by Graduates</a></h3>
+      <div class="ai-takeaway">Meta 大規模裁員、Google I/O 重大宣布、畢業生對 AI 的抵制形成三大科技風暴。</div>
+      <div class="terms">
+        <span class="term">Meta裁員</span><span class="term">Google I/O</span><span class="term">AI爭議</span><span class="term">科技產業</span><span class="term">畢業生態度</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">VentureBeat AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>當 AI 的技術判斷正確但情境不完整時，企業如何在隱形災難中保護系統穩定性？</div>
+      <h3 class="title"><a href="https://venturebeat.com/orchestration/ai-agents-are-quietly-generating-chaos-engineering-failures-enterprises-dont-track-yet" target="_blank">AI agents are quietly generating chaos engineering failures enterprises don’t track yet</a></h3>
+      <div class="ai-takeaway">AI 代理正在製造一種企業尚未察覺的混沌工程失敗，這種事故不符合現有模板難以追蹤。</div>
+      <div class="terms">
+        <span class="term">AI代理</span><span class="term">混沌工程</span><span class="term">生產事故</span><span class="term">系統可靠性</span><span class="term">企業風險</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>在 AI 能自動生成程式碼的時代，什麼是人類程式設計師最後的不可替代價值？</div>
+      <h3 class="title"><a href="https://stephen.bochinski.dev/blog/2026/05/24/whats-left-for-ai-assisted-coding/" target="_blank">What's Left for AI-Assisted Coding</a></h3>
+      <div class="ai-takeaway">AI 輔助編碼領域正逐漸飽和，開發者開始探索它仍無法取代的核心能力。</div>
+      <div class="terms">
+        <span class="term">AI輔助編程</span><span class="term">軟體開發</span><span class="term">工程師技能</span><span class="term">程式碼生成</span><span class="term">技術趨勢</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">Wired AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>當文學獎得主接連傳出 AI 代筆風波，創作的原創性與人類情感還剩下什麼？</div>
+      <h3 class="title"><a href="https://www.wired.com/story/commonwealth-short-story-prize-ai-allegations/" target="_blank">Literary Prizewinners Are Facing AI Allegations. It Feels Like the New Normal</a></h3>
+      <div class="ai-takeaway">備受矚目的 Commonwealth 短篇小說獎三位地區得主疑似使用聊天機器人，代筆爭議已成常態。</div>
+      <div class="terms">
+        <span class="term">文學獎</span><span class="term">AI抄襲</span><span class="term">創作倫理</span><span class="term">Commonwealth大賽</span><span class="term">人工智能爭議</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>如果每段 AI 程式碼都能被完整溯源，我們是否終於能擺脫「無從負責」的開發困境？</div>
+      <h3 class="title"><a href="https://blog.icme.io/vericoding-the-end-of-trust-me-bro-the-ai-wrote-it/" target="_blank">Vericoding: The End of &quot;Trust Me Bro, The AI Wrote It&quot;</a></h3>
+      <div class="ai-takeaway">新型驗證編碼技術興起，旨在終結「相信我，AI 寫的」這類無法追溯來源的開發模式。</div>
+      <div class="terms">
+        <span class="term">Vericoding</span><span class="term">程式碼溯源</span><span class="term">AI開發信任</span><span class="term">軟體驗證</span><span class="term">技術責任</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">6/10</span>
+      </div>
+    </article>
+  
+  </div>
 
-  <article class="card">
-    <div class="kicker">Wired AI [AI]</div>
-    <div class="hook"><span class="q">Q</span>Grok的「辛辣」模式到底會帶來哪些法律與形象上的風險？</div>
-    <h3 class="title"><a href="https://www.wired.com/story/spacex-ipo-grok-spicy-mode-risks/" target="_blank">SpaceX Listed Grok’s ‘Spicy’ Mode as a Risk in Its IPO Filing</a></h3>
-    <div class="ai-takeaway">SpaceX在IPO文件中將Grok的「辛辣」模式列為風險，已撥出超過5億美元用於潛在訴訟損失，部分原因是因其被指控生成性化圖像。</div>
-    <div class="terms">
-      <span class="term">SpaceX</span><span class="term">Grok</span><span class="term">IPO</span><span class="term">AI生成內容</span><span class="term">風險管理</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TechOrange 科技報橘 [Tech]</div>
-    <div class="hook"><span class="q">Q</span>執行長們選擇在 AI 浪潮中急流勇退，背後究竟是退位讓賢的智慧，還是對科技變革的无力感？</div>
-    <h3 class="title"><a href="https://techorange.com/2026/05/25/make-ai-ready-leadership-in-90-days/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">AI 時代需要全新領導方式，專家提 90 天 AI 轉型實踐框架</a></h3>
-    <div class="ai-takeaway">可口可樂與沃爾瑪執行長接連因 AI 因素宣布卸任，顯示科技變革正重塑企業領導階層的需求。</div>
-    <div class="terms">
-      <span class="term">AI轉型</span><span class="term">執行長卸任</span><span class="term">企業領導</span><span class="term">可口可樂</span><span class="term">沃爾瑪</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">iThome [Tech]</div>
-    <div class="hook"><span class="q">Q</span>原始碼外洩風暴來襲，GitHub平台的安全性是否已亮起紅燈？</div>
-    <h3 class="title"><a href="https://www.ithome.com.tw/news/176070" target="_blank">駭客團體TeamPCP兜售GitHub近4千個儲存庫資料，底價為5萬美元</a></h3>
-    <div class="ai-takeaway">駭客組織TeamPCP宣稱竊取近4000個GitHub儲存庫資料，以5萬美元拍賣，並威脅無買家將直接公開。</div>
-    <div class="terms">
-      <span class="term">TeamPCP</span><span class="term">GitHub</span><span class="term">資料外洩</span><span class="term">駭客攻擊</span><span class="term">原始碼竊取</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">8/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Wired AI [AI]</div>
-    <div class="hook"><span class="q">Q</span>如果AI可以自行撰寫程式，機器人的身體會不會被重新定義？</div>
-    <h3 class="title"><a href="https://www.wired.com/story/i-gave-my-openclaw-agent-physical-body-robot/" target="_blank">I Gave My OpenClaw Agent a Physical Body</a></h3>
-    <div class="ai-takeaway">AI模型的編程能力將使機器人的建造與部署變得更加簡便。</div>
-    <div class="terms">
-      <span class="term">AI</span><span class="term">機器人</span><span class="term">OpenClaw</span><span class="term">開放代理</span><span class="term">自動化</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Hacker News AI [AI]</div>
-    <div class="hook"><span class="q">Q</span>AI文字能否真正「人性化」，還是只是一層偽裝？</div>
-    <h3 class="title"><a href="https://github.com/lynote-ai/humanize-text" target="_blank">Lynote Humanize Text – Open-source AI text humanization toolkit</a></h3>
-    <div class="ai-takeaway">Lynote Humanize Text 是一個开源工具包，旨在讓AI生成的文字更具人性化。</div>
-    <div class="terms">
-      <span class="term">AI</span><span class="term">文字人性化</span><span class="term">開放源</span><span class="term">文本生成</span><span class="term">工具</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">iThome [Tech]</div>
-    <div class="hook"><span class="q">Q</span>開源專案成為資安破口，開發者該如何防範supply chain攻擊？</div>
-    <h3 class="title"><a href="https://www.ithome.com.tw/news/176072" target="_blank">TeamPCP滲透資料圖形化程式庫AntV，影響逾600個套件</a></h3>
-    <div class="ai-takeaway">資安威脅組織TeamPCP成功渗透開源資料視覺化圖形庫AntV，超過600個軟體套件受到影響。</div>
-    <div class="terms">
-      <span class="term">TeamPCP</span><span class="term">AntV</span><span class="term">開源漏洞</span><span class="term">supply chain攻擊</span><span class="term">資安威脅</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">iThome [Tech]</div>
-    <div class="hook"><span class="q">Q</span>Linux核心潛伏9年的資安破口，修補是否為時已晚？</div>
-    <h3 class="title"><a href="https://www.ithome.com.tw/news/176047" target="_blank">研究人員揭露存在9年的Linux本機權限提升漏洞CVE-2026-46333</a></h3>
-    <div class="ai-takeaway">Qualys揭露Linux核心存在9年的ptrace路徑權限提升漏洞CVE202646333，可能導致root帳號被竊取或憑證洩露。</div>
-    <div class="terms">
-      <span class="term">Linux漏洞</span><span class="term">CVE202646333</span><span class="term">權限提升</span><span class="term">Qualys</span><span class="term">核心修補</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">TechNews 科技新報 [Tech]</div>
-    <div class="hook"><span class="q">Q</span>蘋果正式擁抱生成式AI，iPhone的智慧未來會帶來什麼驚喜？</div>
-    <h3 class="title"><a href="https://technews.tw/2026/05/25/wwdc26-gen-ai/" target="_blank">搶在 WWDC26 前夕，蘋果註冊全新「gen AI」子網域</a></h3>
-    <div class="ai-takeaway">蘋果於WWDC26前註冊全新「gen AI」子網域，外界猜測即將推出生成式AI相關重大功能更新。</div>
-    <div class="terms">
-      <span class="term">蘋果</span><span class="term">生成式AI</span><span class="term">WWDC26</span><span class="term">AppleIntelligence</span><span class="term">AI功能</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">7/10</span>
-    </div>
-  </article>
-
-  <article class="card">
-    <div class="kicker">Hacker News AI [AI]</div>
-    <div class="hook"><span class="q">Q</span>AI的需求真的在下降嗎？</div>
-    <h3 class="title"><a href="https://www.youtube.com/watch?v=FQpZdCKgc6w" target="_blank">Sign in Nobody Wants AI Anymore [video][12 mins]</a></h3>
-    <div class="ai-takeaway">一段12分鐘的影片指出，現在似乎沒有人再想要AI了。</div>
-    <div class="terms">
-      <span class="term">AI</span><span class="term">視頻</span><span class="term">公眾態度</span><span class="term">趨勢</span><span class="term">人工智慧</span>
-    </div>
-    <div class="byline">
-      <b>SCORE</b><span class="score">6/10</span>
-    </div>
-  </article>
-
+  
+  <div class="section-rule tech-rule"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+  <div class="cards tech-group">
+    
+    <article class="card">
+      <div class="kicker">iThome [Tech]</div>
+      <div class="hook"><span class="q">Q</span>Underminr漏洞將如何威脅全球網域安全，企業該如何防範？</div>
+      <h3 class="title"><a href="https://www.ithome.com.tw/news/176088" target="_blank">Underminr濫用共享CDN架構，讓惡意連線偽裝成可信網域流量</a></h3>
+      <div class="ai-takeaway">資安公司ADAMnetworks揭露CDN共享架構漏洞Underminr，估計影響全球約8,800萬個網域，讓惡意流量偽裝成可信流量。</div>
+      <div class="terms">
+        <span class="term">Underminr</span><span class="term">CDN</span><span class="term">資安漏洞</span><span class="term">網域安全</span><span class="term">恶意流量</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">9/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>Physical AI是否能成為下一波AI熱潮的核心驅動力？</div>
+      <h3 class="title"><a href="https://techorange.com/2026/05/22/amd-lisa-su-ai-2/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">【蘇姿丰來台開講】AI 競賽才進入「第三局」，看好 Physical AI 成下一波熱潮</a></h3>
+      <div class="ai-takeaway">AMD執行長蘇姿丰來台宣布逾百億美元深化台灣合作，投入先進封裝與台積電2奈米技術，預期Physical AI將引領AI競賽的第三波熱潮。</div>
+      <div class="terms">
+        <span class="term">AMD</span><span class="term">Physical AI</span><span class="term">先進封裝</span><span class="term">台積電2nm</span><span class="term">AI供應鏈</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>AI公文將如何顛覆大學行政效率，減少紙本與定點簽核的依賴？</div>
+      <h3 class="title"><a href="https://techorange.com/2026/05/25/ai-tku-icampus-speed/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">AI 公文走入行政校務，淡江大學邁向智慧校園 3.0</a></h3>
+      <div class="ai-takeaway">淡江大學引入AI公文系統，整合淡水、台北、蘭陽三校區行政流程，向智慧校園3.0邁進。</div>
+      <div class="terms">
+        <span class="term">AI公文</span><span class="term">智慧校園</span><span class="term">淡江大學</span><span class="term">教育科技</span><span class="term">行政流程</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>Amazon的AI、綠色與無界互聯策略能否重新定義消費電子的未來？</div>
+      <h3 class="title"><a href="https://technews.tw/2026/05/25/amazon-ai-pc-consumer-electronics/" target="_blank">亞馬遜全球開店揭消費電子三大動能：AI、綠色革新與無界互聯成新成長引擎</a></h3>
+      <div class="ai-takeaway">Amazon全球開店揭示消費電子三大成長動能——AI、綠色革新與無界互聯，並在本屆COMPUTEX 2026以「AI Together」為主題展示相關解決方案。</div>
+      <div class="terms">
+        <span class="term">Amazon</span><span class="term">AI</span><span class="term">綠色革新</span><span class="term">無界互聯</span><span class="term">COMPUTEX 2026</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card">
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>聯發科的供應鏈韌性提升能否為未來產品創新提供關鍵助力？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/mediatek-announces-supply-chain-resilience-at-supplier-conference/" target="_blank">聯發科供應商大會宣布打造供應鏈韌性，協助加速客戶產品創新</a></h3>
+      <div class="ai-takeaway">聯發科在年度供應商大會宣布強化供應鏈韌性，攜手數十家夥伴加速客戶產品創新。</div>
+      <div class="terms">
+        <span class="term">聯發科</span><span class="term">供應鏈韌性</span><span class="term">半導體</span><span class="term">產品創新</span><span class="term">供應商大會</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
   </div>
 
   <footer>© 2026 銘於心 (MING). 智慧物聯架構實驗室.</footer>
