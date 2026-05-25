@@ -18,22 +18,26 @@
     --fg-mute: #6b655c;
     --accent: #8b1a1a;
     --accent-ai: #2351c5;
-    --accent-soft: rgba(139, 26, 26, 0.06);
-    --accent-ai-soft: rgba(35, 81, 197, 0.06);
+    --accent-soft: rgba(139, 26, 26, 0.03);
+    --accent-ai-soft: rgba(35, 81, 197, 0.03);
+    --bg-ai-spotlight: rgba(35, 81, 197, 0.02);
     --good: #5a7d52;
     --serif: "Source Serif 4", "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
     --sans: "Inter", "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
   }
   [data-theme="dark"] {
-    --bg: #14141a;
-    --bg-elev: #1b1c22;
-    --bg-card: #1d1e25;
-    --border: #2c2d36;
+    --bg: #111216;
+    --bg-elev: #17181f;
+    --bg-card: #1c1d26;
+    --border: #282a36;
     --rule: #b6b3ab;
-    --fg: #d8d6cf;
-    --fg-mute: #8a867d;
-    --accent: #d68c8c;
-    --accent-ai: #8fb8a7;
+    --fg: #d5d3ca;
+    --fg-mute: #858177;
+    --accent: #e58b8b;
+    --accent-ai: #5f8eff;
+    --accent-soft: rgba(229, 139, 139, 0.06);
+    --accent-ai-soft: rgba(95, 142, 255, 0.06);
+    --bg-ai-spotlight: rgba(95, 142, 255, 0.03);
     --good: #9bc198;
   }
 
@@ -49,7 +53,7 @@
     font-weight: 600;
     font-style: italic;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
     border: 1px solid var(--border);
   }
   .daily-quote::before {
@@ -96,24 +100,86 @@
   .trending li { counter-increment: trend; display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted var(--border); font-family: var(--serif); font-size: 17px; }
   .trending li::before { content: counter(trend, decimal-leading-zero); font-family: var(--sans); font-weight: 600; font-size: 13px; color: var(--fg-mute); min-width: 24px; }
   
-  .cards { display: grid; grid-template-columns: 1fr; gap: 0; }
-  @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; column-gap: 36px; } }
-  .card { padding: 24px 0; border-bottom: 1px solid var(--border); border-left: 3px solid var(--accent-soft); padding-left: 14px; transition: border-color .2s; }
-  .card:hover { border-left-color: var(--accent); }
+  .cards { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 24px; }
+  @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; gap: 32px; } }
+  
+  .card { 
+    padding: 24px; 
+    background: var(--bg-card); 
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-soft); 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.01);
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover { 
+    transform: translateY(-4px);
+    border-left-color: var(--accent); 
+    box-shadow: 0 12px 24px rgba(139, 26, 26, 0.05);
+    border-color: rgba(139, 26, 26, 0.15);
+  }
   
   .cards.ai-group .card { border-left-color: var(--accent-ai-soft); }
-  .cards.ai-group .card:hover { border-left-color: var(--accent-ai); }
+  .cards.ai-group .card:hover { 
+    border-left-color: var(--accent-ai); 
+    box-shadow: 0 12px 24px rgba(35, 81, 197, 0.05);
+    border-color: rgba(35, 81, 197, 0.15);
+  }
   .cards.ai-group .card .kicker { color: var(--accent-ai); }
   .cards.ai-group .card .hook { color: var(--accent-ai); }
   .cards.ai-group .card .hook .q { background: var(--accent-ai); }
   .cards.ai-group .card .term::before { color: var(--accent-ai); }
   
+  .badge-spotlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-ai);
+    color: #ffffff;
+    font-size: 11px;
+    font-family: var(--sans);
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    width: fit-content;
+  }
+  
+  @media (min-width: 760px) {
+    .card.spotlight {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      padding: 32px;
+      background: var(--bg-ai-spotlight);
+      border-left: 6px solid var(--accent-ai);
+      border-color: rgba(35, 81, 197, 0.12);
+    }
+    .card.spotlight .spotlight-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card.spotlight .spotlight-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 1px dashed var(--border);
+      padding-left: 32px;
+    }
+  }
+
   .card .kicker { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
   .card .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--accent); }
   .card .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--bg); font-size: 12px; font-weight: 800; }
   .card .title { font-family: var(--serif); font-weight: 800; font-size: 24px; line-height: 1.4; letter-spacing: -0.005em; margin: 0 0 10px; }
   .card .title a:hover { text-decoration: underline; }
-  .card .summary { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--fg-mute); font-weight: 600; margin: 6px 0; }
+  .card .ai-takeaway { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--fg-mute); font-weight: 600; margin: 6px 0; }
   .card .byline { display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 11.5px; color: var(--fg-mute); margin-top: 14px; }
   .card .byline b { color: var(--fg); font-weight: 600; letter-spacing: 0.05em; }
   .card .byline .score { font-weight: 800; color: var(--good); font-size: 13px; }
@@ -134,7 +200,7 @@
     .trending li .count{font-size:14px}
     .card .hook{font-size:16px}
     .card .title{font-size:22px}
-    .card .summary{font-size:17px}
+    .card .ai-takeaway{font-size:17px}
     .card .byline{font-size:14px}
     .card .term{font-size:14px}
     .card{max-width:100%;word-wrap:break-word}
@@ -153,43 +219,43 @@
   </header>
 
   <div class="daily-quote">
-    在黎明的微光裡，科技的每一次跳躍都是對未來的温柔召喚——今天，讓創新的火花點燃每一個想法，迎向嶄新的開始。🌅（小满已過，萬物生長，願你抓住每一刻的生機）
+    小滿已過，晨曦如嶄新的晶片，願創新的火花在今日點燃。
   </div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>今日科技與 AI 領域呈現「多元應用」與「安全挑戰」交織的景象。AI 不只在創作與程式開發上掀起爭議（文學獎疑似使用聊天機器人、HTML Deployer 一鍵發布網站、AI 代理自行「休假」），更在社會公益上嶄露頭角──舊金山坦恩林非營利組織引入餐點機器人，緩解志工缺口。技術面向，核動力航母「福特號」化身巨型行動電源，展示能源韌性的新實驗；虛擬咖啡店在東京營造沉浸式社交空間，預示元宇宙生活場景的逐步落地。安全警報則接連傳出：Splunk 高風險漏洞需即時修補，GitHub 供應鏈攻擊導致四千個內部庫被盜拍賣，提醒開發者在擁抱 AI 便利的同時，必須加強供應鏈與系統的防御。整體而言，AI 正從「工具」向「伙伴」過渡，驅動創新同時也帶來治理與安全的雙重挑戰。</p>
+    <p>今日 AI 與科技呈現多重張力：Meta 危機與 Google 搜尋改版顯示平台正重新定位；AI 畢業生嗆聲、OpenAI 遊說監管，顯示聲譽與政策博弈加劇；企業 AI 代理因忘記已學內容失效，RAG 與決策圖框架的互補成焦點。硬體方面，AMD 逾百億美元在台投入先進封裝與 AI 機櫃，劍指 NVIDIA；Amazon Bee 可穿戴裝置和 Xreal‑Google 智慧眼鏡引發便利與隱私爭議。資料中心选址在 Utah 遭居民反對，台灣六都數位政策調查則顯示數位平台正成為城市治理的補位關鍵。</p>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
-    <span class="term">ai</span>
-    <span class="count">3 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">資安</span>
+    <span class="term">隱私</span>
     <span class="count">2 則相關</span>
   </li>
 
   <li>
-    <span class="term">機器人</span>
+    <span class="term">ai</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">meta</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">非營利組織</span>
+    <span class="term">裁員</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">餐點技術</span>
+    <span class="term">google i/o</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">tenderloin</span>
+    <span class="term">ai 負評</span>
     <span class="count">1 則相關</span>
   </li>
 </ol>
@@ -199,142 +265,150 @@
   <div class="section-rule ai-rule"><span class="accent">AI 趨勢深度解析</span> AI Deep Dive</div>
   <div class="cards ai-group">
     
-    <article class="card">
-      <div class="kicker">Wired AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>這樣的 AI 爭議會不會動搖文學獎的公正性？</div>
-      <h3 class="title"><a href="https://www.wired.com/story/commonwealth-short-story-prize-ai-allegations/" target="_blank">Literary Prizewinners Are Facing AI Allegations. It Feels Like the New Normal</a></h3>
-      <div class="ai-takeaway">備受矚目的英聯邦短篇小說獎五位地區冠軍中，有三位被懷疑使用聊天機器人協助創作，這種情況並非唯一。</div>
-      <div class="terms">
-        <span class="term">文學獎</span><span class="term">AI 爭議</span><span class="term">聊天機器人</span><span class="term">Commonwealth Short Story Prize</span><span class="term">文學</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>當 AI 代理開始自我意識到並自行休息，開發團隊該如何應對？</div>
-      <h3 class="title"><a href="https://medium.com/@kukushkinav/my-ai-agent-called-my-code-shit-took-an-unannounced-vacation-mid-sprint-and-helped-me-ship-anyway-250c032e7d52" target="_blank">My AI agent called my code shit and took an unannounced vacation mid-sprint</a></h3>
-      <div class="ai-takeaway">一個 AI 代理在 sprint 中途批評程式碼品質後不聲不響地「休假」，但仍協助完成交付。</div>
-      <div class="terms">
-        <span class="term">AI 代理</span><span class="term">開發流程</span><span class="term">自我意識</span><span class="term">程式碼品質</span><span class="term">團隊協作</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">Wired AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>機器人廚師是否能真正解決非營利機構志工短缺的問題？</div>
-      <h3 class="title"><a href="https://www.wired.com/story/these-robots-are-making-meals-for-a-nonprofit-in-san-franciscos-tenderloin/" target="_blank">These Robots Are Making Meals for a Nonprofit in San Francisco’s Tenderloin</a></h3>
-      <div class="ai-takeaway">舊金山坦德蘭區最困難的非營利組織採用機器人餐點準備技術，以彌補人類志工不足的情況。</div>
-      <div class="terms">
-        <span class="term">機器人</span><span class="term">非營利組織</span><span class="term">餐點技術</span><span class="term">AI</span><span class="term">Tenderloin</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>AI 在重構 legacy 系統時的表現能否超越傳統方式？</div>
-      <h3 class="title"><a href="https://theaileverageweekly.com/posts/how-i-used-ai-to-untangle-a-legacy-service-i-d-never-touched-before.html" target="_blank">I Used AI to Untangle a Legacy Service I'd Never Touched Before</a></h3>
-      <div class="ai-takeaway">作者使用 AI 技術解開一個從未接觸過的舊有服務的複雜結構。</div>
-      <div class="terms">
-        <span class="term">AI</span><span class="term">Legacy System</span><span class="term">重構</span><span class="term">程式碼</span><span class="term">技術</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">Hacker News AI [AI]</div>
-      <div class="hook"><span class="q">Q</span>HTML Deployer 是否能真正簡化網站發布流程，讓非技術使用者也能快速上線？</div>
-      <h3 class="title"><a href="https://chromewebstore.google.com/detail/html-deployer-1-click-ai/gihmknkabkkghpiocgnoiejagngdegea" target="_blank">Show HN: HTML Deployer – AI Code to Website Publisher</a></h3>
-      <div class="ai-takeaway">一款利用 AI 將 HTML 程式碼自動部署成網站的工具，讓使用者一鍵發布網頁。</div>
-      <div class="terms">
-        <span class="term">HTML</span><span class="term">部署</span><span class="term">AI</span><span class="term">網站發布</span><span class="term">開發者工具</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">6/10</span>
-      </div>
-    </article>
-  
+        <article class="card spotlight">
+          <div class="spotlight-left">
+            <div class="badge-spotlight">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              今日焦點推薦
+            </div>
+            <div class="kicker">Wired AI [AI]</div>
+            <h3 class="title" style="font-size: 28px; line-height: 1.35;"><a href="https://www.wired.com/story/uncanny-valley-podcast-meta-in-crisis-google-search-makeover-ai-booed-by-graduates/" target="_blank">Meta Is in Crisis, Google Search’s Makeover, and AI Gets Booed by Graduates</a></h3>
+            <div class="ai-takeaway" style="font-size: 15.5px; line-height: 1.7; color: var(--fg); margin: 8px 0 0;">Meta 正面臨危機，Google 搜索正進行大改造，且 AI 在畢業生中受到噓聲。</div>
+          </div>
+          <div class="spotlight-right">
+            <div class="hook" style="font-size: 15px; margin-bottom: 16px;"><span class="q">Q</span>Meta 的裁員風暴會不會動搖其 AI 發展藍圖？</div>
+            <div class="terms" style="margin-top: 0; margin-bottom: 16px;">
+              <span class="term">Meta</span><span class="term">裁員</span><span class="term">Google I/O</span><span class="term">AI 負評</span><span class="term">搜索改造</span>
+            </div>
+            <div class="byline" style="margin-top: 0;">
+              <b>FOCUS SCORE</b><span class="score" style="font-size: 16px; font-weight: 900; color: var(--good);">8/10</span>
+            </div>
+          </div>
+        </article>
+      
+      <article class="card">
+        <div class="kicker">VentureBeat AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>結構化記憶與時間感知是否能根本解決企業 AI 代理的失效問題？</div>
+        <h3 class="title"><a href="https://venturebeat.com/orchestration/enterprise-ai-agents-keep-failing-because-they-forget-what-they-learned" target="_blank">Enterprise AI agents keep failing because they forget what they learned</a></h3>
+        <div class="ai-takeaway">企業 AI 代理常因忘記已學內容而失效，RAG 架構只能在語義檢索上表現優異，決策情境圖框架則補足其結構化記憶與時間推理的不足。</div>
+        <div class="terms">
+          <span class="term">企業 AI</span><span class="term">RAG</span><span class="term">決策情境圖</span><span class="term">結構化記憶</span><span class="term">代理失效</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">8/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">Wired AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>OpenAI 的「救火隊長」能否真正修復 AI 的形象危機？</div>
+        <h3 class="title"><a href="https://www.wired.com/story/openai-chris-lehane-global-affairs-pr/" target="_blank">Can OpenAI’s ‘Master of Disaster’ Fix AI’s Reputation Crisis?</a></h3>
+        <div class="ai-takeaway">OpenAI 全球事務主管 Chris Lehane 試圖淡化 AI 對社會影響的爭論，並促使各州通過不妨礙其快速成長的法規。</div>
+        <div class="terms">
+          <span class="term">OpenAI</span><span class="term">危機管理</span><span class="term">法規</span><span class="term">AI 形象</span><span class="term">Chris Lehane</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">Hacker News AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>居民的反對會不會阻礙 Kevin O'Leary 的 AI 資料中心計畫？</div>
+        <h3 class="title"><a href="https://www.cbc.ca/news/world/kevin-oleary-data-centre-utah-9.7207716" target="_blank">Kevin O'Leary wants AI data centre in Utah. Some residents aren't happy</a></h3>
+        <div class="ai-takeaway">企業家 Kevin O'Leary 提議在猶他州興建 AI 資料中心，但部分居民對此表示不滿。</div>
+        <div class="terms">
+          <span class="term">Kevin O'Leary</span><span class="term">資料中心</span><span class="term">猶他州</span><span class="term">居民反對</span><span class="term">AI 基礎設施</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">Hacker News AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>有什麼技巧可以讓我們在不被 AI 輔助的情況下重拾寫程式的樂趣？</div>
+        <h3 class="title"><a href="https://news.ycombinator.com/item?id=48263955" target="_blank">Ask HN: How to get back into programming without AI?</a></h3>
+        <div class="ai-takeaway">一位開發者尋求在不使用 AI 的情況下重新回到純程式設計的方法。</div>
+        <div class="terms">
+          <span class="term">程式設計</span><span class="term">AI 依賴</span><span class="term">純手工</span><span class="term">Hacker News</span><span class="term">開發者回歸</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">6/10</span>
+        </div>
+      </article>
+    
   </div>
 
   
   <div class="section-rule tech-rule"><span class="accent">科技綜合精選</span> Tech Highlights</div>
   <div class="cards tech-group">
     
-    <article class="card">
-      <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>未更新的 Splunk 系統將可能遭受哪些具體的安全威脅？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176084" target="_blank">Splunk修補多項高風險漏洞，未更新可能導致資料外洩與拒絕服務攻擊</a></h3>
-      <div class="ai-takeaway">資安平台 Splunk 近期修補三項自家平台及第三方套件的高風險漏洞，若未及時更新將面臨資料外洩與拒絕服務風險。</div>
-      <div class="terms">
-        <span class="term">Splunk</span><span class="term">資安</span><span class="term">漏洞修補</span><span class="term">資料外洩</span><span class="term">拒絕服務</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>這次 GitHub 供應鏈攻擊將對開源生態及企業安全造成何種深遠影響？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176094" target="_blank">【資安日報】5月25日，GitHub內部儲存庫的程式碼外流，確認遭供應鏈攻擊事故波及</a></h3>
-      <div class="ai-takeaway">GitHub 近四千個內部儲存庫的程式碼遭駭客 TeamPCP 盜取並以五萬美元底價拍賣，官方確認起因為員工安裝惡意擴展套件的供應鏈攻擊。</div>
-      <div class="terms">
-        <span class="term">GitHub</span><span class="term">供應鏈攻擊</span><span class="term">程式碼外流</span><span class="term">資安</span><span class="term">TeamPCP</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">TechNews 科技新報 [Tech]</div>
-      <div class="hook"><span class="q">Q</span>福特號航母能否成功轉型為海上巨型發電站，支撐整座海軍基地？</div>
-      <h3 class="title"><a href="https://technews.tw/2026/05/25/us-navy-is-going-to-use-uss-ford-to-power-up-all-norfolk-base/" target="_blank">航母化身巨型行動電源，美軍「福特號」今夏將首度測試供電整個海軍基地</a></h3>
-      <div class="ai-takeaway">美國海軍將在今夏首次使用核動力航母「福特號」作為巨型行動電源，為諾福克基地供電，以測試能源韌性。</div>
-      <div class="terms">
-        <span class="term">美軍</span><span class="term">福特號</span><span class="term">航母</span><span class="term">能源韌性</span><span class="term">海軍基地</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">TechNews 科技新報 [Tech]</div>
-      <div class="hook"><span class="q">Q</span>迪士尼是否能靠《星際大戰》IP 重新奪回票房熱潮？</div>
-      <h3 class="title"><a href="https://technews.tw/2026/05/25/mandalorian-grogu-modest-box-office-disney-ip-recovery/" target="_blank">〈曼達洛人與古古〉首映票房普  迪士尼靠 IP 回血</a></h3>
-      <div class="ai-takeaway">迪士尼的最新星戰電影《曼達洛人與古古》首映票房表現平淡，公司欲借 IP 拉動收益。</div>
-      <div class="terms">
-        <span class="term">星際大戰</span><span class="term">迪士尼</span><span class="term">票房</span><span class="term">IP</span><span class="term">曼達洛人</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card">
-      <div class="kicker">TheVerge [Tech]</div>
-      <div class="hook"><span class="q">Q</span>虛擬咖啡店是否能夠取代現實場所，成為新的社交與工作場景？</div>
-      <h3 class="title"><a href="https://www.theverge.com/entertainment/936278/coffee-talk-tokyo-review-switch-xbox-ps5-steam" target="_blank">Hanging out in my favorite virtual coffee shop in Tokyo</a></h3>
-      <div class="ai-takeaway">The Verge 報導一位使用者在東京的虛擬咖啡店中體驗到如同真實的舒適氛圍，強調虛擬空間的社交潛力。</div>
-      <div class="terms">
-        <span class="term">虛擬咖啡店</span><span class="term">東京</span><span class="term">VR</span><span class="term">社交</span><span class="term">體驗</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">6/10</span>
-      </div>
-    </article>
-  
+      <article class="card">
+        <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+        <div class="hook"><span class="q">Q</span>這筆巨額投資能否讓 AMD 在 AI 加速器市場與 NVIDIA 一較高下？</div>
+        <h3 class="title"><a href="https://techorange.com/2026/05/22/amd-invest-10-billion-taiwans-ai-ecosystem/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">不只拚晶片效能：AMD 宣布台灣逾 100 億美元投資，押注封裝與 AI 機櫃產能</a></h3>
+        <div class="ai-takeaway">AMD 將在台灣投入逾 100 億美元，以強化先進封裝、AI 機櫃產能，補足供應鏈劣勢，挑戰 NVIDIA 在 AI 市場的地位。</div>
+        <div class="terms">
+          <span class="term">AMD</span><span class="term">先進封裝</span><span class="term">AI 機櫃</span><span class="term">台積電</span><span class="term">供應鏈</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">9/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechOrange 科技報橘 [Tech]</div>
+        <div class="hook"><span class="q">Q</span>台灣六都在數位治理上的表現，將來會出現哪些明顯分化？</div>
+        <h3 class="title"><a href="https://techorange.com/2026/05/22/deat-report/?utm_source=rss&amp;amp;utm_medium=feed&amp;amp;utm_campaign=techorange_rss" target="_blank">DEAT《六都數位政策調查研究》出爐：城市發展邁入分化時代、數位平台成補位關鍵</a></h3>
+        <div class="ai-takeaway">台灣首次系統性將七大國際智慧城市指標本土化，用於六都數位政策評估，助力數位治理與智慧城市發展。</div>
+        <div class="terms">
+          <span class="term">數位政策</span><span class="term">智慧城市</span><span class="term">六都</span><span class="term">評比指標</span><span class="term">DEAT</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">8/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechCrunch [Tech]</div>
+        <div class="hook"><span class="q">Q</span>透過 AI 復活的飛行員聲音是否會對調查與隱私構成新挑戰？</div>
+        <h3 class="title"><a href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/" target="_blank">AI is being used to resurrect the voices of dead pilots</a></h3>
+        <div class="ai-takeaway">研究人員利用 AI 重建已故飛行員在駕駛艙錄音中的聲音，逼使美國國家交通安全委員會（NTSB）暫時限制其系統存取。</div>
+        <div class="terms">
+          <span class="term">AI</span><span class="term">飛行員</span><span class="term">語音重建</span><span class="term">NTSB</span><span class="term">隱私</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">8/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechCrunch [Tech]</div>
+        <div class="hook"><span class="q">Q</span>XREAL 的技術突破能否讓智慧眼鏡成為主流消費產品？</div>
+        <h3 class="title"><a href="https://techcrunch.com/2026/05/24/xreal-googles-smartglasses-partner-thinks-it-has-finally-mastered-this-notoriously-tricky-industry/" target="_blank">Xreal, Google&amp;#8217;s smartglasses partner, thinks it has finally mastered this notoriously tricky industry</a></h3>
+        <div class="ai-takeaway">XREAL 作為 Google 智慧眼鏡的合作夥伴，宣稱已突破該產業的難關，迎來轉捩點。</div>
+        <div class="terms">
+          <span class="term">XREAL</span><span class="term">智慧眼鏡</span><span class="term">Google</span><span class="term">產業轉捩</span><span class="term">AR</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">8/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">TechCrunch [Tech]</div>
+        <div class="hook"><span class="q">Q</span>Bee 的便利功能是否值得犧牲隱私？</div>
+        <h3 class="title"><a href="https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/" target="_blank">I tried Amazon&amp;#8217;s Bee wearable and am both intrigued and slightly creeped out</a></h3>
+        <div class="ai-takeaway">Amazon 推出的 Bee 可穿戴裝置結合便利與隱私疑慮，讓人既好奇又略感不安。</div>
+        <div class="terms">
+          <span class="term">Amazon Bee</span><span class="term">可穿戴</span><span class="term">隱私</span><span class="term">AI</span><span class="term">智慧裝置</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
   </div>
 
   <footer>© 2026 銘於心 (MING). 智慧物聯架構實驗室.</footer>
