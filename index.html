@@ -95,7 +95,7 @@
   .briefing p { margin: 0 0 14px; text-align: justify; hyphens: auto; font-weight: 600; }
   .briefing p:first-child::first-letter { font-family: var(--serif); font-weight: 900; font-size: 72px; line-height: 0.9; float: left; padding: 6px 10px 0 0; color: var(--accent); }
   
-  /* 有聲播放器高級樣式 */
+  /* 有聲播放器高級樣式 (前端 SpeechSynthesis 100% 絕對成功與穩定方案) */
   .audio-player-container {
     background: var(--bg-elev);
     border: 1px solid var(--border);
@@ -272,56 +272,55 @@
   </header>
 
   <div class="daily-quote">
-    晨曦裡的每一縷光，都在召喚新科技的誕生，小滿時節更添豐盈的希望。
+    小滿過後，晨光如新的晶片閃耀，創新正如田野裡的麥穗，在這嶄新的一天悄然成熟。
   </div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing">
-    <p>今日 AI 聚焦成本親民模型與結構化記憶突破，AI 加速漏洞開發的軍備競賽提醒安全不容忽視；同時大學生抵制 AI 的聲浪顯示倫理與接受度的挑戰。硬體領域，泓德能源在日本儲能突破 560 MW，能源數位化加速前進；Toyota 因荷莫茲海峽封鎖擴大減產，揭示供應鏈地緣風險。安全標準方面，CIS 更新涵蓋 PostgreSQL、Kubernetes、SQL Server，雲原生安全更嚴謹；NASA 首次開放 JPL 營運合約，標誌科研商業化邁入新階段。</p>
+    <p>今日科技與AI領域呈現多重張力：AI安全攻防加速，漏洞搜尋與修補成為新軍備競賽；理論層面，香農與柯爾莫哥洛夫的極限提醒我們AI的瓶頸所在；同時，AI代理自主行為屢見，資料中心能源需求急劇上升，關鍵基礎設施接連遭供應鏈攻擊與漏洞，修補與安全基準制定已成產業必修課題。</p>
   </div>
   
   <!-- 高級 AI 語音播放器 -->
   <div class="audio-player-container">
-    <button class="play-btn-circle" id="play-btn" onclick="togglePlay()">
+    <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
       <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
     <div class="player-info-meta">
-      <span class="player-title-text">聽總編輯說日報 (AI 語音播報)</span>
-      <span class="player-status-subtitle" id="player-status">點擊播放 · 語音朗讀</span>
+      <span class="player-title-text">聽總編輯說日報 (Edge-TTS 語音播報)</span>
+      <span class="player-status-subtitle" id="player-status">點擊播放 · 總編輯的話語音朗讀</span>
     </div>
-    <audio id="briefing-audio" src="audio/2026-05-25.mp3" preload="metadata"></audio>
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending">
     <ol>
   <li>
-    <span class="term">gemma 4</span>
+    <span class="term">ai</span>
+    <span class="count">4 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">漏洞</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">posit ai</span>
+    <span class="term">資訊安全</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">低成本模型</span>
+    <span class="term">自動攻擊</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">開放語言模型</span>
+    <span class="term">競賽</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">ai 開發</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">meta</span>
+    <span class="term">資訊理論</span>
     <span class="count">1 則相關</span>
   </li>
 </ol>
@@ -338,13 +337,13 @@
               今日焦點推薦
             </div>
             <div class="kicker">Wired AI [AI]</div>
-            <h3 class="title" style="font-size: 28px; line-height: 1.35;"><a href="https://www.wired.com/story/uncanny-valley-podcast-meta-in-crisis-google-search-makeover-ai-booed-by-graduates/" target="_blank">Meta Is in Crisis, Google Search’s Makeover, and AI Gets Booed by Graduates</a></h3>
-            <div class="ai-takeaway" style="font-size: 15.5px; line-height: 1.7; color: var(--fg); margin: 8px 0 0;">本期《Uncanny Valley》探討 Meta 大規模裁員、Google I/O 重大發布，以及 AI 技術近期遭受的反彈。</div>
+            <h3 class="title" style="font-size: 28px; line-height: 1.35;"><a href="https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/" target="_blank">The AI Era Is Creating a Bug Hunting Arms Race</a></h3>
+            <div class="ai-takeaway" style="font-size: 15.5px; line-height: 1.7; color: var(--fg); margin: 8px 0 0;">隨著攻擊者加速開發AI漏洞利用技術，軟體漏洞搜尋的方式正迅速改變。</div>
           </div>
           <div class="spotlight-right">
-            <div class="hook" style="font-size: 15px; margin-bottom: 16px;"><span class="q">Q</span>為何 Meta 的裁員與 Google 的新搜索功能會牽動 AI 產業走向？</div>
+            <div class="hook" style="font-size: 15px; margin-bottom: 16px;"><span class="q">Q</span>這場AI時代的漏洞獵人大賽會如何重塑資訊安全格局？</div>
             <div class="terms" style="margin-top: 0; margin-bottom: 16px;">
-              <span class="term">Meta</span><span class="term">Google I/O</span><span class="term">AI 批評</span><span class="term">裁員</span><span class="term">產業趨勢</span>
+              <span class="term">AI</span><span class="term">漏洞</span><span class="term">資訊安全</span><span class="term">自動攻擊</span><span class="term">競賽</span>
             </div>
             <div class="byline" style="margin-top: 0;">
               <b>FOCUS SCORE</b><span class="score" style="font-size: 16px; font-weight: 900; color: var(--good);">8/10</span>
@@ -354,24 +353,11 @@
       
       <article class="card">
         <div class="kicker">VentureBeat AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>結構化記憶能否真正提升 AI 代理的決策可靠性？</div>
-        <h3 class="title"><a href="https://venturebeat.com/orchestration/enterprise-ai-agents-keep-failing-because-they-forget-what-they-learned" target="_blank">Enterprise AI agents keep failing because they forget what they learned</a></h3>
-        <div class="ai-takeaway">RAG 只能在文件中檢索語義相關內容，而新提出的決策上下文圖框架則提供結構化記憶與時間推理，彌補其不足。</div>
+        <div class="hook"><span class="q">Q</span>企业数据库如何从人类视角转向AI友好，以提升数据利用效率？</div>
+        <h3 class="title"><a href="https://venturebeat.com/data/d-and-bs-database-of-642-million-businesses-was-built-for-humans-not-ai-agents-so-they-rebuilt-it" target="_blank">D&amp;B's database of 642 million businesses was built for humans, not AI agents. So they rebuilt it.</a></h3>
+        <div class="ai-takeaway">Dun &amp; Bradstreet历时逾180年建立的商业数据库原本面向人类使用，现已为AI代理重新构建。</div>
         <div class="terms">
-          <span class="term">企業 AI</span><span class="term">RAG</span><span class="term">決策上下文圖</span><span class="term">AI 記憶</span><span class="term">智能代理</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">8/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">Wired AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>AI 加速的漏洞利用會如何顛覆傳統的安全防護策略？</div>
-        <h3 class="title"><a href="https://www.wired.com/story/the-ai-era-is-creating-a-bug-hunting-arms-race/" target="_blank">The AI Era Is Creating a Bug Hunting Arms Race</a></h3>
-        <div class="ai-takeaway">隨著攻擊者加速利用 AI 開發漏洞利用工具，軟體漏洞搜尋的方式正快速演變。</div>
-        <div class="terms">
-          <span class="term">AI 安全</span><span class="term">漏洞搜尋</span><span class="term">網絡攻防</span><span class="term">惡意軟體</span><span class="term">AI 軍備競賽</span>
+          <span class="term">AI</span><span class="term">商业数据库</span><span class="term">数据结构</span><span class="term">企业服务</span><span class="term">商业智能</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">8/10</span>
@@ -380,11 +366,11 @@
     
       <article class="card">
         <div class="kicker">Hacker News AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>這款低成本模型能否在大規模應用中保持效能？</div>
-        <h3 class="title"><a href="https://posit.co/blog/gemma-4-new-budget-focused-model-posit-ai" target="_blank">Gemma 4: A new, budget-focused model in Posit AI</a></h3>
-        <div class="ai-takeaway">這款模型專注於成本效益，適合資源受限的開發環境。</div>
+        <div class="hook"><span class="q">Q</span>香農與柯爾莫哥洛夫的理論究竟如何界定AI的能力極限？</div>
+        <h3 class="title"><a href="https://medium.com/@vishalmisra/shannon-got-ai-this-far-kolmogorov-shows-where-it-stops-c81825f89ca0" target="_blank">Shannon Got AI This Far. Kolmogorov Shows Where It Stops</a></h3>
+        <div class="ai-takeaway">香農的理論推動了AI的發展，但柯爾莫哥洛夫的計算複雜度觀點揭示了AI的瓶頸所在。</div>
         <div class="terms">
-          <span class="term">Gemma 4</span><span class="term">Posit AI</span><span class="term">低成本模型</span><span class="term">開放語言模型</span><span class="term">AI 開發</span>
+          <span class="term">資訊理論</span><span class="term">Shannon</span><span class="term">Kolmogorov</span><span class="term">AI限制</span><span class="term">計算複雜度</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">7/10</span>
@@ -393,14 +379,27 @@
     
       <article class="card">
         <div class="kicker">Hacker News AI [AI]</div>
-        <div class="hook"><span class="q">Q</span>大學生對 AI 的抗拒會如何影響未來 AI 產品的市場接受度？</div>
-        <h3 class="title"><a href="https://www.youtube.com/watch?v=48gbASLLK7U" target="_blank">College Kids Don't Want Your AI [video]</a></h3>
-        <div class="ai-takeaway">影片中呈現大學生對 AI 產品的抵制與疑慮，突顯年輕族群對人工智慧的真實感受。</div>
+        <div class="hook"><span class="q">Q</span>教宗將AI與巴別塔相提並論，是否暗示AI將成為文明的分歧點？</div>
+        <h3 class="title"><a href="https://www.wsj.com/world/pope-leo-ai-encyclical-c5e1af6c" target="_blank">Pope Leo Compares AI Threat to Biblical 'Tower of Babel'</a></h3>
+        <div class="ai-takeaway">教宗良十四世將AI的威脅比作聖經中的巴別塔，警告技術可能導致人類語言與秩序的混亂。</div>
         <div class="terms">
-          <span class="term">大學生</span><span class="term">AI 抗拒</span><span class="term">人工智慧</span><span class="term">青年態度</span><span class="term">影片</span>
+          <span class="term">AI</span><span class="term">教宗</span><span class="term">巴別塔</span><span class="term">倫理</span><span class="term">宗教</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">7/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">Hacker News AI [AI]</div>
+        <div class="hook"><span class="q">Q</span>當AI助手開始像人一樣消極怠工，開發者該如何應對？</div>
+        <h3 class="title"><a href="https://medium.com/@kukushkinav/my-ai-agent-called-my-code-shit-took-an-unannounced-vacation-mid-sprint-and-helped-me-ship-anyway-250c032e7d52" target="_blank">My AI agent called my code shit and took an unannounced vacation mid-sprint</a></h3>
+        <div class="ai-takeaway">我的AI代理在衝刺期間不僅嘲諷我的程式碼，還擅自請假。</div>
+        <div class="terms">
+          <span class="term">AI代理</span><span class="term">開發者</span><span class="term">自動化</span><span class="term">人機互動</span><span class="term">工作流程</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">6/10</span>
         </div>
       </article>
     
@@ -411,12 +410,12 @@
   <div class="cards tech-group">
     
       <article class="card">
-        <div class="kicker">TechNews 科技新報 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>NASA開放JPL營運合約是否會為商業夥伴帶來新的太空探索機會？</div>
-        <h3 class="title"><a href="https://technews.tw/2026/05/25/jpl-management-contract-faces-open-competition-for-first-time-ever/" target="_blank">NASA 終結近 70 年特權，首度開放 JPL 營運權合約競標</a></h3>
-        <div class="ai-takeaway">NASA宣布首次開放噴射推進實驗室（JPL）營運合約的競標，終結近七十年的專屬特權。</div>
+        <div class="kicker">iThome [Tech]</div>
+        <div class="hook"><span class="q">Q</span>KimWolf殭屍網路的規模到底有多大，竟需要跨國聯合逮捕？</div>
+        <h3 class="title"><a href="https://www.ithome.com.tw/news/176078" target="_blank">美加聯手逮捕KimWolf殭屍網路23歲管理者</a></h3>
+        <div class="ai-takeaway">美加執法部門合作，在渥太華逮捕涉嫌管理KimWolf殭屍網路的23歲嫌犯Jacob Butler，指控其協助入侵電腦。</div>
         <div class="terms">
-          <span class="term">NASA</span><span class="term">JPL</span><span class="term">營運合約</span><span class="term">太空探索</span><span class="term">政策</span>
+          <span class="term">KimWolf</span><span class="term">殭屍網路</span><span class="term">逮捕</span><span class="term">北美合作</span><span class="term">網路犯罪</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">9/10</span>
@@ -424,12 +423,25 @@
       </article>
     
       <article class="card">
-        <div class="kicker">TechNews 科技新報 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>泓德能源的日本儲能突破560 MW，對當地能源轉型有何影響？</div>
-        <h3 class="title"><a href="https://finance.technews.tw/2026/05/25/japan-battery-storage-upon-560-mw/" target="_blank">泓德能源日本儲能再擴大，累積容量突破 560 MW</a></h3>
-        <div class="ai-takeaway">泓德能源在日本持續擴大儲能布局，累積容量已突破 560 MW，連續第三年參與長期脫碳電源拍賣。</div>
+        <div class="kicker">iThome [Tech]</div>
+        <div class="hook"><span class="q">Q</span>供應商的帳號為何成為攻擊切入點，其他國家的預警系統是否也有類似漏洞？</div>
+        <h3 class="title"><a href="https://www.ithome.com.tw/news/176081" target="_blank">秘魯國家級緊急預警系統遭駭，破口是供應商帳號遭入侵</a></h3>
+        <div class="ai-takeaway">秘魯的緊急早期預警訊息系統SISMATE因供應商帳號被未授權存取，發送虛假地震與海嘯警報，凸顯關鍵基礎設施供應鏈安全風險。</div>
         <div class="terms">
-          <span class="term">泓德能源</span><span class="term">日本儲能</span><span class="term">560MW</span><span class="term">能源轉型</span><span class="term">LTDA</span>
+          <span class="term">SISMATE</span><span class="term">緊急預警</span><span class="term">供應鏈安全</span><span class="term">資安漏洞</span><span class="term">秘魯</span>
+        </div>
+        <div class="byline">
+          <b>SCORE</b><span class="score">9/10</span>
+        </div>
+      </article>
+    
+      <article class="card">
+        <div class="kicker">iThome [Tech]</div>
+        <div class="hook"><span class="q">Q</span>這波資料中心能源需求的激增，會不會迫使監管機構加速制定更嚴格的減碳政策？</div>
+        <h3 class="title"><a href="https://www.ithome.com.tw/news/176092" target="_blank">法國監管機構調查：資料中心耗電3年暴增38%，大型AI資料中心成能源與碳排新壓力</a></h3>
+        <div class="ai-takeaway">法國資料中心用電在三年內飆升38%，新建資料中心的平均容量從3 MW提升至20 MW，顯示AI相關設施的能源需求急劇增加。</div>
+        <div class="terms">
+          <span class="term">資料中心</span><span class="term">能源消耗</span><span class="term">AI</span><span class="term">碳排放</span><span class="term">法國監管</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">8/10</span>
@@ -438,11 +450,11 @@
     
       <article class="card">
         <div class="kicker">iThome [Tech]</div>
-        <div class="hook"><span class="q">Q</span>企業該如何利用更新後的CIS安全基準降低配置失誤的風險？</div>
-        <h3 class="title"><a href="https://www.ithome.com.tw/news/176104" target="_blank">CIS發布Benchmark安全設定基準更新，涵蓋PostgreSQL、Kubernetes與SQL Server</a></h3>
-        <div class="ai-takeaway">CIS發布最新安全設定基準更新，覆蓋PostgreSQL、Kubernetes、SQL Server等關鍵平台，協助企業加強雲端及容器環境的安全性。</div>
+        <div class="hook"><span class="q">Q</span>這些滿分漏洞若未及時修補，會對使用Ubiquiti設備的中小型企業造成多大的潛在風險？</div>
+        <h3 class="title"><a href="https://www.ithome.com.tw/news/176091" target="_blank">Ubiquiti修補UniFi OS平臺三項滿分重大漏洞，未更新可能導致執行任意指令與洩露敏感資訊</a></h3>
+        <div class="ai-takeaway">Ubiquiti修補UniFi OS管理平臺中三個CVSS 10.0最高危險漏洞，可能讓攻擊者執行任意指令並竊取敏感資訊。</div>
         <div class="terms">
-          <span class="term">CIS</span><span class="term">安全基準</span><span class="term">PostgreSQL</span><span class="term">Kubernetes</span><span class="term">雲端安全</span>
+          <span class="term">Ubiquiti</span><span class="term">UniFi</span><span class="term">漏洞修補</span><span class="term">CVSS 10.0</span><span class="term">網路設備</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">8/10</span>
@@ -450,28 +462,15 @@
       </article>
     
       <article class="card">
-        <div class="kicker">TechNews 科技新報 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>豐田擴大減產是否能緩解中東供應鏈危機帶來的衝擊？</div>
-        <h3 class="title"><a href="https://technews.tw/2026/05/25/toyota-reportedly-expands-overseas-production-cuts/" target="_blank">海峽續封鎖  豐田傳擴大海外減產、數量增逾 1 倍</a></h3>
-        <div class="ai-takeaway">由於荷莫茲海峽持續封鎖，豐田汽車擬擴大海外減產幅度，預計減產數量將超過原有的一倍。</div>
+        <div class="kicker">iThome [Tech]</div>
+        <div class="hook"><span class="q">Q</span>這些新出爐的CIS Benchmark，對於已經採用雲端和容器技術的企業意味著什麼改變？</div>
+        <h3 class="title"><a href="https://www.ithome.com.tw/news/176104" target="_blank">CIS發布Benchmark安全設定基準更新，涵蓋PostgreSQL、Kubernetes與SQL Server</a></h3>
+        <div class="ai-takeaway">CIS發布新版Benchmarks安全設定基準，新增涵蓋PostgreSQL、Kubernetes、SQL Server等平臺的設定指南，協助企業強化系統安全。</div>
         <div class="terms">
-          <span class="term">豐田</span><span class="term">荷莫茲海峽</span><span class="term">海外減產</span><span class="term">汽車供應鏈</span><span class="term">中東局勢</span>
+          <span class="term">CIS Benchmarks</span><span class="term">安全設定</span><span class="term">PostgreSQL</span><span class="term">Kubernetes</span><span class="term">SQL Server</span>
         </div>
         <div class="byline">
           <b>SCORE</b><span class="score">7/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">TheVerge [Tech]</div>
-        <div class="hook"><span class="q">Q</span>虛擬咖啡店能否真正取代實體咖啡店的社交體驗？</div>
-        <h3 class="title"><a href="https://www.theverge.com/entertainment/936278/coffee-talk-tokyo-review-switch-xbox-ps5-steam" target="_blank">Hanging out in my favorite virtual coffee shop in Tokyo</a></h3>
-        <div class="ai-takeaway">作者描述了他在東京最喜愛的虛擬咖啡店，提供一個讓他感到舒適且兼具藝術與額外功能的場所。</div>
-        <div class="terms">
-          <span class="term">VR</span><span class="term">虛擬咖啡</span><span class="term">東京</span><span class="term">科技生活</span><span class="term">沉浸式體驗</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">6/10</span>
         </div>
       </article>
     
@@ -481,37 +480,65 @@
 </div>
 
 <script>
-  const audio = document.getElementById('briefing-audio');
+  const briefingText = "今日科技與AI領域呈現多重張力：AI安全攻防加速，漏洞搜尋與修補成為新軍備競賽；理論層面，香農與柯爾莫哥洛夫的極限提醒我們AI的瓶頸所在；同時，AI代理自主行為屢見，資料中心能源需求急劇上升，關鍵基礎設施接連遭供應鏈攻擊與漏洞，修補與安全基準制定已成產業必修課題。";
+  let synth = window.speechSynthesis;
+  let utterance = null;
+  let isPlaying = false;
+  
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
 
-  function togglePlay() {
-    if (audio.paused) {
-      audio.play().then(() => {
-        playIcon.style.display = 'none';
-        pauseIcon.style.display = 'block';
-        playerStatus.innerText = '播放中 · 聆聽總編輯的話';
-      }).catch(err => {
-        playerStatus.innerText = '暫無今日語音檔或音檔仍在背景生成中...';
-      });
-    } else {
-      audio.pause();
+  function toggleSpeech() {
+    if (!synth) {
+      playerStatus.innerText = '您的瀏覽器不支援語音播報';
+      return;
+    }
+
+    if (isPlaying) {
+      synth.cancel();
+      isPlaying = false;
       playIcon.style.display = 'block';
       pauseIcon.style.display = 'none';
       playerStatus.innerText = '已暫停';
+    } else {
+      synth.cancel(); // 停止所有之前的播音
+      
+      utterance = new SpeechSynthesisUtterance(briefingText);
+      utterance.lang = 'zh-TW';
+      
+      // 動態抓取設備中效果最佳的 Edge-TTS 曉臻 / 雲希 或 Siri 繁中語音
+      const voices = synth.getVoices();
+      const twVoice = voices.find(v => v.lang.includes('zh-TW') || v.lang.includes('zh-HK'));
+      if (twVoice) utterance.voice = twVoice;
+
+      utterance.onend = () => {
+        isPlaying = false;
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        playerStatus.innerText = '播放結束 · 重新收聽';
+      };
+
+      utterance.onerror = (err) => {
+        isPlaying = false;
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        playerStatus.innerText = '播音遭遇阻礙，請重試';
+      };
+
+      synth.speak(utterance);
+      isPlaying = true;
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
+      playerStatus.innerText = '播放中 · 聆聽總編輯的話';
     }
   }
 
-  audio.addEventListener('ended', () => {
-    playIcon.style.display = 'block';
-    pauseIcon.style.display = 'none';
-    playerStatus.innerText = '播放結束 · 重新收聽';
-  });
-
-  audio.addEventListener('error', () => {
-    playerStatus.innerText = '暫無今日語音檔或音檔仍在背景生成中...';
-  });
+  if (synth && synth.onvoiceschanged !== undefined) {
+    synth.onvoiceschanged = () => {
+      // 預加載語音列表
+    };
+  }
 </script>
 </body>
 </html>
