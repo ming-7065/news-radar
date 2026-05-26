@@ -128,7 +128,13 @@
 
   <div class="daily-quote">唯一不變的，就是變化本身。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
-  <div class="briefing"><p>【模型因長度或其他原因未回傳文字】</p></div>
+  <div class="briefing"><p>【每日引言】
+小滿節氣的晨曦映照未來，勇於創新方能迎接嶄新的一天。  
+
+【今日總結】
+今日焦點薈萃：科技領域，方舟投資大幅增持 AI 新創 Cerebras、減持 RKLB 及 AMD，Google 同步在 I/O 2026 前為 Gemini 增添「延伸思考」層級與第三方整合應用，顯示 AI 與平台生態持續加速。  
+公共事務方面，英格蘭迎來可能破紀錄的 5 月高溫熱浪；博茨瓦納的同性婚姻合法化倡議者繼續在法庭抗爭；巴基斯坦列车因炸彈攻擊出軌，至少 14 人喪生，顯示區域安全威脅仍在。  
+體壇方面，樂天桃猿隊回顧第 8、9 週賽事並蓄積下半季奪冠動能；NBA 東區季後賽 Game 4，紐</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -144,32 +150,32 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">2026</span>
+    <span class="term">nhs</span>
+    <span class="count">3 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">doctors' strikes</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">cerebras</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">apple</span>
+    <span class="term">ark invest</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">macbook air</span>
+    <span class="term">cathie wood</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">m5</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">memorial day</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">特價</span>
+    <span class="term">ai 新創</span>
     <span class="count">1 則相關</span>
   </li>
 </ol></div>
@@ -178,49 +184,81 @@
     <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
     <div class="chip-row">
       <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
-      <button class="chip" data-filter="General" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="Sports" style="--chip-color: #c25100" onclick="filterTopic(this)">體育</button><button class="chip" data-filter="Gaming" style="--chip-color: #0369a1" onclick="filterTopic(this)">數位</button>
+      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button><button class="chip" data-filter="General" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="Sports" style="--chip-color: #c25100" onclick="filterTopic(this)">體育</button><button class="chip" data-filter="Health" style="--chip-color: #0f766e" onclick="filterTopic(this)">健康</button><button class="chip" data-filter="Entertainment" style="--chip-color: #6b21a8" onclick="filterTopic(this)">娛樂</button>
     </div>
   </div>
 
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #0369a1"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #0369a1" data-topic="Gaming" data-search="《黎明杀机》「杰森」宣传视频 《黎明殺機》發布『傑森』宣傳片，預告這位恐怖角色將於6月16日上線。 dead by daylight jason horror game dlc">
-    <div class="kicker">IGN 中文 [Gaming]</div>
-    <div class="hook"><span class="q">Q</span>玩家能否在遊戲中成功抵禦『傑森』的追殺？</div>
-    <h2><a href="https://www.ign.com.cn/lmsjgame/60214/li-ming-sha-ji-jie-sen-xuan-chuan-shi-pin" target="_blank">《黎明杀机》「杰森」宣传视频</a></h2>
-    <div class="takeaway">《黎明殺機》發布『傑森』宣傳片，預告這位恐怖角色將於6月16日上線。</div>
+  <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #4a5568" data-topic="General" data-search="at least 14 killed in bombing attack that derailed a train in pakistan 巴基斯坦的列車因炸彈攻擊出軌，造成至少 14 人死亡，爆炸威力甚至讓 15 英里外的居民被驚醒，分裂組織聲稱負責。 巴基斯坦 炸彈攻擊 列車出軌 分裂組織 傷亡人數">
+    <div class="kicker">NY Times [General]</div>
+    <div class="hook"><span class="q">Q</span>這次炸彈攻擊的幕後組織到底想要達成什麼政治目的？</div>
+    <h2><a href="https://www.nytimes.com/2026/05/24/world/asia/pakistan-train-bomb-attack-derailment.html" target="_blank">At Least 14 Killed in Bombing Attack That Derailed a Train in Pakistan</a></h2>
+    <div class="takeaway">巴基斯坦的列車因炸彈攻擊出軌，造成至少 14 人死亡，爆炸威力甚至讓 15 英里外的居民被驚醒，分裂組織聲稱負責。</div>
     <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
   </div>
   
+  <section class="cat" id="cat-tech" data-topic="Tech">
+    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+    <div class="cards" style="--cat: #8b1a1a">
+      
+    <article class="card" data-topic="Tech" data-search="木頭姊積極加碼 ai 新創 cerebras  砍 rklb、amd 方舟投資上週增持 ai 新創 cerebras，並減持 rklb 及 amd。 cerebras ark invest cathie wood ai 新創 投資動向">
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>方舟投資大手加碼 Cerebras，背後的投資策略是否顯示對 AI 發展的強烈信心？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/cathie-wood-increases-stake-in-cerebras-cuts-rklb-and-amd/" target="_blank">木頭姊積極加碼 AI 新創 Cerebras  砍 RKLB、AMD</a></h3>
+      <div class="ai-takeaway">方舟投資上週增持 AI 新創 Cerebras，並減持 RKLB 及 AMD。</div>
+      <div class="terms">
+        <span class="term">Cerebras</span><span class="term">Ark Invest</span><span class="term">Cathie Wood</span><span class="term">AI 新創</span><span class="term">投資動向</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="gemini app rolling out ‘extended’ thinking level, new 3rd-party app integrations google 在 i/o 2026 前持續推出 gemini 功能，部分使用者已看到「思考層級」選項，並加入新的第三方整合。 gemini google thinking level ai 助手 i/o 2026">
+      <div class="kicker">9to5Google [Tech]</div>
+      <div class="hook"><span class="q">Q</span>Gemini 的「思考層級」將如何提升使用者的互動體驗？</div>
+      <h3 class="title"><a href="https://9to5google.com/2026/05/17/gemini-app-thinking-level/" target="_blank">Gemini app rolling out ‘Extended’ thinking level, new 3rd-party app integrations</a></h3>
+      <div class="ai-takeaway">Google 在 I/O 2026 前持續推出 Gemini 功能，部分使用者已看到「思考層級」選項，並加入新的第三方整合。</div>
+      <div class="terms">
+        <span class="term">Gemini</span><span class="term">Google</span><span class="term">Thinking Level</span><span class="term">AI 助手</span><span class="term">I/O 2026</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    </div>
+  </section>
   <section class="cat" id="cat-general" data-topic="General">
     <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
     <div class="cards" style="--cat: #4a5568">
       
-    <article class="card" data-topic="General" data-search="as trump woos china, the quad grouping drifts towards irrelevance 隨著華盛頓將軍事重心轉向其他地區，分析指出四方安全對話難以確立使命。 trump china quad indo‑pacific geopolitics">
-      <div class="kicker">Al Jazeera [General]</div>
-      <div class="hook"><span class="q">Q</span>四方安全對話是否能在美中關係變化中找到新定位？</div>
-      <h3 class="title"><a href="https://www.aljazeera.com/news/2026/5/26/as-trump-woos-china-the-quad-alliance-drifts-toward-irrelevance?traffic_source=rss" target="_blank">As Trump woos China, the Quad grouping drifts towards irrelevance</a></h3>
-      <div class="ai-takeaway">隨著華盛頓將軍事重心轉向其他地區，分析指出四方安全對話難以確立使命。</div>
+    <article class="card" data-topic="General" data-search="uk heat wave could break may temperature record 氣象預報警告，英格蘭部分地區氣溫可能升至 35°c（95°f），創下 5 月有史以來最高紀錄。 英國 熱浪 5月高溫 氣候變遷 weather">
+      <div class="kicker">NY Times [General]</div>
+      <div class="hook"><span class="q">Q</span>此波熱浪是否預示英國夏季氣溫將更為極端？</div>
+      <h3 class="title"><a href="https://www.nytimes.com/2026/05/25/weather/uk-heat-wave-may-weather-record.html" target="_blank">UK Heat Wave Could Break May Temperature Record</a></h3>
+      <div class="ai-takeaway">氣象預報警告，英格蘭部分地區氣溫可能升至 35°C（95°F），創下 5 月有史以來最高紀錄。</div>
       <div class="terms">
-        <span class="term">Trump</span><span class="term">China</span><span class="term">Quad</span><span class="term">Indo‑Pacific</span><span class="term">Geopolitics</span>
+        <span class="term">英國</span><span class="term">熱浪</span><span class="term">5月高溫</span><span class="term">氣候變遷</span><span class="term">weather</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="hajj pilgrims arrive near mecca ahead of arafah day 穆斯林朝聖者已開始抵達米娜，準備迎接阿拉法日。 hajj mecca arafah day pilgrimage islam">
-      <div class="kicker">Al Jazeera [General]</div>
-      <div class="hook"><span class="q">Q</span>今年朝聖人潮是否因過去的限制而有所變化？</div>
-      <h3 class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/5/26/hajj-pilgrims-arrive-near-mecca-ahead-of-arafah-day?traffic_source=rss" target="_blank">Hajj pilgrims arrive near Mecca ahead of Arafah Day</a></h3>
-      <div class="ai-takeaway">穆斯林朝聖者已開始抵達米娜，準備迎接阿拉法日。</div>
+    <article class="card" data-topic="General" data-search="‘she does not back down’: the couple seeking to legalise same-sex marriage in botswana 博諾洛·塞萊洛與喬洛芙洛·庫米萊在法院爭取同性婚姻合法化，但面臨教會團體的激烈反對。 botswana 同性婚姻 lgbtq 權益 法院案件 教會反對">
+      <div class="kicker">The Guardian [General]</div>
+      <div class="hook"><span class="q">Q</span>博諾洛與喬洛芙洛能否突破教會阻力，讓 Botswana 的同性婚姻合法化？</div>
+      <h3 class="title"><a href="https://www.theguardian.com/world/2026/may/25/same-sex-marriage-botswana-couple-court" target="_blank">‘She does not back down’: the couple seeking to legalise same-sex marriage in Botswana</a></h3>
+      <div class="ai-takeaway">博諾洛·塞萊洛與喬洛芙洛·庫米萊在法院爭取同性婚姻合法化，但面臨教會團體的激烈反對。</div>
       <div class="terms">
-        <span class="term">Hajj</span><span class="term">Mecca</span><span class="term">Arafah Day</span><span class="term">Pilgrimage</span><span class="term">Islam</span>
+        <span class="term">Botswana</span><span class="term">同性婚姻</span><span class="term">LGBTQ 權益</span><span class="term">法院案件</span><span class="term">教會反對</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
@@ -230,65 +268,58 @@
     <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">體育競技動態</span> Sports Arena</div>
     <div class="cards" style="--cat: #c25100">
       
-    <article class="card" data-topic="Sports" data-search="for the first time, oleksandr usyk is in a no-win situation 烏克蘭拳王烏西克首度在重量級陷入無勝局面，面臨前所未有的挑戰。 烏西克 oleksandr usyk 重量級 拳擊 無勝局面">
-      <div class="kicker">Yahoo Sports [Sports]</div>
-      <div class="hook"><span class="q">Q</span>烏西克能否突破此困境，重新奪回拳王寶座？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/first-time-oleksandr-usyk-no-101855368.html" target="_blank">For the first time, Oleksandr Usyk is in a no-win situation</a></h3>
-      <div class="ai-takeaway">烏克蘭拳王烏西克首度在重量級陷入無勝局面，面臨前所未有的挑戰。</div>
+    <article class="card" data-topic="Sports" data-search="《2026 nba季後賽》尼克 vs 騎士 game 4：紐約之王血洗東區 2026 nba 季後賽第4場，紐約尼克隊以壓倒性火力大勝克里夫蘭騎士，展現東區霸主的氣勢。 nba 2026 playoffs knicks cavaliers game 4">
+      <div class="kicker">運動視界 [Sports]</div>
+      <div class="hook"><span class="q">Q</span>尼克能否在餘下系列赛中保持這股進攻火力，最終奪得總冠軍？</div>
+      <h3 class="title"><a href="https://www.sportsv.net/articles/126587" target="_blank">《2026 NBA季後賽》尼克 vs 騎士 Game 4：紐約之王血洗東區</a></h3>
+      <div class="ai-takeaway">2026 NBA 季後賽第4場，紐約尼克隊以壓倒性火力大勝克里夫蘭騎士，展現東區霸主的氣勢。</div>
       <div class="terms">
-        <span class="term">烏西克</span><span class="term">Oleksandr Usyk</span><span class="term">重量級</span><span class="term">拳擊</span><span class="term">無勝局面</span>
+        <span class="term">NBA</span><span class="term">2026 playoffs</span><span class="term">Knicks</span><span class="term">Cavaliers</span><span class="term">Game 4</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">9/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="wales' fastest woman brier breaks 44-year 200m record 漢娜·布里爾刷新威爾斯保持44年的200米紀錄，並鞏固其百米史上最佳成績。 wales hannah brier 200米紀錄 短跑 田徑">
-      <div class="kicker">BBC Sport [Sports]</div>
-      <div class="hook"><span class="q">Q</span>布里爾能否在未來挑戰更長距離的比賽，創造更多紀錄？</div>
-      <h3 class="title"><a href="https://www.bbc.com/sport/athletics/articles/crkppr7j35eo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Wales' fastest woman Brier breaks 44-year 200m record</a></h3>
-      <div class="ai-takeaway">漢娜·布里爾刷新威爾斯保持44年的200米紀錄，並鞏固其百米史上最佳成績。</div>
-      <div class="terms">
-        <span class="term">Wales</span><span class="term">Hannah Brier</span><span class="term">200米紀錄</span><span class="term">短跑</span><span class="term">田徑</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Sports" data-search="《球鞋開箱》三種風格的完美融合─on × beams × rei co-op聯名cloudultra 3越野跑鞋 本文開箱展示 on、beams、rei coop 三方聯名的 cloudultra 3 越野跑鞋，融合三種獨特風格。 on beams cloudultra 3 越野跑鞋 球鞋開箱">
+    <article class="card" data-topic="Sports" data-search="花果山觀察日記．樂天週報 (week 8+9)－展望下半季 樂天桃猿隊第8、9週賽事回顧，並展望下半季的奪冠之路與挑戰。 樂天 cpbl 台灣棒球 季後賽 week 8+9">
       <div class="kicker">運動視界 [Sports]</div>
-      <div class="hook"><span class="q">Q</span>這款結合三種風格的跑鞋實際穿著感受如何？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126531" target="_blank">《球鞋開箱》三種風格的完美融合─On × BEAMS × REI Co-op聯名Cloudultra 3越野跑鞋</a></h3>
-      <div class="ai-takeaway">本文開箱展示 On、BEAMS、REI Coop 三方聯名的 Cloudultra 3 越野跑鞋，融合三種獨特風格。</div>
+      <div class="hook"><span class="q">Q</span>樂天在下半季能否突破目前的瓶頸，成功闖入季後賽？</div>
+      <h3 class="title"><a href="https://www.sportsv.net/articles/126520" target="_blank">花果山觀察日記．樂天週報 (Week 8+9)－展望下半季</a></h3>
+      <div class="ai-takeaway">樂天桃猿隊第8、9週賽事回顧，並展望下半季的奪冠之路與挑戰。</div>
       <div class="terms">
-        <span class="term">On</span><span class="term">BEAMS</span><span class="term">Cloudultra 3</span><span class="term">越野跑鞋</span><span class="term">球鞋開箱</span>
+        <span class="term">樂天</span><span class="term">CPBL</span><span class="term">台灣棒球</span><span class="term">季後賽</span><span class="term">Week 8+9</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
+        <b>SCORE</b><span class="score">6/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="【motogp】2026-07義大利gp賽前展望：加泰隆尼亞的兩起事故將讓戰局出現更多變化 2026年7月義大利 motogp 大獎賽前瞻指出，加泰隆尼亞賽道的兩起事故將為賽局增添更多變數。 motogp 義大利gp 加泰隆尼亞 事故 2026">
-      <div class="kicker">運動視界 [Sports]</div>
-      <div class="hook"><span class="q">Q</span>這些事故將如何影響車手的策略和最終排名？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126585" target="_blank">【MotoGP】2026-07義大利GP賽前展望：加泰隆尼亞的兩起事故將讓戰局出現更多變化</a></h3>
-      <div class="ai-takeaway">2026年7月義大利 MotoGP 大獎賽前瞻指出，加泰隆尼亞賽道的兩起事故將為賽局增添更多變數。</div>
+    </div>
+  </section>
+  <section class="cat" id="cat-health" data-topic="Health">
+    <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">健康生活新知</span> Health &amp; Wellness</div>
+    <div class="cards" style="--cat: #0f766e">
+      
+    <article class="card" data-topic="Health" data-search="'doctors strikes' and 'paw prints in space' bbc health 彙整本週英格蘭西部的地方報導，含醫生罷工與「太空爪印」等熱門話題。 doctors' strikes nhs west england local news health &amp; society">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>本週的醫生罷工是否真的帶來了意想不到的正面效應？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/c0krp1e7lkmo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">'Doctors strikes' and 'paw prints in space'</a></h3>
+      <div class="ai-takeaway">BBC Health 彙整本週英格蘭西部的地方報導，含醫生罷工與「太空爪印」等熱門話題。</div>
       <div class="terms">
-        <span class="term">MotoGP</span><span class="term">義大利GP</span><span class="term">加泰隆尼亞</span><span class="term">事故</span><span class="term">2026</span>
+        <span class="term">Doctors' strikes</span><span class="term">NHS</span><span class="term">West England</span><span class="term">local news</span><span class="term">health &amp; society</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
+        <b>SCORE</b><span class="score">7/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="manchester united have tracked frankfurt’s nathaniel brown in their search for left-back reinforcement 曼徹斯特聯隊已瞄準德甲法蘭克福的左後衛尼撒尼爾·布朗，以加強左後防線。 manchester united 左後衛 nathaniel brown 德甲 轉會">
-      <div class="kicker">Yahoo Sports [Sports]</div>
-      <div class="hook"><span class="q">Q</span>尼撒尼爾·布朗能否快速適應英超的節奏與戰術需求？</div>
-      <h3 class="title"><a href="https://sports.yahoo.com/articles/manchester-united-tracked-frankfurt-nathaniel-103000127.html" target="_blank">Manchester United have tracked Frankfurt’s Nathaniel Brown in their search for left-back reinforcement</a></h3>
-      <div class="ai-takeaway">曼徹斯特聯隊已瞄準德甲法蘭克福的左後衛尼撒尼爾·布朗，以加強左後防線。</div>
+    <article class="card" data-topic="Health" data-search="doctors' strikes can have surprising benefits - but are they sustainable? 部分醫院信托機構反映，醫生罷工後竟出現等候時間縮短、決策加速與走廊更安寧的正面效果。 doctors' strikes nhs hospital trusts patient wait times sustainable impact">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>這樣的正面效應能否成為常態，繼續減輕醫療系統壓力？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cp3l2pygnlyo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Doctors' strikes can have surprising benefits - but are they sustainable?</a></h3>
+      <div class="ai-takeaway">部分醫院信托機構反映，醫生罷工後竟出現等候時間縮短、決策加速與走廊更安寧的正面效果。</div>
       <div class="terms">
-        <span class="term">Manchester United</span><span class="term">左後衛</span><span class="term">Nathaniel Brown</span><span class="term">德甲</span><span class="term">轉會</span>
+        <span class="term">Doctors' strikes</span><span class="term">NHS</span><span class="term">hospital trusts</span><span class="term">patient wait times</span><span class="term">sustainable impact</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
@@ -297,33 +328,20 @@
   
     </div>
   </section>
-  <section class="cat" id="cat-gaming" data-topic="Gaming">
-    <div class="section-rule cat-heading" style="--cat: #0369a1"><span class="accent">數位遊戲與電競</span> Gaming &amp; Esports</div>
-    <div class="cards" style="--cat: #0369a1">
+  <section class="cat" id="cat-entertainment" data-topic="Entertainment">
+    <div class="section-rule cat-heading" style="--cat: #6b21a8"><span class="accent">娛樂與流行文化</span> Entertainment &amp; Culture</div>
+    <div class="cards" style="--cat: #6b21a8">
       
-    <article class="card" data-topic="Gaming" data-search="the 2026 macbook air with new apple m5 chip drops to the lowest price ever for memorial day apple 最新款 macbook air 在亞馬遜限時特惠，配備 m5 晶片、16gb ram、512gb ssd，原價 $1,099 降至 $899.99，附免運。 apple macbook air m5 memorial day 特價">
-      <div class="kicker">IGN [Gaming]</div>
-      <div class="hook"><span class="q">Q</span>現在購買是否比以往任何時候都更划算？</div>
-      <h3 class="title"><a href="https://www.ign.com/articles/best-apple-macbook-air-m5-laptop-deal-amazon-memorial-day-sale" target="_blank">The 2026 MacBook Air With New Apple M5 Chip Drops to the Lowest Price Ever for Memorial Day</a></h3>
-      <div class="ai-takeaway">Apple 最新款 MacBook Air 在亞馬遜限時特惠，配備 M5 晶片、16GB RAM、512GB SSD，原價 $1,099 降至 $899.99，附免運。</div>
+    <article class="card" data-topic="Entertainment" data-search="metallica urges uk fans to donate blood in history-making nhs collaboration 金屬樂團 metallica 與英國 nhs 合作，呼籲粉絲在英國巡演前踴躍捐血，提升血庫存量。 metallica nhs blood donation uk tour fan engagement">
+      <div class="kicker">Mirror Celebrity [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>Metallica 的号召能否實際提升英國的血庫供應量？</div>
+      <h3 class="title"><a href="https://www.mirror.co.uk/3am/celebrity-news/metallica-make-unusual-request-uk-37204830" target="_blank">Metallica urges UK fans to donate blood in history-making NHS collaboration</a></h3>
+      <div class="ai-takeaway">金屬樂團 Metallica 與英國 NHS 合作，呼籲粉絲在英國巡演前踴躍捐血，提升血庫存量。</div>
       <div class="terms">
-        <span class="term">Apple</span><span class="term">MacBook Air</span><span class="term">M5</span><span class="term">Memorial Day</span><span class="term">特價</span>
+        <span class="term">Metallica</span><span class="term">NHS</span><span class="term">blood donation</span><span class="term">UK tour</span><span class="term">fan engagement</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Gaming" data-search="《運將是歧視用語》在日本搭計程車不能亂說 就連很多日本人也不知道？ 台灣常用『運將』稱呼司機，被指涉及歧視，許多日本人並不知情。 運將 歧視 日本 計程車 台灣">
-      <div class="kicker">遊戲基地 [Gaming]</div>
-      <div class="hook"><span class="q">Q</span>此術語是否會引發日本社會對台灣語言的關注？</div>
-      <h3 class="title"><a href="https://news.gamme.com.tw/1774118" target="_blank">《運將是歧視用語》在日本搭計程車不能亂說 就連很多日本人也不知道？</a></h3>
-      <div class="ai-takeaway">台灣常用『運將』稱呼司機，被指涉及歧視，許多日本人並不知情。</div>
-      <div class="terms">
-        <span class="term">運將</span><span class="term">歧視</span><span class="term">日本</span><span class="term">計程車</span><span class="term">台灣</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
       </div>
     </article>
   
@@ -340,7 +358,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【模型因長度或其他原因未回傳文字】";
+  const briefingText = "【每日引言】\\n小滿節氣的晨曦映照未來，勇於創新方能迎接嶄新的一天。  \\n\\n【今日總結】\\n今日焦點薈萃：科技領域，方舟投資大幅增持 AI 新創 Cerebras、減持 RKLB 及 AMD，Google 同步在 I/O 2026 前為 Gemini 增添「延伸思考」層級與第三方整合應用，顯示 AI 與平台生態持續加速。  \\n公共事務方面，英格蘭迎來可能破紀錄的 5 月高溫熱浪；博茨瓦納的同性婚姻合法化倡議者繼續在法庭抗爭；巴基斯坦列车因炸彈攻擊出軌，至少 14 人喪生，顯示區域安全威脅仍在。  \\n體壇方面，樂天桃猿隊回顧第 8、9 週賽事並蓄積下半季奪冠動能；NBA 東區季後賽 Game 4，紐";
 
   function getSelectedVoice() {
     if (!synth) return null;
