@@ -119,20 +119,20 @@
 <body>
 <div class="wrap">
   <header class="masthead">
-    <div class="dateline"><span>2026年5月26日 星期二</span><span>Vol. 1 · No. 3</span></div>
+    <div class="dateline"><span>2026年5月26日 星期二</span><span>Vol. 1 · No. 3</span><span>🏮 距離 端午節 還有 24 天</span></div>
     <h1>銘於心-AI日報</h1>
     <p class="tagline">全自動 AI 新聞日報</p>
-    <p class="meta-line">收錄 5 篇 · <a href="archive.html">歷史過刊</a></p>
+    <p class="meta-line">收錄 10 篇 · <a href="archive.html">歷史過刊</a></p>
     <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
   </header>
 
-  <div class="daily-quote">每一次的日出，都是科技顛覆昨日的開始。祝您有個充滿靈感的一天。</div>
+  <div class="daily-quote">唯一不變的，就是變化本身。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing"><p>【每日引言】
-晨曦破曉，創新的火光在每一口新鮮的料理裡跳動，今日的味蕾正是科技的起點，讓我們以小滿的餘溫迎接嶄新的開始。
+端午的晨光映照創新的道路，讓科技如朝露般為今日注入活力與可能。  
 
 【今日總結】
-今日 Food 領域展現內容驅動與跨界融合的雙重活力：Andrew Rea 與 Vox Media、Eater 合作的《In the Booth with Babish》將廚藝敘事推向播客新舞台；紐約的英式酒吧 Dean’s 以傳統英國酒吧精神結合美式餐飲創意，引領城市餐飲新浪潮；攀岩健身房的咖啡店模式則展示工作與休閒空間的跨界可能；Eater 最新精選的 38 家倫敦最佳餐廳提供從傳統英式料理到自然酒的多元選擇；此外，Quince 從平價羊絨跨界至魚子醬與</p></div>
+警政方面，基隆警局提議以殺人罪偵辨毒駕累犯致死，蔣萬安將與台電協商北士科變電所；巴基斯坦火車遭炸彈攻擊，至少14人罹難。科技領域，台積電帶動台股超越印度躍居全球第五大股市，Packagist 供應鏈被注入惡意腳本，資安警鐘再響。旅遊推薦走訪屏東里港三家風格咖啡廳，肉桂捲、鳳梨水果茶與舒芙蕾在高屏溪畔交織悠閒。體育焦點包括 NHL 2026 斯坦利盃四強對決出爐，雪崩對金騎士，以及湖人新管理層聘請「火箭科學家」拉瑪達斯為副總經理。健康方面，實驗顯示英國最鹹三明治的鹽分危害，並有新呼聲建議將 PCOS</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -148,32 +148,32 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">eater</span>
+    <span class="term">健康</span>
     <span class="count">2 則相關</span>
   </li>
 
   <li>
-    <span class="term">美食播客</span>
+    <span class="term">毒駕</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">vox media</span>
+    <span class="term">警政</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">andrew rea</span>
+    <span class="term">刑事</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">烹飪節目</span>
+    <span class="term">殺人罪</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">英式酒吧</span>
+    <span class="term">交通安全</span>
     <span class="count">1 則相關</span>
   </li>
 </ol></div>
@@ -182,75 +182,164 @@
     <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
     <div class="chip-row">
       <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
-      <button class="chip" data-filter="Food" style="--chip-color: #b91c1c" onclick="filterTopic(this)">美食</button>
+      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button><button class="chip" data-filter="General" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="Sports" style="--chip-color: #c25100" onclick="filterTopic(this)">體育</button><button class="chip" data-filter="Health" style="--chip-color: #0f766e" onclick="filterTopic(this)">健康</button><button class="chip" data-filter="Travel" style="--chip-color: #047857" onclick="filterTopic(this)">全球</button>
     </div>
   </div>
 
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #b91c1c"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #b91c1c" data-topic="Food" data-search="the 38 best london restaurants, according to eater’s local dining expert eater 的本地餐飲專家精選倫敦 38 家最佳餐廳，涵蓋多元料理，從點心到烤肉、法式披薩至傳統英國菜，並推薦自然酒等特色選擇。 倫敦美食 38最佳餐廳 eater 多元料理 餐廳推薦">
-    <div class="kicker">Eater [Food]</div>
-    <div class="hook"><span class="q">Q</span>這份榜單中哪些餐廳特別值得推薦，能展現倫敦餐飲的多樣性？</div>
-    <h2><a href="https://www.eater.com/maps/best-london-restaurants-eater-38" target="_blank">The 38 Best London Restaurants, According to Eater’s Local Dining Expert</a></h2>
-    <div class="takeaway">Eater 的本地餐飲專家精選倫敦 38 家最佳餐廳，涵蓋多元料理，從點心到烤肉、法式披薩至傳統英國菜，並推薦自然酒等特色選擇。</div>
+  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #8b1a1a" data-topic="Tech" data-search="台積電「一個人的武林」大爆發！台股超車印度躍全球第五大股市 受惠於台積電飆升與ai熱潮，台股超越印度成為全球第五大股市。 台積電 台股 ai 全球股市 投資">
+    <div class="kicker">TechNews 科技新報 [Tech]</div>
+    <div class="hook"><span class="q">Q</span>台積電能否持續引領台股維持全球第五大地位？</div>
+    <h2><a href="https://finance.technews.tw/2026/05/26/wulin-of-one/" target="_blank">台積電「一個人的武林」大爆發！台股超車印度躍全球第五大股市</a></h2>
+    <div class="takeaway">受惠於台積電飆升與AI熱潮，台股超越印度成為全球第五大股市。</div>
     <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
   </div>
   
-  <section class="cat" id="cat-food" data-topic="Food">
-    <div class="section-rule cat-heading" style="--cat: #b91c1c"><span class="accent">美食與生活美學</span> Gastronomy &amp; Life</div>
-    <div class="cards" style="--cat: #b91c1c">
+  <section class="cat" id="cat-tech" data-topic="Tech">
+    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+    <div class="cards" style="--cat: #8b1a1a">
       
-    <article class="card" data-topic="Food" data-search="introducing “in the booth with babish,” a new podcast from andrew rea, eater, and vox media andrew rea（暱稱 babish）將加入vox media podcast 網路，與 eater 共同推出全新播客《in the booth with babish》，將於 5 月 26 日首播。 美食播客 eater vox media andrew rea 烹飪節目">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>這檔新播客會如何結合美食與節目內容，呈現哪些獨特視角？</div>
-      <h3 class="title"><a href="https://www.eater.com/press-room/962747/andrew-rea-babish-in-the-booth-with-babish-podcast" target="_blank">Introducing “In the Booth with Babish,” a New Podcast From Andrew Rea, Eater, and Vox Media</a></h3>
-      <div class="ai-takeaway">Andrew Rea（暱稱 Babish）將加入Vox Media Podcast 網路，與 Eater 共同推出全新播客《In the Booth with Babish》，將於 5 月 26 日首播。</div>
+    <article class="card" data-topic="Tech" data-search="packagist遭遇供應鏈攻擊，8個套件被感染，駭客意圖透過github散布linux惡意軟體 packagist遭受供應鏈攻擊，8個套件被植入相同惡意腳本，試圖透過github散播linux惡意軟體。 packagist 供應鏈攻擊 資安 惡意軟體 linux">
+      <div class="kicker">iThome [Tech]</div>
+      <div class="hook"><span class="q">Q</span>開發者該如何防範此類供應鏈攻擊？</div>
+      <h3 class="title"><a href="https://www.ithome.com.tw/news/176103" target="_blank">Packagist遭遇供應鏈攻擊，8個套件被感染，駭客意圖透過GitHub散布Linux惡意軟體</a></h3>
+      <div class="ai-takeaway">Packagist遭受供應鏈攻擊，8個套件被植入相同惡意腳本，試圖透過GitHub散播Linux惡意軟體。</div>
       <div class="terms">
-        <span class="term">美食播客</span><span class="term">Eater</span><span class="term">Vox Media</span><span class="term">Andrew Rea</span><span class="term">烹飪節目</span>
+        <span class="term">Packagist</span><span class="term">供應鏈攻擊</span><span class="term">資安</span><span class="term">惡意軟體</span><span class="term">Linux</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">9/10</span>
+      </div>
+    </article>
+  
+    </div>
+  </section>
+  <section class="cat" id="cat-general" data-topic="General">
+    <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
+    <div class="cards" style="--cat: #4a5568">
+      
+    <article class="card" data-topic="General" data-search="at least 14 killed in bombing attack that derailed a train in pakistan 巴基斯坦火車因炸彈攻擊脫軌，至少14人死亡。 巴基斯坦 火車 炸彈攻擊 恐怖主義 安全">
+      <div class="kicker">NY Times [General]</div>
+      <div class="hook"><span class="q">Q</span>這場炸彈攻擊背後的動機究竟是什麼？</div>
+      <h3 class="title"><a href="https://www.nytimes.com/2026/05/24/world/asia/pakistan-train-bomb-attack-derailment.html" target="_blank">At Least 14 Killed in Bombing Attack That Derailed a Train in Pakistan</a></h3>
+      <div class="ai-takeaway">巴基斯坦火車因炸彈攻擊脫軌，至少14人死亡。</div>
+      <div class="terms">
+        <span class="term">巴基斯坦</span><span class="term">火車</span><span class="term">炸彈攻擊</span><span class="term">恐怖主義</span><span class="term">安全</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Food" data-search="a new ode to british pubs takes nyc by storm 主廚 jess shadbolt 與合夥人 annie shi 在倫敦國王酒吧旁新開英式酒吧 dean’s，供應傳統英國菜餚，引領新餐飲風潮。 英式酒吧 dean’s 倫敦餐飲 jess shadbolt 餐廳">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>Dean’s 的菜單與傳統英式酒吧有何不同，值得一试吗？</div>
-      <h3 class="title"><a href="https://www.eater.com/video/962739/deans-british-pub-nyc-restaurant-opening-now-open" target="_blank">A New Ode to British Pubs Takes NYC By Storm</a></h3>
-      <div class="ai-takeaway">主廚 Jess Shadbolt 與合夥人 Annie Shi 在倫敦國王酒吧旁新開英式酒吧 Dean’s，供應傳統英國菜餚，引領新餐飲風潮。</div>
+    <article class="card" data-topic="General" data-search="強化毒駕防制 基市警局擬推毒駕累犯致重大傷亡者依「殺人罪」偵辦 基隆市警局提議將毒駕累犯導致重大傷亡者以殺人罪偵辨，以強化毒駕防制。 毒駕 警政 刑事 殺人罪 交通安全">
+      <div class="kicker">Yahoo 新聞 [General]</div>
+      <div class="hook"><span class="q">Q</span>把毒駕累犯視為殺人罪，真的能遏止悲劇重演嗎？</div>
+      <h3 class="title"><a href="https://tw.news.yahoo.com/%E5%BC%B7%E5%8C%96%E6%AF%92%E9%A7%95%E9%98%B2%E5%88%B6-%E5%9F%BA%E5%B8%82%E8%AD%A6%E5%B1%80%E6%93%AC%E6%8E%A8%E6%AF%92%E9%A7%95%E7%B4%AF%E7%8A%AF%E8%87%B4%E9%87%8D%E5%A4%A7%E5%82%B7%E4%BA%A1%E8%80%85%E4%BE%9D-%E6%AE%BA%E4%BA%BA%E7%BD%AA-%E5%81%B5%E8%BE%A6-101539160.html" target="_blank">強化毒駕防制 基市警局擬推毒駕累犯致重大傷亡者依「殺人罪」偵辦</a></h3>
+      <div class="ai-takeaway">基隆市警局提議將毒駕累犯導致重大傷亡者以殺人罪偵辨，以強化毒駕防制。</div>
       <div class="terms">
-        <span class="term">英式酒吧</span><span class="term">Dean’s</span><span class="term">倫敦餐飲</span><span class="term">Jess Shadbolt</span><span class="term">餐廳</span>
+        <span class="term">毒駕</span><span class="term">警政</span><span class="term">刑事</span><span class="term">殺人罪</span><span class="term">交通安全</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="General" data-search="蔣萬安：將和台電開會談北士科變電所 (圖) 蔣萬安宣布將與台電開會，討論北士科變電所的相關事宜。 蔣萬安 台電 變電所 北士科 能源政策">
+      <div class="kicker">Yahoo 新聞 [General]</div>
+      <div class="hook"><span class="q">Q</span>北士科變電所的建設會帶來哪些影響？</div>
+      <h3 class="title"><a href="https://tw.news.yahoo.com/%E8%94%A3%E8%90%AC%E5%AE%89-%E5%B0%87%E5%92%8C%E5%8F%B0%E9%9B%BB%E9%96%8B%E6%9C%83%E8%AB%87%E5%8C%97%E5%A3%AB%E7%A7%91%E8%AE%8A%E9%9B%BB%E6%89%80-%E5%9C%96-100307834.html" target="_blank">蔣萬安：將和台電開會談北士科變電所 (圖)</a></h3>
+      <div class="ai-takeaway">蔣萬安宣布將與台電開會，討論北士科變電所的相關事宜。</div>
+      <div class="terms">
+        <span class="term">蔣萬安</span><span class="term">台電</span><span class="term">變電所</span><span class="term">北士科</span><span class="term">能源政策</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    </div>
+  </section>
+  <section class="cat" id="cat-sports" data-topic="Sports">
+    <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">體育競技動態</span> Sports Arena</div>
+    <div class="cards" style="--cat: #c25100">
+      
+    <article class="card" data-topic="Sports" data-search="stanley cup playoffs 2026: bracket, schedule and scores as conference final matchups are set 2026年斯坦利盃季後賽的對戰組合已出爐，雪崩隊與金騎士隊將爭奪進入總決賽的資格。 stanley cup nhl playoffs 2026 avalanche golden knights">
+      <div class="kicker">CBS Sports [Sports]</div>
+      <div class="hook"><span class="q">Q</span>誰能在2026年的斯坦利盃季後賽中脫穎而出，擊敗金騎士奪得總決賽門票？</div>
+      <h3 class="title"><a href="https://www.cbssports.com/nhl/news/nhl-playoffs-2026-stanley-cup-schedule-bracket-scores-results/" target="_blank">Stanley Cup Playoffs 2026: Bracket, schedule and scores as conference final matchups are set</a></h3>
+      <div class="ai-takeaway">2026年斯坦利盃季後賽的對戰組合已出爐，雪崩隊與金騎士隊將爭奪進入總決賽的資格。</div>
+      <div class="terms">
+        <span class="term">Stanley Cup</span><span class="term">NHL</span><span class="term">Playoffs 2026</span><span class="term">Avalanche</span><span class="term">Golden Knights</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Sports" data-search="lakers begin front office restructuring by hiring &amp;#039;literal rocket scientist&amp;#039; rohan ramadas as assistant gm 湖人隊在新東主馬克·華爾特的領導下開始進行管理層重組，聘請了被稱為「火箭科學家」的羅漢·拉瑪達斯擔任副總經理。 湖人 火箭科學家 副總經理 管理層重組 nba">
+      <div class="kicker">CBS Sports [Sports]</div>
+      <div class="hook"><span class="q">Q</span>湖人隊找來火箭科學家擔任副總經理，將如何改變球隊的決策與未來方向？</div>
+      <h3 class="title"><a href="https://www.cbssports.com/nba/news/lakers-front-office-rohan-ramadas-assistant-gm/" target="_blank">Lakers begin front office restructuring by hiring &amp;#039;literal rocket scientist&amp;#039; Rohan Ramadas as assistant GM</a></h3>
+      <div class="ai-takeaway">湖人隊在新東主馬克·華爾特的領導下開始進行管理層重組，聘請了被稱為「火箭科學家」的羅漢·拉瑪達斯擔任副總經理。</div>
+      <div class="terms">
+        <span class="term">湖人</span><span class="term">火箭科學家</span><span class="term">副總經理</span><span class="term">管理層重組</span><span class="term">NBA</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    </div>
+  </section>
+  <section class="cat" id="cat-health" data-topic="Health">
+    <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">健康生活新知</span> Health &amp; Wellness</div>
+    <div class="cards" style="--cat: #0f766e">
+      
+    <article class="card" data-topic="Health" data-search="i tried the uk's 'saltiest' sandwich - here's what i learned bbc健康記者詹姆斯·加拉格爾在一餐中攝取超過每日建議鹽分上限，以探究鹽對人體的影響。 英國 三明治 鹽 健康 bbc">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>這款被稱為英國最鹹的三明治到底有多鹹，吃完會對健康造成什麼影響？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cd9pylq25y9o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">I tried the UK's 'saltiest' sandwich - here's what I learned</a></h3>
+      <div class="ai-takeaway">BBC健康記者詹姆斯·加拉格爾在一餐中攝取超過每日建議鹽分上限，以探究鹽對人體的影響。</div>
+      <div class="terms">
+        <span class="term">英國</span><span class="term">三明治</span><span class="term">鹽</span><span class="term">健康</span><span class="term">BBC</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Food" data-search="how i got my job running cafes out of climbing gyms 作者分享在攀岩健身房裡經營咖啡店的求職與工作經歷，提供實用建議與職人故事。 攀岩咖啡店 餐飲創業 職場故事 餐廳管理 攀岩">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>在攀岩健身房裡开设咖啡店，如何兼顾顧客需求與攀岩者的特殊需求？</div>
-      <h3 class="title"><a href="https://www.eater.com/pre-shift/961011/georgies-vital-joeleen-ng-cafe-pre-shift" target="_blank">How I Got My Job Running Cafes Out of Climbing Gyms</a></h3>
-      <div class="ai-takeaway">作者分享在攀岩健身房裡經營咖啡店的求職與工作經歷，提供實用建議與職人故事。</div>
+    <article class="card" data-topic="Health" data-search="pcos name change 'more representative of condition' 澤西島的健康專家指出，多囊性卵巢綜合症改名更能讓人了解它不僅是卵巢的疾病。 pcos 多囊性卵巢綜合症 名稱改變 健康 jersey">
+      <div class="kicker">BBC Health [Health]</div>
+      <div class="hook"><span class="q">Q</span>新的名稱是否能幫助病患與大眾更準確理解多囊性卵巢綜合症的全身影響？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cpdp9zqgj80o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">PCOS name change 'more representative of condition'</a></h3>
+      <div class="ai-takeaway">澤西島的健康專家指出，多囊性卵巢綜合症改名更能讓人了解它不僅是卵巢的疾病。</div>
       <div class="terms">
-        <span class="term">攀岩咖啡店</span><span class="term">餐飲創業</span><span class="term">職場故事</span><span class="term">餐廳管理</span><span class="term">攀岩</span>
+        <span class="term">PCOS</span><span class="term">多囊性卵巢綜合症</span><span class="term">名稱改變</span><span class="term">健康</span><span class="term">Jersey</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Food" data-search="quince sells caviar and wine now. is it any good? 原本以平價羊絨聞名的 quince 如今擴展至販售魚子醬與葡萄酒，究竟品質如何？ quince 魚子醬 葡萄酒 時尚電商 餐飲零售">
-      <div class="kicker">Eater [Food]</div>
-      <div class="hook"><span class="q">Q</span>這家原本以羊絨為主的品牌現在的魚子醬和葡萄酒是否值得一試？</div>
-      <h3 class="title"><a href="https://www.eater.com/shopping/960397/quince-caviar-wine-coffee-review" target="_blank">Quince Sells Caviar and Wine Now. Is It Any Good?</a></h3>
-      <div class="ai-takeaway">原本以平價羊絨聞名的 Quince 如今擴展至販售魚子醬與葡萄酒，究竟品質如何？</div>
+    </div>
+  </section>
+  <section class="cat" id="cat-travel" data-topic="Travel">
+    <div class="section-rule cat-heading" style="--cat: #047857"><span class="accent">全球旅遊與探索</span> Travel &amp; Exploration</div>
+    <div class="cards" style="--cat: #047857">
+      
+    <article class="card" data-topic="Travel" data-search="到屏東里港喝咖啡吃甜點！肉桂捲、鳳梨醬水果茶與舒芙蕾，在高屏溪畔停留3間風格咖啡廳 沿著國道三號南下，里港是屏東首站，除傳統小吃外亦擁有風格咖啡甜點店，如后院咖啡、玉田村轉角的水果茶與中山路上的現做舒芙蕾，讓人慢下來感受高屏溪畔的悠閒氛圍。 屏東 里港 咖啡 甜點 高屏溪">
+      <div class="kicker">微笑台灣 [Travel]</div>
+      <div class="hook"><span class="q">Q</span>想不想在國道三號的休息點品嚐結合肉桂捲與在地水果茶的咖啡店？</div>
+      <h3 class="title"><a href="https://smiletaiwan.cw.com.tw/article/9137" target="_blank">到屏東里港喝咖啡吃甜點！肉桂捲、鳳梨醬水果茶與舒芙蕾，在高屏溪畔停留3間風格咖啡廳</a></h3>
+      <div class="ai-takeaway">沿著國道三號南下，里港是屏東首站，除傳統小吃外亦擁有風格咖啡甜點店，如后院咖啡、玉田村轉角的水果茶與中山路上的現做舒芙蕾，讓人慢下來感受高屏溪畔的悠閒氛圍。</div>
       <div class="terms">
-        <span class="term">Quince</span><span class="term">魚子醬</span><span class="term">葡萄酒</span><span class="term">時尚電商</span><span class="term">餐飲零售</span>
+        <span class="term">屏東</span><span class="term">里港</span><span class="term">咖啡</span><span class="term">甜點</span><span class="term">高屏溪</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
@@ -267,7 +356,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【每日引言】\\n晨曦破曉，創新的火光在每一口新鮮的料理裡跳動，今日的味蕾正是科技的起點，讓我們以小滿的餘溫迎接嶄新的開始。\\n\\n【今日總結】\\n今日 Food 領域展現內容驅動與跨界融合的雙重活力：Andrew Rea 與 Vox Media、Eater 合作的《In the Booth with Babish》將廚藝敘事推向播客新舞台；紐約的英式酒吧 Dean’s 以傳統英國酒吧精神結合美式餐飲創意，引領城市餐飲新浪潮；攀岩健身房的咖啡店模式則展示工作與休閒空間的跨界可能；Eater 最新精選的 38 家倫敦最佳餐廳提供從傳統英式料理到自然酒的多元選擇；此外，Quince 從平價羊絨跨界至魚子醬與";
+  const briefingText = "【每日引言】\\n端午的晨光映照創新的道路，讓科技如朝露般為今日注入活力與可能。  \\n\\n【今日總結】\\n警政方面，基隆警局提議以殺人罪偵辨毒駕累犯致死，蔣萬安將與台電協商北士科變電所；巴基斯坦火車遭炸彈攻擊，至少14人罹難。科技領域，台積電帶動台股超越印度躍居全球第五大股市，Packagist 供應鏈被注入惡意腳本，資安警鐘再響。旅遊推薦走訪屏東里港三家風格咖啡廳，肉桂捲、鳳梨水果茶與舒芙蕾在高屏溪畔交織悠閒。體育焦點包括 NHL 2026 斯坦利盃四強對決出爐，雪崩對金騎士，以及湖人新管理層聘請「火箭科學家」拉瑪達斯為副總經理。健康方面，實驗顯示英國最鹹三明治的鹽分危害，並有新呼聲建議將 PCOS";
 
   function getSelectedVoice() {
     if (!synth) return null;
