@@ -129,12 +129,10 @@
   <div class="daily-quote">唯一不變的，就是變化本身。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing"><p>【每日引言】
-小滿節氣的晨曦映照未來，勇於創新方能迎接嶄新的一天。  
+晨曦中，每一次代碼的跳動都在預示新時代的黎明，創新是今天的第一縷光。
 
 【今日總結】
-今日焦點薈萃：科技領域，方舟投資大幅增持 AI 新創 Cerebras、減持 RKLB 及 AMD，Google 同步在 I/O 2026 前為 Gemini 增添「延伸思考」層級與第三方整合應用，顯示 AI 與平台生態持續加速。  
-公共事務方面，英格蘭迎來可能破紀錄的 5 月高溫熱浪；博茨瓦納的同性婚姻合法化倡議者繼續在法庭抗爭；巴基斯坦列车因炸彈攻擊出軌，至少 14 人喪生，顯示區域安全威脅仍在。  
-體壇方面，樂天桃猿隊回顧第 8、9 週賽事並蓄積下半季奪冠動能；NBA 東區季後賽 Game 4，紐</p></div>
+今日摘要：沙特的2030愿景正迎接現實挑戰，今晚的美國音樂獎星光熠熠；科技領域傳來摩根大通對通膨二次波的警告，黃金經濟格局已成過去，XREAL 預告2026年底前推出 Android XR 眼鏡；旅遊方面，東京灣舞濱日航大飯店完成全面翻新，提供全房型陽台景觀；娛樂亮點包括 Kevin Hart 在拉斯維加斯的派對與 KATSEYE 在 AMAs 上的熱舞表演；健康領域顯示英國 NHS 能較好應對第十五次醫師罷工，BBC Health 分享一位害羞者的成長故事。</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -150,32 +148,32 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">nhs</span>
-    <span class="count">3 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">doctors' strikes</span>
+    <span class="term">健康</span>
     <span class="count">2 則相關</span>
   </li>
 
   <li>
-    <span class="term">cerebras</span>
+    <span class="term">沙特阿拉伯</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">ark invest</span>
+    <span class="term">vision 2030</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">cathie wood</span>
+    <span class="term">neom</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">ai 新創</span>
+    <span class="term">科技投資</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">經濟轉型</span>
     <span class="count">1 則相關</span>
   </li>
 </ol></div>
@@ -184,19 +182,19 @@
     <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
     <div class="chip-row">
       <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
-      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button><button class="chip" data-filter="General" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="Sports" style="--chip-color: #c25100" onclick="filterTopic(this)">體育</button><button class="chip" data-filter="Health" style="--chip-color: #0f766e" onclick="filterTopic(this)">健康</button><button class="chip" data-filter="Entertainment" style="--chip-color: #6b21a8" onclick="filterTopic(this)">娛樂</button>
+      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button><button class="chip" data-filter="General" style="--chip-color: #4a5568" onclick="filterTopic(this)">每日</button><button class="chip" data-filter="Health" style="--chip-color: #0f766e" onclick="filterTopic(this)">健康</button><button class="chip" data-filter="Entertainment" style="--chip-color: #6b21a8" onclick="filterTopic(this)">娛樂</button><button class="chip" data-filter="Travel" style="--chip-color: #047857" onclick="filterTopic(this)">全球</button>
     </div>
   </div>
 
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #4a5568" data-topic="General" data-search="at least 14 killed in bombing attack that derailed a train in pakistan 巴基斯坦的列車因炸彈攻擊出軌，造成至少 14 人死亡，爆炸威力甚至讓 15 英里外的居民被驚醒，分裂組織聲稱負責。 巴基斯坦 炸彈攻擊 列車出軌 分裂組織 傷亡人數">
-    <div class="kicker">NY Times [General]</div>
-    <div class="hook"><span class="q">Q</span>這次炸彈攻擊的幕後組織到底想要達成什麼政治目的？</div>
-    <h2><a href="https://www.nytimes.com/2026/05/24/world/asia/pakistan-train-bomb-attack-derailment.html" target="_blank">At Least 14 Killed in Bombing Attack That Derailed a Train in Pakistan</a></h2>
-    <div class="takeaway">巴基斯坦的列車因炸彈攻擊出軌，造成至少 14 人死亡，爆炸威力甚至讓 15 英里外的居民被驚醒，分裂組織聲稱負責。</div>
+  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #8b1a1a" data-topic="Tech" data-search="xreal&amp;#8217;s android xr glasses will launch before the end of 2026, early access for devs xreal 宣布其 project aura xr 眼鏡將在 2026 年底前上市，開發者搶先體驗計畫已啟動。 xreal xr眼鏡 android xr 增強實境 開發者搶先體驗">
+    <div class="kicker">9to5Google [Tech]</div>
+    <div class="hook"><span class="q">Q</span>XREAL 的新款 XR 眼鏡將如何重新定義增強實境體驗？</div>
+    <h2><a href="https://9to5google.com/2026/05/19/xreal-project-aura-android-xr-developers-2026-launch/" target="_blank">XREAL&amp;#8217;s Android XR glasses will launch before the end of 2026, early access for devs</a></h2>
+    <div class="takeaway">XREAL 宣布其 Project Aura XR 眼鏡將在 2026 年底前上市，開發者搶先體驗計畫已啟動。</div>
     <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
   </div>
   
@@ -204,29 +202,16 @@
     <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
     <div class="cards" style="--cat: #8b1a1a">
       
-    <article class="card" data-topic="Tech" data-search="木頭姊積極加碼 ai 新創 cerebras  砍 rklb、amd 方舟投資上週增持 ai 新創 cerebras，並減持 rklb 及 amd。 cerebras ark invest cathie wood ai 新創 投資動向">
+    <article class="card" data-topic="Tech" data-search="通膨第二輪將至，小摩：金髮姑娘經濟結束 摩根大通警告通貨膨脹的第二波即將到來，金髮姑娘經濟已成過去。 通膨 金髮姑娘經濟 摩根大通 利率 宏觀經濟">
       <div class="kicker">TechNews 科技新報 [Tech]</div>
-      <div class="hook"><span class="q">Q</span>方舟投資大手加碼 Cerebras，背後的投資策略是否顯示對 AI 發展的強烈信心？</div>
-      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/cathie-wood-increases-stake-in-cerebras-cuts-rklb-and-amd/" target="_blank">木頭姊積極加碼 AI 新創 Cerebras  砍 RKLB、AMD</a></h3>
-      <div class="ai-takeaway">方舟投資上週增持 AI 新創 Cerebras，並減持 RKLB 及 AMD。</div>
+      <div class="hook"><span class="q">Q</span>通貨膨脹的第二波將對全球經濟帶來哪些新風險？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/economy-will-impact-by-inflation/" target="_blank">通膨第二輪將至，小摩：金髮姑娘經濟結束</a></h3>
+      <div class="ai-takeaway">摩根大通警告通貨膨脹的第二波即將到來，金髮姑娘經濟已成過去。</div>
       <div class="terms">
-        <span class="term">Cerebras</span><span class="term">Ark Invest</span><span class="term">Cathie Wood</span><span class="term">AI 新創</span><span class="term">投資動向</span>
+        <span class="term">通膨</span><span class="term">金髮姑娘經濟</span><span class="term">摩根大通</span><span class="term">利率</span><span class="term">宏觀經濟</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Tech" data-search="gemini app rolling out ‘extended’ thinking level, new 3rd-party app integrations google 在 i/o 2026 前持續推出 gemini 功能，部分使用者已看到「思考層級」選項，並加入新的第三方整合。 gemini google thinking level ai 助手 i/o 2026">
-      <div class="kicker">9to5Google [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Gemini 的「思考層級」將如何提升使用者的互動體驗？</div>
-      <h3 class="title"><a href="https://9to5google.com/2026/05/17/gemini-app-thinking-level/" target="_blank">Gemini app rolling out ‘Extended’ thinking level, new 3rd-party app integrations</a></h3>
-      <div class="ai-takeaway">Google 在 I/O 2026 前持續推出 Gemini 功能，部分使用者已看到「思考層級」選項，並加入新的第三方整合。</div>
-      <div class="terms">
-        <span class="term">Gemini</span><span class="term">Google</span><span class="term">Thinking Level</span><span class="term">AI 助手</span><span class="term">I/O 2026</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
@@ -236,61 +221,42 @@
     <div class="section-rule cat-heading" style="--cat: #4a5568"><span class="accent">每日綜合快訊</span> General News</div>
     <div class="cards" style="--cat: #4a5568">
       
-    <article class="card" data-topic="General" data-search="uk heat wave could break may temperature record 氣象預報警告，英格蘭部分地區氣溫可能升至 35°c（95°f），創下 5 月有史以來最高紀錄。 英國 熱浪 5月高溫 氣候變遷 weather">
-      <div class="kicker">NY Times [General]</div>
-      <div class="hook"><span class="q">Q</span>此波熱浪是否預示英國夏季氣溫將更為極端？</div>
-      <h3 class="title"><a href="https://www.nytimes.com/2026/05/25/weather/uk-heat-wave-may-weather-record.html" target="_blank">UK Heat Wave Could Break May Temperature Record</a></h3>
-      <div class="ai-takeaway">氣象預報警告，英格蘭部分地區氣溫可能升至 35°C（95°F），創下 5 月有史以來最高紀錄。</div>
+    <article class="card" data-topic="General" data-search="what to know about the chemical tank in california that forced evacuations 位於加州的 gkn aerospace 化工儲槽泄漏約 7,000 加侖甲基丙烯酸甲酯，迫使周邊居民撤離。 化學品泄漏 加州 gkn aerospace 甲基丙烯酸甲酯 疏散撤離">
+      <div class="kicker">CBS News [General]</div>
+      <div class="hook"><span class="q">Q</span>此次化學品泄漏的根本原因是什麼，對當地社區會造成哪些具體危害？</div>
+      <h3 class="title"><a href="https://www.cbsnews.com/news/garden-grove-methyl-methacrylate-chemical-tank-california/" target="_blank">What to know about the chemical tank in California that forced evacuations</a></h3>
+      <div class="ai-takeaway">位於加州的 GKN Aerospace 化工儲槽泄漏約 7,000 加侖甲基丙烯酸甲酯，迫使周邊居民撤離。</div>
       <div class="terms">
-        <span class="term">英國</span><span class="term">熱浪</span><span class="term">5月高溫</span><span class="term">氣候變遷</span><span class="term">weather</span>
+        <span class="term">化學品泄漏</span><span class="term">加州</span><span class="term">GKN Aerospace</span><span class="term">甲基丙烯酸甲酯</span><span class="term">疏散撤離</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="General" data-search="‘she does not back down’: the couple seeking to legalise same-sex marriage in botswana 博諾洛·塞萊洛與喬洛芙洛·庫米萊在法院爭取同性婚姻合法化，但面臨教會團體的激烈反對。 botswana 同性婚姻 lgbtq 權益 法院案件 教會反對">
-      <div class="kicker">The Guardian [General]</div>
-      <div class="hook"><span class="q">Q</span>博諾洛與喬洛芙洛能否突破教會阻力，讓 Botswana 的同性婚姻合法化？</div>
-      <h3 class="title"><a href="https://www.theguardian.com/world/2026/may/25/same-sex-marriage-botswana-couple-court" target="_blank">‘She does not back down’: the couple seeking to legalise same-sex marriage in Botswana</a></h3>
-      <div class="ai-takeaway">博諾洛·塞萊洛與喬洛芙洛·庫米萊在法院爭取同性婚姻合法化，但面臨教會團體的激烈反對。</div>
+    <article class="card" data-topic="General" data-search="how saudi arabia's spending spree reached the end of the line 沙特的2030愿景曾被視為科幻，但如今現實已開始顯現其挑戰。 沙特阿拉伯 vision 2030 neom 科技投資 經濟轉型">
+      <div class="kicker">BBC News [General]</div>
+      <div class="hook"><span class="q">Q</span>沙特的宏大科技計畫為何被迫回歸現實？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/cx21g0828reo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">How Saudi Arabia's spending spree reached the end of the line</a></h3>
+      <div class="ai-takeaway">沙特的2030愿景曾被視為科幻，但如今現實已開始顯現其挑戰。</div>
       <div class="terms">
-        <span class="term">Botswana</span><span class="term">同性婚姻</span><span class="term">LGBTQ 權益</span><span class="term">法院案件</span><span class="term">教會反對</span>
+        <span class="term">沙特阿拉伯</span><span class="term">Vision 2030</span><span class="term">NEOM</span><span class="term">科技投資</span><span class="term">經濟轉型</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
+        <b>SCORE</b><span class="score">7/10</span>
       </div>
     </article>
   
-    </div>
-  </section>
-  <section class="cat" id="cat-sports" data-topic="Sports">
-    <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">體育競技動態</span> Sports Arena</div>
-    <div class="cards" style="--cat: #c25100">
-      
-    <article class="card" data-topic="Sports" data-search="《2026 nba季後賽》尼克 vs 騎士 game 4：紐約之王血洗東區 2026 nba 季後賽第4場，紐約尼克隊以壓倒性火力大勝克里夫蘭騎士，展現東區霸主的氣勢。 nba 2026 playoffs knicks cavaliers game 4">
-      <div class="kicker">運動視界 [Sports]</div>
-      <div class="hook"><span class="q">Q</span>尼克能否在餘下系列赛中保持這股進攻火力，最終奪得總冠軍？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126587" target="_blank">《2026 NBA季後賽》尼克 vs 騎士 Game 4：紐約之王血洗東區</a></h3>
-      <div class="ai-takeaway">2026 NBA 季後賽第4場，紐約尼克隊以壓倒性火力大勝克里夫蘭騎士，展現東區霸主的氣勢。</div>
+    <article class="card" data-topic="General" data-search="american music awards air tonight with star-studded performances 美國音樂獎今晚播出，星海演出陣容備受期待。 美國音樂獎 明星 演出 音樂頒獎禮 粉絲投票">
+      <div class="kicker">CBS News [General]</div>
+      <div class="hook"><span class="q">Q</span>本屆美國音樂獎將呈現哪些令人驚艷的表演？</div>
+      <h3 class="title"><a href="https://www.cbsnews.com/news/american-music-awards-2026-performances/" target="_blank">American Music Awards air tonight with star-studded performances</a></h3>
+      <div class="ai-takeaway">美國音樂獎今晚播出，星海演出陣容備受期待。</div>
       <div class="terms">
-        <span class="term">NBA</span><span class="term">2026 playoffs</span><span class="term">Knicks</span><span class="term">Cavaliers</span><span class="term">Game 4</span>
+        <span class="term">美國音樂獎</span><span class="term">明星</span><span class="term">演出</span><span class="term">音樂頒獎禮</span><span class="term">粉絲投票</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">9/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Sports" data-search="花果山觀察日記．樂天週報 (week 8+9)－展望下半季 樂天桃猿隊第8、9週賽事回顧，並展望下半季的奪冠之路與挑戰。 樂天 cpbl 台灣棒球 季後賽 week 8+9">
-      <div class="kicker">運動視界 [Sports]</div>
-      <div class="hook"><span class="q">Q</span>樂天在下半季能否突破目前的瓶頸，成功闖入季後賽？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126520" target="_blank">花果山觀察日記．樂天週報 (Week 8+9)－展望下半季</a></h3>
-      <div class="ai-takeaway">樂天桃猿隊第8、9週賽事回顧，並展望下半季的奪冠之路與挑戰。</div>
-      <div class="terms">
-        <span class="term">樂天</span><span class="term">CPBL</span><span class="term">台灣棒球</span><span class="term">季後賽</span><span class="term">Week 8+9</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">6/10</span>
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
@@ -300,26 +266,26 @@
     <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">健康生活新知</span> Health &amp; Wellness</div>
     <div class="cards" style="--cat: #0f766e">
       
-    <article class="card" data-topic="Health" data-search="'doctors strikes' and 'paw prints in space' bbc health 彙整本週英格蘭西部的地方報導，含醫生罷工與「太空爪印」等熱門話題。 doctors' strikes nhs west england local news health &amp; society">
+    <article class="card" data-topic="Health" data-search="hospitals coping well with doctors' strike so far - nhs boss 英國 nhs 主管表示，醫院目前能較好應對第十五次醫師罷工。 nhs 醫師罷工 英國 健康 醫療危機">
       <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>本週的醫生罷工是否真的帶來了意想不到的正面效應？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/c0krp1e7lkmo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">'Doctors strikes' and 'paw prints in space'</a></h3>
-      <div class="ai-takeaway">BBC Health 彙整本週英格蘭西部的地方報導，含醫生罷工與「太空爪印」等熱門話題。</div>
+      <div class="hook"><span class="q">Q</span>在醫師罷工持續之際，醫院能否維持服務品質？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/articles/clyrzrp0x5go?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Hospitals coping well with doctors' strike so far - NHS boss</a></h3>
+      <div class="ai-takeaway">英國 NHS 主管表示，醫院目前能較好應對第十五次醫師罷工。</div>
       <div class="terms">
-        <span class="term">Doctors' strikes</span><span class="term">NHS</span><span class="term">West England</span><span class="term">local news</span><span class="term">health &amp; society</span>
+        <span class="term">NHS</span><span class="term">醫師罷工</span><span class="term">英國</span><span class="term">健康</span><span class="term">醫療危機</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">9/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Health" data-search="doctors' strikes can have surprising benefits - but are they sustainable? 部分醫院信托機構反映，醫生罷工後竟出現等候時間縮短、決策加速與走廊更安寧的正面效果。 doctors' strikes nhs hospital trusts patient wait times sustainable impact">
+    <article class="card" data-topic="Health" data-search="'i used to be the shy kid' bbc health 報導泰勒·韋斯特回憶自己曾是害羞的孩子，分享校園生活的轉變。 健康 學校 心理健康 bbc tyler west">
       <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>這樣的正面效應能否成為常態，繼續減輕醫療系統壓力？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/cp3l2pygnlyo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Doctors' strikes can have surprising benefits - but are they sustainable?</a></h3>
-      <div class="ai-takeaway">部分醫院信托機構反映，醫生罷工後竟出現等候時間縮短、決策加速與走廊更安寧的正面效果。</div>
+      <div class="hook"><span class="q">Q</span>泰勒·韋斯特如何從害羞走向自信？</div>
+      <h3 class="title"><a href="https://www.bbc.com/news/videos/cp9pje2zprvo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">'I used to be the shy kid'</a></h3>
+      <div class="ai-takeaway">BBC Health 報導泰勒·韋斯特回憶自己曾是害羞的孩子，分享校園生活的轉變。</div>
       <div class="terms">
-        <span class="term">Doctors' strikes</span><span class="term">NHS</span><span class="term">hospital trusts</span><span class="term">patient wait times</span><span class="term">sustainable impact</span>
+        <span class="term">健康</span><span class="term">學校</span><span class="term">心理健康</span><span class="term">BBC</span><span class="term">Tyler West</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
@@ -332,16 +298,48 @@
     <div class="section-rule cat-heading" style="--cat: #6b21a8"><span class="accent">娛樂與流行文化</span> Entertainment &amp; Culture</div>
     <div class="cards" style="--cat: #6b21a8">
       
-    <article class="card" data-topic="Entertainment" data-search="metallica urges uk fans to donate blood in history-making nhs collaboration 金屬樂團 metallica 與英國 nhs 合作，呼籲粉絲在英國巡演前踴躍捐血，提升血庫存量。 metallica nhs blood donation uk tour fan engagement">
-      <div class="kicker">Mirror Celebrity [Entertainment]</div>
-      <div class="hook"><span class="q">Q</span>Metallica 的号召能否實際提升英國的血庫供應量？</div>
-      <h3 class="title"><a href="https://www.mirror.co.uk/3am/celebrity-news/metallica-make-unusual-request-uk-37204830" target="_blank">Metallica urges UK fans to donate blood in history-making NHS collaboration</a></h3>
-      <div class="ai-takeaway">金屬樂團 Metallica 與英國 NHS 合作，呼籲粉絲在英國巡演前踴躍捐血，提升血庫存量。</div>
+    <article class="card" data-topic="Entertainment" data-search="girl group katseye deliver dance-heavy “pinky up” performance at 2026 amas katseye 在 2026 年 amas 上呈現充滿舞蹈的《pinky up》演出，儘管成員馬農仍在休假。 katseye amas pinky up 女子團體 表演">
+      <div class="kicker">Hollywood Reporter [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>KATSEYE 的《Pinky Up》表演會有哪些看點？</div>
+      <h3 class="title"><a href="https://www.hollywoodreporter.com/music/music-news/girl-group-katseye-american-music-awards-amas-1236605567/" target="_blank">Girl Group KATSEYE Deliver Dance-Heavy “Pinky Up” Performance at 2026 AMAs</a></h3>
+      <div class="ai-takeaway">KATSEYE 在 2026 年 AMAs 上呈現充滿舞蹈的《Pinky Up》演出，儘管成員馬農仍在休假。</div>
       <div class="terms">
-        <span class="term">Metallica</span><span class="term">NHS</span><span class="term">blood donation</span><span class="term">UK tour</span><span class="term">fan engagement</span>
+        <span class="term">KATSEYE</span><span class="term">AMAs</span><span class="term">Pinky Up</span><span class="term">女子團體</span><span class="term">表演</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Entertainment" data-search="kevin hart parties in las vegas with wife eniko 凱文·哈特與妻子eniko在拉斯維加斯舉辦派對，星光閃耀。 kevin hart 拉斯維加斯 派對 名人 娛樂">
+      <div class="kicker">TMZ [Entertainment]</div>
+      <div class="hook"><span class="q">Q</span>凱文·哈特的派對有何亮點與驚喜？</div>
+      <h3 class="title"><a href="https://www.tmz.com/2026/05/25/kevin-hart-with-wife-partying-on-video/" target="_blank">Kevin Hart Parties in Las Vegas With Wife Eniko</a></h3>
+      <div class="ai-takeaway">凱文·哈特與妻子Eniko在拉斯維加斯舉辦派對，星光閃耀。</div>
+      <div class="terms">
+        <span class="term">Kevin Hart</span><span class="term">拉斯維加斯</span><span class="term">派對</span><span class="term">名人</span><span class="term">娛樂</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
+      </div>
+    </article>
+  
+    </div>
+  </section>
+  <section class="cat" id="cat-travel" data-topic="Travel">
+    <div class="section-rule cat-heading" style="--cat: #047857"><span class="accent">全球旅遊與探索</span> Travel &amp; Exploration</div>
+    <div class="cards" style="--cat: #047857">
+      
+    <article class="card" data-topic="Travel" data-search="迪士尼飯店｜東京灣舞濱日航大飯店 grand nikko tokyo bay maihama，東京迪士尼度假區公認飯店，全房型附陽臺欣賞東京迪士尼度假區、東京灣景色 全面翻新的東京灣舞濱日航大飯店提供全房型陽臺，眺望東京迪士尼度假區與東京灣景色。 東京迪士尼 舞濱日航 飯店 日本旅遊 陽臺景觀">
+      <div class="kicker">台灣旅行趣 [Travel]</div>
+      <div class="hook"><span class="q">Q</span>這家新翻修的飯店有何獨特之處能吸引家庭與情侶？</div>
+      <h3 class="title"><a href="https://travelfun.tw/grandnikko-tokyobay-maihama/" target="_blank">迪士尼飯店｜東京灣舞濱日航大飯店 Grand Nikko Tokyo Bay Maihama，東京迪士尼度假區公認飯店，全房型附陽臺欣賞東京迪士尼度假區、東京灣景色</a></h3>
+      <div class="ai-takeaway">全面翻新的東京灣舞濱日航大飯店提供全房型陽臺，眺望東京迪士尼度假區與東京灣景色。</div>
+      <div class="terms">
+        <span class="term">東京迪士尼</span><span class="term">舞濱日航</span><span class="term">飯店</span><span class="term">日本旅遊</span><span class="term">陽臺景觀</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">6/10</span>
       </div>
     </article>
   
@@ -358,7 +356,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【每日引言】\\n小滿節氣的晨曦映照未來，勇於創新方能迎接嶄新的一天。  \\n\\n【今日總結】\\n今日焦點薈萃：科技領域，方舟投資大幅增持 AI 新創 Cerebras、減持 RKLB 及 AMD，Google 同步在 I/O 2026 前為 Gemini 增添「延伸思考」層級與第三方整合應用，顯示 AI 與平台生態持續加速。  \\n公共事務方面，英格蘭迎來可能破紀錄的 5 月高溫熱浪；博茨瓦納的同性婚姻合法化倡議者繼續在法庭抗爭；巴基斯坦列车因炸彈攻擊出軌，至少 14 人喪生，顯示區域安全威脅仍在。  \\n體壇方面，樂天桃猿隊回顧第 8、9 週賽事並蓄積下半季奪冠動能；NBA 東區季後賽 Game 4，紐";
+  const briefingText = "【每日引言】\\n晨曦中，每一次代碼的跳動都在預示新時代的黎明，創新是今天的第一縷光。\\n\\n【今日總結】\\n今日摘要：沙特的2030愿景正迎接現實挑戰，今晚的美國音樂獎星光熠熠；科技領域傳來摩根大通對通膨二次波的警告，黃金經濟格局已成過去，XREAL 預告2026年底前推出 Android XR 眼鏡；旅遊方面，東京灣舞濱日航大飯店完成全面翻新，提供全房型陽台景觀；娛樂亮點包括 Kevin Hart 在拉斯維加斯的派對與 KATSEYE 在 AMAs 上的熱舞表演；健康領域顯示英國 NHS 能較好應對第十五次醫師罷工，BBC Health 分享一位害羞者的成長故事。";
 
   function getSelectedVoice() {
     if (!synth) return null;
@@ -411,7 +409,7 @@
       sections.forEach(s => {
         s.hidden = s.dataset.topic !== filter;
       });
-      if (hero) hero.hidden = hero.dataset.topic !== filter;
+      if (hero) hero.hidden = false;
       document.querySelectorAll('.card').forEach(c => {
         c.hidden = c.dataset.topic !== filter;
       });
