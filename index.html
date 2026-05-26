@@ -129,9 +129,10 @@
   <div class="daily-quote">每一次的日出，都是科技顛覆昨日的開始。祝您有個充滿靈感的一天。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing"><p>【每日引言】
-（小滿已過，晨光灑落，創新的火花在科技的天空裡點燃嶄新的黎明。）
+晨光中，AI如新芽——端午將至，讓創新與傳統共舞，點燃今天的每一段可能。
+
 【今日總結】
-（今日健康領域呈現挑戰與創新交織：英國黑色素瘤新例突破兩萬，呼籲加強防曬與早期篩檢；伊波拉疫情傳播速度快於預期，全球防控壓力升溫；英格蘭住院醫師第十五次罷工考驗 NHS 韌性，院方稱運作仍穩；新型子宫頸癌檢測在 Suffolk 與 Essex 試點，讓女性健康備受矚目；歐洲淋病與梅毒病例創新高，顯示檢測與預防仍有缺口。總結而言，科技突破正在提升診療效率，但公共衛生資源的均衡配置仍是當務之急。）</p></div>
+今日 AI 趨勢聚焦三大方向：AI 原生能力持續升級，從個人提示優化到企業規模化代碼審查，展現生產力的深度；同時 AI 帶來的心理與社會警訊浮現，「AI 精神病」概念與反技術激進情緒受到執法機構關注；新創工具如 PresentForMe.ai 把簡報本身變為自解說內容，提升會議後資訊價值。AI 正從效率提升走向信任建構與場景創新。</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -147,32 +148,32 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">黑色素瘤</span>
+    <span class="term">ai</span>
+    <span class="count">5 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">提示工程</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">皮膚癌</span>
+    <span class="term">技能提升</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">英國</span>
+    <span class="term">技術趨勢</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">發病率</span>
+    <span class="term">chatbot</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">melanoma</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">伊波拉</span>
+    <span class="term">心理健康</span>
     <span class="count">1 則相關</span>
   </li>
 </ol></div>
@@ -181,75 +182,75 @@
     <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
     <div class="chip-row">
       <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
-      <button class="chip" data-filter="Health" style="--chip-color: #0f766e" onclick="filterTopic(this)">健康</button>
+      <button class="chip" data-filter="AI" style="--chip-color: #2351c5" onclick="filterTopic(this)">AI</button>
     </div>
   </div>
 
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #0f766e" data-topic="Health" data-search="ebola outbreak may be spreading faster than first thought, who doctor warns 伊波拉疫情可能比最初預期的傳播更快。 伊波拉 疫情 非洲 傳播 ebola">
-    <div class="kicker">BBC Health [Health]</div>
-    <div class="hook"><span class="q">Q</span>伊波拉在中非的真實規模究竟有多大？</div>
-    <h2><a href="https://www.bbc.com/news/articles/ceqp11gn1l8o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Ebola outbreak may be spreading faster than first thought, WHO doctor warns</a></h2>
-    <div class="takeaway">伊波拉疫情可能比最初預期的傳播更快。</div>
+  <div class="section-rule cat-heading" style="--cat: #2351c5"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #2351c5" data-topic="AI" data-search="us law enforcement warns of ‘anti-tech extremism’ as ai hatred grows 美國民眾對就業搶奪的 ai 與資料中心坐落自家後院的威脅感到焦慮，聯邦機構已發出警告，顯示新類別的威脅正興起。 ai 法律執法 反科技 資料中心 社會風險">
+    <div class="kicker">Wired AI [AI]</div>
+    <div class="hook"><span class="q">Q</span>政府如何定義與對抗這種「反科技極端主義」？</div>
+    <h2><a href="https://www.wired.com/story/us-law-enforcement-warns-of-anti-tech-extremism/" target="_blank">US Law Enforcement Warns of ‘Anti-Tech Extremism’ as AI Hatred Grows</a></h2>
+    <div class="takeaway">美國民眾對就業搶奪的 AI 與資料中心坐落自家後院的威脅感到焦慮，聯邦機構已發出警告，顯示新類別的威脅正興起。</div>
     <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
   </div>
   
-  <section class="cat" id="cat-health" data-topic="Health">
-    <div class="section-rule cat-heading" style="--cat: #0f766e"><span class="accent">健康生活新知</span> Health &amp; Wellness</div>
-    <div class="cards" style="--cat: #0f766e">
+  <section class="cat" id="cat-ai" data-topic="AI">
+    <div class="section-rule cat-heading" style="--cat: #2351c5"><span class="accent">AI 趨勢深度解析</span> AI Deep Dive</div>
+    <div class="cards" style="--cat: #2351c5">
       
-    <article class="card" data-topic="Health" data-search="riskiest skin cancer cases hit uk record high 英國黑色素瘤皮膚癌新病例首次突破每年2萬例。 黑色素瘤 皮膚癌 英國 發病率 melanoma">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>為何英國的黑色素瘤病例會創新高？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/c4g0ryrewdxo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Riskiest skin cancer cases hit UK record high</a></h3>
-      <div class="ai-takeaway">英國黑色素瘤皮膚癌新病例首次突破每年2萬例。</div>
+    <article class="card" data-topic="AI" data-search="7 ways to get so good at ai, people will think you are ai 從消滅聊天機器人到最佳化提示詞，這裡提供成為全 ai 原生者的最佳方法，幫助你征服新世界。 ai 提示工程 技能提升 技術趨勢 chatbot">
+      <div class="kicker">Wired AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>你是否想讓別人誤以為你是人工智慧？</div>
+      <h3 class="title"><a href="https://www.wired.com/story/7-ways-to-get-so-good-at-ai-people-will-think-you-are-ai/" target="_blank">7 Ways to Get So Good at AI, People Will Think You Are AI</a></h3>
+      <div class="ai-takeaway">從消滅聊天機器人到最佳化提示詞，這裡提供成為全 AI 原生者的最佳方法，幫助你征服新世界。</div>
       <div class="terms">
-        <span class="term">黑色素瘤</span><span class="term">皮膚癌</span><span class="term">英國</span><span class="term">發病率</span><span class="term">melanoma</span>
+        <span class="term">AI</span><span class="term">提示工程</span><span class="term">技能提升</span><span class="term">技術趨勢</span><span class="term">Chatbot</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Health" data-search="'new cancer test makes me feel women's health matters' suffolk 與 essex 的醫院正在試驗新型子宫癌檢測，患者讚揚此測試讓她感受到女性健康備受重視。 子宫癌 新測試 suffolk essex 女性健康">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>這種新型檢測能否改變子宫癌的早期發現率？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/ckgp0gedjk3o?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">'New cancer test makes me feel women's health matters'</a></h3>
-      <div class="ai-takeaway">Suffolk 與 Essex 的醫院正在試驗新型子宫癌檢測，患者讚揚此測試讓她感受到女性健康備受重視。</div>
+    <article class="card" data-topic="AI" data-search="orchestrating ai code review at scale 在規模化場景下，如何利用 ai 系統化地協調代碼審查？ ai 代碼審查 devops 自動化 軟體工程">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>AI 如何在大型代碼庫中自動化代碼審查？</div>
+      <h3 class="title"><a href="https://blog.cloudflare.com/ai-code-review/" target="_blank">Orchestrating AI code review at scale</a></h3>
+      <div class="ai-takeaway">在規模化場景下，如何利用 AI 系統化地協調代碼審查？</div>
       <div class="terms">
-        <span class="term">子宫癌</span><span class="term">新測試</span><span class="term">Suffolk</span><span class="term">Essex</span><span class="term">女性健康</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Health" data-search="gonorrhoea and syphilis hit record levels in europe 歐洲的淋病和梅毒病例創下歷史新高，衛生機構指出檢測與預防缺口導致性傳染病激增。 淋病 梅毒 歐洲 性傳染病 record levels">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>歐洲性傳染病激增背後的根本原因是什麼？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/cm2pj07dr7lo?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Gonorrhoea and syphilis hit record levels in Europe</a></h3>
-      <div class="ai-takeaway">歐洲的淋病和梅毒病例創下歷史新高，衛生機構指出檢測與預防缺口導致性傳染病激增。</div>
-      <div class="terms">
-        <span class="term">淋病</span><span class="term">梅毒</span><span class="term">歐洲</span><span class="term">性傳染病</span><span class="term">record levels</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Health" data-search="hospitals coping well with doctors' strike so far - nhs boss 英格蘭的住院醫師已展開第十五次罷工，nhs主管表示目前醫院運行良好。 醫師罷工 nhs 英格蘭 居民醫師 junior doctors">
-      <div class="kicker">BBC Health [Health]</div>
-      <div class="hook"><span class="q">Q</span>醫師罷工是否會影響患者的就醫安全？</div>
-      <h3 class="title"><a href="https://www.bbc.com/news/articles/clyrzrp0x5go?at_medium=RSS&amp;amp;at_campaign=rss" target="_blank">Hospitals coping well with doctors' strike so far - NHS boss</a></h3>
-      <div class="ai-takeaway">英格蘭的住院醫師已展開第十五次罷工，NHS主管表示目前醫院運行良好。</div>
-      <div class="terms">
-        <span class="term">醫師罷工</span><span class="term">NHS</span><span class="term">英格蘭</span><span class="term">居民醫師</span><span class="term">junior doctors</span>
+        <span class="term">AI</span><span class="term">代碼審查</span><span class="term">DevOps</span><span class="term">自動化</span><span class="term">軟體工程</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="AI" data-search="do i have ai psychosis? 當你開始懷疑自己是否因使用 ai 而產生精神症狀，該如何確認？ ai 心理健康 科技焦慮 精神症狀 人工智慧">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>你是否曾因為 AI 的影響而出現幻覺或焦慮？</div>
+      <h3 class="title"><a href="https://curzel.it/blog/2026_05_26_do_i_have_ai_psychosis.html" target="_blank">Do I have AI Psychosis?</a></h3>
+      <div class="ai-takeaway">當你開始懷疑自己是否因使用 AI 而產生精神症狀，該如何確認？</div>
+      <div class="terms">
+        <span class="term">AI</span><span class="term">心理健康</span><span class="term">科技焦慮</span><span class="term">精神症狀</span><span class="term">人工智慧</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">6/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="AI" data-search="show hn: presentforme.ai – make slide decks explain themselves 我注意到簡報在會議後失去價值，因為資訊多是口述而非文字，於是我開發 presentforme.ai，讓簡報自己解說內容。 ai 簡報 產品 文件分享 工具">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>這款工具能否真正取代傳統的 PDF 分享方式？</div>
+      <h3 class="title"><a href="https://news.ycombinator.com/item?id=48276264" target="_blank">Show HN: Presentforme.ai – Make slide decks explain themselves</a></h3>
+      <div class="ai-takeaway">我注意到簡報在會議後失去價值，因為資訊多是口述而非文字，於是我開發 PresentForMe.ai，讓簡報自己解說內容。</div>
+      <div class="terms">
+        <span class="term">AI</span><span class="term">簡報</span><span class="term">產品</span><span class="term">文件分享</span><span class="term">工具</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">6/10</span>
       </div>
     </article>
   
@@ -266,7 +267,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【每日引言】\\n（小滿已過，晨光灑落，創新的火花在科技的天空裡點燃嶄新的黎明。）\\n【今日總結】\\n（今日健康領域呈現挑戰與創新交織：英國黑色素瘤新例突破兩萬，呼籲加強防曬與早期篩檢；伊波拉疫情傳播速度快於預期，全球防控壓力升溫；英格蘭住院醫師第十五次罷工考驗 NHS 韌性，院方稱運作仍穩；新型子宫頸癌檢測在 Suffolk 與 Essex 試點，讓女性健康備受矚目；歐洲淋病與梅毒病例創新高，顯示檢測與預防仍有缺口。總結而言，科技突破正在提升診療效率，但公共衛生資源的均衡配置仍是當務之急。）";
+  const briefingText = "【每日引言】\\n晨光中，AI如新芽——端午將至，讓創新與傳統共舞，點燃今天的每一段可能。\\n\\n【今日總結】\\n今日 AI 趨勢聚焦三大方向：AI 原生能力持續升級，從個人提示優化到企業規模化代碼審查，展現生產力的深度；同時 AI 帶來的心理與社會警訊浮現，「AI 精神病」概念與反技術激進情緒受到執法機構關注；新創工具如 PresentForMe.ai 把簡報本身變為自解說內容，提升會議後資訊價值。AI 正從效率提升走向信任建構與場景創新。";
 
   function getSelectedVoice() {
     if (!synth) return null;
