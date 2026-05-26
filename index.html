@@ -9,73 +9,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700;8..60,800;8..60,900&family=Inter:wght@500;600;700;800&family=Noto+Sans+TC:wght@500;600;700;900&family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fbf9f4;
-    --bg-elev: #ffffff;
-    --bg-card: #ffffff;
-    --border: #e0dbd0;
-    --rule: #2a2824;
-    --fg: #1f1d1a;
-    --fg-mute: #6b655c;
-    --accent: #8b1a1a;
-    --accent-ai: #2351c5;
-    --accent-soft: rgba(139, 26, 26, 0.03);
-    --accent-ai-soft: rgba(35, 81, 197, 0.03);
-    --bg-ai-spotlight: rgba(35, 81, 197, 0.02);
+    --bg: #fbf9f4; --bg-elev: #ffffff; --bg-card: #ffffff;
+    --border: #e0dbd0; --rule: #2a2824; --fg: #1f1d1a; --fg-mute: #6b655c;
+    --accent: #8b1a1a; --accent-soft: rgba(139, 26, 26, 0.03);
     --good: #5a7d52;
     --serif: "Source Serif 4", "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
     --sans: "Inter", "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
   }
   [data-theme="dark"] {
-    --bg: #111216;
-    --bg-elev: #17181f;
-    --bg-card: #1c1d26;
-    --border: #282a36;
-    --rule: #b6b3ab;
-    --fg: #d5d3ca;
-    --fg-mute: #858177;
-    --accent: #e58b8b;
-    --accent-ai: #5f8eff;
-    --accent-soft: rgba(229, 139, 139, 0.06);
-    --accent-ai-soft: rgba(95, 142, 255, 0.06);
-    --bg-ai-spotlight: rgba(95, 142, 255, 0.03);
+    --bg: #111216; --bg-elev: #17181f; --bg-card: #1c1d26;
+    --border: #282a36; --rule: #b6b3ab; --fg: #d5d3ca; --fg-mute: #858177;
+    --accent: #e58b8b; --accent-soft: rgba(229, 139, 139, 0.06);
     --good: #9bc198;
   }
-
-  .daily-quote {
-    background: var(--bg-elev);
-    border-radius: 12px;
-    padding: 24px 32px 24px 48px;
-    margin: 32px 0 12px;
-    font-family: var(--serif);
-    font-size: 19px;
-    line-height: 1.7;
-    color: var(--accent);
-    font-weight: 600;
-    font-style: italic;
-    position: relative;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    border: 1px solid var(--border);
-  }
-  .daily-quote::before {
-    content: "“";
-    font-family: Georgia, serif;
-    font-size: 64px;
-    color: var(--accent-soft);
-    position: absolute;
-    top: 10px;
-    left: 12px;
-    line-height: 1;
-  }
   * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 600 17px/1.75 var(--sans);
-    min-height: 100vh; transition: background .25s ease, color .25s ease;
-    -webkit-font-smoothing: antialiased;
-  }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 600 17px/1.75 var(--sans); min-height: 100vh; transition: background .25s ease, color .25s ease; -webkit-font-smoothing: antialiased; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 36px 24px 80px; }
   a { color: inherit; text-decoration: none; }
-  
+
   .masthead { text-align: center; padding-bottom: 22px; border-bottom: 3px double var(--rule); position: relative; }
   .masthead .dateline { display: flex; justify-content: center; align-items: center; gap: 12px; font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-mute); padding: 0 4px 14px; }
   .masthead h1 { font-family: var(--serif); font-weight: 900; font-size: 56px; line-height: 1.15; letter-spacing: -0.01em; margin: 4px 0 8px; }
@@ -83,189 +35,83 @@
   .masthead .meta-line { font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; }
   .masthead .theme-btn { position: absolute; top: 0; right: 0; background: transparent; border: 1px solid var(--border); color: var(--fg); width: 36px; height: 36px; border-radius: 4px; cursor: pointer; transition: .12s; }
   @media(max-width:600px){.masthead .theme-btn{position:fixed;top:auto;bottom:20px;right:20px;width:36px;height:36px;border-radius:50%;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}}
-  
-  .section-rule { display: flex; align-items: center; gap: 14px; margin: 48px 0 24px; font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
+
+  .daily-quote { background: var(--bg-elev); border-radius: 12px; padding: 24px 32px 24px 48px; margin: 32px 0 12px; font-family: var(--serif); font-size: 19px; line-height: 1.7; color: var(--accent); font-weight: 600; font-style: italic; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid var(--border); }
+  .daily-quote::before { content: "“"; font-family: Georgia, serif; font-size: 64px; color: var(--accent-soft); position: absolute; top: 10px; left: 12px; line-height: 1; }
+
+  .section-rule { display: flex; align-items: center; gap: 14px; margin: 36px 0 18px; font-family: var(--sans); font-weight: 600; font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg); }
   .section-rule::after { content: ""; flex: 1; border-bottom: 1px solid var(--rule); }
-  .section-rule.ai-rule .accent { color: var(--accent-ai); }
-  .section-rule.tech-rule .accent { color: var(--accent); }
-  .accent { color: var(--accent); font-weight: 800;}
-  
+  .section-rule.cat-heading { color: var(--cat, var(--accent)); }
+  .section-rule.cat-heading::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cat, var(--accent)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--cat, var(--accent)) 16%, transparent); }
+  .accent { color: var(--accent); font-weight: 800; }
+
   .briefing { margin: 14px 0 0; font-family: var(--serif); font-size: 18px; line-height: 1.85; color: var(--fg); column-count: 1; }
   @media (min-width: 760px) { .briefing { column-count: 2; column-gap: 36px; } }
   .briefing p { margin: 0 0 14px; text-align: justify; hyphens: auto; font-weight: 600; }
   .briefing p:first-child::first-letter { font-family: var(--serif); font-weight: 900; font-size: 72px; line-height: 0.9; float: left; padding: 6px 10px 0 0; color: var(--accent); }
-  
-  /* 有聲播放器極簡高級樣式 */
-  .audio-player-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 24px;
-    margin: 20px 0 32px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    border-left: 4px solid var(--accent);
-    transition: all 0.3s ease;
-  }
-  .audio-player-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-  }
-  .play-btn-circle {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2);
-    flex-shrink: 0;
-  }
-  .play-btn-circle:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 14px rgba(139, 26, 26, 0.3);
-  }
-  .player-info-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .player-title-text {
-    font-size: 15.5px;
-    font-weight: 700;
-    color: var(--fg);
-    font-family: var(--sans);
-  }
-  .player-status-subtitle {
-    font-size: 12.5px;
-    color: var(--fg-mute);
-    font-family: var(--sans);
-  }
+
+  .audio-player-container { display: flex; align-items: center; gap: 20px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 16px 24px; margin: 20px 0 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border-left: 4px solid var(--accent); transition: all 0.3s ease; }
+  .audio-player-container:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.04); }
+  .play-btn-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #ffffff; border: none; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2); flex-shrink: 0; }
+  .play-btn-circle:hover { transform: scale(1.08); box-shadow: 0 6px 14px rgba(139, 26, 26, 0.3); }
+  .player-info-meta { display: flex; flex-direction: column; gap: 4px; }
+  .player-title-text { font-size: 15.5px; font-weight: 700; color: var(--fg); font-family: var(--sans); }
+  .player-status-subtitle { font-size: 12.5px; color: var(--fg-mute); font-family: var(--sans); }
+
+  .toolbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 16px 0 0; padding: 10px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .search { flex: 1; min-width: 200px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--fg); padding: 6px 4px; font: inherit; font-size: 14.5px; outline: none; }
+  .search:focus { border-bottom-color: var(--rule); }
+  .search::placeholder { color: var(--fg-mute); }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip { border: none; background: transparent; color: var(--fg-mute); padding: 6px 12px; border-radius: 0; font-family: var(--sans); font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: color .12s ease; border-bottom: 2px solid transparent; }
+  .chip[data-active="true"] { color: var(--chip-color, var(--accent)); border-bottom-color: var(--chip-color, var(--accent)); }
+  .chip:hover { color: var(--fg); }
+  section.cat[hidden] { display: none; }
+  .empty { text-align: center; color: var(--fg-mute); padding: 48px 0; font-family: var(--serif); font-weight: 600; font-size: 15px; display: none; }
+  .empty[data-show="true"] { display: block; }
 
   .trending ol { list-style: none; counter-reset: trend; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; }
   @media (min-width: 600px) { .trending ol { grid-template-columns: 1fr 1fr; column-gap: 28px; } }
   .trending li { counter-increment: trend; display: flex; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px dotted var(--border); font-family: var(--serif); font-size: 17px; }
   .trending li::before { content: counter(trend, decimal-leading-zero); font-family: var(--sans); font-weight: 600; font-size: 13px; color: var(--fg-mute); min-width: 24px; }
-  
-  .cards { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 24px; }
-  @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; gap: 32px; } }
-  
-  .card { 
-    padding: 24px; 
-    background: var(--bg-card); 
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    border-left: 4px solid var(--accent-soft); 
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.01);
-    position: relative;
-    overflow: hidden;
-  }
-  .card:hover { 
-    transform: translateY(-4px);
-    border-left-color: var(--accent); 
-    box-shadow: 0 12px 24px rgba(139, 26, 26, 0.05);
-    border-color: rgba(139, 26, 26, 0.15);
-  }
-  
-  .cards.ai-group .card { border-left-color: var(--accent-ai-soft); }
-  .cards.ai-group .card:hover { 
-    border-left-color: var(--accent-ai); 
-    box-shadow: 0 12px 24px rgba(35, 81, 197, 0.05);
-    border-color: rgba(35, 81, 197, 0.15);
-  }
-  .cards.ai-group .card .kicker { color: var(--accent-ai); }
-  .cards.ai-group .card .hook { color: var(--accent-ai); }
-  .cards.ai-group .card .hook .q { background: var(--accent-ai); }
-  .cards.ai-group .card .term::before { color: var(--accent-ai); }
-  
-  .badge-spotlight {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent-ai);
-    color: #ffffff;
-    font-size: 11px;
-    font-family: var(--sans);
-    font-weight: 800;
-    padding: 4px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 12px;
-    width: fit-content;
-  }
-  
-  @media (min-width: 760px) {
-    .card.spotlight {
-      grid-column: span 2;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 32px;
-      padding: 32px;
-      background: var(--bg-ai-spotlight);
-      border-left: 6px solid var(--accent-ai);
-      border-color: rgba(35, 81, 197, 0.12);
-    }
-    .card.spotlight .spotlight-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .card.spotlight .spotlight-right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-left: 1px dashed var(--border);
-      padding-left: 32px;
-    }
-  }
 
-  .card .kicker { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
-  .card .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--accent); }
-  .card .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--bg); font-size: 12px; font-weight: 800; }
+  .cards { display: grid; grid-template-columns: 1fr; gap: 0; }
+  @media (min-width: 760px) { .cards { grid-template-columns: 1fr 1fr; column-gap: 36px; } }
+  .card { padding: 18px 0; border-bottom: 1px solid var(--border); border-left: 3px solid color-mix(in srgb, var(--cat, var(--accent)) 52%, transparent); padding-left: 14px; transition: opacity .12s ease; }
+  .card[hidden] { display: none; }
+  .card .kicker { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cat, var(--accent)); font-weight: 600; margin-bottom: 6px; }
+  .card .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--cat, var(--accent)); }
+  .card .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--cat, var(--accent)); color: var(--bg); font-size: 12px; font-weight: 800; }
   .card .title { font-family: var(--serif); font-weight: 800; font-size: 24px; line-height: 1.4; letter-spacing: -0.005em; margin: 0 0 10px; }
-  .card .title a:hover { text-decoration: underline; }
-  .card .ai-takeaway { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--fg-mute); font-weight: 600; margin: 6px 0; }
+  .card .title a:hover { text-decoration: underline; color: var(--cat, var(--accent)); }
+  .card .ai-takeaway { font-family: var(--serif); font-size: 15px; line-height: 1.65; color: var(--cat, var(--accent)); font-weight: 700; margin: 6px 0; padding-left: 14px; border-left: 3px solid var(--cat, var(--accent)); }
   .card .byline { display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 11.5px; color: var(--fg-mute); margin-top: 14px; }
   .card .byline b { color: var(--fg); font-weight: 600; letter-spacing: 0.05em; }
   .card .byline .score { font-weight: 800; color: var(--good); font-size: 13px; }
   .card .terms { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
   .card .term { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.06em; color: var(--fg-mute); }
-  .card .term::before { content: "#"; color: var(--accent); }
-  
+  .card .term::before { content: "#"; color: var(--cat, var(--accent)); }
+
+  .hero { margin-top: 14px; padding-top: 4px; }
+  .hero .kicker { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cat, var(--accent)); margin-bottom: 10px; font-weight: 600; }
+  .hero .hook { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 10px; font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--cat, var(--accent)); letter-spacing: 0.02em; }
+  .hero .hook .q { display: inline-flex; justify-content: center; align-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--cat, var(--accent)); color: var(--bg); font-size: 12px; font-weight: 800; }
+  .hero h2 { font-family: var(--serif); font-weight: 900; font-size: 42px; line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .hero h2 a:hover { color: var(--cat, var(--accent)); }
+  .hero .takeaway { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.65; color: var(--cat, var(--accent)); border-left: 4px solid var(--cat, var(--accent)); padding-left: 16px; margin: 14px 0; max-width: 60ch; }
+  .hero .byline { font-family: var(--sans); font-size: 12px; color: var(--fg-mute); letter-spacing: 0.04em; margin-top: 14px; }
+  .hero .byline b { color: var(--fg); font-weight: 600; }
+
   footer { margin-top: 48px; padding-top: 22px; border-top: 3px double var(--rule); color: var(--fg-mute); font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.10em; text-transform: uppercase; text-align: center; }
-  
-  /* 行動端極致排版自適應 */
+
   @media(max-width:600px){
     body{font-size:18px;overflow-x:hidden}
     .masthead h1{font-size:36px}
-    .masthead .tagline{font-size:18px}
-    .masthead .meta-line{font-size:14px}
-    .dateline{font-size:14px}
-    .section-rule{font-size:14px}
-    .briefing{font-size:18px}.briefing p:first-child::first-letter{font-size:48px}
-    .trending li{font-size:18px}
-    .trending li .count{font-size:14px}
-    .card .hook{font-size:16px}
+    .hero h2{font-size:28px}
     .card .title{font-size:22px}
-    .card .ai-takeaway{font-size:17px}
-    .card .byline{font-size:14px}
-    .card .term{font-size:14px}
-    .card{max-width:100%;word-wrap:break-word}
-    a{word-break:break-all}
-    
-    .audio-player-container {
-      padding: 16px 20px;
-      gap: 16px;
-    }
+    .toolbar{flex-direction:column;align-items:stretch}
+    .search{min-width:auto}
+    .audio-player-container{padding:16px 20px;gap:16px}
   }
 </style>
 </head>
@@ -279,15 +125,14 @@
     <button class="theme-btn" onclick="document.documentElement.dataset.theme = document.documentElement.dataset.theme==='light'?'dark':'light'">🌓</button>
   </header>
 
-  <div class="daily-quote">
-    小满晨光，創新如芽破土——讓每一次技術迭代，成為今天的最好開始。早安！
-  </div>
+  <div class="daily-quote">每一次的日出，都是科技顛覆昨日的開始。祝您有個充滿靈感的一天。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
-  <div class="briefing">
-    <p>微軟推出.NET版MCP治理套件，為AI代理的安全可控樹立新標準；隨之而來的TrapDoor供應鏈攻擊則警示開源生態的資安風險不容忽視。OLED顯示器在電競市場季增78%，顯示高階硬體需求正快速攀升；而美伊局勢的油價波動意外惠及台灣石化業，並與華為提出的τ縮放定律一起，暗示晶片效能突破正朝向新架構而非僅靠製程微縮。整體可見，AI治理、資安防護、硬體創新與地緣政治交織，正為科技生態注入新的驅動力。</p>
-  </div>
-  
-  <!-- 高級 AI 語音播放器 -->
+  <div class="briefing"><p>【每日引言】
+晨曦破曉，技術的曙光在每一次呼吸中閃爍，創新正是今日嶄新的開始。  
+
+【今日總結】
+今日 Tech 領域亮點多元：美國迎來國殤日週末購物季，便攜式音響優惠火熱；英國研擬立法禁止 16 歲以下使用社群媒體，警示其健康危害等同吸菸；教宗良十四世首份通諭將 AI 列為核心，強調技術不得凌駕人類尊嚴；日本海外淨資產創新高卻被中國超越，退居全球第三大債權國；類比裝置公司 Analog Devices 宣佈收購 Empower Semiconductor，強化 AI 時代高密度電源產品線。总体來看，AI 治理、數位健康與產業併購正同步塑造未來科技走向。</p></div>
+
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
       <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -300,112 +145,116 @@
   </div>
 
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
-  <div class="trending">
-    <ol>
+  <div class="trending"><ol>
   <li>
-    <span class="term">微軟</span>
+    <span class="term">memorial day</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">mcp</span>
+    <span class="term">折扣優惠</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">.net</span>
+    <span class="term">消費電子</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">ai代理</span>
+    <span class="term">音響設備</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">工具治理</span>
+    <span class="term">夏季購物</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">trapdoor</span>
+    <span class="term">社群媒體</span>
     <span class="count">1 則相關</span>
   </li>
-</ol>
+</ol></div>
+
+  <div class="toolbar">
+    <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
+    <div class="chip-row">
+      <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
+      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button>
+    </div>
   </div>
 
-  
+  <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule tech-rule"><span class="accent">科技綜合精選</span> Tech Highlights</div>
-  <div class="cards tech-group">
-    
-      <article class="card">
-        <div class="kicker">iThome [Tech]</div>
-        <div class="hook"><span class="q">Q</span>攻擊者如何在開源生態系中同時植入多個惡意套件，而不被察覺？</div>
-        <h3 class="title"><a href="https://www.ithome.com.tw/news/176113" target="_blank">TrapDoor供應鏈攻擊透過NPM、PyPI、Crates散布竊資軟體</a></h3>
-        <div class="ai-takeaway">資安公司Socket揭露TrapDoor攻擊行動，透過NPM、PyPI、Crates.io散布384個惡意套件，竊取開發者的加密貨幣錢包、SSH金鑰等敏感資料。</div>
-        <div class="terms">
-          <span class="term">TrapDoor</span><span class="term">供應鏈攻擊</span><span class="term">NPM</span><span class="term">PyPI</span><span class="term">Crates.io</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">9/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">iThome [Tech]</div>
-        <div class="hook"><span class="q">Q</span>微軟的這套治理機制能否真正杜絕AI代理工具的濫用？</div>
-        <h3 class="title"><a href="https://www.ithome.com.tw/news/176111" target="_blank">微軟推.NET版MCP代理治理套件，控管AI代理工具呼叫風險</a></h3>
-        <div class="ai-takeaway">微軟推出.NET版MCP代理治理擴充套件公開預覽版，讓開發者可於MCP伺服器中加入工具呼叫管控、回應內容過濾與稽核機制，確保工具使用安全。</div>
-        <div class="terms">
-          <span class="term">微軟</span><span class="term">MCP</span><span class="term">.NET</span><span class="term">AI代理</span><span class="term">工具治理</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">8/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">iThome [Tech]</div>
-        <div class="hook"><span class="q">Q</span>τ縮放定律能否為半導體產業提供取代傳統摩爾定律的新方向？</div>
-        <h3 class="title"><a href="https://www.ithome.com.tw/news/176126" target="_blank">華為提出τ縮放定律，尋找製程微縮之外的晶片演進路徑</a></h3>
-        <div class="ai-takeaway">華為在ISCAS上發表τ縮放定律，旨在以縮短訊號傳輸與執行時間突破製程微縮限制，延續晶片效能與密度提升。</div>
-        <div class="terms">
-          <span class="term">華為</span><span class="term">τ縮放定律</span><span class="term">半導體</span><span class="term">晶片效能</span><span class="term">ISCAS</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">8/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">TechNews 科技新報 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>OLED 是否將成為未來電競顯示器的主流技術？</div>
-        <h3 class="title"><a href="https://technews.tw/2026/05/26/oled-screens-accelerate-penetration-high-end-gaming-applications-q1-shipments-up-78-yoy/" target="_blank">加速滲透高階電競應用  OLED 螢幕 Q1 出貨年增 78%</a></h3>
-        <div class="ai-takeaway">TrendForce 報告指出，OLED 螢幕在 Q1 的出貨量較去年同期增長78%，顯示高階電競顯示器需求急速攀升。</div>
-        <div class="terms">
-          <span class="term">OLED</span><span class="term">電競</span><span class="term">顯示器</span><span class="term">TrendForce</span><span class="term">出貨成長</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">7/10</span>
-        </div>
-      </article>
-    
-      <article class="card">
-        <div class="kicker">TechNews 科技新報 [Tech]</div>
-        <div class="hook"><span class="q">Q</span>地緣政治衝突如何成為台塑化盈餘提升的關鍵因素？</div>
-        <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/oil-refining/" target="_blank">美伊戰火助攻台塑化超額配息 1.2 元！曹明喊煉油由虧轉盈、獲利增近一倍</a></h3>
-        <div class="ai-takeaway">台塑化因美伊戰火導致油價波動，透過超額配息1.2元並宣布煉油業務由虧轉盈，獲利增近一倍。</div>
-        <div class="terms">
-          <span class="term">台塑化</span><span class="term">超額配息</span><span class="term">美伊戰火</span><span class="term">煉油</span><span class="term">盈餘</span>
-        </div>
-        <div class="byline">
-          <b>SCORE</b><span class="score">7/10</span>
-        </div>
-      </article>
-    
+  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #8b1a1a" data-topic="Tech" data-search="教宗leo xiv首份通諭聚焦ai，警告技術不可凌駕人類 教宗良十四世發表首份通諭，將ai列為核心議題，警告技術發展不應凌駕人類尊嚴與價值。 人工智慧 教宗通諭 科技倫理 人類尊嚴 ai治理">
+    <div class="kicker">iThome [Tech]</div>
+    <div class="hook"><span class="q">Q</span>教宗首份AI通諭能否成為全球科技倫理的新共識？</div>
+    <h2><a href="https://www.ithome.com.tw/news/176117" target="_blank">教宗Leo XIV首份通諭聚焦AI，警告技術不可凌駕人類</a></h2>
+    <div class="takeaway">教宗良十四世發表首份通諭，將AI列為核心議題，警告技術發展不應凌駕人類尊嚴與價值。</div>
+    <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
   </div>
+  
+  <section class="cat" id="cat-tech" data-topic="Tech">
+    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+    <div class="cards" style="--cat: #8b1a1a">
+      
+    <article class="card" data-topic="Tech" data-search="社群媒體危害如吸菸  英國也研擬 16 歲以下禁用 英國政府研擬立法禁止16歲以下青少年使用社群媒體，皇家醫學會指出其健康危害不亞於吸菸。 社群媒體 青少年健康 英國政策 數位監管 公共衛生">
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>社群媒體對青少年的危害真的堪比吸菸嗎？</div>
+      <h3 class="title"><a href="https://technews.tw/2026/05/26/social-media-harms-smoking-uk-ban-under-16s/" target="_blank">社群媒體危害如吸菸  英國也研擬 16 歲以下禁用</a></h3>
+      <div class="ai-takeaway">英國政府研擬立法禁止16歲以下青少年使用社群媒體，皇家醫學會指出其健康危害不亞於吸菸。</div>
+      <div class="terms">
+        <span class="term">社群媒體</span><span class="term">青少年健康</span><span class="term">英國政策</span><span class="term">數位監管</span><span class="term">公共衛生</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">8/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="遭中國超車、日本退居全球第 3 大債權國 日本海外淨資產連續7年創新高，但遭中國超越，退居全球第3大債權國，美國則居全球最大債務國。 債權國 日本經濟 中國崛起 海外淨資產 全球經濟">
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>日本債權國地位下滑對全球經濟格局有何影響？</div>
+      <h3 class="title"><a href="https://finance.technews.tw/2026/05/26/japan-drops-to-worlds-third-largest-creditor-nation-overtaken-by-china/" target="_blank">遭中國超車、日本退居全球第 3 大債權國</a></h3>
+      <div class="ai-takeaway">日本海外淨資產連續7年創新高，但遭中國超越，退居全球第3大債權國，美國則居全球最大債務國。</div>
+      <div class="terms">
+        <span class="term">債權國</span><span class="term">日本經濟</span><span class="term">中國崛起</span><span class="term">海外淨資產</span><span class="term">全球經濟</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="analog devices 擬收購 empower semiconductor，拓展因應 ai 時代的新一代高密度電源產品組合 類比裝置公司宣布擬收購empower semiconductor，強化ai時代高密度電源產品組合。 半導體 企業收購 ai硬體 電源管理 類比裝置">
+      <div class="kicker">TechNews 科技新報 [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這起收購將如何改變AI硬體供應鏈的競爭態勢？</div>
+      <h3 class="title"><a href="https://technews.tw/2026/05/26/analog-devices-plans-to-acquire-empower-semiconductor/" target="_blank">Analog Devices 擬收購 Empower Semiconductor，拓展因應 AI 時代的新一代高密度電源產品組合</a></h3>
+      <div class="ai-takeaway">類比裝置公司宣布擬收購Empower Semiconductor，強化AI時代高密度電源產品組合。</div>
+      <div class="terms">
+        <span class="term">半導體</span><span class="term">企業收購</span><span class="term">AI硬體</span><span class="term">電源管理</span><span class="term">類比裝置</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">7/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="the best memorial day sales you can shop this weekend 美國國殤日週末購物季火熱展開，消費者可趁優惠期間選購便攜式喇叭或音響組合。 memorial day 折扣優惠 消費電子 音響設備 夏季購物">
+      <div class="kicker">TheVerge [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這波國殤日優惠中，哪些科技產品最值得搶購？</div>
+      <h3 class="title"><a href="https://www.theverge.com/gadgets/936196/best-memorial-day-sales-tech-deals-2026" target="_blank">The best Memorial Day sales you can shop this weekend</a></h3>
+      <div class="ai-takeaway">美國國殤日週末購物季火熱展開，消費者可趁優惠期間選購便攜式喇叭或音響組合。</div>
+      <div class="terms">
+        <span class="term">Memorial Day</span><span class="term">折扣優惠</span><span class="term">消費電子</span><span class="term">音響設備</span><span class="term">夏季購物</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">6/10</span>
+      </div>
+    </article>
+  
+    </div>
+  </section>
 
   <footer>© 2026 銘於心 (MING). 智慧物聯架構實驗室.</footer>
 </div>
@@ -414,95 +263,103 @@
   let synth = window.speechSynthesis;
   let utterance = null;
   let isPlaying = false;
-  
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
+  const briefingText = "【每日引言】\\n晨曦破曉，技術的曙光在每一次呼吸中閃爍，創新正是今日嶄新的開始。  \\n\\n【今日總結】\\n今日 Tech 領域亮點多元：美國迎來國殤日週末購物季，便攜式音響優惠火熱；英國研擬立法禁止 16 歲以下使用社群媒體，警示其健康危害等同吸菸；教宗良十四世首份通諭將 AI 列為核心，強調技術不得凌駕人類尊嚴；日本海外淨資產創新高卻被中國超越，退居全球第三大債權國；類比裝置公司 Analog Devices 宣佈收購 Empower Semiconductor，強化 AI 時代高密度電源產品線。总体來看，AI 治理、數位健康與產業併購正同步塑造未來科技走向。";
 
-  // 使用最純淨、無人工轉義的新聞原稿文字，獲得最優雅自然的中英雙語朗讀
-  const briefingText = "微軟推出.NET版MCP治理套件，為AI代理的安全可控樹立新標準；隨之而來的TrapDoor供應鏈攻擊則警示開源生態的資安風險不容忽視。OLED顯示器在電競市場季增78%，顯示高階硬體需求正快速攀升；而美伊局勢的油價波動意外惠及台灣石化業，並與華為提出的τ縮放定律一起，暗示晶片效能突破正朝向新架構而非僅靠製程微縮。整體可見，AI治理、資安防護、硬體創新與地緣政治交織，正為科技生態注入新的驅動力。";
-
-  // 跨平台智慧女聲匹配器 (優先配對美佳，其次為曉臻與廷廷等優質繁中女聲)
   function getSelectedVoice() {
     if (!synth) return null;
     const voices = synth.getVoices();
-    
-    const twVoices = voices.filter(v => 
-      v.lang.includes('zh-TW') || 
-      v.lang.includes('zh-HK') ||
-      v.lang.includes('zh-')
-    );
-
+    const twVoices = voices.filter(v => v.lang.includes('zh-TW') || v.lang.includes('zh-HK') || v.lang.includes('zh-'));
     if (twVoices.length === 0) return null;
-
-    // 1. 優先匹配微軟與系統原生女聲美佳 (Mei-Jia)
     let v = voices.find(v => v.name.includes('Mei-Jia') || v.name.includes('美佳'));
     if (v) return v;
-
-    // 2. 匹配微軟曉臻播報音 (Xiaoxiao - 頂級 Neural 女聲)
     v = voices.find(v => v.name.includes('Xiaoxiao') || v.name.includes('曉臻'));
     if (v) return v;
-
-    // 3. 匹配 Apple 廷廷經典女聲 (Ting-Ting)
     v = voices.find(v => v.name.includes('Ting-Ting') || v.name.includes('廷廷'));
     if (v) return v;
-
-    // 4. 最後退路：取第一個可用的繁中/中文語音
     return twVoices[0];
   }
-
   function toggleSpeech() {
-    if (!synth) {
-      playerStatus.innerText = '您的瀏覽器不支援語音播報';
-      return;
-    }
-
-    if (isPlaying) {
+    if (!synth) { playerStatus.innerText = '您的瀏覽器不支援語音播報'; return; }
+    if (isPlaying) { synth.cancel(); isPlaying = false; playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; playerStatus.innerText = '已暫停'; }
+    else {
       synth.cancel();
-      isPlaying = false;
-      playIcon.style.display = 'block';
-      pauseIcon.style.display = 'none';
-      playerStatus.innerText = '已暫停';
-    } else {
-      synth.cancel();
-      
       utterance = new SpeechSynthesisUtterance(briefingText);
       utterance.lang = 'zh-TW';
-      
       const selectedVoice = getSelectedVoice();
-      if (selectedVoice) {
-        utterance.voice = selectedVoice;
-        console.log("Selected Voice:", selectedVoice.name);
-      }
-
-      utterance.onend = () => {
-        isPlaying = false;
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
-        playerStatus.innerText = '播放結束 · 重新收聽';
-      };
-
-      utterance.onerror = (err) => {
-        isPlaying = false;
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
-        playerStatus.innerText = '播音遭遇阻礙，請重試';
-      };
-
+      if (selectedVoice) utterance.voice = selectedVoice;
+      utterance.onend = () => { isPlaying = false; playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; playerStatus.innerText = '播放結束 · 重新收聽'; };
+      utterance.onerror = () => { isPlaying = false; playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; playerStatus.innerText = '播音遭遇阻礙，請重試'; };
       synth.speak(utterance);
       isPlaying = true;
       playIcon.style.display = 'none';
       pauseIcon.style.display = 'block';
-      
-      const voiceLabel = selectedVoice ? '總編輯女聲' : '總編輯語音';
-      playerStatus.innerText = '播放中 · 聆聽' + voiceLabel + '說日報';
+      playerStatus.innerText = '播放中 · 聆聽總編輯女聲說日報';
     }
   }
+  if (synth && synth.onvoiceschanged !== undefined) { synth.onvoiceschanged = () => {}; }
 
-  if (synth && synth.onvoiceschanged !== undefined) {
-    synth.onvoiceschanged = () => {
-      // Warm up
-    };
+  // Toolbar: 主題 Chip 過濾
+  function filterTopic(btn) {
+    document.querySelectorAll('.chip').forEach(c => c.dataset.active = 'false');
+    btn.dataset.active = 'true';
+    const filter = btn.dataset.filter;
+    const sections = document.querySelectorAll('section.cat');
+    const hero = document.querySelector('.hero');
+    const searchInput = document.querySelector('.search');
+    if (searchInput) searchInput.value = '';
+
+    if (filter === 'all') {
+      sections.forEach(s => s.hidden = false);
+      if (hero) hero.hidden = false;
+      document.querySelectorAll('.card').forEach(c => c.hidden = false);
+    } else {
+      sections.forEach(s => {
+        s.hidden = s.dataset.topic !== filter;
+      });
+      if (hero) hero.hidden = hero.dataset.topic !== filter;
+      document.querySelectorAll('.card').forEach(c => {
+        c.hidden = c.dataset.topic !== filter;
+      });
+    }
+    checkEmpty();
+  }
+
+  // Toolbar: 搜尋
+  function searchArticles(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.chip').forEach(c => c.dataset.active = 'false');
+    document.querySelector('.chip[data-filter="all"]').dataset.active = 'true';
+
+    const sections = document.querySelectorAll('section.cat');
+    const hero = document.querySelector('.hero');
+
+    if (!q) {
+      sections.forEach(s => s.hidden = false);
+      if (hero) hero.hidden = false;
+      document.querySelectorAll('.card').forEach(c => c.hidden = false);
+    } else {
+      if (hero) hero.hidden = !(hero.dataset.search || '').includes(q);
+      document.querySelectorAll('.card').forEach(c => {
+        c.hidden = !(c.dataset.search || '').includes(q);
+      });
+      sections.forEach(s => {
+        const visibleCards = s.querySelectorAll('.card:not([hidden])');
+        s.hidden = visibleCards.length === 0;
+      });
+    }
+    checkEmpty();
+  }
+
+  function checkEmpty() {
+    const visibleCards = document.querySelectorAll('.card:not([hidden])');
+    const hero = document.querySelector('.hero:not([hidden])');
+    const emptyEl = document.getElementById('empty-state');
+    if (emptyEl) {
+      emptyEl.dataset.show = (visibleCards.length === 0 && !hero) ? 'true' : 'false';
+    }
   }
 </script>
 </body>
