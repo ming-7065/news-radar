@@ -129,10 +129,10 @@
   <div class="daily-quote">每一次的日出，都是科技顛覆昨日的開始。祝您有個充滿靈感的一天。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing"><p>【每日引言】
-晨曦微露，AI與創新的脈動為新的一天注入無限可能。
+破曉之光映照創新的航道，小滿已過，萬物煥然新生，正是迎接嶄新可能的最佳時機。
 
 【今日總結】
-今日科技領域呈現多元動態：教宗良十四在首份文件中提醒AI與不受約束的技術可能侵蝕人類本質，呼籲回歸「深人而人性」的核心；開源網路分析工具Wireshark緊急釋出4.6.6版，修補多個協定解析漏洞，提醒使用者儘速更新以防崩潰；Google宣布Project Genie將結合Street View，讓玩家身臨其境探索真實地點，開創互動式世界建造新玩法；威鋒電子推出首款多串流傳輸晶片瞄準多螢幕USB‑C擴充底座市場，加速高速顯示與資料傳遞的融合；資安研究揭露透過微軟Teams假冒IT支援散播ModeloRAT惡意程式</p></div>
+今日AI領域呈現多維突破：AI代理在生產環境中引發尚未被追蹤的混沌工程失效，企業亟需強化監控與治理；首批「AI原住民」正踏入職場，重新定義人才標準；同時PresentForMe.ai等工具正簡化簡報與數據分析流程，提升創辦人與分析師的效率；華爾街不惜每日斥資25,000美元聘請頂尖AI專家，凸顯高價值AI顧問需求的緊迫性。整體而言，從治理、人才、工具到顧問服務，AI正全方位滲透企業運營，成為推動未來創新的核心引擎。</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -148,32 +148,32 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">ai</span>
+    <span class="term">自動化</span>
+    <span class="count">2 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">ai代理</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">教皇</span>
+    <span class="term">混沌工程</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">人性</span>
+    <span class="term">系統可靠性</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">科技倫理</span>
+    <span class="term">故障追蹤</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">數位時代</span>
-    <span class="count">1 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">wireshark</span>
+    <span class="term">ai原生代</span>
     <span class="count">1 則相關</span>
   </li>
 </ol></div>
@@ -182,72 +182,72 @@
     <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
     <div class="chip-row">
       <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
-      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button>
+      <button class="chip" data-filter="AI" style="--chip-color: #2351c5" onclick="filterTopic(this)">AI</button>
     </div>
   </div>
 
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #8b1a1a" data-topic="Tech" data-search="pope leo calls for being ‘profoundly human’ in the age of ai 教宗良十四在他的首份重要教皇文件中警告，ai 的風險與不受約束的科技力量可能危害人類本質。 ai 教皇 人性 科技倫理 數位時代">
-    <div class="kicker">TheVerge [Tech]</div>
-    <div class="hook"><span class="q">Q</span>在AI 時代，人類該如何保持「深刻的人性」？</div>
-    <h2><a href="https://www.theverge.com/news/936945/pope-leo-letter-encyclical-ai-anthropic-labor-warfare" target="_blank">Pope Leo calls for being ‘profoundly human’ in the age of AI</a></h2>
-    <div class="takeaway">教宗良十四在他的首份重要教皇文件中警告，AI 的風險與不受約束的科技力量可能危害人類本質。</div>
+  <div class="section-rule cat-heading" style="--cat: #2351c5"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #2351c5" data-topic="AI" data-search="ai agents are quietly generating chaos engineering failures enterprises don’t track yet ai代理在生產環境中引發尚未被企業追蹤的混沌工程失效。 ai代理 混沌工程 系統可靠性 故障追蹤 自動化">
+    <div class="kicker">VentureBeat AI [AI]</div>
+    <div class="hook"><span class="q">Q</span>企業該如何監控AI代理造成的未預期故障？</div>
+    <h2><a href="https://venturebeat.com/orchestration/ai-agents-are-quietly-generating-chaos-engineering-failures-enterprises-dont-track-yet" target="_blank">AI agents are quietly generating chaos engineering failures enterprises don’t track yet</a></h2>
+    <div class="takeaway">AI代理在生產環境中引發尚未被企業追蹤的混沌工程失效。</div>
     <div class="byline"><b>FOCUS SCORE</b> <span>8/10</span></div>
   </div>
   
-  <section class="cat" id="cat-tech" data-topic="Tech">
-    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
-    <div class="cards" style="--cat: #8b1a1a">
+  <section class="cat" id="cat-ai" data-topic="AI">
+    <div class="section-rule cat-heading" style="--cat: #2351c5"><span class="accent">AI 趨勢深度解析</span> AI Deep Dive</div>
+    <div class="cards" style="--cat: #2351c5">
       
-    <article class="card" data-topic="Tech" data-search="透過微軟teams散布惡意程式的攻擊又一樁！駭客假冒it支援發動modelorat攻擊，誘騙企業員工執行遠端工具 資安研究機構rapid7揭露攻擊者透過微軟teams假冒it支援，散布modelorat惡意程式，誘騙員工執行遠端工具。 modelorat 微軟teams 資安 社交工程 遠端控制">
-      <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>企業該如何防範透過Teams平台的社交工程攻擊？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176128" target="_blank">透過微軟Teams散布惡意程式的攻擊又一樁！駭客假冒IT支援發動ModeloRAT攻擊，誘騙企業員工執行遠端工具</a></h3>
-      <div class="ai-takeaway">資安研究機構Rapid7揭露攻擊者透過微軟Teams假冒IT支援，散布ModeloRAT惡意程式，誘騙員工執行遠端工具。</div>
+    <article class="card" data-topic="AI" data-search="ai gurus are charging wall street banks $25,000 a day 華爾街銀行每天支付25,000美元聘請ai專家協助轉型。 ai專家 華爾街 金融服務 高額顧問費 ai轉型">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>如此高價的AI顧問將如何影響金融業的技術策略？</div>
+      <h3 class="title"><a href="https://www.bloomberg.com/news/features/2026-05-25/the-ai-trainers-charging-25-000-a-day-to-push-wall-street-s-agentic-shift" target="_blank">AI Gurus Are Charging Wall Street Banks $25,000 a Day</a></h3>
+      <div class="ai-takeaway">華爾街銀行每天支付25,000美元聘請AI專家協助轉型。</div>
       <div class="terms">
-        <span class="term">ModeloRAT</span><span class="term">微軟Teams</span><span class="term">資安</span><span class="term">社交工程</span><span class="term">遠端控制</span>
+        <span class="term">AI專家</span><span class="term">華爾街</span><span class="term">金融服務</span><span class="term">高額顧問費</span><span class="term">AI轉型</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">8/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Tech" data-search="網路流量分析工具wireshark發布新版本，修補多項可能導致程式當機的協定解析器漏洞 知名開源網路流量分析工具wireshark發布4.6.6版，修補多個協定解析器漏洞，包括rohc與macsec，建議用戶儘速升級。 wireshark 安全性 漏洞修補 網路分析 開放原始碼">
-      <div class="kicker">iThome [Tech]</div>
-      <div class="hook"><span class="q">Q</span>這次修補能否杜絕未來的解析器崩潰？</div>
-      <h3 class="title"><a href="https://www.ithome.com.tw/news/176120" target="_blank">網路流量分析工具Wireshark發布新版本，修補多項可能導致程式當機的協定解析器漏洞</a></h3>
-      <div class="ai-takeaway">知名開源網路流量分析工具Wireshark發布4.6.6版，修補多個協定解析器漏洞，包括ROHC與MACsec，建議用戶儘速升級。</div>
+    <article class="card" data-topic="AI" data-search="the first class of ai natives is graduating 首批在ai環境成長的世代正步入職場，可能取代傳統技能。 ai原生代 畢業生 職場變革 技能轉型 人工智慧">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>這批AI原生代進入職場會如何改變就業市場？</div>
+      <h3 class="title"><a href="https://www.wsj.com/tech/ai/ai-natives-graduates-job-cuts-6bab8ac9" target="_blank">The first class of AI natives is graduating</a></h3>
+      <div class="ai-takeaway">首批在AI環境成長的世代正步入職場，可能取代傳統技能。</div>
       <div class="terms">
-        <span class="term">Wireshark</span><span class="term">安全性</span><span class="term">漏洞修補</span><span class="term">網路分析</span><span class="term">開放原始碼</span>
+        <span class="term">AI原生代</span><span class="term">畢業生</span><span class="term">職場變革</span><span class="term">技能轉型</span><span class="term">人工智慧</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Tech" data-search="威鋒電子發表首款多串流傳輸晶片，搶攻多螢幕 usb-c 擴充底座市場 威鋒電子發表首款多串流傳輸晶片，瞄準多螢幕usb‑c擴充底座市場。 威鋒電子 usb‑c 多串流傳輸 晶片 擴充底座">
-      <div class="kicker">TechNews 科技新報 [Tech]</div>
-      <div class="hook"><span class="q">Q</span>這款新晶片能否成為USB‑C擴充底座的標準？</div>
-      <h3 class="title"><a href="https://technews.tw/2026/05/26/via-labs-unveils-its-first-multi-streaming-chip/" target="_blank">威鋒電子發表首款多串流傳輸晶片，搶攻多螢幕 USB-C 擴充底座市場</a></h3>
-      <div class="ai-takeaway">威鋒電子發表首款多串流傳輸晶片，瞄準多螢幕USB‑C擴充底座市場。</div>
+    <article class="card" data-topic="AI" data-search="ai making work easy for data analysts and founders ai正簡化數據分析師與創辦人的工作流程。 ai工具 數據分析 創業 自動化 工作效率">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>AI工具會取代分析師的專業判斷嗎？</div>
+      <h3 class="title"><a href="https://anallyst.app/" target="_blank">AI Making Work Easy for Data Analysts and Founders</a></h3>
+      <div class="ai-takeaway">AI正簡化數據分析師與創辦人的工作流程。</div>
       <div class="terms">
-        <span class="term">威鋒電子</span><span class="term">USB‑C</span><span class="term">多串流傳輸</span><span class="term">晶片</span><span class="term">擴充底座</span>
+        <span class="term">AI工具</span><span class="term">數據分析</span><span class="term">創業</span><span class="term">自動化</span><span class="term">工作效率</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Tech" data-search="google&amp;#8217;s interactive world builder, project genie, will drop you in real places using street view google宣布其互動式世界建造遊戲project genie將加入新功能，讓玩家透過street view置身真實地點。 google project genie street view 遊戲 互動世界">
-      <div class="kicker">9to5Google [Tech]</div>
-      <div class="hook"><span class="q">Q</span>Project Genie 會如何改變玩家對現實世界的探索方式？</div>
-      <h3 class="title"><a href="https://9to5google.com/2026/05/19/google-project-genie-to-generate-real-places-with-street-view/" target="_blank">Google&amp;#8217;s interactive world builder, Project Genie, will drop you in real places using Street View</a></h3>
-      <div class="ai-takeaway">Google宣布其互動式世界建造遊戲Project Genie將加入新功能，讓玩家透過Street View置身真實地點。</div>
+    <article class="card" data-topic="AI" data-search="show hn: presentforme.ai – make slide decks explain themselves presentforme.ai提供可自我說明的簡報生成工具，提升會議後的資訊傳遞。 presentforme.ai 簡報工具 ai生成 資訊傳遞 會議效率">
+      <div class="kicker">Hacker News AI [AI]</div>
+      <div class="hook"><span class="q">Q</span>讓簡報自行解說會改變商業簡報的傳統模式嗎？</div>
+      <h3 class="title"><a href="https://news.ycombinator.com/item?id=48276264" target="_blank">Show HN: Presentforme.ai – Make slide decks explain themselves</a></h3>
+      <div class="ai-takeaway">PresentForMe.ai提供可自我說明的簡報生成工具，提升會議後的資訊傳遞。</div>
       <div class="terms">
-        <span class="term">Google</span><span class="term">Project Genie</span><span class="term">Street View</span><span class="term">遊戲</span><span class="term">互動世界</span>
+        <span class="term">PresentForMe.ai</span><span class="term">簡報工具</span><span class="term">AI生成</span><span class="term">資訊傳遞</span><span class="term">會議效率</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">6/10</span>
@@ -267,7 +267,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【每日引言】\\n晨曦微露，AI與創新的脈動為新的一天注入無限可能。\\n\\n【今日總結】\\n今日科技領域呈現多元動態：教宗良十四在首份文件中提醒AI與不受約束的技術可能侵蝕人類本質，呼籲回歸「深人而人性」的核心；開源網路分析工具Wireshark緊急釋出4.6.6版，修補多個協定解析漏洞，提醒使用者儘速更新以防崩潰；Google宣布Project Genie將結合Street View，讓玩家身臨其境探索真實地點，開創互動式世界建造新玩法；威鋒電子推出首款多串流傳輸晶片瞄準多螢幕USB‑C擴充底座市場，加速高速顯示與資料傳遞的融合；資安研究揭露透過微軟Teams假冒IT支援散播ModeloRAT惡意程式";
+  const briefingText = "【每日引言】\\n破曉之光映照創新的航道，小滿已過，萬物煥然新生，正是迎接嶄新可能的最佳時機。\\n\\n【今日總結】\\n今日AI領域呈現多維突破：AI代理在生產環境中引發尚未被追蹤的混沌工程失效，企業亟需強化監控與治理；首批「AI原住民」正踏入職場，重新定義人才標準；同時PresentForMe.ai等工具正簡化簡報與數據分析流程，提升創辦人與分析師的效率；華爾街不惜每日斥資25,000美元聘請頂尖AI專家，凸顯高價值AI顧問需求的緊迫性。整體而言，從治理、人才、工具到顧問服務，AI正全方位滲透企業運營，成為推動未來創新的核心引擎。";
 
   function getSelectedVoice() {
     if (!synth) return null;
