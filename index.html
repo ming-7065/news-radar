@@ -129,10 +129,9 @@
   <div class="daily-quote">每一次的日出，都是科技顛覆昨日的開始。祝您有個充滿靈感的一天。</div>
   <div class="section-rule"><span class="accent">今日總結</span> Briefing</div>
   <div class="briefing"><p>【每日引言】
-小滿已過，夏意漸濃，晨光裡的每一次技術突破都在提醒我們：今天的每一刻，都是嶄新的起點。
-
+晨曦初照，技術的微光正引領我們踏上今日的嶄新旅程。
 【今日總結】
-今日體壇亮點：NBA 傳言暴龍欲再迎 Kawhi Leonard，能否重現昔日傳奇；TPBL 第二季總冠軍賽，蔣淯安與杰倫關鍵表現助國王三分甦醒，夢想家飲恨；MLB 太空人靠三名投手聯手無安打創賽季新局；SEC 風波中 Sankey 仍堅持冠軍賽舉行；NBA 季後賽尼克對騎士 Game 4 的球員投注備受矚目。</p></div>
+今日科技界聚焦於多重動態：TrapDoor供應鏈攻擊透過NPM、PyPI、Crates等開源平台竊取加密貨幣錢包、SSH金鑰等敏感資料，凸顯供應鏈安全仍是首要挑戰；Google I/O 2026正式啟動，Android 17 Beta搶先上線，展示平台快速迭代與跨裝置整合的決心；Pixel Watch的「Find My Phone」與ECG應用接連崩潰，暴露出穿戴式裝置在功能穩定性上的痛點；Epic Games首度公開Unreal Engine 6實機預告，並透露《火箭聯盟》將迎來次世代大重製，預示遊戲引擎與內容製</p></div>
 
   <div class="audio-player-container">
     <button class="play-btn-circle" id="play-btn" onclick="toggleSpeech()">
@@ -148,32 +147,32 @@
   <div class="section-rule"><span class="accent">熱門趨勢</span> Trending</div>
   <div class="trending"><ol>
   <li>
-    <span class="term">nba</span>
-    <span class="count">2 則相關</span>
-  </li>
-
-  <li>
-    <span class="term">暴龍</span>
+    <span class="term">供應鏈攻擊</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">kawhi leonard</span>
+    <span class="term">trapdoor</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">轉會</span>
+    <span class="term">npm</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">球隊重建</span>
+    <span class="term">惡意套件</span>
     <span class="count">1 則相關</span>
   </li>
 
   <li>
-    <span class="term">tpbl</span>
+    <span class="term">資訊竊取</span>
+    <span class="count">1 則相關</span>
+  </li>
+
+  <li>
+    <span class="term">pixel watch</span>
     <span class="count">1 則相關</span>
   </li>
 </ol></div>
@@ -182,75 +181,75 @@
     <input type="text" class="search" placeholder="🔍 搜尋文章標題、摘要、標籤..." oninput="searchArticles(this.value)">
     <div class="chip-row">
       <button class="chip" data-filter="all" data-active="true" style="--chip-color: var(--accent)" onclick="filterTopic(this)">全部</button>
-      <button class="chip" data-filter="Sports" style="--chip-color: #c25100" onclick="filterTopic(this)">體育</button>
+      <button class="chip" data-filter="Tech" style="--chip-color: #8b1a1a" onclick="filterTopic(this)">科技</button>
     </div>
   </div>
 
   <div class="empty" id="empty-state">找不到符合的文章，請嘗試其他關鍵字或主題。</div>
 
   
-  <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">今日焦點推薦</span> Spotlight</div>
-  <div class="hero" style="--cat: #c25100" data-topic="Sports" data-search="astros throw no-hitter vs. rangers: three pitchers combine for mlb&amp;#039;s first no-no since 2024 太空人隊聯手三位投手對遊騎兵投出無安打比賽，為2024年以來mlb首場無安打。 mlb 太空人 無安打 遊騎兵 投手">
-    <div class="kicker">CBS Sports [Sports]</div>
-    <div class="hook"><span class="q">Q</span>這場無安打是否預示著太空人本賽季的強勢回歸？</div>
-    <h2><a href="https://www.cbssports.com/mlb/news/astros-no-hitter-rangers-first-since-2024/" target="_blank">Astros throw no-hitter vs. Rangers: Three pitchers combine for MLB&amp;#039;s first no-no since 2024</a></h2>
-    <div class="takeaway">太空人隊聯手三位投手對遊騎兵投出無安打比賽，為2024年以來MLB首場無安打。</div>
-    <div class="byline"><b>FOCUS SCORE</b> <span>9/10</span></div>
+  <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">今日焦點推薦</span> Spotlight</div>
+  <div class="hero" style="--cat: #8b1a1a" data-topic="Tech" data-search="trapdoor供應鏈攻擊透過npm、pypi、crates散布竊資軟體 資安公司socket揭露的「trapdoor」供應鏈攻擊，透過npm、pypi、crates三大開源生態系滲透34個套件、上傳384個惡意版本，瞄準加密貨幣錢包、ssh金鑰、雲端憑證等機密資料竊取。 供應鏈攻擊 trapdoor npm 惡意套件 資訊竊取">
+    <div class="kicker">iThome [Tech]</div>
+    <div class="hook"><span class="q">Q</span>這些在開源生態中被暗中植入的惡意套件，會不會在不知情的開發者手中成為滲透公司內網的敲門磚？</div>
+    <h2><a href="https://www.ithome.com.tw/news/176113" target="_blank">TrapDoor供應鏈攻擊透過NPM、PyPI、Crates散布竊資軟體</a></h2>
+    <div class="takeaway">資安公司Socket揭露的「TrapDoor」供應鏈攻擊，透過NPM、PyPI、Crates三大開源生態系滲透34個套件、上傳384個惡意版本，瞄準加密貨幣錢包、SSH金鑰、雲端憑證等機密資料竊取。</div>
+    <div class="byline"><b>FOCUS SCORE</b> <span>8/10</span></div>
   </div>
   
-  <section class="cat" id="cat-sports" data-topic="Sports">
-    <div class="section-rule cat-heading" style="--cat: #c25100"><span class="accent">體育競技動態</span> Sports Arena</div>
-    <div class="cards" style="--cat: #c25100">
+  <section class="cat" id="cat-tech" data-topic="Tech">
+    <div class="section-rule cat-heading" style="--cat: #8b1a1a"><span class="accent">科技綜合精選</span> Tech Highlights</div>
+    <div class="cards" style="--cat: #8b1a1a">
       
-    <article class="card" data-topic="Sports" data-search="《tpbl(s2)總冠軍賽》蔣淯安與杰倫成就勝敗兩端，國王三分甦醒讓夢想家最終失足 蔣淯安與杰倫在tpbl第二季總冠軍賽中成為勝負關鍵，國王的三分火力恢復使夢想家最終失利。 tpbl 總冠軍賽 蔣淯安 杰倫 三分">
-      <div class="kicker">運動視界 [Sports]</div>
-      <div class="hook"><span class="q">Q</span>國王的三分甦醒能否成為球隊奪冠的決定性因素？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126560" target="_blank">《TPBL(S2)總冠軍賽》蔣淯安與杰倫成就勝敗兩端，國王三分甦醒讓夢想家最終失足</a></h3>
-      <div class="ai-takeaway">蔣淯安與杰倫在TPBL第二季總冠軍賽中成為勝負關鍵，國王的三分火力恢復使夢想家最終失利。</div>
+    <article class="card" data-topic="Tech" data-search="epic games首度展示unreal engine 6實機畫面，《火箭聯盟》將迎來次世代大重製 epic games於《火箭聯盟》巴黎特錦賽期間首次公開以unreal engine 6打造的實機重製畫面，預告該作將迎來次世代大翻新。 unreal engine 6 epic games 火箭聯盟 遊戲引擎 次世代重製">
+      <div class="kicker">Mashdigi [Tech]</div>
+      <div class="hook"><span class="q">Q</span>UE6所呈現的視覺效果與技術突破，會不會重新定義未來遊戲的渲染標準？</div>
+      <h3 class="title"><a href="https://mashdigi.com/epic-games-showcases-unreal-engine-6-gameplay-footage-for-the-first-time-rocket-league-is-set-for-a-next-gen-remaster/" target="_blank">Epic Games首度展示Unreal Engine 6實機畫面，《火箭聯盟》將迎來次世代大重製</a></h3>
+      <div class="ai-takeaway">Epic Games於《火箭聯盟》巴黎特錦賽期間首次公開以Unreal Engine 6打造的實機重製畫面，預告該作將迎來次世代大翻新。</div>
       <div class="terms">
-        <span class="term">TPBL</span><span class="term">總冠軍賽</span><span class="term">蔣淯安</span><span class="term">杰倫</span><span class="term">三分</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Sports" data-search="nba player prop picks, odds: three best 2026 nba playoffs prop bets for knicks vs. cavaliers, game 4 專家揭露2026年nba季後賽第四場尼克對騎士的最佳球員投注選項與赔率。 nba 尼克 騎士 2026季後賽 球員投注">
-      <div class="kicker">CBS Sports [Sports]</div>
-      <div class="hook"><span class="q">Q</span>尼克在第四場能否突破騎士防守，取得領先？</div>
-      <h3 class="title"><a href="https://www.cbssports.com/nba/news/nba-player-prop-picks-odds-three-best-2026-nba-playoffs-prop-bets-for-knicks-vs-cavaliers-game-4/" target="_blank">NBA player prop picks, odds: Three best 2026 NBA Playoffs prop bets for Knicks vs. Cavaliers, Game 4</a></h3>
-      <div class="ai-takeaway">專家揭露2026年NBA季後賽第四場尼克對騎士的最佳球員投注選項與赔率。</div>
-      <div class="terms">
-        <span class="term">NBA</span><span class="term">尼克</span><span class="term">騎士</span><span class="term">2026季後賽</span><span class="term">球員投注</span>
-      </div>
-      <div class="byline">
-        <b>SCORE</b><span class="score">8/10</span>
-      </div>
-    </article>
-  
-    <article class="card" data-topic="Sports" data-search="nba》熟悉的劇本與熟悉解方 暴龍能否再迎回 kawhi leonard？ 暴龍隊能否再次引進 kawhi leonard，重演過去的劇本？ nba 暴龍 kawhi leonard 轉會 球隊重建">
-      <div class="kicker">運動視界 [Sports]</div>
-      <div class="hook"><span class="q">Q</span>暴龍是否真的會重新簽下 Kawhi Leonard，複製他們昔日的成功模式？</div>
-      <h3 class="title"><a href="https://www.sportsv.net/articles/126535" target="_blank">NBA》熟悉的劇本與熟悉解方 暴龍能否再迎回 Kawhi Leonard？</a></h3>
-      <div class="ai-takeaway">暴龍隊能否再次引進 Kawhi Leonard，重演過去的劇本？</div>
-      <div class="terms">
-        <span class="term">NBA</span><span class="term">暴龍</span><span class="term">Kawhi Leonard</span><span class="term">轉會</span><span class="term">球隊重建</span>
+        <span class="term">Unreal Engine 6</span><span class="term">Epic Games</span><span class="term">火箭聯盟</span><span class="term">遊戲引擎</span><span class="term">次世代重製</span>
       </div>
       <div class="byline">
         <b>SCORE</b><span class="score">7/10</span>
       </div>
     </article>
   
-    <article class="card" data-topic="Sports" data-search="greg sankey &amp;#039;committed&amp;#039; to sec championship game amid 24-team playoff expansion debate sec專員greg sankey在24支球隊季後賽擴張爭議中堅持舉辦sec冠軍賽。 sec greg sankey 大學足球 季後賽 24隊">
-      <div class="kicker">CBS Sports [Sports]</div>
-      <div class="hook"><span class="q">Q</span>在擴張季後賽的呼聲下，SEC是否會繼續保留其冠軍賽？</div>
-      <h3 class="title"><a href="https://www.cbssports.com/college-football/news/greg-sankey-sec-championship-game-24-team-playoff/" target="_blank">Greg Sankey &amp;#039;committed&amp;#039; to SEC Championship Game amid 24-team playoff expansion debate</a></h3>
-      <div class="ai-takeaway">SEC專員Greg Sankey在24支球隊季後賽擴張爭議中堅持舉辦SEC冠軍賽。</div>
+    <article class="card" data-topic="Tech" data-search="how to watch google i/o 2026 kick off live google i/o 2026今日正式啟動，開發者與android相關新訊將同步於線上直播與實體活動公開發表。 google i/o 2026 直播 android 開發者大会 alphabet">
+      <div class="kicker">9to5Google [Tech]</div>
+      <div class="hook"><span class="q">Q</span>今年的Google I/O會揭曉哪些突破性的AI或Android新功能？</div>
+      <h3 class="title"><a href="https://9to5google.com/2026/05/19/how-to-watch-google-i-o-2026/" target="_blank">How to watch Google I/O 2026 kick off live</a></h3>
+      <div class="ai-takeaway">Google I/O 2026今日正式啟動，開發者與Android相關新訊將同步於線上直播與實體活動公開發表。</div>
       <div class="terms">
-        <span class="term">SEC</span><span class="term">Greg Sankey</span><span class="term">大學足球</span><span class="term">季後賽</span><span class="term">24隊</span>
+        <span class="term">Google I/O 2026</span><span class="term">直播</span><span class="term">Android</span><span class="term">開發者大会</span><span class="term">Alphabet</span>
       </div>
       <div class="byline">
-        <b>SCORE</b><span class="score">7/10</span>
+        <b>SCORE</b><span class="score">6/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="how to install the latest android 17 beta on google pixel google已跳過傳統的開發者預覽，直接為pixel裝置釋出android 17 beta供測試。 android 17 beta google pixel 作業系統更新 canary build 行動平台">
+      <div class="kicker">9to5Google [Tech]</div>
+      <div class="hook"><span class="q">Q</span>.Android 17 Beta在Pixel上的表現是否能滿足早期采用者的期待？</div>
+      <h3 class="title"><a href="https://9to5google.com/2026/05/19/how-to-install-the-android-17-beta-on-google-pixel/" target="_blank">How to install the latest Android 17 Beta on Google Pixel</a></h3>
+      <div class="ai-takeaway">Google已跳過傳統的開發者預覽，直接為Pixel裝置釋出Android 17 Beta供測試。</div>
+      <div class="terms">
+        <span class="term">Android 17 Beta</span><span class="term">Google Pixel</span><span class="term">作業系統更新</span><span class="term">Canary Build</span><span class="term">行動平台</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">6/10</span>
+      </div>
+    </article>
+  
+    <article class="card" data-topic="Tech" data-search="pixel watch &amp;#8216;find my phone&amp;#8217; and ecg apps are broken, crashing for many [video] pixel watch的「find my phone」與ecg應用在某些使用者裝置上因錯誤而無法運作或直接崩潰，導致兩項功能失效。 pixel watch find my phone ecg 應用程式崩潰 wear os">
+      <div class="kicker">9to5Google [Tech]</div>
+      <div class="hook"><span class="q">Q</span>這款健康追蹤裝置的Bug是否會影響用戶的緊急定位與心電圖監測？</div>
+      <h3 class="title"><a href="https://9to5google.com/2026/05/22/google-pixel-watch-find-my-phone-ecg-app-issues/" target="_blank">Pixel Watch &amp;#8216;Find My Phone&amp;#8217; and ECG apps are broken, crashing for many [Video]</a></h3>
+      <div class="ai-takeaway">Pixel Watch的「Find My Phone」與ECG應用在某些使用者裝置上因錯誤而無法運作或直接崩潰，導致兩項功能失效。</div>
+      <div class="terms">
+        <span class="term">Pixel Watch</span><span class="term">Find My Phone</span><span class="term">ECG</span><span class="term">應用程式崩潰</span><span class="term">Wear OS</span>
+      </div>
+      <div class="byline">
+        <b>SCORE</b><span class="score">5/10</span>
       </div>
     </article>
   
@@ -267,7 +266,7 @@
   const playIcon = document.getElementById('play-icon');
   const pauseIcon = document.getElementById('pause-icon');
   const playerStatus = document.getElementById('player-status');
-  const briefingText = "【每日引言】\\n小滿已過，夏意漸濃，晨光裡的每一次技術突破都在提醒我們：今天的每一刻，都是嶄新的起點。\\n\\n【今日總結】\\n今日體壇亮點：NBA 傳言暴龍欲再迎 Kawhi Leonard，能否重現昔日傳奇；TPBL 第二季總冠軍賽，蔣淯安與杰倫關鍵表現助國王三分甦醒，夢想家飲恨；MLB 太空人靠三名投手聯手無安打創賽季新局；SEC 風波中 Sankey 仍堅持冠軍賽舉行；NBA 季後賽尼克對騎士 Game 4 的球員投注備受矚目。";
+  const briefingText = "【每日引言】\\n晨曦初照，技術的微光正引領我們踏上今日的嶄新旅程。\\n【今日總結】\\n今日科技界聚焦於多重動態：TrapDoor供應鏈攻擊透過NPM、PyPI、Crates等開源平台竊取加密貨幣錢包、SSH金鑰等敏感資料，凸顯供應鏈安全仍是首要挑戰；Google I/O 2026正式啟動，Android 17 Beta搶先上線，展示平台快速迭代與跨裝置整合的決心；Pixel Watch的「Find My Phone」與ECG應用接連崩潰，暴露出穿戴式裝置在功能穩定性上的痛點；Epic Games首度公開Unreal Engine 6實機預告，並透露《火箭聯盟》將迎來次世代大重製，預示遊戲引擎與內容製";
 
   function getSelectedVoice() {
     if (!synth) return null;
